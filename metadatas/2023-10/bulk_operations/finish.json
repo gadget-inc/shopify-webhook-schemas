@@ -1,0 +1,17 @@
+{
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Notifies when a Bulk Operation finishes.",
+  "name": "bulk_operations/finish",
+  "related_resource": "BulkOperation",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/BulkOperation/147595010",
+    "completed_at": "2024-04-19T14:38:41-04:00",
+    "created_at": "2024-04-19T14:38:41-04:00",
+    "error_code": null,
+    "status": "completed",
+    "type": "query"
+  }
+}

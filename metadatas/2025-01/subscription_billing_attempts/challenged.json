@@ -1,0 +1,30 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when the financial instutition challenges the subscripttion billing attempt charge as per 3D Secure.",
+  "name": "subscription_billing_attempts/challenged",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "SubscriptionBillingAttempt",
+  "response": {
+    "id": null,
+    "admin_graphql_api_id": null,
+    "idempotency_key": "9a453d81-d41d-403e-806f-714dee215ff9",
+    "order_id": 1,
+    "admin_graphql_api_order_id": "gid://shopify/Order/1",
+    "subscription_contract_id": 2994656425,
+    "admin_graphql_api_subscription_contract_id": "gid://shopify/SubscriptionContract/2994656425",
+    "ready": true,
+    "error_message": null,
+    "error_code": null
+  },
+  "shop_feature": false
+}

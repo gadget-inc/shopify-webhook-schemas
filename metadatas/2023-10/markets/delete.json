@@ -1,0 +1,15 @@
+{
+  "access_scopes": [
+    "markets"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a market is deleted.",
+  "name": "markets/delete",
+  "related_resource": "Market",
+  "response": {
+    "id": 188558248
+  }
+}

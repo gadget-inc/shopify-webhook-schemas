@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "created_by_app_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "handle": {
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "created_by_app_id",
+    "handle",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

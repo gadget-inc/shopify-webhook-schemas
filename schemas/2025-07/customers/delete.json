@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "addresses": {
+      "items": {
+        "properties": {
+          "address1": {
+            "type": "string"
+          },
+          "address2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "country_code": {
+            "type": "string"
+          },
+          "country_name": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "integer"
+          },
+          "default": {
+            "type": "boolean"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "province": {
+            "type": "string"
+          },
+          "province_code": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "address1",
+          "address2",
+          "city",
+          "company",
+          "country",
+          "country_code",
+          "country_name",
+          "customer_id",
+          "default",
+          "first_name",
+          "id",
+          "last_name",
+          "name",
+          "phone",
+          "province",
+          "province_code",
+          "zip"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tax_exemptions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "addresses",
+    "admin_graphql_api_id",
+    "id",
+    "phone",
+    "tax_exemptions"
+  ],
+  "type": "object"
+}

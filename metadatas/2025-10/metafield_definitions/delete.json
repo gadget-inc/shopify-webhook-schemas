@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "content"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a metafield definition is deleted.",
+  "name": "metafield_definitions/delete",
+  "related_resource": "MetafieldDefinition",
+  "response": {
+    "id": "gid://shopify/MetafieldDefinition/1",
+    "type": "ShopifyMetafields::Types::SingleLineTextFieldType",
+    "created_by_app_id": null
+  },
+  "shop_feature": false
+}

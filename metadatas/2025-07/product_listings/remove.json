@@ -1,0 +1,20 @@
+{
+  "access_scopes": [
+    "product_listings"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a product listing is removed from the channel.",
+  "name": "product_listings/remove",
+  "related_resource": "ProductListing",
+  "response": {
+    "product_listing": {
+      "product_id": 788032119674292900
+    }
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "events": {
+      "items": {
+        "properties": {
+          "event": {
+            "properties": {
+              "action": {
+                "type": "string"
+              },
+              "actor": {
+                "properties": {
+                  "actor_identifier": {
+                    "type": "integer"
+                  },
+                  "actor_metadata": {
+                    "properties": {
+                      "api_version_requested": {
+                        "type": "string"
+                      },
+                      "api_version_served": {
+                        "type": "string"
+                      },
+                      "app_name": {
+                        "type": "string"
+                      },
+                      "ecosystem_category": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "api_version_requested",
+                      "api_version_served",
+                      "app_name",
+                      "ecosystem_category"
+                    ],
+                    "type": "object"
+                  },
+                  "actor_type": {
+                    "type": "string"
+                  },
+                  "on_behalf_of": {
+                    "properties": {
+                      "user_email": {
+                        "format": "email",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "user_email"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "actor_identifier",
+                  "actor_metadata",
+                  "actor_type",
+                  "on_behalf_of"
+                ],
+                "type": "object"
+              },
+              "additional_metadata": {
+                "properties": {
+                  "error_codes": {
+                    "items": false,
+                    "type": "array"
+                  },
+                  "mutation_names": {
+                    "items": false,
+                    "type": "array"
+                  },
+                  "query": {
+                    "type": "string"
+                  },
+                  "request_type": {
+                    "type": "string"
+                  },
+                  "variables": {
+                    "properties": {
+                      "first": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "first"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "error_codes",
+                  "mutation_names",
+                  "query",
+                  "request_type",
+                  "variables"
+                ],
+                "type": "object"
+              },
+              "context": {
+                "properties": {
+                  "context_identifier": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "context_metadata": {
+                    "properties": {
+                      "api_request_failed": {
+                        "type": "boolean"
+                      },
+                      "client_ip": {
+                        "format": "ipv4",
+                        "type": "string"
+                      },
+                      "content_type": {
+                        "type": "string"
+                      },
+                      "response_code": {
+                        "type": "integer"
+                      },
+                      "response_time_ms": {
+                        "type": "number"
+                      },
+                      "user_agent": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "api_request_failed",
+                      "client_ip",
+                      "content_type",
+                      "response_code",
+                      "response_time_ms",
+                      "user_agent"
+                    ],
+                    "type": "object"
+                  },
+                  "context_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "context_identifier",
+                  "context_metadata",
+                  "context_type"
+                ],
+                "type": "object"
+              },
+              "subject": {
+                "properties": {
+                  "subject_identifier": {
+                    "format": "hostname",
+                    "type": "string"
+                  },
+                  "subject_metadata": {
+                    "type": "object"
+                  },
+                  "subject_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "subject_identifier",
+                  "subject_metadata",
+                  "subject_type"
+                ],
+                "type": "object"
+              },
+              "timestamp": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "action",
+              "actor",
+              "additional_metadata",
+              "context",
+              "subject",
+              "timestamp"
+            ],
+            "type": "object"
+          },
+          "time": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "event",
+          "time"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "events"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "presentment_currency": {
+      "type": "string"
+    },
+    "buyer_accepts_sms_marketing": {
+      "type": "boolean"
+    },
+    "sms_marketing_phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "total_discounts": {
+      "type": "string"
+    },
+    "total_line_items_price": {
+      "type": "string"
+    },
+    "total_price": {
+      "type": "string"
+    },
+    "total_tax": {
+      "type": "string"
+    },
+    "subtotal_price": {
+      "type": "string"
+    },
+    "cart_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "total_duties": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "presentment_currency",
+    "buyer_accepts_sms_marketing",
+    "sms_marketing_phone",
+    "total_discounts",
+    "total_line_items_price",
+    "total_price",
+    "total_tax",
+    "subtotal_price",
+    "cart_token",
+    "total_duties"
+  ]
+}

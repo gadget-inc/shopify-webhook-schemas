@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "order_edit": {
+      "properties": {
+        "app_id": {
+          "type": "null"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "discounts": {
+          "properties": {
+            "line_item": {
+              "properties": {
+                "additions": {
+                  "items": false,
+                  "type": "array"
+                },
+                "removals": {
+                  "items": false,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "additions",
+                "removals"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "line_item"
+          ],
+          "type": "object"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "line_items": {
+          "properties": {
+            "additions": {
+              "items": {
+                "properties": {
+                  "delta": {
+                    "type": "integer"
+                  },
+                  "id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "delta",
+                  "id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "removals": {
+              "items": {
+                "properties": {
+                  "delta": {
+                    "type": "integer"
+                  },
+                  "id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "delta",
+                  "id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "additions",
+            "removals"
+          ],
+          "type": "object"
+        },
+        "notify_customer": {
+          "type": "boolean"
+        },
+        "order_id": {
+          "type": "integer"
+        },
+        "shipping_lines": {
+          "properties": {
+            "additions": {
+              "items": false,
+              "type": "array"
+            },
+            "removals": {
+              "items": false,
+              "type": "array"
+            }
+          },
+          "required": [
+            "additions",
+            "removals"
+          ],
+          "type": "object"
+        },
+        "staff_note": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "app_id",
+        "created_at",
+        "discounts",
+        "id",
+        "line_items",
+        "notify_customer",
+        "order_id",
+        "shipping_lines",
+        "staff_note",
+        "user_id"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "order_edit"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "addresses": {
+      "items": false,
+      "type": "array"
+    },
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "default_address": {
+      "properties": {
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "null"
+        },
+        "city": {
+          "type": "string"
+        },
+        "company": {
+          "type": "null"
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "country_name": {
+          "type": "string"
+        },
+        "customer_id": {
+          "type": "integer"
+        },
+        "default": {
+          "type": "boolean"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "province_code": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "address1",
+        "address2",
+        "city",
+        "company",
+        "country",
+        "country_code",
+        "country_name",
+        "customer_id",
+        "default",
+        "first_name",
+        "id",
+        "last_name",
+        "name",
+        "phone",
+        "province",
+        "province_code",
+        "zip"
+      ],
+      "type": "object"
+    },
+    "email": {
+      "format": "email",
+      "type": "string"
+    },
+    "email_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "last_order_id": {
+      "type": "integer"
+    },
+    "last_order_name": {
+      "type": "string"
+    },
+    "multipass_identifier": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "orders_count": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "sms_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "state": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "tax_exempt": {
+      "type": "boolean"
+    },
+    "tax_exemptions": {
+      "items": false,
+      "type": "array"
+    },
+    "total_spent": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "verified_email": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "addresses",
+    "admin_graphql_api_id",
+    "created_at",
+    "currency",
+    "default_address",
+    "email",
+    "email_marketing_consent",
+    "first_name",
+    "id",
+    "last_name",
+    "last_order_id",
+    "last_order_name",
+    "multipass_identifier",
+    "note",
+    "orders_count",
+    "phone",
+    "sms_marketing_consent",
+    "state",
+    "tags",
+    "tax_exempt",
+    "tax_exemptions",
+    "total_spent",
+    "updated_at",
+    "verified_email"
+  ],
+  "type": "object"
+}

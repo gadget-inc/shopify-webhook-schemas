@@ -1,0 +1,30 @@
+{
+  "access_scopes": [
+    "orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a tender transaction is created.",
+  "name": "tender_transactions/create",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "TenderTransaction",
+  "response": {
+    "id": 220982911946154500,
+    "order_id": 820982911946154500,
+    "amount": "403.00",
+    "currency": "USD",
+    "user_id": null,
+    "test": false,
+    "processed_at": null,
+    "remote_reference": "1001",
+    "payment_details": null,
+    "payment_method": "unknown"
+  },
+  "shop_feature": false
+}

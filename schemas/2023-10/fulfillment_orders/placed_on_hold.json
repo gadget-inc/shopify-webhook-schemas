@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "fulfillment_order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string"
+        },
+        "fulfillment_holds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reason": {
+                "type": "string"
+              },
+              "reason_notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reason",
+              "reason_notes"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "fulfillment_holds"
+      ]
+    },
+    "remaining_fulfillment_order": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "shop_id": {
+          "type": "integer"
+        },
+        "order_id": {
+          "type": "integer"
+        },
+        "assigned_location_id": {
+          "type": "integer"
+        },
+        "request_status": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "supported_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "destination": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "address1": {
+              "type": "string"
+            },
+            "address2": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "company": {
+              "type": "null"
+            },
+            "country": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "first_name": {
+              "type": "string"
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "null"
+            },
+            "province": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string",
+              "format": "time"
+            }
+          },
+          "required": [
+            "id",
+            "address1",
+            "address2",
+            "city",
+            "company",
+            "country",
+            "email",
+            "first_name",
+            "last_name",
+            "phone",
+            "province",
+            "zip"
+          ]
+        },
+        "line_items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "shop_id": {
+                "type": "integer"
+              },
+              "fulfillment_order_id": {
+                "type": "integer"
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "line_item_id": {
+                "type": "integer"
+              },
+              "inventory_item_id": {
+                "type": "integer"
+              },
+              "fulfillable_quantity": {
+                "type": "integer"
+              },
+              "variant_id": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "shop_id",
+              "fulfillment_order_id",
+              "quantity",
+              "line_item_id",
+              "inventory_item_id",
+              "fulfillable_quantity",
+              "variant_id"
+            ]
+          }
+        },
+        "fulfill_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "fulfill_by": {
+          "type": "null"
+        },
+        "international_duties": {
+          "type": "object",
+          "properties": {
+            "incoterm": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "incoterm"
+          ]
+        },
+        "fulfillment_holds": {
+          "type": "array",
+          "items": false
+        },
+        "delivery_method": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "method_type": {
+              "type": "string"
+            },
+            "min_delivery_date_time": {
+              "type": "null"
+            },
+            "max_delivery_date_time": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "method_type",
+            "min_delivery_date_time",
+            "max_delivery_date_time"
+          ]
+        },
+        "assigned_location": {
+          "type": "object",
+          "properties": {
+            "address1": {
+              "type": "null"
+            },
+            "address2": {
+              "type": "null"
+            },
+            "city": {
+              "type": "null"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "null"
+            },
+            "province": {
+              "type": "null"
+            },
+            "zip": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "address1",
+            "address2",
+            "city",
+            "country_code",
+            "location_id",
+            "name",
+            "phone",
+            "province",
+            "zip"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "shop_id",
+        "order_id",
+        "assigned_location_id",
+        "request_status",
+        "status",
+        "supported_actions",
+        "destination",
+        "line_items",
+        "fulfill_at",
+        "fulfill_by",
+        "international_duties",
+        "fulfillment_holds",
+        "delivery_method",
+        "assigned_location"
+      ]
+    },
+    "held_fulfillment_order_line_items": {
+      "type": "array",
+      "items": false
+    }
+  },
+  "required": [
+    "fulfillment_order",
+    "remaining_fulfillment_order",
+    "held_fulfillment_order_line_items"
+  ]
+}

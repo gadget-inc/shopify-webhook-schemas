@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "discounts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a discount is deleted.",
+  "name": "discounts/delete",
+  "related_resource": "PriceRule",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/DiscountAutomaticNode/1",
+    "deleted_at": "2018-08-29T15:00:00-04:00"
+  },
+  "shop_feature": false
+}

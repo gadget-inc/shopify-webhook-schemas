@@ -1,0 +1,55 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a customer is created.",
+  "name": "customers/create",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Customer",
+  "response": {
+    "id": 706405506930370000,
+    "email": null,
+    "created_at": "2021-12-31T19:00:00-05:00",
+    "updated_at": "2021-12-31T19:00:00-05:00",
+    "first_name": "Bob",
+    "last_name": "Biller",
+    "state": "disabled",
+    "note": "This customer loves ice cream",
+    "verified_email": true,
+    "multipass_identifier": null,
+    "tax_exempt": false,
+    "currency": "USD",
+    "phone": null,
+    "addresses": [],
+    "tax_exemptions": [],
+    "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084",
+    "default_address": {
+      "id": 12321,
+      "customer_id": 706405506930370000,
+      "first_name": "Bob",
+      "last_name": "Biller",
+      "company": null,
+      "address1": "151 O'Connor Street",
+      "address2": null,
+      "city": "Ottawa",
+      "province": "ON",
+      "country": "CA",
+      "zip": "K2P 2L8",
+      "phone": "555-555-5555",
+      "name": "Bob Biller",
+      "province_code": "ON",
+      "country_code": "CA",
+      "country_name": "CA",
+      "default": true
+    }
+  },
+  "shop_feature": false
+}

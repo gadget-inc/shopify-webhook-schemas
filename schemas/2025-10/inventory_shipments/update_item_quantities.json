@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "items_updated": {
+      "items": {
+        "properties": {
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "new_quantity": {
+            "type": "integer"
+          },
+          "old_quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "new_quantity",
+          "old_quantity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "happened_at",
+    "id",
+    "items_updated"
+  ],
+  "type": "object"
+}

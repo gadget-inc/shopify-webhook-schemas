@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "products"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Notifies when a SellingPlanGroup is deleted.",
+  "name": "selling_plan_groups/delete",
+  "related_resource": "SellingPlanGroup",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518901",
+    "id": 1039518901
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "admin_graphql_api_order_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "admin_graphql_api_subscription_contract_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "error_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "error_message": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "idempotency_key": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "ready": {
+      "type": "boolean"
+    },
+    "subscription_contract_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "admin_graphql_api_order_id",
+    "admin_graphql_api_subscription_contract_id",
+    "error_code",
+    "error_message",
+    "id",
+    "idempotency_key",
+    "order_id",
+    "ready",
+    "subscription_contract_id"
+  ],
+  "type": "object"
+}
