@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "provider_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "provider_title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "order_id": {
+      "type": "null"
+    },
+    "admin_graphql_api_order_id": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "provider_id",
+    "provider_title",
+    "risk_level",
+    "created_at",
+    "order_id",
+    "admin_graphql_api_order_id"
+  ]
+}

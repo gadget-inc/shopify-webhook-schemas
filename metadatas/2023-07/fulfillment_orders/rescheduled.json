@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Triggers when a fulfillment order is rescheduled.\n\nFulfillment orders may be merged if they have the same `fulfillAt` datetime.\nIf the fulfillment order is merged then the resulting fulfillment order will be indicated in the webhook body.\nOtherwise it will be the original fulfillment order with an updated `fulfill_at` datetime.\n",
+  "name": "fulfillment_orders/rescheduled",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "scheduled",
+      "fulfill_at": "2021-12-31T19:00:00-05:00"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a merchant submits a fulfillment request to a 3PL.",
+  "name": "fulfillment_orders/fulfillment_request_submitted",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "original_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open",
+      "request_status": "unsubmitted"
+    },
+    "submitted_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open",
+      "request_status": "unsubmitted"
+    },
+    "fulfillment_order_merchant_request": {
+      "id": "gid://shopify/FulfillmentOrderMerchantRequest/1",
+      "message": "Fragile"
+    }
+  },
+  "shop_feature": false
+}

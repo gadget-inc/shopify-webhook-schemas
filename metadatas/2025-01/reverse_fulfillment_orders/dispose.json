@@ -1,0 +1,48 @@
+{
+  "access_scopes": [
+    "returns",
+    "marketplace_returns"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a disposition is made on a reverse fulfillment order.\nThis includes dispositions made on reverse deliveries that are associated with the reverse fulfillment order.\n",
+  "name": "reverse_fulfillment_orders/dispose",
+  "related_resource": "ReverseFulfillmentOrder",
+  "response": {
+    "id": 11111111,
+    "admin_graphql_api_id": "gid://shopify/ReverseFulfillmentOrder/11111111",
+    "dispositions": [
+      {
+        "reverse_fulfillment_order_line_item": {
+          "id": 2222222,
+          "admin_graphql_api_id": "gid://shopify/ReverseFulfillmentOrderLineItem/2222222"
+        },
+        "reverse_delivery_line_item": null,
+        "type": "restocked",
+        "location": {
+          "id": 3333333,
+          "admin_graphql_api_id": "gid://shopify/Location/3333333"
+        },
+        "quantity": 1
+      },
+      {
+        "reverse_fulfillment_order_line_item": {
+          "id": 2222223,
+          "admin_graphql_api_id": "gid://shopify/ReverseFulfillmentOrderLineItem/2222223"
+        },
+        "reverse_delivery_line_item": null,
+        "type": "restocked",
+        "location": {
+          "id": 3333333,
+          "admin_graphql_api_id": "gid://shopify/Location/3333333"
+        },
+        "quantity": 1
+      }
+    ],
+    "total_dispositions": 2
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,364 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "company_contact": {
+      "type": "object",
+      "properties": {
+        "customer_admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "external_id": {
+              "type": "string"
+            },
+            "main_contact_admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "customer_since": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "name",
+            "note",
+            "external_id",
+            "main_contact_admin_graphql_api_id",
+            "created_at",
+            "updated_at",
+            "customer_since",
+            "admin_graphql_api_id"
+          ]
+        }
+      },
+      "required": [
+        "customer_admin_graphql_api_id",
+        "title",
+        "locale",
+        "created_at",
+        "updated_at",
+        "admin_graphql_api_id",
+        "company"
+      ]
+    },
+    "company_location": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "external_id": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        },
+        "buyer_experience_configuration": {
+          "type": "null"
+        },
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "tax_exemptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "external_id": {
+              "type": "string"
+            },
+            "main_contact_admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "customer_since": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "name",
+            "note",
+            "external_id",
+            "main_contact_admin_graphql_api_id",
+            "created_at",
+            "updated_at",
+            "customer_since",
+            "admin_graphql_api_id"
+          ]
+        },
+        "billing_address": {
+          "type": "object",
+          "properties": {
+            "address1": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "province": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "recipient": {
+              "type": "string"
+            },
+            "first_name": {
+              "type": "null"
+            },
+            "last_name": {
+              "type": "null"
+            },
+            "address2": {
+              "type": "null"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "zone_code": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "company_admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "address1",
+            "city",
+            "province",
+            "country",
+            "zip",
+            "recipient",
+            "first_name",
+            "last_name",
+            "address2",
+            "phone",
+            "zone_code",
+            "country_code",
+            "created_at",
+            "updated_at",
+            "admin_graphql_api_id",
+            "company_admin_graphql_api_id"
+          ]
+        },
+        "shipping_address": {
+          "type": "object",
+          "properties": {
+            "address1": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "province": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "recipient": {
+              "type": "string"
+            },
+            "first_name": {
+              "type": "null"
+            },
+            "last_name": {
+              "type": "null"
+            },
+            "address2": {
+              "type": "null"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "zone_code": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "company_admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "address1",
+            "city",
+            "province",
+            "country",
+            "zip",
+            "recipient",
+            "first_name",
+            "last_name",
+            "address2",
+            "phone",
+            "zone_code",
+            "country_code",
+            "created_at",
+            "updated_at",
+            "admin_graphql_api_id",
+            "company_admin_graphql_api_id"
+          ]
+        },
+        "tax_registration": {
+          "type": "object",
+          "properties": {
+            "tax_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "tax_id"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "external_id",
+        "phone",
+        "locale",
+        "created_at",
+        "updated_at",
+        "note",
+        "buyer_experience_configuration",
+        "admin_graphql_api_id",
+        "tax_exemptions",
+        "company",
+        "billing_address",
+        "shipping_address",
+        "tax_registration"
+      ]
+    },
+    "company_contact_role": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  "required": [
+    "company_contact",
+    "company_location",
+    "company_contact_role"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "product_listings"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Triggers when product feed is created",
+  "name": "product_feeds/create",
+  "related_resource": "ProductFeed",
+  "response": {
+    "id": "gid://shopify/ProductFeed/",
+    "country": "CA",
+    "language": "EN",
+    "status": ""
+  }
+}

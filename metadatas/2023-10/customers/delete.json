@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a customer is deleted.",
+  "name": "customers/delete",
+  "related_resource": "Customer",
+  "response": {
+    "id": 706405506930370000,
+    "phone": null,
+    "addresses": [],
+    "accepts_marketing": false,
+    "accepts_marketing_updated_at": null,
+    "marketing_opt_in_level": null,
+    "tax_exemptions": [],
+    "email_marketing_consent": null,
+    "sms_marketing_consent": null,
+    "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084"
+  }
+}

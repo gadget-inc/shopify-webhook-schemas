@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "orders_count": {
+      "type": "integer"
+    },
+    "state": {
+      "type": "string"
+    },
+    "total_spent": {
+      "type": "string"
+    },
+    "last_order_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "verified_email": {
+      "type": "boolean"
+    },
+    "multipass_identifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tax_exempt": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "last_order_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currency": {
+      "type": "string"
+    },
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "addresses": {
+      "type": "array",
+      "items": false
+    },
+    "accepts_marketing": {
+      "type": "boolean"
+    },
+    "accepts_marketing_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "marketing_opt_in_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tax_exemptions": {
+      "type": "array",
+      "items": false
+    },
+    "email_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "sms_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "id",
+    "email",
+    "created_at",
+    "updated_at",
+    "first_name",
+    "last_name",
+    "orders_count",
+    "state",
+    "total_spent",
+    "last_order_id",
+    "note",
+    "verified_email",
+    "multipass_identifier",
+    "tax_exempt",
+    "tags",
+    "last_order_name",
+    "currency",
+    "phone",
+    "addresses",
+    "accepts_marketing",
+    "accepts_marketing_updated_at",
+    "marketing_opt_in_level",
+    "tax_exemptions",
+    "email_marketing_consent",
+    "sms_marketing_consent",
+    "admin_graphql_api_id"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a subscription contract billing cycle is unskipped.",
+  "name": "subscription_billing_cycles/unskip",
+  "related_resource": "SubscriptionBillingCycle",
+  "response": {
+    "subscription_contract_id": 7581408600,
+    "cycle_start_at": "2022-10-01T00:00:00-04:00",
+    "cycle_end_at": "2022-11-01T00:00:00-04:00",
+    "cycle_index": 1,
+    "contract_edit": null,
+    "billing_attempt_expected_date": "2022-11-01T00:00:00-04:00",
+    "skipped": false,
+    "edited": true
+  },
+  "shop_feature": false
+}

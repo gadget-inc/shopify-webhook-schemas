@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "buyer_membership_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when an order has finished being routed and it's fulfillment orders assigned to a fulfillment service's location.",
+  "name": "fulfillment_orders/order_routing_complete",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open"
+    }
+  }
+}

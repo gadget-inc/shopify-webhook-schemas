@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a 3PL accepts a fulfillment cancellation request, received from a merchant.",
+  "name": "fulfillment_orders/cancellation_request_accepted",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "closed"
+    },
+    "message": "Order has not been shipped yet."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a fulfillment service accepts a request to fulfill a fulfillment order.",
+  "name": "fulfillment_orders/fulfillment_request_accepted",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "in_progress",
+      "request_status": "accepted"
+    },
+    "message": "We will ship the item tomorrow."
+  }
+}

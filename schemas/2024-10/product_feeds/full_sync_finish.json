@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "resource": {
+          "type": "string"
+        },
+        "fullSyncId": {
+          "type": "string",
+          "format": "uri"
+        },
+        "truncatedFields": {
+          "type": "array",
+          "items": false
+        },
+        "occurred_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "action",
+        "type",
+        "resource",
+        "fullSyncId",
+        "truncatedFields",
+        "occurred_at"
+      ]
+    },
+    "productFeed": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "shop_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "country": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "shop_id",
+        "country",
+        "language"
+      ]
+    },
+    "fullSync": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
+        },
+        "errorCode": {
+          "type": "null"
+        },
+        "status": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "createdAt",
+        "errorCode",
+        "status",
+        "count",
+        "url"
+      ]
+    }
+  },
+  "required": [
+    "metadata",
+    "productFeed",
+    "fullSync"
+  ]
+}
