@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "products"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a product is deleted.",
+  "name": "products/delete",
+  "related_resource": "Product",
+  "response": {
+    "id": 788032119674292900
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "collection_listing": {
+      "type": "object",
+      "properties": {
+        "collection_id": {
+          "type": "integer"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sort_order": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "collection_id"
+      ]
+    }
+  },
+  "required": [
+    "collection_listing"
+  ]
+}

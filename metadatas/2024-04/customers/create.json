@@ -1,0 +1,43 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a customer is created.",
+  "name": "customers/create",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Customer",
+  "response": {
+    "id": 706405506930370000,
+    "email": "bob@biller.com",
+    "created_at": "2021-12-31T19:00:00-05:00",
+    "updated_at": "2021-12-31T19:00:00-05:00",
+    "first_name": "Bob",
+    "last_name": "Biller",
+    "orders_count": 0,
+    "state": "disabled",
+    "total_spent": "0.00",
+    "last_order_id": null,
+    "note": "This customer loves ice cream",
+    "verified_email": true,
+    "multipass_identifier": null,
+    "tax_exempt": false,
+    "tags": "",
+    "last_order_name": null,
+    "currency": "USD",
+    "phone": null,
+    "addresses": [],
+    "tax_exemptions": [],
+    "email_marketing_consent": null,
+    "sms_marketing_consent": null,
+    "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084"
+  },
+  "shop_feature": false
+}

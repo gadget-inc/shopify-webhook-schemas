@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "return": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "admin_graphql_api_id"
+      ]
+    },
+    "shipping_deliverable": {
+      "type": "object",
+      "properties": {
+        "tracking": {
+          "type": "object",
+          "properties": {
+            "carrier_name": {
+              "type": "string"
+            },
+            "tracking_number": {
+              "type": "string"
+            },
+            "tracking_url": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "carrier_name",
+            "tracking_number",
+            "tracking_url"
+          ]
+        },
+        "label": {
+          "type": "object",
+          "properties": {
+            "public_file_url": {
+              "type": "null"
+            },
+            "created_at": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "public_file_url",
+            "created_at"
+          ]
+        }
+      },
+      "required": [
+        "tracking",
+        "label"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "admin_graphql_api_id",
+    "return",
+    "shipping_deliverable"
+  ]
+}
