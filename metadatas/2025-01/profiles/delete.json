@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "shipping",
+    "assigned_shipping"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a delivery profile is deleted",
+  "name": "profiles/delete",
+  "related_resource": "DeliveryProfile",
+  "response": {
+    "id": 1
+  },
+  "shop_feature": false
+}

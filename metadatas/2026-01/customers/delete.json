@@ -1,0 +1,20 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a customer is deleted.",
+  "name": "customers/delete",
+  "related_resource": "Customer",
+  "response": {
+    "id": 706405506930370000,
+    "tax_exemptions": [],
+    "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084"
+  },
+  "shop_feature": false
+}

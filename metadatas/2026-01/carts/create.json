@@ -1,0 +1,98 @@
+{
+  "access_scopes": [
+    "orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a cart is created in the online store. Other types of carts aren't supported. For example, the webhook doesn't support carts that are created in a custom storefront.",
+  "name": "carts/create",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "CartNext",
+  "response": {
+    "id": "exampleCartId",
+    "token": "exampleCartId",
+    "line_items": [
+      {
+        "id": 704912205188288500,
+        "properties": null,
+        "quantity": 3,
+        "variant_id": 704912205188288500,
+        "key": "704912205188288575:3abdf474dce81d0025dd15b9a02ef6bf",
+        "discounted_price": "19.99",
+        "discounts": [],
+        "gift_card": false,
+        "grams": 200,
+        "line_price": "59.97",
+        "original_line_price": "59.97",
+        "original_price": "19.99",
+        "price": "19.99",
+        "product_id": 788032119674292900,
+        "sku": "example-shirt-s",
+        "taxable": true,
+        "title": "Example T-Shirt - Small",
+        "total_discount": "39.98",
+        "vendor": "Acme",
+        "discounted_price_set": {
+          "shop_money": {
+            "amount": "19.99",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "19.99",
+            "currency_code": "USD"
+          }
+        },
+        "line_price_set": {
+          "shop_money": {
+            "amount": "59.97",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "59.97",
+            "currency_code": "USD"
+          }
+        },
+        "original_line_price_set": {
+          "shop_money": {
+            "amount": "59.97",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "59.97",
+            "currency_code": "USD"
+          }
+        },
+        "price_set": {
+          "shop_money": {
+            "amount": "19.99",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "19.99",
+            "currency_code": "USD"
+          }
+        },
+        "total_discount_set": {
+          "shop_money": {
+            "amount": "39.98",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "39.98",
+            "currency_code": "USD"
+          }
+        }
+      }
+    ],
+    "note": null,
+    "updated_at": "2022-01-01T00:00:00.000Z",
+    "created_at": "2022-01-01T00:00:00.000Z"
+  },
+  "shop_feature": false
+}

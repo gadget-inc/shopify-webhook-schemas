@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "inventory"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever an inventory level is connected.",
+  "name": "inventory_levels/connect",
+  "related_resource": "InventoryLevel",
+  "response": {},
+  "shop_feature": false
+}

@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "discounts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a discount is created.",
+  "name": "discounts/create",
+  "related_resource": "PriceRule",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/DiscountAutomaticNode/1",
+    "title": "Automatic free shipping",
+    "status": "ACTIVE",
+    "created_at": "2016-08-29T13:00:00-04:00",
+    "updated_at": "2016-08-29T13:00:00-04:00"
+  },
+  "shop_feature": false
+}

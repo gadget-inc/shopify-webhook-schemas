@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql"
+  ],
+  "description": "Triggers when tags are removed from a customer.",
+  "name": "customer.tags_removed",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Payload",
+  "response": {
+    "customerId": "gid://shopify/Customer/1",
+    "tags": [
+      "tag1",
+      "tag2"
+    ],
+    "occurredAt": "2005-05-05T00:00:00.000Z"
+  }
+}

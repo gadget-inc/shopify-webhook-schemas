@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "customer_id": {
+      "type": "integer"
+    },
+    "email_address": {
+      "format": "email",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "email_marketing_consent": {
+      "properties": {
+        "consent_updated_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "opt_in_level": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "consent_updated_at",
+        "opt_in_level",
+        "state"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "customer_id",
+    "email_address",
+    "email_marketing_consent"
+  ],
+  "type": "object"
+}

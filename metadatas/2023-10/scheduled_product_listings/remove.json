@@ -1,0 +1,17 @@
+{
+  "access_scopes": [
+    "product_listings"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a product is no longer scheduled to be published.",
+  "name": "scheduled_product_listings/remove",
+  "related_resource": "ProductListing",
+  "response": {
+    "scheduled_product_listing": {
+      "product_id": 788032119674292900
+    }
+  }
+}

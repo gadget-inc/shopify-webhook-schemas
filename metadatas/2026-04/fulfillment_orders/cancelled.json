@@ -1,0 +1,28 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a fulfillment order is cancelled.",
+  "name": "fulfillment_orders/cancelled",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "cancelled"
+    },
+    "replacement_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/2",
+      "status": "open"
+    }
+  },
+  "shop_feature": false
+}

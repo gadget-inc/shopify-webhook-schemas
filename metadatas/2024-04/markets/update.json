@@ -1,0 +1,25 @@
+{
+  "access_scopes": [
+    "markets"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a market is updated.",
+  "name": "markets/update",
+  "related_resource": "Market",
+  "response": {
+    "id": 188558248,
+    "name": "United States",
+    "enabled": true,
+    "regions": [
+      {
+        "country_code": "US"
+      }
+    ]
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "fulfillment_order": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status"
+      ],
+      "type": "object"
+    },
+    "initial_status": {
+      "type": "string"
+    },
+    "progress_report": {
+      "properties": {
+        "progress_reported_by_app": {
+          "properties": {
+            "id": {
+              "format": "uri",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "type": "object"
+        },
+        "progress_reported_by_user": {
+          "properties": {
+            "id": {
+              "format": "uri",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "type": "object"
+        },
+        "reason_notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "progress_reported_by_app",
+        "progress_reported_by_user",
+        "reason_notes"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "fulfillment_order",
+    "initial_status",
+    "progress_report"
+  ],
+  "type": "object"
+}

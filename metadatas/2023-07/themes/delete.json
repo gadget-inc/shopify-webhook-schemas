@@ -1,0 +1,15 @@
+{
+  "access_scopes": [
+    "themes"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a theme is deleted. Does not occur when theme files are deleted.",
+  "name": "themes/delete",
+  "related_resource": "Theme",
+  "response": {
+    "id": 512162865275216960
+  }
+}

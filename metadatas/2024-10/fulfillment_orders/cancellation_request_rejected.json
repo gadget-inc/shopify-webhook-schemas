@@ -1,0 +1,26 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a 3PL rejects a fulfillment cancellation request, received from a merchant.",
+  "name": "fulfillment_orders/cancellation_request_rejected",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "in_progress",
+      "request_status": "cancellation_rejected"
+    },
+    "message": "Order has already been shipped."
+  },
+  "shop_feature": false
+}

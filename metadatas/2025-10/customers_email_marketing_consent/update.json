@@ -1,0 +1,27 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a customer's email marketing consent is updated.",
+  "name": "customers_email_marketing_consent/update",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Customer",
+  "response": {
+    "customer_id": 706405506930370000,
+    "email_address": "bob@biller.com",
+    "email_marketing_consent": {
+      "state": null,
+      "opt_in_level": null,
+      "consent_updated_at": null
+    }
+  },
+  "shop_feature": false
+}

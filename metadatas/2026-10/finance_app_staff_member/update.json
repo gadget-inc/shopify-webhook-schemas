@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "financial_kyc_information"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a staff's information has been updated.",
+  "name": "finance_app_staff_member/update",
+  "related_resource": "User",
+  "response": {},
+  "shop_feature": false
+}

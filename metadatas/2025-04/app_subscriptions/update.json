@@ -1,0 +1,27 @@
+{
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever an app subscription is updated.",
+  "name": "app_subscriptions/update",
+  "related_resource": "RecurringApplicationCharge",
+  "response": {
+    "app_subscription": {
+      "admin_graphql_api_id": "gid://shopify/AppSubscription/1029266950",
+      "name": "Webhook Test",
+      "status": "PENDING",
+      "admin_graphql_api_shop_id": "gid://shopify/Shop/548380009",
+      "created_at": "2021-12-31T19:00:00-05:00",
+      "updated_at": "2021-12-31T19:00:00-05:00",
+      "currency": "USD",
+      "capped_amount": "20.0",
+      "price": "10.00",
+      "interval": "every_30_days",
+      "plan_handle": "plan-123"
+    }
+  },
+  "shop_feature": false
+}

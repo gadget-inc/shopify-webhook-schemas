@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "publications"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a collection publication listing is deleted.",
+  "name": "collection_publications/delete",
+  "related_resource": "CollectionPublication",
+  "response": {
+    "id": null
+  },
+  "shop_feature": false
+}

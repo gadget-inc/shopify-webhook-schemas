@@ -1,0 +1,34 @@
+{
+  "access_scopes": [
+    "orders",
+    "marketplace_orders",
+    "buyer_membership_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a requested order edit on an order is resolved.",
+  "name": "requested_order_edit/resolved",
+  "related_resource": "RequestedOrderEdit",
+  "response": {
+    "id": 963881762,
+    "admin_graphql_api_id": "gid://shopify/RequestedOrderEdit/963881762",
+    "status": "resolved",
+    "order_id": 820982911946154500,
+    "requested_at": "2026-01-15T07:00:00-05:00",
+    "line_items": {
+      "removals": [
+        {
+          "id": 1071823172,
+          "admin_graphql_api_id": "gid://shopify/RequestedOrderEditLineItem/1071823172",
+          "line_item_id": 866550311766439000,
+          "quantity": 2,
+          "resolved_quantity": 2
+        }
+      ]
+    }
+  },
+  "shop_feature": false
+}

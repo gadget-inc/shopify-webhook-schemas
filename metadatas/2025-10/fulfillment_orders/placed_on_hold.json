@@ -1,0 +1,66 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a fulfillment order transitions to the `ON_HOLD` status\n\nFor cases where multiple holds are applied to a fulfillment order, this webhook will only trigger once when the first hold is applied and the fulfillment order status changes to `ON_HOLD`.\n",
+  "name": "fulfillment_orders/placed_on_hold",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "on_hold",
+      "fulfillment_holds": [
+        {
+          "id": "gid://shopify/FulfillmentHold/1",
+          "reason": "other",
+          "reason_notes": "example",
+          "held_by_requesting_app": false,
+          "handle": "example-hold-1",
+          "held_by_app": {
+            "id": "gid://shopify/App/12345"
+          }
+        },
+        {
+          "id": "gid://shopify/FulfillmentHold/2",
+          "reason": "inventory_out_of_stock",
+          "reason_notes": "Stacked hold",
+          "held_by_requesting_app": false,
+          "handle": "example-hold-2",
+          "held_by_app": {
+            "id": "gid://shopify/App/12345"
+          }
+        }
+      ]
+    },
+    "remaining_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/2",
+      "status": "open"
+    },
+    "held_fulfillment_order_line_items": [
+      {
+        "id": "gid://shopify/FulfillmentOrderLineItem/3",
+        "quantity": 4
+      }
+    ],
+    "created_fulfillment_hold": {
+      "id": "gid://shopify/FulfillmentHold/1",
+      "reason": "other",
+      "reason_notes": "example",
+      "held_by_requesting_app": false,
+      "handle": "example-hold-1",
+      "held_by_app": {
+        "id": "gid://shopify/App/12345"
+      }
+    }
+  },
+  "shop_feature": false
+}

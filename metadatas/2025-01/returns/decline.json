@@ -1,0 +1,29 @@
+{
+  "access_scopes": [
+    "returns",
+    "marketplace_returns",
+    "buyer_membership_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a return is declined. This means `Return.status` is `DECLINED`.",
+  "name": "returns/decline",
+  "related_resource": "Return",
+  "response": {
+    "id": 123134564567890,
+    "admin_graphql_api_id": "gid://shopify/Return/123134564567890",
+    "status": "declined",
+    "order": {
+      "id": 4783296544821,
+      "admin_graphql_api_id": "gid://shopify/Order/4783296544821"
+    },
+    "decline": {
+      "reason": "return_period_ended",
+      "note": "As discussed on the phone, the 30-day return window has ended."
+    }
+  },
+  "shop_feature": false
+}

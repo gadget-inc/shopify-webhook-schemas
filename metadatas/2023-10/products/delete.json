@@ -1,0 +1,15 @@
+{
+  "access_scopes": [
+    "products"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a product is deleted.",
+  "name": "products/delete",
+  "related_resource": "Product",
+  "response": {
+    "id": 788032119674292900
+  }
+}

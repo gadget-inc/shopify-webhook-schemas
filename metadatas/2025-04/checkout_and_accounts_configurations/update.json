@@ -1,0 +1,22 @@
+{
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "The event occurs whenever a published checkout and account configuration is updated.",
+  "name": "checkout_and_accounts_configurations/update",
+  "related_resource": "Payload",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/CheckoutProfile/1",
+    "name": "Sample Checkout Profile",
+    "created_at": "2021-12-31T19:00:00-05:00",
+    "edited_at": "2021-12-31T19:00:00-05:00",
+    "updated_at": "2021-12-31T19:00:00-05:00",
+    "is_published": true,
+    "settings": {
+      "typ_osp_pages_enabled": false
+    }
+  },
+  "shop_feature": false
+}

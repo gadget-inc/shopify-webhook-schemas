@@ -1,0 +1,20 @@
+{
+  "access_scopes": [
+    "metaobjects"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a metaobject is deleted.",
+  "name": "metaobjects/delete",
+  "related_resource": "Metaobject",
+  "response": {
+    "id": "gid://shopify/Metaobject/123",
+    "type": "example-type",
+    "handle": "example-metaobject",
+    "created_by_app_id": "gid://shopify/ApiClient/333"
+  },
+  "shop_feature": false
+}

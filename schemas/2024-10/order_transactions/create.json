@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "amount_rounding": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "authorization": {
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "device_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "error_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "gateway": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "location_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "manual_payment_gateway": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "parent_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "payment_details": {
+      "properties": {
+        "avs_result_code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "buyer_action_info": {
+          "type": "null"
+        },
+        "credit_card_bin": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "credit_card_company": {
+          "type": "string"
+        },
+        "credit_card_expiration_month": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "credit_card_expiration_year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "credit_card_name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "credit_card_number": {
+          "type": "string"
+        },
+        "credit_card_wallet": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "cvv_result_code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "payment_method_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "avs_result_code",
+        "buyer_action_info",
+        "credit_card_bin",
+        "credit_card_company",
+        "credit_card_expiration_month",
+        "credit_card_expiration_year",
+        "credit_card_name",
+        "credit_card_number",
+        "credit_card_wallet",
+        "cvv_result_code",
+        "payment_method_name"
+      ],
+      "type": "object"
+    },
+    "payment_id": {
+      "type": "string"
+    },
+    "processed_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "receipt": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "test": {
+      "type": "boolean"
+    },
+    "total_unsettled_set": {
+      "properties": {
+        "presentment_money": {
+          "properties": {
+            "amount": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amount",
+            "currency"
+          ],
+          "type": "object"
+        },
+        "shop_money": {
+          "properties": {
+            "amount": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amount",
+            "currency"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "presentment_money",
+        "shop_money"
+      ],
+      "type": "object"
+    },
+    "user_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "amount",
+    "amount_rounding",
+    "authorization",
+    "created_at",
+    "currency",
+    "device_id",
+    "error_code",
+    "gateway",
+    "id",
+    "kind",
+    "location_id",
+    "manual_payment_gateway",
+    "message",
+    "order_id",
+    "parent_id",
+    "payment_details",
+    "payment_id",
+    "processed_at",
+    "receipt",
+    "source_name",
+    "status",
+    "test",
+    "total_unsettled_set",
+    "user_id"
+  ],
+  "type": "object"
+}

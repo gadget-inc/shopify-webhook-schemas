@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sms_marketing_consent": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "null"
+        },
+        "opt_in_level": {
+          "type": "null"
+        },
+        "consent_updated_at": {
+          "type": "null"
+        },
+        "consent_collected_from": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "opt_in_level",
+        "consent_updated_at",
+        "consent_collected_from"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "phone",
+    "sms_marketing_consent"
+  ]
+}

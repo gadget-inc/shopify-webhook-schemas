@@ -1,0 +1,28 @@
+{
+  "access_scopes": [
+    "inventory_transfers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs any time items are added to a transfer.",
+  "name": "inventory_transfers/add_items",
+  "related_resource": "Transfer",
+  "response": {
+    "id": "gid://shopify/InventoryTransfer/2921201",
+    "items_added": [
+      {
+        "line_item_id": "gid://shopify/InventoryTransferLineItem/72243",
+        "quantity": 14
+      },
+      {
+        "line_item_id": "gid://shopify/InventoryTransferLineItem/81958",
+        "quantity": 22
+      }
+    ],
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}

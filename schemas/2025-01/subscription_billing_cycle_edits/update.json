@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "billing_attempt_expected_date": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "contract_edit": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "cycle_end_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "cycle_index": {
+      "type": "integer"
+    },
+    "cycle_start_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "edited": {
+      "type": "boolean"
+    },
+    "skipped": {
+      "type": "boolean"
+    },
+    "subscription_contract_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "billing_attempt_expected_date",
+    "contract_edit",
+    "cycle_end_at",
+    "cycle_index",
+    "cycle_start_at",
+    "edited",
+    "skipped",
+    "subscription_contract_id"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "financial_kyc_information"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a staff is granted access to all or some finance app.",
+  "name": "finance_app_staff_member/grant",
+  "related_resource": "User",
+  "response": {},
+  "shop_feature": false,
+  "shopify_approval_scope": [
+    "read_financial_kyc_information"
+  ]
+}

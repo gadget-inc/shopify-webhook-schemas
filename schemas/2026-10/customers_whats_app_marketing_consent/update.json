@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "customer_id": {
+      "type": "integer"
+    },
+    "phone_number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "whats_app_marketing_consent": {
+      "properties": {
+        "collected_from": {
+          "type": "string"
+        },
+        "opt_in_level": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "collected_from",
+        "opt_in_level",
+        "state",
+        "updated_at"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "customer_id",
+    "phone_number",
+    "whats_app_marketing_consent"
+  ],
+  "type": "object"
+}

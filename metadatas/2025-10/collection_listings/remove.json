@@ -1,0 +1,20 @@
+{
+  "access_scopes": [
+    "product_listings"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a collection listing is removed.",
+  "name": "collection_listings/remove",
+  "related_resource": "CollectionPublication",
+  "response": {
+    "collection_listing": {
+      "collection_id": 408372092144951400
+    }
+  },
+  "shop_feature": false
+}

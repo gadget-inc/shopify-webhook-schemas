@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "locales"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a shop locale is created",
+  "name": "locales/create",
+  "related_resource": "ShopLocale",
+  "response": {
+    "locale": "fr-CA",
+    "published": true
+  }
+}

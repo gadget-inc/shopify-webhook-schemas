@@ -1,0 +1,21 @@
+{
+  "access_scopes": [
+    "rollouts"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a change in a rollout treatment targets a different resource. The change ID stays the same.",
+  "name": "rollouts/resource_change_updated",
+  "related_resource": "PayloadEnvelope",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/Rollout/123",
+    "treatment_id": "gid://shopify/RolloutTreatment/456",
+    "change_id": "gid://shopify/RolloutThemePublishChange/c265076973b138de5ca1d63e4d08860deb31a8903b277cc8575a2035048ccb03",
+    "resource_id": "gid://shopify/OnlineStoreTheme/402",
+    "occurred_at": "2026-09-21T16:00:00.000000Z"
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,37 @@
+{
+  "access_scopes": [
+    "inventory_shipments"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when items on a shipment are received.",
+  "name": "inventory_shipments/receive_items",
+  "related_resource": "Shipment",
+  "response": {
+    "id": "gid://shopify/InventoryShipment/3921201",
+    "status": "PARTIALLY_RECEIVED",
+    "items_received": [
+      {
+        "id": "gid://shopify/InventoryShipmentLineItem/82243",
+        "old_accepted_quantity": 5,
+        "old_rejected_quantity": 2,
+        "new_accepted_quantity": 11,
+        "new_rejected_quantity": 3,
+        "remaining_quantity_to_receive": 6
+      },
+      {
+        "id": "gid://shopify/InventoryShipmentLineItem/57116",
+        "old_accepted_quantity": 21,
+        "old_rejected_quantity": 9,
+        "new_accepted_quantity": 37,
+        "new_rejected_quantity": 14,
+        "remaining_quantity_to_receive": 16
+      }
+    ],
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}
