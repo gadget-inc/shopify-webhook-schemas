@@ -1,0 +1,26 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a 3PL rejects a fulfillment request that was sent by a merchant.",
+  "name": "fulfillment_orders/fulfillment_request_rejected",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open",
+      "request_status": "rejected"
+    },
+    "message": "Can't fulfill due to no inventory on product."
+  },
+  "shop_feature": false
+}

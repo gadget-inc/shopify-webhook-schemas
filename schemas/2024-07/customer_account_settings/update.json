@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "customer_accounts_version": {
+      "type": "string"
+    },
+    "login_required_at_checkout": {
+      "type": "boolean"
+    },
+    "login_links_visible_on_storefront_and_checkout": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "url",
+    "customer_accounts_version",
+    "login_required_at_checkout",
+    "login_links_visible_on_storefront_and_checkout"
+  ]
+}

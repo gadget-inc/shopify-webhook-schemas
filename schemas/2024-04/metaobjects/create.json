@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "handle": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "definition_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "example-key": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "example-key"
+      ]
+    },
+    "created_by_staff_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "created_by_app_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "publishable": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      },
+      "required": [
+        "publishable"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "handle",
+    "created_at",
+    "updated_at",
+    "display_name",
+    "id",
+    "definition_id",
+    "fields",
+    "created_by_staff_id",
+    "created_by_app_id",
+    "capabilities"
+  ]
+}
