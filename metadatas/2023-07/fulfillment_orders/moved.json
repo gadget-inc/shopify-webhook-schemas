@@ -1,0 +1,37 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever the location which is assigned to fulfill one or more fulfillment order line items is changed.\n\n* `original_fulfillment_order` - The final state of the original fulfillment order.\n* `moved_fulfillment_order` - The fulfillment order which now contains the re-assigned line items.\n* `source_location` - The original location which was assigned to fulfill the line items (available as of the `2023-04` API version).\n* `destination_location_id` - The ID of the location which is now responsible for fulfilling the line items.\n\n**Note:** The [assignedLocation](https://shopify.dev/docs/api/admin-graphql/latest/objects/fulfillmentorder#field-fulfillmentorder-assignedlocation)\nof the `original_fulfillment_order` might be changed by the move operation.\nIf you need to determine the originally assigned location, then you should refer to the `source_location`.\n\n[Learn more about moving line items](https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentOrderMove).\n",
+  "name": "fulfillment_orders/moved",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "original_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "closed",
+      "assigned_location_id": "gid://shopify/Location/0"
+    },
+    "moved_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/2",
+      "status": "open",
+      "assigned_location_id": "gid://shopify/Location/1"
+    },
+    "destination_location_id": "gid://shopify/Location/1",
+    "fulfillment_order_line_items_requested": [
+      {
+        "id": "gid://shopify/FulfillmentOrderLineItem/1",
+        "quantity": 1
+      }
+    ],
+    "source_location": {
+      "id": "gid://shopify/Location/0"
+    }
+  }
+}

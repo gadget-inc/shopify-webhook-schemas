@@ -1,0 +1,25 @@
+{
+  "access_scopes": [
+    "inventory_transfers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a transfer is canceled.",
+  "name": "inventory_transfers/cancel",
+  "related_resource": "Transfer",
+  "response": {
+    "id": "gid://shopify/InventoryTransfer/2921201",
+    "happened_at": "2023-09-01T08:19:56-04:00",
+    "origin": {
+      "id": "gid://shopify/Location/346779"
+    },
+    "destination": {
+      "id": "gid://shopify/Location/482156"
+    },
+    "status": "CANCELED"
+  },
+  "shop_feature": false
+}

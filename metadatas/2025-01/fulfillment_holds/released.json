@@ -1,0 +1,32 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs each time that a hold is released from a fulfillment order.\nFor cases where multiple holds are released from a fulfillment order a the same time, this webhook will trigger for each released hold.\n",
+  "name": "fulfillment_holds/released",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1"
+    },
+    "fulfillment_hold": {
+      "id": "gid://shopify/FulfillmentHold/1",
+      "reason": "other",
+      "reason_notes": "Waiting for some more details from the customer before this can be fulfilled.",
+      "held_by_requesting_app": false,
+      "handle": "fulfillment_hold_1",
+      "held_by_app": {
+        "id": "gid://shopify/App/12345"
+      }
+    }
+  },
+  "shop_feature": false
+}

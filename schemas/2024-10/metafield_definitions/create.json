@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "access": {
+      "type": "string"
+    },
+    "access_only": {
+      "type": "boolean"
+    },
+    "admin_filter_status": {
+      "type": "string"
+    },
+    "admin_filterable": {
+      "type": "boolean"
+    },
+    "admin_filterable_status": {
+      "type": "null"
+    },
+    "api_client_id": {
+      "type": "null"
+    },
+    "app_admin_access": {
+      "type": "null"
+    },
+    "app_config_managed": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "customer_access": {
+      "type": "null"
+    },
+    "deleting": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "null"
+    },
+    "id": {
+      "type": "null"
+    },
+    "key": {
+      "type": "string"
+    },
+    "merchant_writeable": {
+      "type": "null"
+    },
+    "name": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "namespace_owner_api_client_id": {
+      "type": "null"
+    },
+    "option_linkable": {
+      "type": "boolean"
+    },
+    "options": {
+      "items": false,
+      "type": "array"
+    },
+    "owner_type": {
+      "type": "string"
+    },
+    "pinned_position": {
+      "type": "integer"
+    },
+    "shop_id": {
+      "type": "integer"
+    },
+    "smart_collection_condition": {
+      "type": "boolean"
+    },
+    "standard_template_id": {
+      "type": "null"
+    },
+    "storefront_readable": {
+      "type": "null"
+    },
+    "type_name": {
+      "type": "string"
+    },
+    "unique_values": {
+      "type": "boolean"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "use_as_collection_condition": {
+      "type": "boolean"
+    },
+    "validation_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "access",
+    "access_only",
+    "admin_filter_status",
+    "admin_filterable",
+    "admin_filterable_status",
+    "api_client_id",
+    "app_admin_access",
+    "app_config_managed",
+    "created_at",
+    "customer_access",
+    "deleting",
+    "description",
+    "id",
+    "key",
+    "merchant_writeable",
+    "name",
+    "namespace",
+    "namespace_owner_api_client_id",
+    "option_linkable",
+    "options",
+    "owner_type",
+    "pinned_position",
+    "shop_id",
+    "smart_collection_condition",
+    "standard_template_id",
+    "storefront_readable",
+    "type_name",
+    "unique_values",
+    "updated_at",
+    "use_as_collection_condition",
+    "validation_status"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "items_received": {
+      "items": {
+        "properties": {
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "new_accepted_quantity": {
+            "type": "integer"
+          },
+          "new_rejected_quantity": {
+            "type": "integer"
+          },
+          "old_accepted_quantity": {
+            "type": "integer"
+          },
+          "old_rejected_quantity": {
+            "type": "integer"
+          },
+          "remaining_quantity_to_receive": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "new_accepted_quantity",
+          "new_rejected_quantity",
+          "old_accepted_quantity",
+          "old_rejected_quantity",
+          "remaining_quantity_to_receive"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "happened_at",
+    "id",
+    "items_received",
+    "status"
+  ],
+  "type": "object"
+}

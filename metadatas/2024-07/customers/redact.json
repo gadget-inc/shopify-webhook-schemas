@@ -1,0 +1,25 @@
+{
+  "available_on": [
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Store owners can request that data is deleted on behalf of a customer. When this happens, Shopify sends a payload on the customers/redact topic to the apps installed on that store.\n\nCustomer redaction occurs either at the end of the grace period after the redaction was requested (today + 10 days), OR the customer's last order date plus the chargeback period of 60 days (last order date + 60 days), whichever occurs later.",
+  "name": "customers/redact",
+  "privacy_compliance_topic": true,
+  "related_resource": "Customer",
+  "response": {
+    "shop_id": 954889,
+    "shop_domain": "{shop}.myshopify.com",
+    "customer": {
+      "id": 191167,
+      "email": "john@example.com",
+      "phone": "555-625-1199"
+    },
+    "orders_to_redact": [
+      299938,
+      280263,
+      220458
+    ]
+  },
+  "shop_feature": false
+}

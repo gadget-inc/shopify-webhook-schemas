@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "locales"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a shop locale is updated, such as published or unpublished",
+  "name": "locales/update",
+  "related_resource": "ShopLocale",
+  "response": {
+    "locale": "fr-CA",
+    "published": true
+  },
+  "shop_feature": false
+}

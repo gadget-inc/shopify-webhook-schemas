@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "address1": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "city": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "country": {
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "estimated_delivery_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "fulfillment_id": {
+      "type": "integer"
+    },
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "longitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "province": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "shop_id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "zip": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "address1",
+    "admin_graphql_api_id",
+    "city",
+    "country",
+    "created_at",
+    "estimated_delivery_at",
+    "fulfillment_id",
+    "happened_at",
+    "id",
+    "latitude",
+    "longitude",
+    "message",
+    "order_id",
+    "province",
+    "shop_id",
+    "status",
+    "updated_at",
+    "zip"
+  ],
+  "type": "object"
+}

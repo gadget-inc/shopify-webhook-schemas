@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "host": {
+      "type": "string",
+      "format": "hostname"
+    },
+    "ssl_enabled": {
+      "type": "boolean"
+    },
+    "localization": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "null"
+        },
+        "default_locale": {
+          "type": "string"
+        },
+        "alternate_locales": {
+          "type": "array",
+          "items": false
+        }
+      },
+      "required": [
+        "country",
+        "default_locale",
+        "alternate_locales"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "host",
+    "ssl_enabled",
+    "localization"
+  ]
+}

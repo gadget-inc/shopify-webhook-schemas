@@ -1,0 +1,29 @@
+{
+  "access_scopes": [
+    "inventory_transfers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a transfer is marked as ready to ship.",
+  "name": "inventory_transfers/ready_to_ship",
+  "related_resource": "Transfer",
+  "response": {
+    "id": "gid://shopify/InventoryTransfer/2921201",
+    "status": "READY_TO_SHIP",
+    "happened_at": "2023-09-01T08:19:56-04:00",
+    "line_items": [
+      {
+        "id": "gid://shopify/InventoryTransferLineItem/72243",
+        "quantity": 10
+      },
+      {
+        "id": "gid://shopify/InventoryTransferLineItem/81958",
+        "quantity": 8
+      }
+    ]
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "inventory_shipments"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a shipment is marked as in transit.",
+  "name": "inventory_shipments/mark_in_transit",
+  "related_resource": "Shipment",
+  "response": {
+    "id": "gid://shopify/InventoryShipment/3921201",
+    "status": "IN_TRANSIT",
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}

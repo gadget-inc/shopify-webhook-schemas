@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a customer leaves a segment.",
+  "name": "customer.left_segment",
+  "related_resource": "LeftSegment",
+  "response": {
+    "shop_id": "gid://shopify/Shop/1",
+    "customer_id": "gid://shopify/Customer/2",
+    "segment_id": "gid://shopify/Segment/3"
+  },
+  "shop_feature": false
+}

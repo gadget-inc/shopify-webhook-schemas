@@ -1,0 +1,1783 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "allow_discount_codes_in_checkout?": {
+      "type": "boolean"
+    },
+    "api_client_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "applied_discount": {
+      "properties": {
+        "amount": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "value_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "description",
+        "title",
+        "value",
+        "value_type"
+      ],
+      "type": [
+        "null",
+        "object"
+      ]
+    },
+    "b2b?": {
+      "type": "boolean"
+    },
+    "billing_address": {
+      "properties": {
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "city": {
+          "type": "string"
+        },
+        "company": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "longitude": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "province": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "province_code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "zip": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "address1",
+        "address2",
+        "city",
+        "company",
+        "country",
+        "country_code",
+        "first_name",
+        "last_name",
+        "latitude",
+        "longitude",
+        "name",
+        "phone",
+        "province",
+        "province_code",
+        "zip"
+      ],
+      "type": "object"
+    },
+    "completed_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "created_on_api_version_handle": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "currency": {
+      "type": "string"
+    },
+    "customer": {
+      "properties": {
+        "accepts_marketing": {
+          "type": "boolean"
+        },
+        "accepts_marketing_updated_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "currency": {
+          "type": "string"
+        },
+        "default_address": {
+          "properties": {
+            "address1": {
+              "type": "string"
+            },
+            "address2": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "city": {
+              "type": "string"
+            },
+            "company": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "country": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "country_name": {
+              "type": "string"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "default": {
+              "type": "boolean"
+            },
+            "first_name": {
+              "type": "string"
+            },
+            "id": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "province": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "province_code": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "zip": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "address1",
+            "address2",
+            "city",
+            "company",
+            "country",
+            "country_code",
+            "country_name",
+            "customer_id",
+            "default",
+            "first_name",
+            "id",
+            "last_name",
+            "name",
+            "phone",
+            "province",
+            "province_code",
+            "zip"
+          ],
+          "type": "object"
+        },
+        "email": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "email_marketing_consent": {
+          "properties": {
+            "consent_updated_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "opt_in_level": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "consent_updated_at",
+            "opt_in_level",
+            "state"
+          ],
+          "type": "object"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "last_order_id": {
+          "type": "integer"
+        },
+        "last_order_name": {
+          "type": "string"
+        },
+        "marketing_opt_in_level": {
+          "type": "string"
+        },
+        "metafields": {
+          "items": false,
+          "type": "array"
+        },
+        "multipass_identifier": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "note": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "orders_count": {
+          "type": "integer"
+        },
+        "phone": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "sms_marketing_consent": {
+          "properties": {
+            "consent_collected_from": {
+              "type": "string"
+            },
+            "consent_updated_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "opt_in_level": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "consent_collected_from",
+            "consent_updated_at",
+            "opt_in_level",
+            "state"
+          ],
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        "state": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "string"
+        },
+        "tax_exempt": {
+          "type": "boolean"
+        },
+        "tax_exemptions": {
+          "items": false,
+          "type": "array"
+        },
+        "total_spent": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "verified_email": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "created_at",
+        "currency",
+        "default_address",
+        "email",
+        "first_name",
+        "id",
+        "last_name",
+        "multipass_identifier",
+        "note",
+        "phone",
+        "state",
+        "tax_exempt",
+        "tax_exemptions",
+        "updated_at",
+        "verified_email"
+      ],
+      "type": "object"
+    },
+    "email": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "invoice_sent_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "invoice_url": {
+      "format": "uri",
+      "type": "string"
+    },
+    "line_items": {
+      "items": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "applied_discount": {
+            "properties": {
+              "amount": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "value_type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "description",
+              "title",
+              "value",
+              "value_type"
+            ],
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "attributed_staffs": {
+            "items": false,
+            "type": "array"
+          },
+          "current_quantity": {
+            "type": "integer"
+          },
+          "custom": {
+            "type": "boolean"
+          },
+          "discount_allocations": {
+            "items": {
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "amount_set": {
+                  "properties": {
+                    "presentment_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    },
+                    "shop_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "presentment_money",
+                    "shop_money"
+                  ],
+                  "type": "object"
+                },
+                "discount_application_index": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "amount",
+                "amount_set",
+                "discount_application_index"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "duties": {
+            "items": false,
+            "type": "array"
+          },
+          "fulfillable_quantity": {
+            "type": "integer"
+          },
+          "fulfillment_service": {
+            "type": "string"
+          },
+          "fulfillment_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gift_card": {
+            "type": "boolean"
+          },
+          "grams": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "pre_tax_price": {
+            "type": "string"
+          },
+          "pre_tax_price_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ],
+            "type": "object"
+          },
+          "price": {
+            "type": "string"
+          },
+          "price_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ],
+            "type": "object"
+          },
+          "product_exists": {
+            "type": "boolean"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "properties": {
+            "items": {
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "requires_shipping": {
+            "type": "boolean"
+          },
+          "sales_line_item_group_id": {
+            "type": "null"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "tax_lines": {
+            "items": {
+              "properties": {
+                "channel_liable": {
+                  "type": "boolean"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "price_set": {
+                  "properties": {
+                    "presentment_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    },
+                    "shop_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "presentment_money",
+                    "shop_money"
+                  ],
+                  "type": "object"
+                },
+                "rate": {
+                  "type": "number"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "price",
+                "rate",
+                "title"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "taxable": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "total_discount": {
+            "type": "string"
+          },
+          "total_discount_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ],
+            "type": "object"
+          },
+          "variant_id": {
+            "type": "integer"
+          },
+          "variant_inventory_management": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "variant_title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "vendor": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "admin_graphql_api_id",
+          "fulfillment_service",
+          "gift_card",
+          "grams",
+          "id",
+          "name",
+          "price",
+          "product_id",
+          "properties",
+          "quantity",
+          "requires_shipping",
+          "sku",
+          "tax_lines",
+          "taxable",
+          "title",
+          "variant_id",
+          "variant_title",
+          "vendor"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "note": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "note_attributes": {
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "order_id": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "payment_terms": {
+      "anyOf": [
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "shipping_address": {
+      "properties": {
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "city": {
+          "type": "string"
+        },
+        "company": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "longitude": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "province": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "province_code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "zip": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "address1",
+        "address2",
+        "city",
+        "company",
+        "country",
+        "country_code",
+        "first_name",
+        "last_name",
+        "latitude",
+        "longitude",
+        "name",
+        "phone",
+        "province",
+        "province_code",
+        "zip"
+      ],
+      "type": "object"
+    },
+    "shipping_line": {
+      "properties": {
+        "custom": {
+          "type": "boolean"
+        },
+        "handle": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "price": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "custom",
+        "handle",
+        "price",
+        "title"
+      ],
+      "type": [
+        "null",
+        "object"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "subtotal_price": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "tax_exempt": {
+      "type": "boolean"
+    },
+    "tax_lines": {
+      "items": {
+        "properties": {
+          "channel_liable": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "string"
+          },
+          "price_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ],
+            "type": "object"
+          },
+          "rate": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "price",
+          "rate",
+          "title"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "taxes_included": {
+      "type": "boolean"
+    },
+    "total_price": {
+      "type": "string"
+    },
+    "total_tax": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "allow_discount_codes_in_checkout?",
+    "api_client_id",
+    "applied_discount",
+    "b2b?",
+    "billing_address",
+    "completed_at",
+    "created_at",
+    "created_on_api_version_handle",
+    "currency",
+    "customer",
+    "email",
+    "id",
+    "invoice_sent_at",
+    "invoice_url",
+    "line_items",
+    "name",
+    "note",
+    "note_attributes",
+    "order_id",
+    "payment_terms",
+    "shipping_address",
+    "shipping_line",
+    "status",
+    "subtotal_price",
+    "tags",
+    "tax_exempt",
+    "tax_lines",
+    "taxes_included",
+    "total_price",
+    "total_tax",
+    "updated_at"
+  ],
+  "type": "object"
+}

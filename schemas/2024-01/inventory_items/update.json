@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "cost": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "country_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "country_harmonized_system_codes": {
+      "items": false,
+      "type": "array"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "harmonized_system_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "province_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "requires_shipping": {
+      "type": "boolean"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "tracked": {
+      "type": "boolean"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "cost",
+    "country_code_of_origin",
+    "country_harmonized_system_codes",
+    "created_at",
+    "harmonized_system_code",
+    "id",
+    "province_code_of_origin",
+    "requires_shipping",
+    "sku",
+    "tracked",
+    "updated_at"
+  ],
+  "type": "object"
+}

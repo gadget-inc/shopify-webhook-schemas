@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "addresses": {
+      "type": "array",
+      "items": false
+    },
+    "accepts_marketing": {
+      "type": "boolean"
+    },
+    "accepts_marketing_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "marketing_opt_in_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tax_exemptions": {
+      "type": "array",
+      "items": false
+    },
+    "email_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "sms_marketing_consent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "id",
+    "phone",
+    "addresses",
+    "accepts_marketing",
+    "accepts_marketing_updated_at",
+    "marketing_opt_in_level",
+    "tax_exemptions",
+    "email_marketing_consent",
+    "sms_marketing_consent",
+    "admin_graphql_api_id"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "access_scopes": [
+    "locations"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a location is deleted.",
+  "name": "locations/delete",
+  "related_resource": "Location",
+  "response": {
+    "id": 866550311766439000
+  }
+}

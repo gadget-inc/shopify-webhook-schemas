@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "fulfillment_order": {
+      "properties": {
+        "delivery_method": {
+          "properties": {
+            "method_type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "method_type"
+          ],
+          "type": "object"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "preparable": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "delivery_method",
+        "id",
+        "preparable",
+        "status"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "fulfillment_order"
+  ],
+  "type": "object"
+}

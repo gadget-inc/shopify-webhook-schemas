@@ -1,0 +1,29 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a fulfillment order is placed on hold.",
+  "name": "fulfillment_orders/placed_on_hold",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "on_hold",
+      "fulfillment_holds": [
+        {
+          "reason": "other",
+          "reason_notes": "example"
+        }
+      ]
+    },
+    "remaining_fulfillment_order": null,
+    "held_fulfillment_order_line_items": []
+  }
+}

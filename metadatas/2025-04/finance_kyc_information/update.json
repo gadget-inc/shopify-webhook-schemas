@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "financial_kyc_information"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever shop's finance KYC information was updated",
+  "name": "finance_kyc_information/update",
+  "related_resource": "FinanceKycInformation",
+  "response": {},
+  "shop_feature": false,
+  "shopify_approval_scope": [
+    "read_financial_kyc_information"
+  ]
+}

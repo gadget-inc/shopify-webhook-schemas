@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "amount": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "evidence_due_by": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "evidence_sent_on": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "finalized_on": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "initiated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "network_reason_code": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "amount",
+    "currency",
+    "evidence_due_by",
+    "evidence_sent_on",
+    "finalized_on",
+    "id",
+    "initiated_at",
+    "network_reason_code",
+    "order_id",
+    "reason",
+    "status",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,31 @@
+{
+  "access_scopes": [
+    "inventory_transfers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever the quantity of transfer line items changes.",
+  "name": "inventory_transfers/update_item_quantities",
+  "related_resource": "Transfer",
+  "response": {
+    "id": "gid://shopify/InventoryTransfer/2921201",
+    "status": "IN_PROGRESS",
+    "items_updated": [
+      {
+        "line_item_id": "gid://shopify/InventoryTransferLineItem/72243",
+        "old_quantity": 10,
+        "new_quantity": 23
+      },
+      {
+        "line_item_id": "gid://shopify/InventoryTransferLineItem/81958",
+        "old_quantity": 8,
+        "new_quantity": 15
+      }
+    ],
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}

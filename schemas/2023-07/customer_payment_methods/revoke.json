@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "token": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "integer"
+    },
+    "admin_graphql_api_customer_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "instrument_type": {
+      "type": "string"
+    },
+    "payment_instrument": {
+      "type": "object",
+      "properties": {
+        "last_digits": {
+          "type": "string",
+          "format": "time"
+        },
+        "month": {
+          "type": "integer"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "last_digits",
+        "month",
+        "year",
+        "name",
+        "brand"
+      ]
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "token",
+    "customer_id",
+    "admin_graphql_api_customer_id",
+    "instrument_type",
+    "payment_instrument"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "country_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "country_code"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "enabled",
+    "regions"
+  ]
+}

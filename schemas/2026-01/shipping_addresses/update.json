@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "city": {
+      "type": "string"
+    },
+    "company": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "country": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "longitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "province_code": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

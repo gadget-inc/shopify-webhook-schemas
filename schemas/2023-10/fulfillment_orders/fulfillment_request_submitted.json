@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "original_fulfillment_order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string"
+        },
+        "request_status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "request_status"
+      ]
+    },
+    "submitted_fulfillment_order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string"
+        },
+        "request_status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "request_status"
+      ]
+    },
+    "fulfillment_order_merchant_request": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "message"
+      ]
+    }
+  },
+  "required": [
+    "original_fulfillment_order",
+    "submitted_fulfillment_order",
+    "fulfillment_order_merchant_request"
+  ]
+}

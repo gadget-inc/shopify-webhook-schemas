@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "draft_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a draft order is deleted.",
+  "name": "draft_orders/delete",
+  "related_resource": "DraftOrder",
+  "response": {
+    "id": 890612572568261600
+  },
+  "shop_feature": false
+}

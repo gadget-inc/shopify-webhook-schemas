@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "merchant_code": {
+      "type": "string"
+    },
+    "admin_graphql_api_app": {
+      "type": "string",
+      "format": "uri"
+    },
+    "app_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "position": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "selling_plans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "position": {
+            "type": "null"
+          },
+          "description": {
+            "type": "null"
+          },
+          "billing_policy": {
+            "type": "object",
+            "properties": {
+              "interval": {
+                "type": "string"
+              },
+              "interval_count": {
+                "type": "integer"
+              },
+              "min_cycles": {
+                "type": "null"
+              },
+              "max_cycles": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "interval",
+              "interval_count",
+              "min_cycles",
+              "max_cycles"
+            ]
+          },
+          "delivery_policy": {
+            "type": "object",
+            "properties": {
+              "interval": {
+                "type": "string"
+              },
+              "interval_count": {
+                "type": "integer"
+              },
+              "anchors": {
+                "type": "array",
+                "items": false
+              },
+              "cutoff": {
+                "type": "null"
+              },
+              "pre_anchor_behavior": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "interval",
+              "interval_count",
+              "anchors",
+              "cutoff",
+              "pre_anchor_behavior"
+            ]
+          },
+          "pricing_policies": {
+            "type": "array",
+            "items": false
+          }
+        },
+        "required": [
+          "name",
+          "options",
+          "position",
+          "description",
+          "billing_policy",
+          "delivery_policy",
+          "pricing_policies"
+        ]
+      }
+    },
+    "product_variants": {
+      "type": "array",
+      "items": false
+    },
+    "products": {
+      "type": "array",
+      "items": false
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "id",
+    "name",
+    "merchant_code",
+    "admin_graphql_api_app",
+    "app_id",
+    "description",
+    "options",
+    "position",
+    "summary",
+    "selling_plans",
+    "product_variants",
+    "products"
+  ]
+}
