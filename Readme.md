@@ -42,6 +42,15 @@ const metadata = metadataForWebhook("2024-04", "products/update");
 //   "body_html": "An example T-Shirt",
 //   "created_at": null,
 // ...
+
+const topics = allTopicsForVersion("2024-04");
+// returns [
+//   'customer.tags_added',
+//   'customer.tags_removed',
+//   'app/uninstalled',
+//   'app_purchases_one_time/update',
+//   'app_subscriptions/approaching_capped_amount',
+// ...
 ```
 
 ### Refreshing

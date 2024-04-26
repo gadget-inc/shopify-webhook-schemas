@@ -38,3 +38,8 @@ export function metadataForWebhook(apiVersion: string, topic: string) {
 export function schemaForWebhook(apiVersion: string, topic: string) {
   return loaded.schemas[apiVersion][topic];
 }
+
+/** Return all the known webhook topics */
+export function allTopicsForVersion(apiVersion: string) {
+  return Object.keys(loaded.schemas[apiVersion])
+}
