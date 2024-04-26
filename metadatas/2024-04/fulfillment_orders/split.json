@@ -1,0 +1,34 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a fulfillment order is split into multiple fulfillment orders.",
+  "name": "fulfillment_orders/split",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "split_line_items": [
+      {
+        "id": "gid://shopify/FulfillmentOrderLineItem/1",
+        "quantity": 1
+      }
+    ],
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open"
+    },
+    "remaining_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/2",
+      "status": "open"
+    },
+    "replacement_fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/3",
+      "status": "open"
+    }
+  }
+}

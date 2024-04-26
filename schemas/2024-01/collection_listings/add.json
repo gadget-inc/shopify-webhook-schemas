@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "collection_listing": {
+      "type": "object",
+      "properties": {
+        "collection_id": {
+          "type": "integer"
+        },
+        "updated_at": {
+          "type": "null"
+        },
+        "body_html": {
+          "type": "string"
+        },
+        "default_product_image": {
+          "type": "null"
+        },
+        "handle": {
+          "type": "string"
+        },
+        "image": {
+          "type": "null"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sort_order": {
+          "type": "null"
+        },
+        "published_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "collection_id",
+        "updated_at",
+        "body_html",
+        "default_product_image",
+        "handle",
+        "image",
+        "title",
+        "sort_order",
+        "published_at"
+      ]
+    }
+  },
+  "required": [
+    "collection_listing"
+  ]
+}

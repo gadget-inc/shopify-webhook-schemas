@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "gateway": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "test": {
+      "type": "boolean"
+    },
+    "authorization": {
+      "type": "string",
+      "format": "time"
+    },
+    "location_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "parent_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "processed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "device_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "error_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "payment_details": {
+      "type": "object",
+      "properties": {
+        "credit_card_bin": {
+          "type": "null"
+        },
+        "avs_result_code": {
+          "type": "null"
+        },
+        "cvv_result_code": {
+          "type": "null"
+        },
+        "credit_card_number": {
+          "type": "string"
+        },
+        "credit_card_company": {
+          "type": "string"
+        },
+        "buyer_action_info": {
+          "type": "null"
+        },
+        "credit_card_name": {
+          "type": "null"
+        },
+        "credit_card_wallet": {
+          "type": "null"
+        },
+        "credit_card_expiration_month": {
+          "type": "null"
+        },
+        "credit_card_expiration_year": {
+          "type": "null"
+        },
+        "payment_method_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "credit_card_bin",
+        "avs_result_code",
+        "cvv_result_code",
+        "credit_card_number",
+        "credit_card_company",
+        "buyer_action_info",
+        "credit_card_name",
+        "credit_card_wallet",
+        "credit_card_expiration_month",
+        "credit_card_expiration_year",
+        "payment_method_name"
+      ]
+    },
+    "receipt": {
+      "type": "object"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "payment_id": {
+      "type": "string"
+    },
+    "total_unsettled_set": {
+      "type": "object",
+      "properties": {
+        "presentment_money": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amount",
+            "currency"
+          ]
+        },
+        "shop_money": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amount",
+            "currency"
+          ]
+        }
+      },
+      "required": [
+        "presentment_money",
+        "shop_money"
+      ]
+    },
+    "manual_payment_gateway": {
+      "type": "boolean"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "id",
+    "order_id",
+    "kind",
+    "gateway",
+    "status",
+    "message",
+    "created_at",
+    "test",
+    "authorization",
+    "location_id",
+    "user_id",
+    "parent_id",
+    "processed_at",
+    "device_id",
+    "error_code",
+    "source_name",
+    "payment_details",
+    "receipt",
+    "amount",
+    "currency",
+    "payment_id",
+    "total_unsettled_set",
+    "manual_payment_gateway",
+    "admin_graphql_api_id"
+  ]
+}

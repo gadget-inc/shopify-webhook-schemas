@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "files": [
+    "Readme.md",
+    "dist/index.*",
+    "metadatas/**/*",
+    "schemas/**/*"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "jest --runInBand",
+    "test": "node --import tsx --test test/*.test.ts",
     "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:prettier": "prettier --check \"{spec,src}/**/*.{js,ts}\"",
     "lint:eslint": "eslint --quiet --ext ts,tsx spec src",

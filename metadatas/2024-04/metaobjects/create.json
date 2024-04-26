@@ -1,0 +1,29 @@
+{
+  "access_scopes": [
+    "metaobjects"
+  ],
+  "available_on": [
+    "graphql"
+  ],
+  "description": "Occurs when a metaobject is created.",
+  "name": "metaobjects/create",
+  "related_resource": "Metaobject",
+  "response": {
+    "type": "example-type",
+    "handle": "example-metaobject",
+    "created_at": "1975-10-31T00:55:12-05:00",
+    "updated_at": "1985-07-13T01:55:12-04:00",
+    "id": "gid://shopify/Metaobject/123",
+    "definition_id": "gid://shopify/MetaobjectDefinition/222",
+    "fields": {
+      "example-key": "example-value"
+    },
+    "created_by_staff_id": "gid://shopify/StaffMember/444",
+    "created_by_app_id": "gid://shopify/ApiClient/333",
+    "capabilities": {
+      "publishable": {
+        "status": "draft"
+      }
+    }
+  }
+}

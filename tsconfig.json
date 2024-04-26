@@ -14,5 +14,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["scrape.ts", "index.ts"]
+  "include": ["src", "test"]
 }

@@ -1,0 +1,14 @@
+{
+  "available_on": [
+    "graphql"
+  ],
+  "description": "Triggers when merchants change customer account setting.",
+  "name": "customer_account_settings/update",
+  "related_resource": "CustomerSettingsRecord",
+  "response": {
+    "url": null,
+    "customer_accounts_version": "classic",
+    "login_required_at_checkout": true,
+    "login_links_visible_on_storefront_and_checkout": true
+  }
+}

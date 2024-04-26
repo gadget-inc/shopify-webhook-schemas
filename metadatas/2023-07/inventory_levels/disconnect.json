@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "inventory"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever an inventory level is disconnected.",
+  "name": "inventory_levels/disconnect",
+  "related_resource": "InventoryLevel",
+  "response": {
+    "inventory_item_id": 271878346596884000,
+    "location_id": 24826418
+  }
+}

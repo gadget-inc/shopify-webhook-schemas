@@ -1,0 +1,20 @@
+{
+  "access_scopes": [
+    "discounts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a redeem code is added to a code discount.",
+  "name": "discounts/redeemcode_added",
+  "related_resource": "DiscountsRedeemcodeWebhookPayload",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/DiscountCodeNode/1",
+    "redeem_code": {
+      "id": "gid://shopify/DiscountRedeemCode/1",
+      "code": "code1"
+    },
+    "updated_at": "2018-08-29T12:00:00.000Z"
+  }
+}

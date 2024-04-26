@@ -1,0 +1,26 @@
+{
+  "access_scopes": [
+    "orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a checkout is deleted.",
+  "name": "checkouts/delete",
+  "related_resource": "Checkout",
+  "response": {
+    "id": 981820079255243500,
+    "presentment_currency": "USD",
+    "buyer_accepts_sms_marketing": false,
+    "sms_marketing_phone": null,
+    "total_discounts": "0.00",
+    "total_line_items_price": "398.00",
+    "total_price": "421.88",
+    "total_tax": "23.88",
+    "subtotal_price": "398.00",
+    "cart_token": "eeafa272cebfd4b22385bc4b645e762c",
+    "total_duties": null,
+    "reservation_token": null
+  }
+}

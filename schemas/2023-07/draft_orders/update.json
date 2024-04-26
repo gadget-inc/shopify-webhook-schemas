@@ -1,0 +1,702 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "taxes_included": {
+      "type": "boolean"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "invoice_sent_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tax_exempt": {
+      "type": "boolean"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "variant_id": {
+            "type": "integer"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "variant_title": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "vendor": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "requires_shipping": {
+            "type": "boolean"
+          },
+          "taxable": {
+            "type": "boolean"
+          },
+          "gift_card": {
+            "type": "boolean"
+          },
+          "fulfillment_service": {
+            "type": "string"
+          },
+          "grams": {
+            "type": "integer"
+          },
+          "tax_lines": {
+            "type": "array",
+            "items": false
+          },
+          "applied_discount": {
+            "type": "null"
+          },
+          "name": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "array",
+            "items": false
+          },
+          "custom": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "string"
+          },
+          "admin_graphql_api_id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "id",
+          "variant_id",
+          "product_id",
+          "title",
+          "variant_title",
+          "sku",
+          "vendor",
+          "quantity",
+          "requires_shipping",
+          "taxable",
+          "gift_card",
+          "fulfillment_service",
+          "grams",
+          "tax_lines",
+          "applied_discount",
+          "name",
+          "properties",
+          "custom",
+          "price",
+          "admin_graphql_api_id"
+        ]
+      }
+    },
+    "shipping_address": {
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "null"
+        },
+        "company": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "null"
+        },
+        "longitude": {
+          "type": "null"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "province_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "address1",
+        "phone",
+        "city",
+        "zip",
+        "province",
+        "country",
+        "last_name",
+        "address2",
+        "company",
+        "latitude",
+        "longitude",
+        "name",
+        "country_code",
+        "province_code"
+      ]
+    },
+    "billing_address": {
+      "type": "object",
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "null"
+        },
+        "company": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "null"
+        },
+        "longitude": {
+          "type": "null"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "province_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "address1",
+        "phone",
+        "city",
+        "zip",
+        "province",
+        "country",
+        "last_name",
+        "address2",
+        "company",
+        "latitude",
+        "longitude",
+        "name",
+        "country_code",
+        "province_code"
+      ]
+    },
+    "invoice_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "applied_discount": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "value_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "value",
+        "title",
+        "amount",
+        "value_type"
+      ]
+    },
+    "order_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "shipping_line": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "custom": {
+          "type": "boolean"
+        },
+        "handle": {
+          "type": "null"
+        },
+        "price": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "custom",
+        "handle",
+        "price"
+      ]
+    },
+    "tax_lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rate",
+          "title",
+          "price"
+        ]
+      }
+    },
+    "tags": {
+      "type": "string"
+    },
+    "note_attributes": {
+      "type": "array",
+      "items": false
+    },
+    "total_price": {
+      "type": "string"
+    },
+    "subtotal_price": {
+      "type": "string"
+    },
+    "total_tax": {
+      "type": "string"
+    },
+    "payment_terms": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "payment_terms_name": {
+          "type": "string"
+        },
+        "payment_terms_type": {
+          "type": "string"
+        },
+        "due_in_days": {
+          "type": "integer"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "payment_schedules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "payment_terms_id": {
+                "type": "integer"
+              },
+              "issued_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "due_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "completed_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "amount": {
+                "type": "string"
+              },
+              "currency": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "created_at",
+              "updated_at",
+              "payment_terms_id",
+              "issued_at",
+              "due_at",
+              "completed_at",
+              "amount",
+              "currency"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "payment_terms_name",
+        "payment_terms_type",
+        "due_in_days",
+        "created_at",
+        "updated_at",
+        "payment_schedules"
+      ]
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "created_at": {
+          "type": "null"
+        },
+        "updated_at": {
+          "type": "null"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "orders_count": {
+          "type": "integer"
+        },
+        "state": {
+          "type": "string"
+        },
+        "total_spent": {
+          "type": "string"
+        },
+        "last_order_id": {
+          "type": "null"
+        },
+        "note": {
+          "type": "null"
+        },
+        "verified_email": {
+          "type": "boolean"
+        },
+        "multipass_identifier": {
+          "type": "null"
+        },
+        "tax_exempt": {
+          "type": "boolean"
+        },
+        "tags": {
+          "type": "string"
+        },
+        "last_order_name": {
+          "type": "null"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "null"
+        },
+        "accepts_marketing": {
+          "type": "boolean"
+        },
+        "accepts_marketing_updated_at": {
+          "type": "null"
+        },
+        "marketing_opt_in_level": {
+          "type": "null"
+        },
+        "tax_exemptions": {
+          "type": "array",
+          "items": false
+        },
+        "email_marketing_consent": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "type": "string"
+            },
+            "opt_in_level": {
+              "type": "null"
+            },
+            "consent_updated_at": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "state",
+            "opt_in_level",
+            "consent_updated_at"
+          ]
+        },
+        "sms_marketing_consent": {
+          "type": "null"
+        },
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "default_address": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "null"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "first_name": {
+              "type": "null"
+            },
+            "last_name": {
+              "type": "null"
+            },
+            "company": {
+              "type": "null"
+            },
+            "address1": {
+              "type": "string"
+            },
+            "address2": {
+              "type": "null"
+            },
+            "city": {
+              "type": "string"
+            },
+            "province": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "province_code": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "country_name": {
+              "type": "string"
+            },
+            "default": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "customer_id",
+            "first_name",
+            "last_name",
+            "company",
+            "address1",
+            "address2",
+            "city",
+            "province",
+            "country",
+            "zip",
+            "phone",
+            "name",
+            "province_code",
+            "country_code",
+            "country_name",
+            "default"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "created_at",
+        "updated_at",
+        "first_name",
+        "last_name",
+        "orders_count",
+        "state",
+        "total_spent",
+        "last_order_id",
+        "note",
+        "verified_email",
+        "multipass_identifier",
+        "tax_exempt",
+        "tags",
+        "last_order_name",
+        "currency",
+        "phone",
+        "accepts_marketing",
+        "accepts_marketing_updated_at",
+        "marketing_opt_in_level",
+        "tax_exemptions",
+        "email_marketing_consent",
+        "sms_marketing_consent",
+        "admin_graphql_api_id",
+        "default_address"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "note",
+    "email",
+    "taxes_included",
+    "currency",
+    "invoice_sent_at",
+    "created_at",
+    "updated_at",
+    "tax_exempt",
+    "completed_at",
+    "name",
+    "status",
+    "line_items",
+    "shipping_address",
+    "billing_address",
+    "invoice_url",
+    "applied_discount",
+    "order_id",
+    "shipping_line",
+    "tax_lines",
+    "tags",
+    "note_attributes",
+    "total_price",
+    "subtotal_price",
+    "total_tax",
+    "payment_terms",
+    "admin_graphql_api_id",
+    "customer"
+  ]
+}

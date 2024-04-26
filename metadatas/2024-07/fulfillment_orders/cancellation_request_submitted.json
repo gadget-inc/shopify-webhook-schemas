@@ -1,0 +1,26 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders",
+    "marketplace_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs when a merchant requests a fulfillment request to be cancelled after that request was approved by a 3PL.",
+  "name": "fulfillment_orders/cancellation_request_submitted",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "in_progress",
+      "request_status": "cancellation_request"
+    },
+    "fulfillment_order_merchant_request": {
+      "id": "gid://shopify/FulfillmentOrderMerchantRequest/1",
+      "message": "Customer cancelled their order"
+    }
+  }
+}

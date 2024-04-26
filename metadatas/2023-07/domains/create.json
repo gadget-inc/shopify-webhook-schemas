@@ -1,0 +1,19 @@
+{
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a domain is created.",
+  "name": "domains/create",
+  "related_resource": "Domain",
+  "response": {
+    "id": 690933842,
+    "host": "jsmith.myshopify.com",
+    "ssl_enabled": true,
+    "localization": {
+      "country": null,
+      "default_locale": "en",
+      "alternate_locales": []
+    }
+  }
+}

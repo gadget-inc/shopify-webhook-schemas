@@ -1,0 +1,17 @@
+{
+  "access_scopes": [
+    "products"
+  ],
+  "available_on": [
+    "graphql",
+    "rest"
+  ],
+  "description": "Occurs whenever a collection is deleted.",
+  "name": "collections/delete",
+  "related_resource": "Collection",
+  "response": {
+    "id": 408372092144951400,
+    "published_scope": "web",
+    "admin_graphql_api_id": "gid://shopify/Collection/408372092144951419"
+  }
+}
