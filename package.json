@@ -1,0 +1,42 @@
+{
+  "name": "shopify-webhook-schemas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "jest --runInBand",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
+    "lint:prettier": "prettier --check \"{spec,src}/**/*.{js,ts}\"",
+    "lint:eslint": "eslint --quiet --ext ts,tsx spec src",
+    "lint:fix": "prettier --write --check \"{spec,src}/**/*.{js,ts}\"; eslint --ext ts --fix spec src",
+    "build": "rm -rf dist && tsc",
+    "watch": "rm -rf dist && tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "pnpm run build",
+    "prerelease": "gitpkg publish",
+    "clean": "rm -rf *.0x *-v8.log",
+    "x": "tsx"
+  },
+  "keywords": [],
+  "author": "Harry Brundage",
+  "license": "MIT",
+  "devDependencies": {
+    "@gadgetinc/eslint-config": "^0.6.1",
+    "@gadgetinc/prettier-config": "^0.4.0",
+    "@jsonhero/schema-infer": "^0.1.5",
+    "@opentelemetry/api": "^1.8.0",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20.12.7",
+    "cheerio": "1.0.0-rc.12",
+    "eslint": "^8.52.0",
+    "got": "^11.8.6",
+    "inflected": "^2.1.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.8",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2"
+  }
+}
