@@ -4,6 +4,7 @@ import cheerio from "cheerio";
 import got from "got";
 import { cloneDeep, isEqual, isNull, template, uniq } from "lodash";
 import path from "path";
+import { getPackageRootDir } from "src";
 
 const startVersion = "2024-04";
 
@@ -71,7 +72,7 @@ const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, meta
 }
 
 const main = async () => {
-  const rootDir = path.join(__dirname);
+  const rootDir = getPackageRootDir();
   const rootPage = await loadRailsData(docsWebhooksPageForVersion(startVersion));
   const versions = uniq([startVersion, ...rootPage.api.selectable_versions]).filter((version) => version != "unstable");
 

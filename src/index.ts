@@ -4,7 +4,7 @@ import fastGlob from "fast-glob"
 
 const loaded: { [kind in "metadatas" | "schemas"]: { [apiVersion: string]: { [topic: string]: any } } } = { metadatas: {}, schemas: {} }
 
-function getAppRootDir() {
+export function getPackageRootDir() {
   let currentDir = __dirname
   while (!fs.existsSync(path.join(currentDir, 'package.json'))) {
     currentDir = path.join(currentDir, '..')
@@ -12,7 +12,7 @@ function getAppRootDir() {
   return currentDir
 }
 
-const rootDir = getAppRootDir()
+const rootDir = getPackageRootDir()
 
 
 for (const kind of ["metadatas", "schemas"] as const) {
