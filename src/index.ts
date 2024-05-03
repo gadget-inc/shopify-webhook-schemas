@@ -29,17 +29,23 @@ for (const kind of ["metadatas", "schemas"] as const) {
   }
 }
 
+const getVersion = <T>(obj: Record<string, T>, version: string): T => {
+  const value = obj[version];
+  if (value) return value;
+  throw new Error(`Unknown shopify api version ${version} in shopify-webhook-schemas package -- please pass a real version or regenerate the metadata`);
+}
+
 /** Return a metadata blob from Shopify's docs describing a webhook topic */
 export function metadataForWebhook(apiVersion: string, topic: string) {
-  return loaded.metadatas[apiVersion][topic];
+  return getVersion(loaded.metadatas, apiVersion)[topic];
 }
 
 /** Return the inferred JSON schema describing a webhook payload */
 export function schemaForWebhook(apiVersion: string, topic: string) {
-  return loaded.schemas[apiVersion][topic];
+  return getVersion(loaded.schemas, apiVersion)[topic];
 }
 
 /** Return all the known webhook topics */
 export function allTopicsForVersion(apiVersion: string) {
-  return Object.keys(loaded.schemas[apiVersion])
+  return Object.keys(getVersion(loaded.schemas, apiVersion));
 }
