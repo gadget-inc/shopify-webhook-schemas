@@ -46,19 +46,31 @@
         "null"
       ],
       "properties": {
-        "first_name": {
-          "type": "string"
-        },
         "address1": {
-          "type": "string"
-        },
-        "phone": {
           "type": "string"
         },
         "city": {
           "type": "string"
         },
         "zip": {
+          "type": "string"
+        },
+        "address2": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "province_code": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "phone": {
           "type": "string"
         },
         "province": {
@@ -69,9 +81,6 @@
         },
         "last_name": {
           "type": "string"
-        },
-        "address2": {
-          "type": "null"
         },
         "company": {
           "type": "string"
@@ -84,28 +93,13 @@
         },
         "name": {
           "type": "string"
-        },
-        "country_code": {
-          "type": "string"
-        },
-        "province_code": {
-          "type": "string"
         }
       },
       "required": [
-        "first_name",
         "address1",
-        "phone",
         "city",
         "zip",
-        "province",
-        "country",
-        "last_name",
         "address2",
-        "company",
-        "latitude",
-        "longitude",
-        "name",
         "country_code",
         "province_code"
       ]
@@ -145,13 +139,22 @@
           "type": "null"
         },
         "company": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "latitude": {
-          "type": "null"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "longitude": {
-          "type": "null"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "name": {
           "type": "string"
@@ -202,10 +205,16 @@
             "type": "string"
           },
           "variant_title": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "vendor": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "fulfillment_service": {
             "type": "string"
@@ -248,7 +257,10 @@
             "type": "string"
           },
           "fulfillment_status": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "price_set": {
             "type": "object",
@@ -396,7 +408,114 @@
           },
           "tax_lines": {
             "type": "array",
-            "items": false
+            "items": {
+              "type": "object",
+              "properties": {
+                "rate": {
+                  "type": "number"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "channel_liable": {
+                  "type": "boolean"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "price_set": {
+                  "type": "object",
+                  "properties": {
+                    "presentment_money": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ]
+                    },
+                    "shop_money": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "presentment_money",
+                    "shop_money"
+                  ]
+                }
+              },
+              "required": [
+                "rate",
+                "title",
+                "channel_liable",
+                "price",
+                "price_set"
+              ]
+            }
+          },
+          "tax_code": {
+            "type": "string"
+          },
+          "pre_tax_price_set": {
+            "type": "object",
+            "properties": {
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "currency_code": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "currency_code",
+                  "amount"
+                ]
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ]
+          },
+          "pre_tax_price": {
+            "type": "string"
           }
         },
         "required": [

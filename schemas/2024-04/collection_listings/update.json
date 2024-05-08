@@ -9,7 +9,11 @@
           "type": "integer"
         },
         "updated_at": {
-          "type": "null"
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "body_html": {
           "type": "string"
@@ -27,7 +31,10 @@
           "type": "string"
         },
         "sort_order": {
-          "type": "null"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "published_at": {
           "type": "string",

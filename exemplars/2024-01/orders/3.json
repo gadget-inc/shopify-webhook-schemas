@@ -1,0 +1,417 @@
+{
+  "current_total_price": "example string",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "note": "example string",
+  "total_discounts_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "original_total_additional_fees_set": null,
+  "total_weight": 123,
+  "note_attributes": [],
+  "name": "example string",
+  "source_name": "example string",
+  "tax_exempt": false,
+  "current_subtotal_price": "example string",
+  "company": null,
+  "tags": "example string",
+  "checkout_id": null,
+  "line_items": [
+    {
+      "variant_id": 123,
+      "name": "example string",
+      "quantity": 123,
+      "variant_title": "example string",
+      "requires_shipping": true,
+      "total_discount_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      },
+      "tax_lines": [],
+      "discount_allocations": [
+        {
+          "amount": "example string",
+          "amount_set": {
+            "presentment_money": {
+              "amount": "example string",
+              "currency_code": "example string"
+            },
+            "shop_money": {
+              "amount": "example string",
+              "currency_code": "example string"
+            }
+          },
+          "discount_application_index": 123
+        }
+      ],
+      "fulfillable_quantity": 123,
+      "fulfillment_status": "example string",
+      "sku": "example string",
+      "gift_card": false,
+      "taxable": true,
+      "current_quantity": 123,
+      "title": "example string",
+      "variant_inventory_management": "example string",
+      "id": 123,
+      "admin_graphql_api_id": "https://www.example.com/",
+      "properties": [],
+      "vendor": "example string",
+      "product_exists": true,
+      "price_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      },
+      "duties": [],
+      "price": "example string",
+      "fulfillment_service": "example string",
+      "grams": 123,
+      "product_id": 123,
+      "total_discount": "example string"
+    }
+  ],
+  "estimated_taxes": false,
+  "current_total_tax": "example string",
+  "total_shipping_price_set": {
+    "presentment_money": {
+      "currency_code": "example string",
+      "amount": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "cancel_reason": null,
+  "order_number": 123,
+  "reference": null,
+  "client_details": null,
+  "tax_lines": [],
+  "total_line_items_price": "example string",
+  "presentment_currency": "example string",
+  "subtotal_price": "example string",
+  "shipping_lines": [],
+  "total_price_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "total_line_items_price_set": {
+    "presentment_money": {
+      "currency_code": "example string",
+      "amount": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "landing_site_ref": null,
+  "current_total_tax_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "source_url": null,
+  "browser_ip": null,
+  "fulfillment_status": "example string",
+  "number": 123,
+  "total_tax_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "merchant_of_record_app_id": null,
+  "customer_locale": null,
+  "current_total_discounts_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "fulfillments": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "status": "example string",
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "tracking_number": null,
+      "line_items": [
+        {
+          "name": "example string",
+          "tax_lines": [],
+          "id": 123,
+          "fulfillment_service": "example string",
+          "product_id": 123,
+          "discount_allocations": [
+            {
+              "amount": "example string",
+              "amount_set": {
+                "presentment_money": {
+                  "amount": "example string",
+                  "currency_code": "example string"
+                },
+                "shop_money": {
+                  "amount": "example string",
+                  "currency_code": "example string"
+                }
+              },
+              "discount_application_index": 123
+            }
+          ],
+          "properties": [],
+          "quantity": 123,
+          "price_set": {
+            "shop_money": {
+              "amount": "example string",
+              "currency_code": "example string"
+            },
+            "presentment_money": {
+              "currency_code": "example string",
+              "amount": "example string"
+            }
+          },
+          "admin_graphql_api_id": "https://www.example.com/",
+          "variant_title": "example string",
+          "fulfillable_quantity": 123,
+          "total_discount_set": {
+            "presentment_money": {
+              "amount": "example string",
+              "currency_code": "example string"
+            },
+            "shop_money": {
+              "amount": "example string",
+              "currency_code": "example string"
+            }
+          },
+          "current_quantity": 123,
+          "variant_inventory_management": "example string",
+          "requires_shipping": true,
+          "title": "example string",
+          "sku": "example string",
+          "price": "example string",
+          "vendor": "example string",
+          "gift_card": false,
+          "duties": [],
+          "variant_id": 123,
+          "grams": 123,
+          "total_discount": "example string",
+          "fulfillment_status": "example string",
+          "product_exists": true,
+          "taxable": true
+        }
+      ],
+      "tracking_numbers": [],
+      "name": "example string",
+      "origin_address": {},
+      "id": 123,
+      "receipt": {},
+      "shipment_status": null,
+      "tracking_company": null,
+      "tracking_url": null,
+      "tracking_urls": [],
+      "order_id": 123,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "service": "example string",
+      "location_id": 123
+    }
+  ],
+  "location_id": null,
+  "confirmed": true,
+  "closed_at": "2019-01-01 00:00:00.000Z",
+  "taxes_included": false,
+  "cancelled_at": null,
+  "order_status_url": "https://www.example.com/",
+  "user_id": null,
+  "checkout_token": null,
+  "cart_token": null,
+  "current_total_duties_set": null,
+  "customer": {
+    "sms_marketing_consent": {
+      "consent_collected_from": "example string",
+      "consent_updated_at": "2019-01-01 00:00:00.000Z",
+      "opt_in_level": "example string",
+      "state": "example string"
+    },
+    "state": "example string",
+    "currency": "example string",
+    "last_name": "example string",
+    "id": 123,
+    "tags": "example string",
+    "email_marketing_consent": {
+      "opt_in_level": "example string",
+      "state": "example string",
+      "consent_updated_at": "2019-01-01 00:00:00.000Z"
+    },
+    "note": "example string",
+    "tax_exempt": false,
+    "admin_graphql_api_id": "https://www.example.com/",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "verified_email": true,
+    "first_name": "example string",
+    "default_address": {
+      "first_name": "example string",
+      "city": "example string",
+      "id": 123,
+      "zip": "example string",
+      "last_name": "example string",
+      "country": "example string",
+      "province": "example string",
+      "customer_id": 123,
+      "province_code": "example string",
+      "default": true,
+      "address1": "example string",
+      "company": null,
+      "country_name": "example string",
+      "country_code": "example string",
+      "address2": "example string",
+      "name": "example string"
+    },
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "multipass_identifier": null,
+    "tax_exemptions": []
+  },
+  "discount_codes": [
+    {
+      "type": "example string",
+      "amount": "example string",
+      "code": "example string"
+    }
+  ],
+  "current_total_price_set": {
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "presentment_money": {
+      "currency_code": "example string",
+      "amount": "example string"
+    }
+  },
+  "financial_status": "example string",
+  "refunds": [],
+  "subtotal_price_set": {
+    "presentment_money": {
+      "currency_code": "example string",
+      "amount": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "current_total_additional_fees_set": null,
+  "source_identifier": null,
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "discount_applications": [
+    {
+      "value_type": "example string",
+      "allocation_method": "example string",
+      "description": "example string",
+      "target_selection": "example string",
+      "target_type": "example string",
+      "title": "example string",
+      "type": "example string",
+      "value": "example string"
+    }
+  ],
+  "app_id": 123,
+  "token": "example string",
+  "current_subtotal_price_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "payment_gateway_names": [],
+  "total_tax": "example string",
+  "referring_site": null,
+  "landing_site": null,
+  "buyer_accepts_marketing": true,
+  "test": false,
+  "total_discounts": "example string",
+  "original_total_duties_set": null,
+  "current_total_discounts": "example string",
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "total_tip_received": "example string",
+  "po_number": null,
+  "payment_terms": null,
+  "id": 123,
+  "billing_address": {
+    "longitude": 123.456,
+    "province": "example string",
+    "first_name": "example string",
+    "company": "example string",
+    "country": "example string",
+    "address1": "example string",
+    "city": "example string",
+    "latitude": 123.456,
+    "country_code": "example string",
+    "zip": "example string",
+    "last_name": "example string",
+    "name": "example string",
+    "address2": "example string",
+    "province_code": "example string"
+  },
+  "confirmation_number": "example string",
+  "device_id": null,
+  "total_price": "example string",
+  "currency": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "shipping_address": {
+    "province": "example string",
+    "country_code": "example string",
+    "name": "example string",
+    "company": "example string",
+    "address1": "example string",
+    "zip": "example string",
+    "first_name": "example string",
+    "country": "example string",
+    "last_name": "example string",
+    "city": "example string",
+    "address2": "example string",
+    "longitude": 123.456,
+    "province_code": "example string",
+    "latitude": 123.456
+  },
+  "total_outstanding": "example string"
+}

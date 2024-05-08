@@ -1,0 +1,129 @@
+{
+  "authorization": "example string",
+  "id": 123,
+  "message": "example string",
+  "error_code": null,
+  "manual_payment_gateway": false,
+  "parent_id": null,
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "test": false,
+  "currency": "example string",
+  "payment_details": {
+    "credit_card_number": "example string",
+    "buyer_action_info": null,
+    "credit_card_name": null,
+    "cvv_result_code": null,
+    "avs_result_code": null,
+    "credit_card_bin": "2019-01-01 00:00:00.000Z",
+    "credit_card_expiration_year": null,
+    "payment_method_name": "example string",
+    "credit_card_company": "example string",
+    "credit_card_expiration_month": null,
+    "credit_card_wallet": null
+  },
+  "amount": "example string",
+  "order_id": 123,
+  "receipt": {
+    "charges": {
+      "url": "example string",
+      "data": [],
+      "has_more": false,
+      "object": "example string",
+      "total_count": 123
+    },
+    "next_action": null,
+    "amount": 123,
+    "payment_method_types": [
+      "example string"
+    ],
+    "amount_capturable": 123,
+    "canceled_at": null,
+    "object": "example string",
+    "cancellation_reason": null,
+    "capture_method": "example string",
+    "last_payment_error": {
+      "code": "example string",
+      "doc_url": "https://www.example.com/",
+      "message": "example string",
+      "payment_method": {
+        "object": "example string",
+        "type": "example string",
+        "card": {
+          "wallet": null,
+          "display_brand": "example string",
+          "exp_year": 123,
+          "payment_account_reference": null,
+          "generated_from": null,
+          "country": "example string",
+          "description": "example string",
+          "networks": {
+            "available": [
+              "example string"
+            ],
+            "preferred": null
+          },
+          "brand": "example string",
+          "funding": "example string",
+          "iin": "2019-01-01 00:00:00.000Z",
+          "exp_month": 123,
+          "checks": {
+            "address_line1_check": "example string",
+            "address_postal_code_check": "example string",
+            "cvc_check": "example string"
+          },
+          "last4": "2019-01-01 00:00:00.000Z",
+          "fingerprint": "example string",
+          "three_d_secure_usage": {
+            "supported": true
+          },
+          "issuer": "example string"
+        },
+        "created": 123,
+        "id": "example string",
+        "livemode": true,
+        "metadata": {}
+      },
+      "type": "example string"
+    },
+    "created": 123,
+    "livemode": true,
+    "payment_method": null,
+    "amount_received": 123,
+    "confirmation_method": "example string",
+    "metadata": {
+      "order_id": "example string",
+      "transaction_fee_tax_amount": "example string",
+      "transaction_fee_total_amount": "example string",
+      "email": "eallam@example.com",
+      "shop_id": "example string",
+      "manual_entry": "example string",
+      "payments_charge_id": "example string",
+      "shop_name": "example string",
+      "order_transaction_id": "example string"
+    },
+    "source": null,
+    "status": "example string",
+    "currency": "example string",
+    "id": "example string"
+  },
+  "source_name": "example string",
+  "status": "example string",
+  "gateway": "example string",
+  "location_id": null,
+  "admin_graphql_api_id": "https://www.example.com/",
+  "device_id": null,
+  "kind": "example string",
+  "payment_id": "example string",
+  "total_unsettled_set": {
+    "presentment_money": {
+      "currency": "example string",
+      "amount": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency": "example string"
+    }
+  },
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "user_id": null
+}

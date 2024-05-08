@@ -15,6 +15,10 @@
           "type": "string",
           "format": "date-time"
         },
+        "committed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
         "notify_customer": {
           "type": "boolean"
         },
@@ -119,6 +123,7 @@
         "id",
         "app_id",
         "created_at",
+        "committed_at",
         "notify_customer",
         "order_id",
         "staff_note",

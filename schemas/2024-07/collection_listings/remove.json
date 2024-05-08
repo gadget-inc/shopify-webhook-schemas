@@ -7,6 +7,13 @@
       "properties": {
         "collection_id": {
           "type": "integer"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sort_order": {
+          "type": "integer"
         }
       },
       "required": [

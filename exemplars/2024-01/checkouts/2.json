@@ -1,0 +1,267 @@
+{
+  "billing_address": {
+    "province_code": null,
+    "company": "example string",
+    "country_code": "example string",
+    "name": "example string",
+    "province": null,
+    "phone": "example string",
+    "country": "example string",
+    "last_name": "example string",
+    "first_name": "example string"
+  },
+  "closed_at": null,
+  "referring_site": null,
+  "source_url": null,
+  "discount_codes": [
+    {
+      "amount": "example string",
+      "code": "example string",
+      "type": "example string"
+    }
+  ],
+  "note_attributes": [],
+  "abandoned_checkout_url": "https://www.example.com/",
+  "source_name": "example string",
+  "gateway": "example string",
+  "device_id": null,
+  "customer": {
+    "phone": null,
+    "first_name": "example string",
+    "note": null,
+    "tax_exemptions": [],
+    "default_address": {
+      "country_name": "example string",
+      "id": 123,
+      "first_name": "example string",
+      "name": "example string",
+      "province_code": null,
+      "country_code": "example string",
+      "customer_id": 123,
+      "phone": "example string",
+      "default": true,
+      "last_name": "example string",
+      "company": "example string",
+      "province": null,
+      "country": "example string"
+    },
+    "orders_count": 123,
+    "state": "example string",
+    "last_order_id": 123,
+    "multipass_identifier": null,
+    "sms_marketing_consent": null,
+    "tags": "example string",
+    "verified_email": true,
+    "currency": "example string",
+    "total_spent": "example string",
+    "admin_graphql_api_id": "https://www.example.com/",
+    "last_name": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "last_order_name": "example string",
+    "email": "eallam@example.com",
+    "id": 123,
+    "tax_exempt": false,
+    "email_marketing_consent": {
+      "consent_updated_at": "2019-01-01 00:00:00.000Z",
+      "opt_in_level": "example string",
+      "state": "example string"
+    }
+  },
+  "buyer_accepts_sms_marketing": false,
+  "customer_locale": "example string",
+  "source_identifier": null,
+  "completed_at": "2019-01-01 00:00:00.000Z",
+  "total_duties": null,
+  "total_discounts": "example string",
+  "source": null,
+  "landing_site": null,
+  "shipping_lines": [
+    {
+      "presentment_title": null,
+      "price": "example string",
+      "estimated_delivery_time_range": null,
+      "original_shop_markup": null,
+      "original_shop_price": null,
+      "id": "example string",
+      "applied_discounts": [],
+      "delivery_category": null,
+      "delivery_option_group_type": null,
+      "source": "example string",
+      "validation_context": null,
+      "code": "example string",
+      "delivery_expectation_range": null,
+      "requested_fulfillment_service_id": null,
+      "tax_lines": [],
+      "markup": "example string",
+      "api_client_id": null,
+      "custom_tax_lines": null,
+      "title": "example string",
+      "carrier_identifier": null,
+      "phone": null,
+      "carrier_service_id": null,
+      "delivery_expectation_type": null,
+      "original_rate_price": null
+    }
+  ],
+  "total_price": "example string",
+  "note": null,
+  "taxes_included": true,
+  "user_id": 123,
+  "tax_lines": [],
+  "name": "example string",
+  "total_tax": "example string",
+  "token": "example string",
+  "presentment_currency": "example string",
+  "buyer_accepts_marketing": true,
+  "currency": "example string",
+  "total_line_items_price": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "total_weight": 123,
+  "email": "eallam@example.com",
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "id": 123,
+  "location_id": null,
+  "cart_token": null,
+  "sms_marketing_phone": null,
+  "subtotal_price": "example string",
+  "line_items": [
+    {
+      "applied_discounts": [],
+      "variant_id": 123,
+      "gift_card": false,
+      "user_id": null,
+      "destination_location_id": 123,
+      "id": "example string",
+      "quantity": 123,
+      "variant_price": "example string",
+      "variant_title": "example string",
+      "fulfillment_service": "example string",
+      "rank": 123,
+      "compare_at_price": "example string",
+      "line_price": "example string",
+      "presentment_title": "example string",
+      "key": "example string",
+      "origin_location_id": 123,
+      "product_id": 123,
+      "tax_lines": [],
+      "title": "example string",
+      "sku": "example string",
+      "unit_price_measurement": {
+        "quantity_value": null,
+        "reference_unit": null,
+        "reference_value": null,
+        "measured_type": null,
+        "quantity_unit": null
+      },
+      "vendor": "example string",
+      "properties": [
+        {
+          "name": "example string",
+          "value": "example string"
+        },
+        {
+          "name": "example string",
+          "value": "example string"
+        },
+        {
+          "name": "example string",
+          "value": "example string"
+        },
+        {
+          "value": "example string",
+          "name": "example string"
+        },
+        {
+          "value": "example string",
+          "name": "example string"
+        },
+        {
+          "name": "example string",
+          "value": "example string"
+        },
+        {
+          "value": "example string",
+          "name": "example string"
+        },
+        {
+          "value": "example string",
+          "name": "example string"
+        }
+      ],
+      "price": "example string",
+      "grams": 123,
+      "discount_allocations": [
+        {
+          "id": null,
+          "amount": "example string",
+          "application_type": "example string",
+          "created_at": null,
+          "description": "example string",
+          "discount_class": "example string"
+        }
+      ],
+      "presentment_variant_title": "example string",
+      "taxable": true,
+      "requires_shipping": true
+    },
+    {
+      "applied_discounts": [],
+      "variant_price": "example string",
+      "rank": 123,
+      "tax_lines": [],
+      "quantity": 123,
+      "key": "example string",
+      "taxable": true,
+      "grams": 123,
+      "price": "example string",
+      "product_id": 123,
+      "variant_title": "example string",
+      "title": "example string",
+      "unit_price_measurement": {
+        "reference_value": null,
+        "measured_type": null,
+        "quantity_unit": null,
+        "quantity_value": null,
+        "reference_unit": null
+      },
+      "destination_location_id": 123,
+      "id": "example string",
+      "presentment_title": "example string",
+      "user_id": null,
+      "discount_allocations": [
+        {
+          "discount_class": "example string",
+          "id": null,
+          "amount": "example string",
+          "application_type": "example string",
+          "created_at": null,
+          "description": "example string"
+        }
+      ],
+      "vendor": "example string",
+      "line_price": "example string",
+      "fulfillment_service": "example string",
+      "presentment_variant_title": "example string",
+      "origin_location_id": 123,
+      "requires_shipping": true,
+      "sku": "example string",
+      "gift_card": false,
+      "compare_at_price": null,
+      "properties": [],
+      "variant_id": 123
+    }
+  ],
+  "shipping_address": {
+    "country_code": "example string",
+    "first_name": "example string",
+    "last_name": "example string",
+    "country": "example string",
+    "company": "example string",
+    "phone": "example string",
+    "province": null,
+    "province_code": null,
+    "name": "example string"
+  },
+  "phone": null
+}

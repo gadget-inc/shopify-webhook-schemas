@@ -33,12 +33,34 @@
       "type": "string"
     },
     "cart_token": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "total_duties": {
-      "type": [
-        "number",
-        "null"
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
       ]
     }
   },

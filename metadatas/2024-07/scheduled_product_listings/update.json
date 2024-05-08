@@ -84,19 +84,7 @@
         }
       ],
       "publish_at": null,
-      "images": [
-        {
-          "id": 539438707724640960,
-          "created_at": null,
-          "position": 0,
-          "updated_at": null,
-          "product_id": 788032119674292900,
-          "src": "//cdn.shopify.com/shopifycloud/shopify/assets/shopify_shirt-39bb555874ecaeed0a1170417d58bbcf792f7ceb56acfe758384f788710ba635.png",
-          "variant_ids": [],
-          "width": 323,
-          "height": 434
-        }
-      ],
+      "images": [],
       "options": [
         {
           "id": 527050010214937800,

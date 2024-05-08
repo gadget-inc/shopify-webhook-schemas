@@ -1,0 +1,161 @@
+{
+  "status": "example string",
+  "payment_terms": null,
+  "subtotal_price": "example string",
+  "shipping_address": {
+    "last_name": "example string",
+    "phone": "example string",
+    "country_code": "example string",
+    "address2": "example string",
+    "province": null,
+    "province_code": null,
+    "zip": null,
+    "city": "example string",
+    "latitude": 123.456,
+    "longitude": 123.456,
+    "name": "example string",
+    "first_name": "example string",
+    "address1": "example string",
+    "company": null,
+    "country": "example string"
+  },
+  "shipping_line": {
+    "custom": true,
+    "handle": null,
+    "price": "example string",
+    "title": "example string"
+  },
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "id": 123,
+  "taxes_included": false,
+  "total_tax": "example string",
+  "applied_discount": null,
+  "email": "eallam@example.com",
+  "tax_lines": [
+    {
+      "title": "example string",
+      "price": "example string",
+      "rate": 123
+    },
+    {
+      "price": "example string",
+      "rate": 123,
+      "title": "example string"
+    },
+    {
+      "rate": 123,
+      "title": "example string",
+      "price": "example string"
+    }
+  ],
+  "billing_address": {
+    "first_name": "example string",
+    "last_name": "example string",
+    "city": "example string",
+    "country_code": "example string",
+    "name": "example string",
+    "zip": null,
+    "longitude": 123.456,
+    "phone": "example string",
+    "address2": "example string",
+    "company": null,
+    "province_code": null,
+    "latitude": 123.456,
+    "country": "example string",
+    "province": null,
+    "address1": "example string"
+  },
+  "line_items": [
+    {
+      "grams": 123,
+      "taxable": true,
+      "title": "example string",
+      "fulfillment_service": "example string",
+      "variant_title": "example string",
+      "sku": "example string",
+      "variant_id": 123,
+      "vendor": "example string",
+      "gift_card": false,
+      "custom": false,
+      "admin_graphql_api_id": "https://www.example.com/",
+      "price": "example string",
+      "product_id": 123,
+      "quantity": 123,
+      "applied_discount": null,
+      "id": 123,
+      "tax_lines": [
+        {
+          "price": "example string",
+          "rate": 123,
+          "title": "example string"
+        }
+      ],
+      "properties": [],
+      "requires_shipping": true,
+      "name": "example string"
+    }
+  ],
+  "total_price": "example string",
+  "customer": {
+    "tax_exempt": false,
+    "accepts_marketing": true,
+    "tax_exemptions": [],
+    "phone": null,
+    "last_name": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "verified_email": false,
+    "tags": "example string",
+    "email_marketing_consent": {
+      "consent_updated_at": "2019-01-01 00:00:00.000Z",
+      "opt_in_level": "example string",
+      "state": "example string"
+    },
+    "admin_graphql_api_id": "https://www.example.com/",
+    "state": "example string",
+    "last_order_name": "example string",
+    "last_order_id": 123,
+    "default_address": {
+      "default": true,
+      "country": "example string",
+      "province_code": null,
+      "last_name": "example string",
+      "first_name": "example string",
+      "province": null,
+      "address1": "example string",
+      "address2": "example string",
+      "country_name": "example string",
+      "country_code": "example string",
+      "city": "example string",
+      "customer_id": 123,
+      "zip": null,
+      "phone": "example string",
+      "id": 123,
+      "company": null,
+      "name": "example string"
+    },
+    "first_name": "example string",
+    "total_spent": "example string",
+    "orders_count": 123,
+    "accepts_marketing_updated_at": "2019-01-01 00:00:00.000Z",
+    "marketing_opt_in_level": "example string",
+    "multipass_identifier": null,
+    "currency": "example string",
+    "note": null,
+    "email": "eallam@example.com",
+    "sms_marketing_consent": null,
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "id": 123
+  },
+  "name": "example string",
+  "currency": "example string",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "invoice_sent_at": null,
+  "tags": "example string",
+  "tax_exempt": false,
+  "order_id": null,
+  "completed_at": null,
+  "invoice_url": "https://www.example.com/",
+  "note": null,
+  "note_attributes": []
+}

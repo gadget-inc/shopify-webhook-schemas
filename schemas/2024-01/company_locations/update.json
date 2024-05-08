@@ -115,7 +115,10 @@
           "type": "string"
         },
         "address2": {
-          "type": "null"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "phone": {
           "type": "string"
@@ -182,7 +185,10 @@
           "type": "string"
         },
         "address2": {
-          "type": "null"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "phone": {
           "type": "string"

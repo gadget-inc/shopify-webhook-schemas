@@ -1,0 +1,198 @@
+{
+  "amount": "example string",
+  "payment_id": "example string",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "gateway": "example string",
+  "kind": "example string",
+  "authorization": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "total_unsettled_set": {
+    "presentment_money": {
+      "currency": "example string",
+      "amount": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency": "example string"
+    }
+  },
+  "order_id": 123,
+  "receipt": {
+    "transfer_group": null,
+    "captured": true,
+    "refunds": {
+      "total_count": 123,
+      "url": "example string",
+      "data": [],
+      "has_more": false,
+      "object": "example string"
+    },
+    "id": "example string",
+    "receipt_number": null,
+    "review": null,
+    "invoice": null,
+    "fraud_details": {},
+    "shipping": null,
+    "amount_refunded": 123,
+    "calculated_statement_descriptor": null,
+    "billing_details": {
+      "phone": null,
+      "address": {
+        "line1": "example string",
+        "line2": "example string",
+        "postal_code": "2019-01-01 00:00:00.000Z",
+        "state": null,
+        "city": "example string",
+        "country": "example string"
+      },
+      "email": "eallam@example.com",
+      "name": null
+    },
+    "receipt_url": "https://www.example.com/",
+    "receipt_email": null,
+    "on_behalf_of": null,
+    "balance_transaction": "example string",
+    "description": null,
+    "payment_method_details": {
+      "klarna": {
+        "preferred_locale": "example string",
+        "payment_method_category": "example string"
+      },
+      "type": "example string"
+    },
+    "source_transfer": null,
+    "currency": "example string",
+    "failure_code": null,
+    "disputed": false,
+    "amount": 123,
+    "status": "example string",
+    "metadata": {
+      "payment_object_type": "example string",
+      "payment_service": "example string",
+      "client_account_id": "example string",
+      "payment_id": "example string",
+      "payment_object_id": "example string",
+      "shopify_payments_next": "example string",
+      "payments_charge_id": "example string",
+      "merchant_created_at": "2019-01-01 00:00:00.000Z",
+      "origin": "example string"
+    },
+    "statement_descriptor": null,
+    "source": {
+      "flow": "example string",
+      "status": "example string",
+      "object": "example string",
+      "klarna": {
+        "client_token": "example string",
+        "purchase_country": "example string",
+        "payment_method_categories": "example string",
+        "pay_later_redirect_url": "https://www.example.com/",
+        "pay_now_redirect_url": "https://www.example.com/",
+        "pay_later_asset_urls_standard": "https://www.example.com/",
+        "shipping_last_name": "example string",
+        "shipping_first_name": "example string",
+        "first_name": "example string",
+        "pay_later_asset_urls_descriptive": "https://www.example.com/",
+        "payment_intents_redirect_url": "https://www.example.com/",
+        "locale": "example string",
+        "pay_now_asset_urls_standard": "https://www.example.com/",
+        "pay_now_name": "example string",
+        "pay_later_name": "example string",
+        "last_name": "example string",
+        "pay_now_asset_urls_descriptive": "https://www.example.com/"
+      },
+      "created": 123,
+      "order": "example string",
+      "owner": {
+        "address": {
+          "country": "example string",
+          "line1": "example string",
+          "line2": "example string",
+          "postal_code": "2019-01-01 00:00:00.000Z",
+          "state": null,
+          "city": "example string"
+        },
+        "email": "eallam@example.com",
+        "name": null,
+        "phone": null,
+        "verified_address": null,
+        "verified_email": null,
+        "verified_name": null,
+        "verified_phone": null
+      },
+      "statement_descriptor": null,
+      "client_secret": "example string",
+      "currency": "example string",
+      "livemode": true,
+      "metadata": {
+        "charge_id": "example string",
+        "client_account_id": "example string",
+        "payment_object_id": "example string",
+        "payment_object_type": "example string",
+        "payment_service": "example string"
+      },
+      "amount": 123,
+      "id": "example string",
+      "type": "example string",
+      "redirect": {
+        "return_url": "https://www.example.com/",
+        "status": "example string",
+        "url": "https://www.example.com/",
+        "failure_reason": null
+      },
+      "usage": "example string"
+    },
+    "dispute": null,
+    "order": "example string",
+    "transfer_data": null,
+    "object": "example string",
+    "payment_intent": "example string",
+    "livemode": true,
+    "paid": true,
+    "application": "example string",
+    "customer": null,
+    "created": 123,
+    "application_fee": "example string",
+    "outcome": {
+      "network_status": "example string",
+      "reason": null,
+      "risk_level": "example string",
+      "seller_message": "example string",
+      "type": "example string"
+    },
+    "amount_captured": 123,
+    "application_fee_amount": 123,
+    "failure_balance_transaction": null,
+    "statement_descriptor_suffix": null,
+    "destination": null,
+    "refunded": false,
+    "payment_method": "example string",
+    "failure_message": null
+  },
+  "source_name": "example string",
+  "parent_id": null,
+  "test": false,
+  "device_id": null,
+  "message": "example string",
+  "user_id": null,
+  "currency": "example string",
+  "manual_payment_gateway": false,
+  "id": 123,
+  "location_id": null,
+  "payment_details": {
+    "credit_card_wallet": null,
+    "cvv_result_code": null,
+    "credit_card_expiration_month": null,
+    "payment_method_name": "example string",
+    "credit_card_company": "example string",
+    "credit_card_name": null,
+    "avs_result_code": null,
+    "credit_card_bin": null,
+    "credit_card_expiration_year": null,
+    "buyer_action_info": null,
+    "credit_card_number": "example string"
+  },
+  "status": "example string",
+  "error_code": null,
+  "processed_at": "2019-01-01 00:00:00.000Z"
+}

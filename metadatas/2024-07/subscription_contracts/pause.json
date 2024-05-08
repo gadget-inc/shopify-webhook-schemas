@@ -10,8 +10,8 @@
   "name": "subscription_contracts/pause",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/2635957786",
-    "id": 2635957786,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/6022434938",
+    "id": 6022434938,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -28,6 +28,6 @@
     "status": "paused",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "7760596610"
+    "revision_id": "6978606581"
   }
 }

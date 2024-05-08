@@ -23,18 +23,18 @@
     "updated_at": "2021-12-31T19:00:00-05:00",
     "tax_exempt": false,
     "completed_at": null,
-    "name": "#D182",
+    "name": "#D160",
     "status": "open",
     "line_items": [
       {
-        "id": 3199548,
+        "id": 4284481,
         "variant_id": 49148385,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Red",
         "sku": "IPOD2008RED",
         "vendor": "Apple",
-        "quantity": 5,
+        "quantity": 4,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -46,10 +46,10 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/3199548"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/4284481"
       },
       {
-        "id": 99212,
+        "id": 4988979,
         "variant_id": 457924702,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
@@ -68,17 +68,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/99212"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/4988979"
       },
       {
-        "id": 4238599,
+        "id": 4479966,
         "variant_id": 808950810,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Pink",
         "sku": "IPOD2008PINK",
         "vendor": "Apple",
-        "quantity": 4,
+        "quantity": 8,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -90,7 +90,7 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/4238599"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/4479966"
       }
     ],
     "shipping_address": {
@@ -130,9 +130,9 @@
     "invoice_url": "https://jsmith.myshopify.com/548380009/invoices/abcd1234abcd1234abcd1234abcd1234",
     "applied_discount": {
       "description": "ABC 123",
-      "value": "9.0",
+      "value": "6.0",
       "title": "ABC 123",
-      "amount": "1.00",
+      "amount": "10.00",
       "value_type": "percentage"
     },
     "order_id": null,
@@ -140,30 +140,30 @@
       "title": "ABC 123",
       "custom": true,
       "handle": null,
-      "price": "5.00"
+      "price": "2.00"
     },
     "tax_lines": [
       {
-        "rate": 0.029033681805550937,
+        "rate": 0.028672501327433715,
+        "title": "State tax",
+        "price": "4.00"
+      },
+      {
+        "rate": 0.028672501327433715,
         "title": "State tax",
         "price": "5.00"
       },
       {
-        "rate": 0.029033681805550937,
-        "title": "State tax",
-        "price": "2.00"
-      },
-      {
-        "rate": 0.029033681805550937,
+        "rate": 0.028672501327433715,
         "title": "State tax",
         "price": "2.00"
       }
     ],
     "tags": "",
     "note_attributes": [],
-    "total_price": "454.00",
-    "subtotal_price": "489.00",
-    "total_tax": "460.00",
+    "total_price": "464.00",
+    "subtotal_price": "409.00",
+    "total_tax": "482.00",
     "payment_terms": {
       "id": 706405506930370000,
       "payment_terms_name": "Net 7",

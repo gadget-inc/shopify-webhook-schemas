@@ -10,7 +10,7 @@
   "name": "subscription_billing_cycle_edits/create",
   "related_resource": "SubscriptionBillingCycle",
   "response": {
-    "subscription_contract_id": 5921010725,
+    "subscription_contract_id": 6707033905,
     "cycle_start_at": "2022-10-01T00:00:00-04:00",
     "cycle_end_at": "2022-11-01T00:00:00-04:00",
     "cycle_index": 1,

@@ -159,50 +159,7 @@
         },
         "images": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "created_at": {
-                "type": "null"
-              },
-              "position": {
-                "type": "integer"
-              },
-              "updated_at": {
-                "type": "null"
-              },
-              "product_id": {
-                "type": "integer"
-              },
-              "src": {
-                "type": "string"
-              },
-              "variant_ids": {
-                "type": "array",
-                "items": false
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              }
-            },
-            "required": [
-              "id",
-              "created_at",
-              "position",
-              "updated_at",
-              "product_id",
-              "src",
-              "variant_ids",
-              "width",
-              "height"
-            ]
-          }
+          "items": false
         },
         "options": {
           "type": "array",

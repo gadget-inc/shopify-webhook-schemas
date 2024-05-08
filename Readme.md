@@ -2,15 +2,20 @@
 
 This repo contains inferred JSONSchemas for each Shopify webhook topic payload. Find them all in the `schemas` directory.
 
-### Usage from JavaScript
+They're built by scraping Shopify's example payloads in their docs as well as comparing to a bunch of anonymized example payloads in this repo.
 
-If you want to load the metadata or the json schemas programmatically from JS, you can do so with the exported functions from this library.
+Contributions to correct the types or add new examples of rare payloads are welcome!
+
+## Usage from JavaScript
+
+If you want to load the json schemas programmatically from JS, or the metadata objects that Shopify exposes under the hood, you can do so with the exported functions from this library.
 
 ```typescript
 import { metadataForWebhook, schemaForWebhook } from "shopify-webhook-schemas";
 
 // get the JSONSchema for a webhook payload
 const schema = schemaForWebhook("2024-04", "products/update");
+
 // returns {
 //   "$schema": "https://json-schema.org/draft/2020-12/schema",
 //   "type": "object",
@@ -26,6 +31,7 @@ const schema = schemaForWebhook("2024-04", "products/update");
 
 // get the metadata blob with an description and example payload that shopify puts in their docs
 const metadata = metadataForWebhook("2024-04", "products/update");
+
 // returns {
 // "access_scopes": [
 //   "products"
@@ -53,6 +59,12 @@ const topics = allTopicsForVersion("2024-04");
 // ...
 ```
 
+### Editorialization
+
+This repo includes some inferred types beyond what Shopify's docs offer based on observed data in the wild. Shopify's example payloads are the ground truth, but they often include `null` for field values, so we have to guess what the real type of the value is. If you believe there to be an error, please open a PR adjusting the overrides in `src/scrape.ts`.
+
 ### Refreshing
 
 Run `pnpm x src/scrape.ts` to re-scrape Shopify's docs. See `src/scrape.ts` for the logic and the overrides.
+
+Add new exemplars in in the `exemplars/` directory, and then run `pnpm x src/anonymize-exemplars.ts` to remove any PII.

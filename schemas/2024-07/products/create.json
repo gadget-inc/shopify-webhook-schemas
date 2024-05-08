@@ -64,13 +64,23 @@
             "format": "uri"
           },
           "barcode": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "compare_at_price": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "created_at": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
           },
           "fulfillment_service": {
             "type": "string"
@@ -94,7 +104,10 @@
             "type": "integer"
           },
           "sku": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "taxable": {
             "type": "boolean"
@@ -103,31 +116,47 @@
             "type": "string"
           },
           "updated_at": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
           },
           "option1": {
             "type": "string"
           },
           "option2": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "option3": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "grams": {
             "type": "integer"
           },
           "image_id": {
-            "type": "null"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "weight": {
-            "type": "integer"
+            "type": "number"
           },
           "weight_unit": {
             "type": "string"
           },
           "inventory_item_id": {
-            "type": "null"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "inventory_quantity": {
             "type": "integer"
@@ -171,18 +200,163 @@
     },
     "options": {
       "type": "array",
-      "items": false
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "position",
+          "product_id",
+          "values"
+        ]
+      }
     },
     "images": {
       "type": "array",
-      "items": false
+      "items": {
+        "type": "object",
+        "properties": {
+          "height": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "src": {
+            "type": "string",
+            "format": "uri"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "variant_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "admin_graphql_api_id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "alt": {
+            "type": "null"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "width": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "height",
+          "id",
+          "src",
+          "updated_at",
+          "variant_ids",
+          "admin_graphql_api_id",
+          "alt",
+          "created_at",
+          "product_id",
+          "position",
+          "width"
+        ]
+      }
     },
     "image": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "uri"
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "integer"
+            },
+            "position": {
+              "type": "integer"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "variant_ids": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "admin_graphql_api_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "alt": {
+              "type": "null"
+            },
+            "src": {
+              "type": "string",
+              "format": "uri"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "height",
+            "position",
+            "updated_at",
+            "variant_ids",
+            "admin_graphql_api_id",
+            "created_at",
+            "product_id",
+            "alt",
+            "src",
+            "width",
+            "id"
+          ]
+        }
+      ]
     },
     "media": {
       "type": "array",

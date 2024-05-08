@@ -1,0 +1,169 @@
+{
+  "image": null,
+  "product_type": "example string",
+  "body_html": "example string",
+  "template_suffix": null,
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "variant_ids": [
+    {
+      "id": 123
+    },
+    {
+      "id": 123
+    },
+    {
+      "id": 123
+    },
+    {
+      "id": 123
+    }
+  ],
+  "title": "example string",
+  "options": [
+    {
+      "id": 123,
+      "name": "example string",
+      "position": 123,
+      "product_id": 123,
+      "values": [
+        "example string"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "example string",
+      "position": 123,
+      "product_id": 123,
+      "values": [
+        "example string",
+        "example string",
+        "example string",
+        "example string"
+      ]
+    }
+  ],
+  "published_at": "2019-01-01 00:00:00.000Z",
+  "variants": [
+    {
+      "barcode": "example string",
+      "option1": "example string",
+      "admin_graphql_api_id": "https://www.example.com/",
+      "inventory_quantity": 123,
+      "fulfillment_service": "example string",
+      "old_inventory_quantity": 123,
+      "id": 123,
+      "position": 123,
+      "grams": 123,
+      "option3": null,
+      "sku": "example string",
+      "image_id": null,
+      "inventory_management": "example string",
+      "product_id": 123,
+      "price": "example string",
+      "option2": "example string",
+      "inventory_item_id": 123,
+      "requires_shipping": true,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "inventory_policy": "example string",
+      "taxable": true,
+      "weight": 123,
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "weight_unit": "example string",
+      "compare_at_price": null,
+      "title": "example string"
+    },
+    {
+      "inventory_management": "example string",
+      "fulfillment_service": "example string",
+      "sku": "example string",
+      "taxable": true,
+      "option1": "example string",
+      "price": "example string",
+      "admin_graphql_api_id": "https://www.example.com/",
+      "inventory_item_id": 123,
+      "weight_unit": "example string",
+      "compare_at_price": null,
+      "grams": 123,
+      "barcode": "example string",
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "weight": 123,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "option3": null,
+      "title": "example string",
+      "position": 123,
+      "requires_shipping": true,
+      "product_id": 123,
+      "inventory_quantity": 123,
+      "old_inventory_quantity": 123,
+      "inventory_policy": "example string",
+      "id": 123,
+      "image_id": null,
+      "option2": "example string"
+    },
+    {
+      "price": "example string",
+      "product_id": 123,
+      "old_inventory_quantity": 123,
+      "inventory_policy": "example string",
+      "option3": null,
+      "weight_unit": "example string",
+      "title": "example string",
+      "inventory_item_id": 123,
+      "inventory_quantity": 123,
+      "admin_graphql_api_id": "https://www.example.com/",
+      "grams": 123,
+      "taxable": true,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "id": 123,
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "inventory_management": "example string",
+      "sku": "example string",
+      "fulfillment_service": "example string",
+      "option2": "example string",
+      "image_id": null,
+      "weight": 123,
+      "position": 123,
+      "option1": "example string",
+      "requires_shipping": true,
+      "compare_at_price": null,
+      "barcode": "example string"
+    },
+    {
+      "weight_unit": "example string",
+      "requires_shipping": true,
+      "id": 123,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "grams": 123,
+      "inventory_item_id": 123,
+      "option3": null,
+      "inventory_quantity": 123,
+      "inventory_management": "example string",
+      "compare_at_price": null,
+      "option1": "example string",
+      "sku": "example string",
+      "price": "example string",
+      "taxable": true,
+      "option2": "example string",
+      "product_id": 123,
+      "fulfillment_service": "example string",
+      "title": "example string",
+      "barcode": "example string",
+      "position": 123,
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "weight": 123,
+      "image_id": null,
+      "old_inventory_quantity": 123,
+      "inventory_policy": "example string",
+      "admin_graphql_api_id": "https://www.example.com/"
+    }
+  ],
+  "status": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "id": 123,
+  "images": [],
+  "tags": "example string",
+  "published_scope": "example string",
+  "handle": "example string",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "vendor": "example string"
+}
