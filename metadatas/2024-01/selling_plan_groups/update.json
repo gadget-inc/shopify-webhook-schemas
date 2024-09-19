@@ -4,14 +4,16 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Notifies when a SellingPlanGroup is updated.",
   "name": "selling_plan_groups/update",
   "related_resource": "SellingPlanGroup",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518928",
-    "id": 1039518928,
+    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518916",
+    "id": 1039518916,
     "name": "Subscribe & Save",
     "merchant_code": "sub-n-save",
     "admin_graphql_api_app": "gid://shopify/App/2525000003",
@@ -48,5 +50,6 @@
     ],
     "product_variants": [],
     "products": []
-  }
+  },
+  "shop_feature": false
 }

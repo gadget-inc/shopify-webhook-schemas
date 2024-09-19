@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a customer's email marketing consent is updated.",
   "name": "customers_email_marketing_consent/update",
   "pii": [
@@ -20,5 +22,6 @@
       "opt_in_level": null,
       "consent_updated_at": null
     }
-  }
+  },
+  "shop_feature": false
 }

@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a merchant requests a fulfillment request to be cancelled after that request was approved by a 3PL.",
   "name": "fulfillment_orders/cancellation_request_submitted",
   "related_resource": "FulfillmentOrder",
@@ -22,5 +24,6 @@
       "id": "gid://shopify/FulfillmentOrderMerchantRequest/1",
       "message": "Customer cancelled their order"
     }
-  }
+  },
+  "shop_feature": false
 }

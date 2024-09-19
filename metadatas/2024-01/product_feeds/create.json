@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Triggers when product feed is created",
   "name": "product_feeds/create",
   "related_resource": "ProductFeed",
@@ -14,5 +16,6 @@
     "country": "CA",
     "language": "EN",
     "status": ""
-  }
+  },
+  "shop_feature": false
 }

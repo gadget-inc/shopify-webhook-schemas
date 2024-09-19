@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a fulfillment order hold is released.",
   "name": "fulfillment_orders/hold_released",
   "related_resource": "FulfillmentOrder",
@@ -17,5 +19,6 @@
       "id": "gid://shopify/FulfillmentOrder/1",
       "status": "open"
     }
-  }
+  },
+  "shop_feature": false
 }

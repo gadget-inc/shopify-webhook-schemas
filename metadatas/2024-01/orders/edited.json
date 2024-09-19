@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever an order is edited.",
   "name": "orders/edited",
   "pii": [
@@ -48,5 +50,6 @@
         "removals": []
       }
     }
-  }
+  },
+  "shop_feature": false
 }

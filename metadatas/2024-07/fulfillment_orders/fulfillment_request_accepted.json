@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a fulfillment service accepts a request to fulfill a fulfillment order.",
   "name": "fulfillment_orders/fulfillment_request_accepted",
   "related_resource": "FulfillmentOrder",
@@ -19,5 +21,6 @@
       "request_status": "accepted"
     },
     "message": "We will ship the item tomorrow."
-  }
+  },
+  "shop_feature": false
 }

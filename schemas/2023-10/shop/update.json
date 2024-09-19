@@ -216,10 +216,10 @@
         "type": "string"
       }
     },
-    "transactional_sms_disabled": {
+    "marketing_sms_consent_enabled_at_checkout": {
       "type": "boolean"
     },
-    "marketing_sms_consent_enabled_at_checkout": {
+    "transactional_sms_disabled": {
       "type": "boolean"
     }
   },
@@ -276,7 +276,7 @@
     "setup_required",
     "pre_launch_enabled",
     "enabled_presentment_currencies",
-    "transactional_sms_disabled",
-    "marketing_sms_consent_enabled_at_checkout"
+    "marketing_sms_consent_enabled_at_checkout",
+    "transactional_sms_disabled"
   ]
 }

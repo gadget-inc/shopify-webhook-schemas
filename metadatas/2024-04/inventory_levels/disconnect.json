@@ -4,13 +4,16 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever an inventory level is disconnected.",
   "name": "inventory_levels/disconnect",
   "related_resource": "InventoryLevel",
   "response": {
     "inventory_item_id": 271878346596884000,
     "location_id": 24826418
-  }
+  },
+  "shop_feature": false
 }

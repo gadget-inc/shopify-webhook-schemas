@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a checkout is deleted.",
   "name": "checkouts/delete",
   "related_resource": "Checkout",
@@ -21,5 +23,6 @@
     "subtotal_price": "398.00",
     "cart_token": "eeafa272cebfd4b22385bc4b645e762c",
     "total_duties": null
-  }
+  },
+  "shop_feature": false
 }

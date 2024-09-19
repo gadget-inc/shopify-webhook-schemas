@@ -4,12 +4,15 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a theme is deleted. Does not occur when theme files are deleted.",
   "name": "themes/delete",
   "related_resource": "Theme",
   "response": {
     "id": 512162865275216960
-  }
+  },
+  "shop_feature": false
 }

@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a fulfillment order's line items are prepared for local delivery.",
   "name": "fulfillment_orders/line_items_prepared_for_local_delivery",
   "related_resource": "FulfillmentOrder",
@@ -21,5 +23,6 @@
         "method_type": "local"
       }
     }
-  }
+  },
+  "shop_feature": false
 }

@@ -593,10 +593,7 @@
       "type": "string"
     },
     "processed_at": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "format": "date-time"
     },
     "reference": {

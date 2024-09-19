@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a draft order is updated.",
   "name": "draft_orders/update",
   "pii": [
@@ -23,18 +25,18 @@
     "updated_at": "2021-12-31T19:00:00-05:00",
     "tax_exempt": false,
     "completed_at": null,
-    "name": "#D152",
+    "name": "#D156",
     "status": "open",
     "line_items": [
       {
-        "id": 2198646,
+        "id": 1183942,
         "variant_id": 49148385,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Red",
         "sku": "IPOD2008RED",
         "vendor": "Apple",
-        "quantity": 6,
+        "quantity": 3,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -46,17 +48,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2198646"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1183942"
       },
       {
-        "id": 2463429,
+        "id": 1640865,
         "variant_id": 457924702,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Black",
         "sku": "IPOD2008BLACK",
         "vendor": "Apple",
-        "quantity": 9,
+        "quantity": 10,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -68,17 +70,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2463429"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1640865"
       },
       {
-        "id": 2770097,
+        "id": 4453949,
         "variant_id": 808950810,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Pink",
         "sku": "IPOD2008PINK",
         "vendor": "Apple",
-        "quantity": 10,
+        "quantity": 7,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -90,7 +92,7 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2770097"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/4453949"
       }
     ],
     "shipping_address": {
@@ -130,9 +132,9 @@
     "invoice_url": "https://jsmith.myshopify.com/548380009/invoices/abcd1234abcd1234abcd1234abcd1234",
     "applied_discount": {
       "description": "ABC 123",
-      "value": "5.0",
+      "value": "9.0",
       "title": "ABC 123",
-      "amount": "4.00",
+      "amount": "8.00",
       "value_type": "percentage"
     },
     "order_id": null,
@@ -144,26 +146,26 @@
     },
     "tax_lines": [
       {
-        "rate": 0.01696658581057835,
+        "rate": 0.017294978532553667,
         "title": "State tax",
-        "price": "2.00"
+        "price": "1.00"
       },
       {
-        "rate": 0.01696658581057835,
+        "rate": 0.017294978532553667,
         "title": "State tax",
-        "price": "3.00"
+        "price": "4.00"
       },
       {
-        "rate": 0.01696658581057835,
+        "rate": 0.017294978532553667,
         "title": "State tax",
-        "price": "3.00"
+        "price": "4.00"
       }
     ],
     "tags": "",
     "note_attributes": [],
-    "total_price": "438.00",
-    "subtotal_price": "427.00",
-    "total_tax": "428.00",
+    "total_price": "448.00",
+    "subtotal_price": "402.00",
+    "total_tax": "491.00",
     "payment_terms": {
       "id": 706405506930370000,
       "payment_terms_name": "Net 7",
@@ -177,13 +179,16 @@
           "created_at": "2021-01-01T00:00:00-05:00",
           "updated_at": "2021-01-01T00:00:01-05:00",
           "payment_terms_id": 706405506930370000,
+          "reference_id": null,
+          "reference_type": null,
           "issued_at": "2021-01-01T00:00:00-05:00",
           "due_at": "2021-01-02T00:00:00-05:00",
           "completed_at": "2021-01-02T00:00:00-05:00",
           "amount": "10.00",
           "currency": "USD"
         }
-      ]
+      ],
+      "can_pay_early": true
     },
     "admin_graphql_api_id": "gid://shopify/DraftOrder/890612572568261625",
     "customer": {
@@ -233,5 +238,6 @@
         "default": true
       }
     }
-  }
+  },
+  "shop_feature": false
 }

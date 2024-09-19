@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a collection is created.",
   "name": "collections/create",
   "related_resource": "Collection",
@@ -20,5 +22,6 @@
     "template_suffix": null,
     "published_scope": "web",
     "admin_graphql_api_id": "gid://shopify/Collection/408372092144951419"
-  }
+  },
+  "shop_feature": false
 }

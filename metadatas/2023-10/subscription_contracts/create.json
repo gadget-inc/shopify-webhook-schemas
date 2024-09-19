@@ -4,14 +4,16 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a subscription contract is created.",
   "name": "subscription_contracts/create",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/1311157863",
-    "id": 1311157863,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/612257411",
+    "id": 612257411,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -28,6 +30,7 @@
     "status": "active",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "4286247680"
-  }
+    "revision_id": "6896239530"
+  },
+  "shop_feature": false
 }

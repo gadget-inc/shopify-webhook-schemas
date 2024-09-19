@@ -1,18 +1,21 @@
 {
   "available_on": [
-    "graphql"
+    "graphql",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a one-time app charge is updated.",
   "name": "app_purchases_one_time/update",
   "related_resource": "ApplicationCharge",
   "response": {
     "app_purchase_one_time": {
-      "admin_graphql_api_id": "gid://shopify/AppPurchaseOneTime/1017262354",
+      "admin_graphql_api_id": "gid://shopify/AppPurchaseOneTime/1017262351",
       "name": "Webhook Test",
       "status": "PENDING",
       "admin_graphql_api_shop_id": "gid://shopify/Shop/548380009",
       "created_at": "2021-12-31T19:00:00-05:00",
       "updated_at": "2021-12-31T19:00:00-05:00"
     }
-  }
+  },
+  "shop_feature": false
 }

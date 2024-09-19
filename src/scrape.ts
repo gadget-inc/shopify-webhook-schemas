@@ -88,7 +88,7 @@ const inferSchemaFromExamplePayload = async (examplePayload: Record<string, any>
         }
       }
     },
-    () => { },
+    () => {},
     getVocabulary(schema)
   );
 
@@ -125,7 +125,13 @@ const main = async () => {
     console.log(`Loaded ${webhooks.length} webhooks for version ${version}`);
 
     for (const webhook of webhooks) {
-      webhook.response = JSON.parse(webhook.response);
+      if (webhook.response === "") {
+        console.warn(`${webhook.name} has an empty response`);
+        webhook.response = {};
+      } else {
+        webhook.response = JSON.parse(webhook.response);
+      }
+
       const metadataFile = path.join(rootDir, "metadatas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");
@@ -192,7 +198,7 @@ const unknownPaths: [topicPattern: RegExp, paths: string[]][] = [
     ["properties.collection_listing.properties.default_product_image", "properties.collection_listing.properties.image"],
   ],
   [/domains\/.+/, ["properties.localization.properties.country"]],
-  [/orders\/.+/, ["properties.client_details.properties.session_hash"]]
+  [/orders\/.+/, ["properties.client_details.properties.session_hash"]],
 ];
 
 // example data we feed the schema infer-er for each topic to allow it to discover real types
@@ -417,8 +423,7 @@ const manualExamples: [RegExp, Record<string, any>][] = [
       collection_listing: {
         updated_at: "2021-12-30T19:00:00-05:00",
         sort_order: 1,
-      }
-
+      },
     },
   ],
   [
@@ -426,10 +431,10 @@ const manualExamples: [RegExp, Record<string, any>][] = [
     {
       buyer_experience_configuration: { pay_now_only: true },
       billing_address: {
-        address2: "suite 101"
+        address2: "suite 101",
       },
       shipping_address: {
-        address2: "suite 101"
+        address2: "suite 101",
       },
     },
   ],
@@ -713,7 +718,7 @@ const overrides: { topics: string[]; schema: any; versions?: string[] }[] = [
       receipt: {
         type: "object",
         additionalProperties: true,
-      }
-    }
-  }
+      },
+    },
+  },
 ];

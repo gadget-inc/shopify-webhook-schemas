@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "external_id": {
+      "type": "string"
+    },
+    "main_contact_admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "customer_since": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "name",
+    "note",
+    "external_id",
+    "main_contact_admin_graphql_api_id",
+    "created_at",
+    "updated_at",
+    "customer_since",
+    "admin_graphql_api_id"
+  ]
+}

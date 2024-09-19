@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "inventory_item_id": {
+      "type": "integer"
+    },
+    "location_id": {
+      "type": "integer"
+    },
+    "available": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "inventory_item_id",
+    "location_id",
+    "available",
+    "updated_at",
+    "admin_graphql_api_id"
+  ]
+}

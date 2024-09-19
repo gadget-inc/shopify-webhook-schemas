@@ -6,6 +6,7 @@
     "graphql",
     "rest"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a product publication is created, updated or removed for a product feed",
   "name": "product_feeds/incremental_sync",
   "related_resource": "",
@@ -20,8 +21,8 @@
     "productFeed": {
       "id": "gid://shopify/ProductFeed/12345",
       "shop_id": "gid://shopify/Shop/12345",
-      "language": "EN",
-      "country": "CA"
+      "country": "CA",
+      "language": "EN"
     },
     "product": {
       "id": "gid://shopify/Product/12345",
@@ -102,6 +103,8 @@
           }
         ]
       }
-    }
-  }
+    },
+    "products": null
+  },
+  "shop_feature": false
 }

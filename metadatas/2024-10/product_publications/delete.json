@@ -1,0 +1,21 @@
+{
+  "access_scopes": [
+    "publications"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a product publication for an active product is removed, or whenever an existing product publication is unpublished.",
+  "name": "product_publications/delete",
+  "related_resource": "ProductListing",
+  "response": {
+    "id": null
+  },
+  "shop_feature": false,
+  "shopify_approval_scope": [
+    "write_publications"
+  ]
+}

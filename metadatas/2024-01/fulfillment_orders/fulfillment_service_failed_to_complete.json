@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a fulfillment service intends to close an in_progress fulfillment order.",
   "name": "fulfillment_orders/fulfillment_service_failed_to_complete",
   "related_resource": "FulfillmentOrder",
@@ -18,5 +20,6 @@
       "status": "closed"
     },
     "message": "We broke the last item."
-  }
+  },
+  "shop_feature": false
 }

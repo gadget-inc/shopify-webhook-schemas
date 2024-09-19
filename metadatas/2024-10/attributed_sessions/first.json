@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "marketing_events"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": true,
+  "description": "Occurs whenever an order with a \"first\" attributed session is attributed.",
+  "name": "attributed_sessions/first",
+  "related_resource": "AttributedSession",
+  "response": {},
+  "shop_feature": false
+}

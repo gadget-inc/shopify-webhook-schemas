@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever an inventory item is updated.",
   "name": "inventory_items/update",
   "related_resource": "InventoryItem",
@@ -22,5 +24,6 @@
     "tracked": true,
     "country_harmonized_system_codes": [],
     "admin_graphql_api_id": "gid://shopify/InventoryItem/271878346596884015"
-  }
+  },
+  "shop_feature": false
 }

@@ -89,7 +89,7 @@
                 "type": "boolean"
               },
               "sku": {
-                "type": "string"
+                "type": "null"
               },
               "barcode": {
                 "type": "null"
@@ -110,13 +110,13 @@
                 "type": "integer"
               },
               "inventory_management": {
-                "type": "string"
+                "type": "null"
               },
               "fulfillment_service": {
                 "type": "string"
               },
               "weight": {
-                "type": "integer"
+                "type": "null"
               },
               "weight_unit": {
                 "type": "string"
@@ -125,10 +125,12 @@
                 "type": "null"
               },
               "created_at": {
-                "type": "null"
+                "type": "string",
+                "format": "date-time"
               },
               "updated_at": {
-                "type": "null"
+                "type": "string",
+                "format": "date-time"
               }
             },
             "required": [

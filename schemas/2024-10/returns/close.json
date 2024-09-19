@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "admin_graphql_api_id",
+    "order_id",
+    "status"
+  ]
+}

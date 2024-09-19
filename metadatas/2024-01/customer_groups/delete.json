@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a customer saved search is deleted.",
   "name": "customer_groups/delete",
   "pii": [
@@ -14,5 +16,6 @@
   "related_resource": "CustomerSavedSearch",
   "response": {
     "id": 239443597569284770
-  }
+  },
+  "shop_feature": false
 }

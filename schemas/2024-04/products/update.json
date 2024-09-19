@@ -76,10 +76,7 @@
             ]
           },
           "created_at": {
-            "type": [
-              "string",
-              "null"
-            ],
+            "type": "string",
             "format": "date-time"
           },
           "fulfillment_service": {
@@ -89,7 +86,10 @@
             "type": "integer"
           },
           "inventory_management": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "inventory_policy": {
             "type": "string"
@@ -116,10 +116,7 @@
             "type": "string"
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ],
+            "type": "string",
             "format": "date-time"
           },
           "option1": {
@@ -366,10 +363,15 @@
           "admin_graphql_api_id": {
             "type": "string",
             "format": "uri"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "required": [
-          "admin_graphql_api_id"
+          "admin_graphql_api_id",
+          "updated_at"
         ]
       }
     }

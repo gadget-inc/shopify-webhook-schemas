@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever an order is cancelled.",
   "name": "orders/cancelled",
   "pii": [
@@ -104,7 +106,7 @@
     "phone": null,
     "po_number": null,
     "presentment_currency": "USD",
-    "processed_at": null,
+    "processed_at": "2021-12-31T19:00:00-05:00",
     "reference": null,
     "referring_site": null,
     "source_identifier": null,
@@ -408,5 +410,6 @@
         "discount_allocations": []
       }
     ]
-  }
+  },
+  "shop_feature": false
 }
