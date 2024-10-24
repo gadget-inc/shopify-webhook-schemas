@@ -40,20 +40,14 @@ const loadRailsData = async (url: string) => {
   const data = jsonMatch[1].replace("\\\n", "");
 
   const encoder = new TextEncoderStream();
-  let controller: ReadableStreamController<any> | undefined = undefined;
   const readableStream = new ReadableStream({
     start(c) {
-      controller = c;
       c.enqueue(JSON.parse(data));
       c.close();
     },
   }).pipeThrough(encoder);
 
-  const result = await startDecoding(readableStream, {
-    __reactRouterContext: {
-      streamController: controller,
-    },
-  });
+  const result = await startDecoding(readableStream);
   return result.value.loaderData["./routes/rest"].rails_data;
 };
 
