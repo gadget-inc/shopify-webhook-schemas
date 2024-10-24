@@ -104,13 +104,13 @@
             "items": {
               "type": "object",
               "properties": {
-                "price": {
-                  "type": "string"
-                },
                 "rate": {
                   "type": "number"
                 },
                 "title": {
+                  "type": "string"
+                },
+                "price": {
                   "type": "string"
                 },
                 "channel_liable": {
@@ -157,9 +157,9 @@
                 }
               },
               "required": [
-                "price",
                 "rate",
-                "title"
+                "title",
+                "price"
               ]
             }
           },
@@ -1296,15 +1296,15 @@
         "marketing_opt_in_level": {
           "type": "string"
         },
-        "accepts_marketing": {
-          "type": "boolean"
-        },
         "accepts_marketing_updated_at": {
           "type": [
             "string",
             "null"
           ],
           "format": "date-time"
+        },
+        "accepts_marketing": {
+          "type": "boolean"
         },
         "metafields": {
           "type": "array",

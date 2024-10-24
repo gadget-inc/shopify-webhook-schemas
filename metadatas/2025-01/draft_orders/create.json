@@ -29,14 +29,14 @@
     "status": "open",
     "line_items": [
       {
-        "id": 2763459,
+        "id": 461676,
         "variant_id": 49148385,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Red",
         "sku": "IPOD2008RED",
         "vendor": "Apple",
-        "quantity": 9,
+        "quantity": 10,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -48,17 +48,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2763459"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/461676"
       },
       {
-        "id": 2885971,
+        "id": 3415970,
         "variant_id": 457924702,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Black",
         "sku": "IPOD2008BLACK",
         "vendor": "Apple",
-        "quantity": 6,
+        "quantity": 10,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -70,17 +70,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2885971"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/3415970"
       },
       {
-        "id": 1088688,
+        "id": 1776953,
         "variant_id": 808950810,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Pink",
         "sku": "IPOD2008PINK",
         "vendor": "Apple",
-        "quantity": 8,
+        "quantity": 1,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -92,7 +92,7 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1088688"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1776953"
       }
     ],
     "shipping_address": {
@@ -134,7 +134,7 @@
       "description": "ABC 123",
       "value": "8.0",
       "title": "ABC 123",
-      "amount": "7.00",
+      "amount": "1.00",
       "value_type": "percentage"
     },
     "order_id": null,
@@ -142,30 +142,30 @@
       "title": "ABC 123",
       "custom": true,
       "handle": null,
-      "price": "1.00"
+      "price": "5.00"
     },
     "tax_lines": [
       {
-        "rate": 0.040071487609543925,
+        "rate": 0.024965066656266036,
         "title": "State tax",
-        "price": "4.00"
+        "price": "5.00"
       },
       {
-        "rate": 0.040071487609543925,
+        "rate": 0.024965066656266036,
         "title": "State tax",
-        "price": "4.00"
+        "price": "3.00"
       },
       {
-        "rate": 0.040071487609543925,
+        "rate": 0.024965066656266036,
         "title": "State tax",
-        "price": "2.00"
+        "price": "5.00"
       }
     ],
     "tags": "",
     "note_attributes": [],
-    "total_price": "465.00",
-    "subtotal_price": "411.00",
-    "total_tax": "404.00",
+    "total_price": "407.00",
+    "subtotal_price": "440.00",
+    "total_tax": "432.00",
     "payment_terms": {
       "id": 706405506930370000,
       "payment_terms_name": "Net 7",
@@ -184,13 +184,13 @@
           "issued_at": "2021-01-01T00:00:00-05:00",
           "due_at": "2021-01-02T00:00:00-05:00",
           "completed_at": "2021-01-02T00:00:00-05:00",
-          "amount": "465.00",
+          "amount": "407.00",
           "currency": "USD",
-          "total_price": "465.00",
+          "total_price": "407.00",
           "total_price_currency": "USD",
-          "balance_due": "465.00",
+          "balance_due": "407.00",
           "balance_due_currency": "USD",
-          "outstanding_balance": "465.00",
+          "outstanding_balance": "407.00",
           "outstanding_balance_currency": "USD"
         }
       ],

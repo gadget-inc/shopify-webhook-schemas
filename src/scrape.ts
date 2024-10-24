@@ -5,7 +5,7 @@ import { schemaWalk, getVocabulary } from "@cloudflare/json-schema-walker";
 import { inferSchema } from "@jsonhero/schema-infer";
 import cheerio from "cheerio";
 import got from "got";
-import { cloneDeep, isEqual, isNull, merge, pick, template, uniq } from "lodash";
+import { cloneDeep, isEqual, merge, pick, uniq } from "lodash";
 import path from "path";
 import { getPackageRootDir } from "src";
 import { startDecoding } from "./shopify.js";
@@ -25,36 +25,43 @@ function assert<T>(value: T | false | undefined | null, message?: string): T {
 const loadRailsData = async (url: string) => {
   const shopifyDocsSource = await got(url);
   const $ = cheerio.load(shopifyDocsSource.body);
-  const scriptTag = assert(
-    $("script")
-      .toArray()
-      .find((script) => $(script).html()?.includes("rails_data")),
-    "expected to find rails_data script in shopify source but couldn't"
-  );
+  const jsonScriptTag = $("script")
+    .toArray()
+    .find((script) => $(script).html()?.includes("window.RailsData"));
+  const compressedScriptTag = $("script")
+    .toArray()
+    .find((script) => $(script).html()?.includes("rails_data"));
 
-  const scriptText = $(scriptTag).html()!;
-  const jsonMatch = scriptText.match(/window.__reactRouterContext.streamController.enqueue\(([\s\S]*)\)/);
-  if (!jsonMatch) {
-    throw new Error("RailsData object literal not found in script tag or is in an unexpected format");
+  if (jsonScriptTag) {
+    const scriptText = $(jsonScriptTag).html()!;
+    const jsonMatch = scriptText.match(/window\.RailsData = (\{[\s\S]*?\}\s*)\/\/\]\]/m);
+
+    if (!jsonMatch) {
+      throw new Error("RailsData object literal is in an unexpected format");
+    }
+
+    return JSON.parse(jsonMatch[1]);
+  } else if (compressedScriptTag) {
+    const scriptText = $(compressedScriptTag).html()!;
+    const jsonMatch = scriptText.match(/window.__reactRouterContext.streamController.enqueue\(([\s\S]*)\)/);
+    if (!jsonMatch) {
+      throw new Error("RailsData object literal not found in script tag or is in an unexpected format");
+    }
+    const data = jsonMatch[1].replace("\\\n", "");
+
+    const encoder = new TextEncoderStream();
+    const readableStream = new ReadableStream({
+      start(c) {
+        c.enqueue(JSON.parse(data));
+        c.close();
+      },
+    }).pipeThrough(encoder);
+
+    const result = await startDecoding(readableStream);
+    return result.value.loaderData["./routes/rest"].rails_data;
+  } else {
+    throw new Error("expected to find rails_data or window.RailsData script in shopify source but couldn't");
   }
-  const data = jsonMatch[1].replace("\\\n", "");
-
-  const encoder = new TextEncoderStream();
-  let controller: ReadableStreamController<any> | undefined = undefined;
-  const readableStream = new ReadableStream({
-    start(c) {
-      controller = c;
-      c.enqueue(JSON.parse(data));
-      c.close();
-    },
-  }).pipeThrough(encoder);
-
-  const result = await startDecoding(readableStream, {
-    __reactRouterContext: {
-      streamController: controller,
-    },
-  });
-  return result.value.loaderData["./routes/rest"].rails_data;
 };
 
 const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/docs/api/admin-rest/${version}/resources/webhook#event-topics`;
@@ -62,7 +69,7 @@ const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/doc
 let warnings = 0;
 let errors = 0;
 
-const inferSchemaFromExamplePayload = async (examplePayload: Record<string, any>, metadata: { name: string }) => {
+const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }) => {
   const inference = inferSchema(examplePayload);
 
   // build a copy of the payload and apply overrides based on the webhook name
@@ -119,7 +126,7 @@ const loadExemplars = async () => {
     const segments = file.split(path.sep);
     const _filename = segments.pop();
     const topicPattern = new RegExp(`${segments.pop()}.+`);
-    const version = segments.pop();
+    const _version = segments.pop();
 
     const exemplar = await fs.readJSON(file);
     manualExamples.push([topicPattern, exemplar]);
@@ -154,7 +161,7 @@ const main = async () => {
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");
 
-      const schema = await inferSchemaFromExamplePayload(webhook.response, webhook);
+      const schema = inferSchemaFromExamplePayload(webhook.response, webhook);
 
       const schemaFile = path.join(rootDir, "schemas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(schemaFile), { recursive: true });
@@ -162,8 +169,8 @@ const main = async () => {
     }
   }
 
-  if (warnings > 0) {
-    console.log(`Done with ${warnings} warnings`);
+  if (warnings > 0 || errors > 0) {
+    console.log(`Done with ${warnings} warnings and ${errors} errors`);
     process.exitCode = 1;
   } else {
     console.log(`Done`);

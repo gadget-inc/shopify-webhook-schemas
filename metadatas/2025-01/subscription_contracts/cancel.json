@@ -12,8 +12,8 @@
   "name": "subscription_contracts/cancel",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/6527657182",
-    "id": 6527657182,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/9166793214",
+    "id": 9166793214,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -30,7 +30,7 @@
     "status": "cancelled",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "8708358495"
+    "revision_id": "3461842045"
   },
   "shop_feature": false
 }
