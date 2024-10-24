@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "product_id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "position": {
+      "type": "integer"
+    },
+    "inventory_policy": {
+      "type": "string"
+    },
+    "compare_at_price": {
+      "type": "string"
+    },
+    "option1": {
+      "type": "string"
+    },
+    "option2": {
+      "type": "null"
+    },
+    "option3": {
+      "type": "null"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "taxable": {
+      "type": "boolean"
+    },
+    "barcode": {
+      "type": "null"
+    },
+    "sku": {
+      "type": "null"
+    },
+    "inventory_quantity": {
+      "type": "integer"
+    },
+    "old_inventory_quantity": {
+      "type": "integer"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "image_id": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "id",
+    "product_id",
+    "title",
+    "price",
+    "position",
+    "inventory_policy",
+    "compare_at_price",
+    "option1",
+    "option2",
+    "option3",
+    "created_at",
+    "updated_at",
+    "taxable",
+    "barcode",
+    "sku",
+    "inventory_quantity",
+    "old_inventory_quantity",
+    "admin_graphql_api_id",
+    "image_id"
+  ]
+}

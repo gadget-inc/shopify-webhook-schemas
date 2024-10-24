@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a theme is created. Does not occur when theme files are created.",
   "name": "themes/create",
   "related_resource": "Theme",
@@ -19,5 +21,6 @@
     "previewable": true,
     "processing": false,
     "admin_graphql_api_id": "gid://shopify/Theme/512162865275216980"
-  }
+  },
+  "shop_feature": false
 }

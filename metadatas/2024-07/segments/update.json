@@ -3,8 +3,10 @@
     "customers"
   ],
   "available_on": [
-    "graphql"
+    "graphql",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a segment is updated.",
   "name": "segments/update",
   "related_resource": "Payload",
@@ -14,5 +16,6 @@
     "query": "number_of_orders = 1",
     "creationDate": "2005-05-05T00:00:00.000Z",
     "lastEditDate": "2022-01-01T00:00:00.000Z"
-  }
+  },
+  "shop_feature": false
 }

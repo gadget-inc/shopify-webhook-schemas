@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a fulfillment order is cancelled.",
   "name": "fulfillment_orders/cancelled",
   "related_resource": "FulfillmentOrder",
@@ -21,5 +23,6 @@
       "id": "gid://shopify/FulfillmentOrder/2",
       "status": "open"
     }
-  }
+  },
+  "shop_feature": false
 }

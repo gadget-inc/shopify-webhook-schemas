@@ -1,0 +1,23 @@
+{
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever the access scopes of any installation are modified. Allows apps to keep track of the granted access scopes of their installations.",
+  "name": "app/scopes_update",
+  "related_resource": "AppScopesUpdateWebhookPayload",
+  "response": {
+    "id": 1,
+    "previous": [
+      "read_products"
+    ],
+    "current": [
+      "read_products",
+      "write_products"
+    ],
+    "updated_at": "2024-06-25T00:00:00.000Z"
+  },
+  "shop_feature": false
+}

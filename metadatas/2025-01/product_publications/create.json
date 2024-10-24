@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "publications"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a product publication for an active product is created, or whenever an existing product publication is published on the app that is subscribed to this webhook topic. Note that a webhook is only emitted when there are publishing changes to the app that is subscribed to the topic (ie. no webhook will be emitted if there is a publishing change to the online store and the webhook subscriber of the topic is a third-party app).",
+  "name": "product_publications/create",
+  "related_resource": "ProductListing",
+  "response": {
+    "id": null,
+    "publication_id": null,
+    "published_at": "2021-12-31T19:00:00-05:00",
+    "published": true,
+    "created_at": null,
+    "updated_at": null,
+    "product_id": 788032119674292900
+  },
+  "shop_feature": false
+}

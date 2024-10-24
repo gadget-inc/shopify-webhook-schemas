@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "return_line_items": {
+      "type": "object",
+      "properties": {
+        "removals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "admin_graphql_api_id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "delta": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "admin_graphql_api_id",
+              "delta"
+            ]
+          }
+        }
+      },
+      "required": [
+        "removals"
+      ]
+    },
+    "restocking_fees": {
+      "type": "object",
+      "properties": {
+        "updates": {
+          "type": "array",
+          "items": false
+        },
+        "removals": {
+          "type": "array",
+          "items": false
+        }
+      },
+      "required": [
+        "updates",
+        "removals"
+      ]
+    },
+    "return_shipping_fees": {
+      "type": "object",
+      "properties": {
+        "updates": {
+          "type": "array",
+          "items": false
+        },
+        "removals": {
+          "type": "array",
+          "items": false
+        }
+      },
+      "required": [
+        "updates",
+        "removals"
+      ]
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "return_line_items",
+    "restocking_fees",
+    "return_shipping_fees"
+  ]
+}

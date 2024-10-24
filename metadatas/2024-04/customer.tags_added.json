@@ -3,8 +3,10 @@
     "customers"
   ],
   "available_on": [
-    "graphql"
+    "graphql",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Triggers when tags are added to a customer.",
   "name": "customer.tags_added",
   "pii": [
@@ -18,5 +20,6 @@
       "tag2"
     ],
     "occurredAt": "2005-05-05T00:00:00.000Z"
-  }
+  },
+  "shop_feature": false
 }

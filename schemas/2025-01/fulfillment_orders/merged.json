@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "merge_intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fulfillment_order_id": {
+            "type": "integer"
+          },
+          "fulfillment_order_line_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "quantity": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "quantity"
+              ]
+            }
+          }
+        },
+        "required": [
+          "fulfillment_order_id",
+          "fulfillment_order_line_items"
+        ]
+      }
+    },
+    "fulfillment_order_merges": {
+      "type": "object",
+      "properties": {
+        "fulfillment_order": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "status"
+          ]
+        }
+      },
+      "required": [
+        "fulfillment_order"
+      ]
+    }
+  },
+  "required": [
+    "merge_intents",
+    "fulfillment_order_merges"
+  ]
+}

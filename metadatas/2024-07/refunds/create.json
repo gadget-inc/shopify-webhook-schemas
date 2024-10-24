@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a new refund is created without errors on an order, independent from the movement of money.",
   "name": "refunds/create",
   "pii": [
@@ -21,7 +23,6 @@
     "note": "Things were damaged",
     "user_id": 548380009,
     "processed_at": "2021-12-31T19:00:00-05:00",
-    "restock": false,
     "duties": [],
     "total_duties_set": {
       "shop_money": {
@@ -34,8 +35,10 @@
       }
     },
     "return": null,
+    "restock": false,
     "refund_shipping_lines": [],
     "admin_graphql_api_id": "gid://shopify/Refund/890088186047892319",
+    "order_adjustments": [],
     "refund_line_items": [
       {
         "id": 866550311766439000,
@@ -219,7 +222,7 @@
         }
       }
     ],
-    "transactions": [],
-    "order_adjustments": []
-  }
+    "transactions": []
+  },
+  "shop_feature": false
 }

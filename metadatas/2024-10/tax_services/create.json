@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "taxes"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": true,
+  "description": "Occurs whenever a tax service is created.",
+  "name": "tax_services/create",
+  "related_resource": "TaxService",
+  "response": {
+    "id": null,
+    "name": "Tax Service",
+    "url": "https://taxes.shopify.com",
+    "active": true
+  },
+  "shop_feature": true,
+  "shopify_approval_scope": [
+    "write_taxes"
+  ]
+}

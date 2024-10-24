@@ -42,18 +42,18 @@
           "type": "string",
           "format": "uri"
         },
-        "language": {
+        "country": {
           "type": "string"
         },
-        "country": {
+        "language": {
           "type": "string"
         }
       },
       "required": [
         "id",
         "shop_id",
-        "language",
-        "country"
+        "country",
+        "language"
       ]
     },
     "product": {
@@ -344,11 +344,15 @@
         "tags",
         "variants"
       ]
+    },
+    "products": {
+      "type": "null"
     }
   },
   "required": [
     "metadata",
     "productFeed",
-    "product"
+    "product",
+    "products"
   ]
 }

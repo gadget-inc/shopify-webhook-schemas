@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a fulfillment order is split into multiple fulfillment orders.",
   "name": "fulfillment_orders/split",
   "related_resource": "FulfillmentOrder",
@@ -30,5 +32,6 @@
       "id": "gid://shopify/FulfillmentOrder/3",
       "status": "open"
     }
-  }
+  },
+  "shop_feature": false
 }

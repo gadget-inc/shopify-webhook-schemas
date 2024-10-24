@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a cart is created in the online store. Other types of carts aren't supported. For example, the webhook doesn't support carts that are created in a custom storefront.",
   "name": "carts/create",
   "pii": [
@@ -33,7 +35,7 @@
         "product_id": 788032119674292900,
         "sku": "example-shirt-s",
         "taxable": true,
-        "title": "Example T-Shirt",
+        "title": "Example T-Shirt - Small",
         "total_discount": "0.00",
         "vendor": "Acme",
         "discounted_price_set": {
@@ -91,5 +93,6 @@
     "note": null,
     "updated_at": "2022-01-01T00:00:00.000Z",
     "created_at": "2022-01-01T00:00:00.000Z"
-  }
+  },
+  "shop_feature": false
 }

@@ -5,8 +5,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a fulfillment is created.",
   "name": "fulfillments/create",
   "pii": [
@@ -178,5 +180,6 @@
     "receipt": {},
     "name": "#9999.1",
     "admin_graphql_api_id": "gid://shopify/Fulfillment/123456"
-  }
+  },
+  "shop_feature": false
 }

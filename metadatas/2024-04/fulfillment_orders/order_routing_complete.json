@@ -8,8 +8,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when an order has finished being routed and it's fulfillment orders assigned to a fulfillment service's location.",
   "name": "fulfillment_orders/order_routing_complete",
   "related_resource": "FulfillmentOrder",
@@ -18,5 +20,6 @@
       "id": "gid://shopify/FulfillmentOrder/1",
       "status": "open"
     }
-  }
+  },
+  "shop_feature": false
 }

@@ -1,0 +1,66 @@
+{
+  "access_scopes": [
+    "returns",
+    "marketplace_returns",
+    "buyer_membership_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a return is requested. This means `Return.status` is `REQUESTED`.",
+  "name": "returns/request",
+  "related_resource": "Return",
+  "response": {
+    "id": 123134564567890,
+    "admin_graphql_api_id": "gid://shopify/Return/123134564567890",
+    "status": "requested",
+    "order": {
+      "id": 4783296544821,
+      "admin_graphql_api_id": "gid://shopify/Order/4783296544821"
+    },
+    "total_return_line_items": 2,
+    "name": null,
+    "return_line_items": [
+      {
+        "id": 987654321,
+        "admin_graphql_api_id": "gid://shopify/ReturnLineItem/987654321",
+        "fulfillment_line_item": {
+          "id": 4463854417760,
+          "admin_graphql_api_id": "gid://shopify/FulfillmentLineItem/4463854417760",
+          "line_item": {
+            "id": 4176556606960,
+            "admin_graphql_api_id": "gid://shopify/LineItem/4176556606960"
+          }
+        },
+        "quantity": 1,
+        "return_reason": "size_too_small",
+        "return_reason_note": "",
+        "customer_note": null,
+        "restocking_fee": null
+      },
+      {
+        "id": 987654322,
+        "admin_graphql_api_id": "gid://shopify/ReturnLineItem/987654322",
+        "fulfillment_line_item": {
+          "id": 7219216693661,
+          "admin_graphql_api_id": "gid://shopify/FulfillmentLineItem/7219216693661",
+          "line_item": {
+            "id": 7014063798651,
+            "admin_graphql_api_id": "gid://shopify/LineItem/7014063798651"
+          }
+        },
+        "quantity": 1,
+        "return_reason": "size_too_large",
+        "return_reason_note": "",
+        "customer_note": null,
+        "restocking_fee": null
+      }
+    ],
+    "return_shipping_fees": [],
+    "exchange_line_items": [],
+    "total_exchange_line_items": 0
+  },
+  "shop_feature": false
+}

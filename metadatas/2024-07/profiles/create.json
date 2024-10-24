@@ -5,8 +5,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a delivery profile is created",
   "name": "profiles/create",
   "pii": [
@@ -15,5 +17,6 @@
   "related_resource": "DeliveryProfile",
   "response": {
     "id": 1
-  }
+  },
+  "shop_feature": false
 }

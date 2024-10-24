@@ -3,15 +3,20 @@
     "orders"
   ],
   "available_on": [
-    "graphql"
+    "graphql",
+    "toml"
   ],
-  "description": "Triggers when a new risk assessment is available on the order.\nThis can be the first or a subsequent risk assessment.\nNew risk assessments can be provided until the order is marked as fulfilled.\nIncludes the risk level, risk facts and the provider. Does not include the risk recommendation for the order.\nThe order and shop are identified in the headers.\n",
+  "deprecated": false,
+  "description": "Triggers when a new risk assessment is available on the order.\nThis can be the first or a subsequent risk assessment.\nNew risk assessments can be provided until the order is marked as fulfilled.\nIncludes the risk level, risk facts, the provider and the order ID.\nDoes not include the risk recommendation for the order.\nThe Shop ID is available in the headers.\n",
   "name": "orders/risk_assessment_changed",
   "related_resource": "Assessment",
   "response": {
     "provider_id": null,
     "provider_title": null,
     "risk_level": "medium",
-    "created_at": null
-  }
+    "created_at": null,
+    "order_id": null,
+    "admin_graphql_api_order_id": null
+  },
+  "shop_feature": false
 }

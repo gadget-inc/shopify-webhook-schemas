@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "app_purchase_one_time": {
+      "type": "object",
+      "properties": {
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "admin_graphql_api_shop_id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "name",
+        "status",
+        "admin_graphql_api_shop_id",
+        "created_at",
+        "updated_at"
+      ]
+    }
+  },
+  "required": [
+    "app_purchase_one_time"
+  ]
+}

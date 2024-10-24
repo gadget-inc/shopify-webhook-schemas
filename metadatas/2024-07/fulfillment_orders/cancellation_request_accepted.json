@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a 3PL accepts a fulfillment cancellation request, received from a merchant.",
   "name": "fulfillment_orders/cancellation_request_accepted",
   "related_resource": "FulfillmentOrder",
@@ -18,5 +20,6 @@
       "status": "closed"
     },
     "message": "Order has not been shipped yet."
-  }
+  },
+  "shop_feature": false
 }

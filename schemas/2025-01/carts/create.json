@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "properties": {
+            "type": "object"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "variant_id": {
+            "type": "integer"
+          },
+          "key": {
+            "type": "string"
+          },
+          "discounted_price": {
+            "type": "string"
+          },
+          "discounts": {
+            "type": "array",
+            "items": false
+          },
+          "gift_card": {
+            "type": "boolean"
+          },
+          "grams": {
+            "type": "integer"
+          },
+          "line_price": {
+            "type": "string"
+          },
+          "original_line_price": {
+            "type": "string"
+          },
+          "original_price": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "taxable": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "total_discount": {
+            "type": "string"
+          },
+          "vendor": {
+            "type": "string"
+          },
+          "discounted_price_set": {
+            "type": "object",
+            "properties": {
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              }
+            },
+            "required": [
+              "shop_money",
+              "presentment_money"
+            ]
+          },
+          "line_price_set": {
+            "type": "object",
+            "properties": {
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              }
+            },
+            "required": [
+              "shop_money",
+              "presentment_money"
+            ]
+          },
+          "original_line_price_set": {
+            "type": "object",
+            "properties": {
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              }
+            },
+            "required": [
+              "shop_money",
+              "presentment_money"
+            ]
+          },
+          "price_set": {
+            "type": "object",
+            "properties": {
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              }
+            },
+            "required": [
+              "shop_money",
+              "presentment_money"
+            ]
+          },
+          "total_discount_set": {
+            "type": "object",
+            "properties": {
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              },
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency_code"
+                ]
+              }
+            },
+            "required": [
+              "shop_money",
+              "presentment_money"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "properties",
+          "quantity",
+          "variant_id",
+          "key",
+          "discounted_price",
+          "discounts",
+          "gift_card",
+          "grams",
+          "line_price",
+          "original_line_price",
+          "original_price",
+          "price",
+          "product_id",
+          "sku",
+          "taxable",
+          "title",
+          "total_discount",
+          "vendor",
+          "discounted_price_set",
+          "line_price_set",
+          "original_line_price_set",
+          "price_set",
+          "total_discount_set"
+        ]
+      }
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "token",
+    "line_items",
+    "note",
+    "updated_at",
+    "created_at"
+  ]
+}

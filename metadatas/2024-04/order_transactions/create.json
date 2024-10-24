@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a order transaction is created or when it's status is updated. Only occurs for transactions with a status of success, failure or error.",
   "name": "order_transactions/create",
   "pii": [
@@ -60,5 +62,6 @@
     },
     "manual_payment_gateway": true,
     "admin_graphql_api_id": "gid://shopify/OrderTransaction/120560818172775265"
-  }
+  },
+  "shop_feature": false
 }

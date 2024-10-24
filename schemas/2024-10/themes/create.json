@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "role": {
+      "type": "string"
+    },
+    "theme_store_id": {
+      "type": "integer"
+    },
+    "previewable": {
+      "type": "boolean"
+    },
+    "processing": {
+      "type": "boolean"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "created_at",
+    "updated_at",
+    "role",
+    "theme_store_id",
+    "previewable",
+    "processing",
+    "admin_graphql_api_id"
+  ]
+}

@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever Shopify Protect's eligibility for an order is changed.",
   "name": "orders/shopify_protect_eligibility_changed",
   "related_resource": "Summary",
@@ -15,5 +17,6 @@
     "eligibility": {
       "status": "eligible"
     }
-  }
+  },
+  "shop_feature": false
 }

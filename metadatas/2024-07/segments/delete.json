@@ -3,12 +3,15 @@
     "customers"
   ],
   "available_on": [
-    "graphql"
+    "graphql",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a segment is deleted.",
   "name": "segments/delete",
   "related_resource": "Payload",
   "response": {
     "id": 1
-  }
+  },
+  "shop_feature": false
 }

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "test": {
+      "type": "boolean"
+    },
+    "processed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "remote_reference": {
+      "type": "string",
+      "format": "time"
+    },
+    "payment_details": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "something": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "something"
+      ]
+    },
+    "payment_method": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "order_id",
+    "amount",
+    "currency",
+    "user_id",
+    "test",
+    "processed_at",
+    "remote_reference",
+    "payment_details",
+    "payment_method"
+  ]
+}

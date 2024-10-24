@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "payment_terms"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever payment terms are deleted.",
+  "name": "payment_terms/delete",
+  "related_resource": "PaymentTerms",
+  "response": {
+    "id": 706405506930370000
+  },
+  "shop_feature": false
+}

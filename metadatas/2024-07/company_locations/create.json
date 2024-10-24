@@ -1,15 +1,17 @@
 {
   "access_scopes": [
-    "customers"
+    "customers",
+    "companies"
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a company location is created.",
   "name": "company_locations/create",
   "pii": [
-    "third_party",
     "customer"
   ],
   "related_resource": "CompanyLocation",
@@ -44,6 +46,8 @@
       "country": "Canada",
       "zip": "H3A 0G4",
       "recipient": "Adam Felix",
+      "first_name": null,
+      "last_name": null,
       "address2": null,
       "phone": "+49738001239",
       "zone_code": "QC",
@@ -60,6 +64,8 @@
       "country": "Canada",
       "zip": "H3A 0G4",
       "recipient": "Adam Felix",
+      "first_name": null,
+      "last_name": null,
       "address2": null,
       "phone": "+49738001239",
       "zone_code": "QC",
@@ -72,5 +78,6 @@
     "tax_registration": {
       "tax_id": "1214214141"
     }
-  }
+  },
+  "shop_feature": false
 }

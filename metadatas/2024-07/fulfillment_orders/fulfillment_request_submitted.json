@@ -3,13 +3,14 @@
     "merchant_managed_fulfillment_orders",
     "assigned_fulfillment_orders",
     "third_party_fulfillment_orders",
-    "buyer_membership_orders",
     "marketplace_fulfillment_orders"
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a merchant submits a fulfillment request to a 3PL.",
   "name": "fulfillment_orders/fulfillment_request_submitted",
   "related_resource": "FulfillmentOrder",
@@ -28,5 +29,6 @@
       "id": "gid://shopify/FulfillmentOrderMerchantRequest/1",
       "message": "Fragile"
     }
-  }
+  },
+  "shop_feature": false
 }

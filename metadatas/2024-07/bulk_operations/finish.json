@@ -1,17 +1,20 @@
 {
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Notifies when a Bulk Operation finishes.",
   "name": "bulk_operations/finish",
   "related_resource": "BulkOperation",
   "response": {
     "admin_graphql_api_id": "gid://shopify/BulkOperation/147595010",
-    "completed_at": "2024-04-25T20:31:44-04:00",
-    "created_at": "2024-04-25T20:31:44-04:00",
+    "completed_at": "2024-10-07T22:08:17-04:00",
+    "created_at": "2024-10-07T22:08:17-04:00",
     "error_code": null,
     "status": "completed",
     "type": "query"
-  }
+  },
+  "shop_feature": false
 }

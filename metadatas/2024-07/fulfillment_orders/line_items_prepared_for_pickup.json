@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Triggers when one or more of the line items for a fulfillment order are prepared for pickup",
   "name": "fulfillment_orders/line_items_prepared_for_pickup",
   "related_resource": "FulfillmentOrder",
@@ -21,5 +23,6 @@
         "method_type": "pickup"
       }
     }
-  }
+  },
+  "shop_feature": false
 }
