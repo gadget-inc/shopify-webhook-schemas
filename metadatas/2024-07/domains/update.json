@@ -1,8 +1,10 @@
 {
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a domain is updated.",
   "name": "domains/update",
   "related_resource": "Domain",
@@ -15,5 +17,6 @@
       "default_locale": "en",
       "alternate_locales": []
     }
-  }
+  },
+  "shop_feature": false
 }

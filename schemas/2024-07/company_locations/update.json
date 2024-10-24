@@ -114,6 +114,12 @@
         "recipient": {
           "type": "string"
         },
+        "first_name": {
+          "type": "null"
+        },
+        "last_name": {
+          "type": "null"
+        },
         "address2": {
           "type": [
             "string",
@@ -153,6 +159,8 @@
         "country",
         "zip",
         "recipient",
+        "first_name",
+        "last_name",
         "address2",
         "phone",
         "zone_code",
@@ -184,6 +192,12 @@
         "recipient": {
           "type": "string"
         },
+        "first_name": {
+          "type": "null"
+        },
+        "last_name": {
+          "type": "null"
+        },
         "address2": {
           "type": [
             "string",
@@ -223,6 +237,8 @@
         "country",
         "zip",
         "recipient",
+        "first_name",
+        "last_name",
         "address2",
         "phone",
         "zone_code",

@@ -1,11 +1,14 @@
 {
   "access_scopes": [
-    "customers"
+    "customers",
+    "companies"
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a company is deleted.",
   "name": "companies/delete",
   "related_resource": "Company",
@@ -18,5 +21,6 @@
     "updated_at": "2021-12-31T19:00:00-05:00",
     "customer_since": "2021-12-31T19:00:00-05:00",
     "admin_graphql_api_id": "gid://shopify/Company/408372092144951419"
-  }
+  },
+  "shop_feature": false
 }

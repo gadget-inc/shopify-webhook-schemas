@@ -16,6 +16,9 @@
       "type": "string",
       "format": "date-time"
     },
+    "display_name": {
+      "type": "string"
+    },
     "id": {
       "type": "string",
       "format": "uri"
@@ -68,6 +71,7 @@
     "handle",
     "created_at",
     "updated_at",
+    "display_name",
     "id",
     "definition_id",
     "fields",

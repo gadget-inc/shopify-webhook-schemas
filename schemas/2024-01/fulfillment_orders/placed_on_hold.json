@@ -38,13 +38,45 @@
       ]
     },
     "remaining_fulfillment_order": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ]
+        },
+        "status": {
+          "type": "string"
         },
         "shop_id": {
           "type": "integer"
@@ -56,9 +88,6 @@
           "type": "integer"
         },
         "request_status": {
-          "type": "string"
-        },
-        "status": {
           "type": "string"
         },
         "supported_actions": {
@@ -256,25 +285,27 @@
       },
       "required": [
         "id",
-        "shop_id",
-        "order_id",
-        "assigned_location_id",
-        "request_status",
-        "status",
-        "supported_actions",
-        "destination",
-        "line_items",
-        "fulfill_at",
-        "fulfill_by",
-        "international_duties",
-        "fulfillment_holds",
-        "delivery_method",
-        "assigned_location"
+        "status"
       ]
     },
     "held_fulfillment_order_line_items": {
       "type": "array",
-      "items": false
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "quantity"
+        ]
+      }
     }
   },
   "required": [

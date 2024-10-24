@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a product is no longer scheduled to be published.",
   "name": "scheduled_product_listings/remove",
   "related_resource": "ProductListing",
@@ -13,5 +15,6 @@
     "scheduled_product_listing": {
       "product_id": 788032119674292900
     }
-  }
+  },
+  "shop_feature": false
 }

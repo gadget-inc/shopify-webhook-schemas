@@ -22,9 +22,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "restock": {
-      "type": "boolean"
-    },
     "duties": {
       "type": "array",
       "items": false
@@ -74,6 +71,9 @@
         "null"
       ]
     },
+    "restock": {
+      "type": "boolean"
+    },
     "refund_shipping_lines": {
       "type": "array",
       "items": false
@@ -81,6 +81,10 @@
     "admin_graphql_api_id": {
       "type": "string",
       "format": "uri"
+    },
+    "order_adjustments": {
+      "type": "array",
+      "items": false
     },
     "refund_line_items": {
       "type": "array",
@@ -450,10 +454,6 @@
     "transactions": {
       "type": "array",
       "items": false
-    },
-    "order_adjustments": {
-      "type": "array",
-      "items": false
     }
   },
   "required": [
@@ -463,14 +463,14 @@
     "note",
     "user_id",
     "processed_at",
-    "restock",
     "duties",
     "total_duties_set",
     "return",
+    "restock",
     "refund_shipping_lines",
     "admin_graphql_api_id",
+    "order_adjustments",
     "refund_line_items",
-    "transactions",
-    "order_adjustments"
+    "transactions"
   ]
 }

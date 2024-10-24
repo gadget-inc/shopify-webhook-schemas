@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "original_fulfillment_order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string"
+        },
+        "assigned_location_id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "assigned_location_id"
+      ]
+    },
+    "moved_fulfillment_order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string"
+        },
+        "assigned_location_id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "assigned_location_id"
+      ]
+    },
+    "destination_location_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "fulfillment_order_line_items_requested": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "quantity"
+        ]
+      }
+    },
+    "source_location": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  "required": [
+    "original_fulfillment_order",
+    "moved_fulfillment_order",
+    "destination_location_id",
+    "fulfillment_order_line_items_requested",
+    "source_location"
+  ]
+}

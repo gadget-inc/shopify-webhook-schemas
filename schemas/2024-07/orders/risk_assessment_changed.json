@@ -23,12 +23,20 @@
         "null"
       ],
       "format": "date-time"
+    },
+    "order_id": {
+      "type": "null"
+    },
+    "admin_graphql_api_order_id": {
+      "type": "null"
     }
   },
   "required": [
     "provider_id",
     "provider_title",
     "risk_level",
-    "created_at"
+    "created_at",
+    "order_id",
+    "admin_graphql_api_order_id"
   ]
 }

@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a customer payment method is revoked.",
   "name": "customer_payment_methods/revoke",
   "pii": [
@@ -25,5 +27,6 @@
       "name": "Jim Smith",
       "brand": "Visa"
     }
-  }
+  },
+  "shop_feature": false
 }

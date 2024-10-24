@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a tender transaction is created.",
   "name": "tender_transactions/create",
   "pii": [
@@ -23,5 +25,6 @@
     "remote_reference": "1001",
     "payment_details": null,
     "payment_method": "unknown"
-  }
+  },
+  "shop_feature": false
 }
