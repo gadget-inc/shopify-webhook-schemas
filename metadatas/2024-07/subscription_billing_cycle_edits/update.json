@@ -4,13 +4,15 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a subscription contract billing cycle edit is updated.",
   "name": "subscription_billing_cycle_edits/update",
   "related_resource": "SubscriptionBillingCycle",
   "response": {
-    "subscription_contract_id": 1429327114,
+    "subscription_contract_id": 3581331296,
     "cycle_start_at": "2022-10-01T00:00:00-04:00",
     "cycle_end_at": "2022-11-01T00:00:00-04:00",
     "cycle_index": 1,
@@ -18,5 +20,6 @@
     "billing_attempt_expected_date": "2022-11-01T00:00:00-04:00",
     "skipped": false,
     "edited": false
-  }
+  },
+  "shop_feature": false
 }

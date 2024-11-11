@@ -7,8 +7,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a 3PL rejects a fulfillment request that was sent by a merchant.",
   "name": "fulfillment_orders/fulfillment_request_rejected",
   "related_resource": "FulfillmentOrder",
@@ -19,5 +21,6 @@
       "request_status": "rejected"
     },
     "message": "Can't fulfill due to no inventory on product."
-  }
+  },
+  "shop_feature": false
 }

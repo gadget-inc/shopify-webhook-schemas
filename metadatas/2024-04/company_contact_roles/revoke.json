@@ -1,15 +1,17 @@
 {
   "access_scopes": [
-    "customers"
+    "customers",
+    "companies"
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a role is revoked from a contact at a location.",
   "name": "company_contact_roles/revoke",
   "pii": [
-    "third_party",
     "customer"
   ],
   "related_resource": "CompanyContactRoleAssignment",
@@ -63,6 +65,8 @@
         "country": "Canada",
         "zip": "H3A 0G4",
         "recipient": "Adam Felix",
+        "first_name": null,
+        "last_name": null,
         "address2": null,
         "phone": "+49738001239",
         "zone_code": "QC",
@@ -79,6 +83,8 @@
         "country": "Canada",
         "zip": "H3A 0G4",
         "recipient": "Adam Felix",
+        "first_name": null,
+        "last_name": null,
         "address2": null,
         "phone": "+49738001239",
         "zone_code": "QC",
@@ -95,5 +101,6 @@
     "company_contact_role": {
       "name": "Location Admin"
     }
-  }
+  },
+  "shop_feature": false
 }

@@ -6,6 +6,7 @@
     "graphql",
     "rest"
   ],
+  "deprecated": false,
   "description": "Triggers when a full sync for a product feed is performed",
   "name": "product_feeds/full_sync",
   "related_resource": "",
@@ -14,15 +15,15 @@
       "action": "CREATE",
       "type": "FULL",
       "resource": "PRODUCT",
-      "fullSyncId": "gid://shopify/ProductFullSync/11235",
+      "fullSyncId": "gid://shopify/ProductFullSync/1123511235",
       "truncatedFields": [],
       "occurred_at": "2022-01-01T00:00:00.000Z"
     },
     "productFeed": {
       "id": "gid://shopify/ProductFeed/12345",
       "shop_id": "gid://shopify/Shop/12345",
-      "language": "EN",
-      "country": "CA"
+      "country": "CA",
+      "language": "EN"
     },
     "product": {
       "id": "gid://shopify/Product/12345",
@@ -103,6 +104,8 @@
           }
         ]
       }
-    }
-  }
+    },
+    "products": null
+  },
+  "shop_feature": false
 }

@@ -497,6 +497,9 @@
                 "tax_type": {
                   "type": "null"
                 },
+                "tax_registration_id": {
+                  "type": "null"
+                },
                 "jurisdiction_id": {
                   "type": [
                     "string",

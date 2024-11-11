@@ -14,27 +14,26 @@ const main = async () => {
       if (typeof value == "number") {
         return Math.round(value) == value ? 123 : 123.456;
       } else if (typeof value == "string") {
-        const type = inferType(value)
-        if ('format' in type && type.format) {
+        const type = inferType(value);
+        if ("format" in type && type.format) {
           switch (type.format.name) {
             case "email": {
-              return "eallam@example.com"
+              return "eallam@example.com";
             }
-            case ("date" as any): {
-              return "2016-05-25"
+            case "date" as any: {
+              return "2016-05-25";
             }
             case "datetime": {
-              return "2019-01-01 00:00:00.000Z"
+              return "2019-01-01 00:00:00.000Z";
             }
             case "uri": {
-              return "https://www.example.com/"
+              return "https://www.example.com/";
             }
             case "ip": {
-              return "192.168.0.1"
+              return "192.168.0.1";
             }
           }
         }
-
 
         return "example string";
       } else {

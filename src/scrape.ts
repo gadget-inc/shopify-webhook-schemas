@@ -5,9 +5,10 @@ import { schemaWalk, getVocabulary } from "@cloudflare/json-schema-walker";
 import { inferSchema } from "@jsonhero/schema-infer";
 import cheerio from "cheerio";
 import got from "got";
-import { cloneDeep, isEqual, isNull, merge, pick, template, uniq } from "lodash";
+import { cloneDeep, isEqual, merge, pick, uniq } from "lodash";
 import path from "path";
 import { getPackageRootDir } from "src";
+import { startDecoding } from "./shopify.js";
 
 const startVersion = "2024-04";
 
@@ -24,19 +25,43 @@ function assert<T>(value: T | false | undefined | null, message?: string): T {
 const loadRailsData = async (url: string) => {
   const shopifyDocsSource = await got(url);
   const $ = cheerio.load(shopifyDocsSource.body);
-  const scriptTag = assert(
-    $("script")
-      .toArray()
-      .find((script) => $(script).html()?.includes("window.RailsData")),
-    "expected to find window.RailsData script tag in shopify source but couldn't"
-  );
+  const jsonScriptTag = $("script")
+    .toArray()
+    .find((script) => $(script).html()?.includes("window.RailsData"));
+  const compressedScriptTag = $("script")
+    .toArray()
+    .find((script) => $(script).html()?.includes("rails_data"));
 
-  const scriptText = $(scriptTag).html()!;
-  const jsonMatch = scriptText.match(/window\.RailsData = (\{[\s\S]*?\}\s*)\/\/\]\]/m);
-  if (!jsonMatch) {
-    throw new Error("RailsData object literal not found in script tag or is in an unexpected format");
+  if (jsonScriptTag) {
+    const scriptText = $(jsonScriptTag).html()!;
+    const jsonMatch = scriptText.match(/window\.RailsData = (\{[\s\S]*?\}\s*)\/\/\]\]/m);
+
+    if (!jsonMatch) {
+      throw new Error("RailsData object literal is in an unexpected format");
+    }
+
+    return JSON.parse(jsonMatch[1]);
+  } else if (compressedScriptTag) {
+    const scriptText = $(compressedScriptTag).html()!;
+    const jsonMatch = scriptText.match(/window.__reactRouterContext.streamController.enqueue\(([\s\S]*)\)/);
+    if (!jsonMatch) {
+      throw new Error("RailsData object literal not found in script tag or is in an unexpected format");
+    }
+    const data = jsonMatch[1].replace("\\\n", "");
+
+    const encoder = new TextEncoderStream();
+    const readableStream = new ReadableStream({
+      start(c) {
+        c.enqueue(JSON.parse(data));
+        c.close();
+      },
+    }).pipeThrough(encoder);
+
+    const result = await startDecoding(readableStream);
+    return result.value.loaderData["./routes/rest"].rails_data;
+  } else {
+    throw new Error("expected to find rails_data or window.RailsData script in shopify source but couldn't");
   }
-  return JSON.parse(jsonMatch[1]);
 };
 
 const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/docs/api/admin-rest/${version}/resources/webhook#event-topics`;
@@ -44,7 +69,7 @@ const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/doc
 let warnings = 0;
 let errors = 0;
 
-const inferSchemaFromExamplePayload = async (examplePayload: Record<string, any>, metadata: { name: string }) => {
+const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }) => {
   const inference = inferSchema(examplePayload);
 
   // build a copy of the payload and apply overrides based on the webhook name
@@ -88,7 +113,7 @@ const inferSchemaFromExamplePayload = async (examplePayload: Record<string, any>
         }
       }
     },
-    () => { },
+    () => {},
     getVocabulary(schema)
   );
 
@@ -101,7 +126,7 @@ const loadExemplars = async () => {
     const segments = file.split(path.sep);
     const _filename = segments.pop();
     const topicPattern = new RegExp(`${segments.pop()}.+`);
-    const version = segments.pop();
+    const _version = segments.pop();
 
     const exemplar = await fs.readJSON(file);
     manualExamples.push([topicPattern, exemplar]);
@@ -125,12 +150,18 @@ const main = async () => {
     console.log(`Loaded ${webhooks.length} webhooks for version ${version}`);
 
     for (const webhook of webhooks) {
-      webhook.response = JSON.parse(webhook.response);
+      if (webhook.response === "") {
+        console.warn(`${webhook.name} has an empty response`);
+        warnings += 1;
+        webhook.response = {};
+      } else {
+        webhook.response = JSON.parse(webhook.response);
+      }
       const metadataFile = path.join(rootDir, "metadatas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");
 
-      const schema = await inferSchemaFromExamplePayload(webhook.response, webhook);
+      const schema = inferSchemaFromExamplePayload(webhook.response, webhook);
 
       const schemaFile = path.join(rootDir, "schemas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(schemaFile), { recursive: true });
@@ -138,8 +169,8 @@ const main = async () => {
     }
   }
 
-  if (warnings > 0) {
-    console.log(`Done with ${warnings} warnings`);
+  if (warnings > 0 || errors > 0) {
+    console.log(`Done with ${warnings} warnings and ${errors} errors`);
     process.exitCode = 1;
   } else {
     console.log(`Done`);
@@ -192,7 +223,7 @@ const unknownPaths: [topicPattern: RegExp, paths: string[]][] = [
     ["properties.collection_listing.properties.default_product_image", "properties.collection_listing.properties.image"],
   ],
   [/domains\/.+/, ["properties.localization.properties.country"]],
-  [/orders\/.+/, ["properties.client_details.properties.session_hash"]]
+  [/orders\/.+/, ["properties.client_details.properties.session_hash"]],
 ];
 
 // example data we feed the schema infer-er for each topic to allow it to discover real types
@@ -417,8 +448,7 @@ const manualExamples: [RegExp, Record<string, any>][] = [
       collection_listing: {
         updated_at: "2021-12-30T19:00:00-05:00",
         sort_order: 1,
-      }
-
+      },
     },
   ],
   [
@@ -426,10 +456,10 @@ const manualExamples: [RegExp, Record<string, any>][] = [
     {
       buyer_experience_configuration: { pay_now_only: true },
       billing_address: {
-        address2: "suite 101"
+        address2: "suite 101",
       },
       shipping_address: {
-        address2: "suite 101"
+        address2: "suite 101",
       },
     },
   ],
@@ -713,7 +743,7 @@ const overrides: { topics: string[]; schema: any; versions?: string[] }[] = [
       receipt: {
         type: "object",
         additionalProperties: true,
-      }
-    }
-  }
+      },
+    },
+  },
 ];

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "admin_graphql_api_id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "status": {
+      "type": "string"
+    },
+    "order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "admin_graphql_api_id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "admin_graphql_api_id"
+      ]
+    },
+    "total_return_line_items": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "null"
+    },
+    "return_line_items": {
+      "type": "array",
+      "items": false
+    },
+    "return_shipping_fees": {
+      "type": "array",
+      "items": false
+    },
+    "exchange_line_items": {
+      "type": "array",
+      "items": false
+    },
+    "total_exchange_line_items": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "id",
+    "admin_graphql_api_id",
+    "status",
+    "order",
+    "total_return_line_items",
+    "name",
+    "return_line_items",
+    "return_shipping_fees",
+    "exchange_line_items",
+    "total_exchange_line_items"
+  ]
+}

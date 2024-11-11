@@ -1,0 +1,37 @@
+{
+  "access_scopes": [
+    "returns",
+    "marketplace_returns"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a deliverable is attached to a reverse delivery.\nThis occurs when a reverse delivery is created or updated with delivery metadata.\nMetadata includes the delivery method, label, and tracking information associated with a reverse delivery.\n",
+  "name": "reverse_deliveries/attach_deliverable",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "ReverseDelivery",
+  "response": {
+    "id": 9080907654321,
+    "admin_graphql_api_id": "gid://shopify/ReverseDelivery/9080907654321",
+    "return": {
+      "id": 123134564567890,
+      "admin_graphql_api_id": "gid://shopify/Return/123134564567890"
+    },
+    "shipping_deliverable": {
+      "tracking": {
+        "carrier_name": "USPS",
+        "tracking_number": "123345345",
+        "tracking_url": null
+      },
+      "label": {
+        "public_file_url": null,
+        "created_at": null
+      }
+    }
+  },
+  "shop_feature": false
+}

@@ -4,14 +4,16 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a subscription contract expires.",
   "name": "subscription_contracts/expire",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/5757047950",
-    "id": 5757047950,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/8099849403",
+    "id": 8099849403,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -28,6 +30,7 @@
     "status": "expired",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "3691632374"
-  }
+    "revision_id": "529962553"
+  },
+  "shop_feature": false
 }

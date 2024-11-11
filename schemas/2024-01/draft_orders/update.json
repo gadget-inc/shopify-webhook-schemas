@@ -104,13 +104,13 @@
             "items": {
               "type": "object",
               "properties": {
-                "price": {
-                  "type": "string"
-                },
                 "rate": {
                   "type": "number"
                 },
                 "title": {
+                  "type": "string"
+                },
+                "price": {
                   "type": "string"
                 },
                 "channel_liable": {
@@ -157,9 +157,9 @@
                 }
               },
               "required": [
-                "price",
                 "rate",
-                "title"
+                "title",
+                "price"
               ]
             }
           },
@@ -840,6 +840,12 @@
                   "payment_terms_id": {
                     "type": "integer"
                   },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
                   "issued_at": {
                     "type": "string",
                     "format": "date-time"
@@ -857,6 +863,24 @@
                   },
                   "currency": {
                     "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -864,13 +888,24 @@
                   "created_at",
                   "updated_at",
                   "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
                   "issued_at",
                   "due_at",
                   "completed_at",
                   "amount",
-                  "currency"
+                  "currency",
+                  "total_price",
+                  "total_price_currency",
+                  "balance_due",
+                  "balance_due_currency",
+                  "outstanding_balance",
+                  "outstanding_balance_currency"
                 ]
               }
+            },
+            "can_pay_early": {
+              "type": "boolean"
             }
           },
           "required": [
@@ -880,7 +915,8 @@
             "due_in_days",
             "created_at",
             "updated_at",
-            "payment_schedules"
+            "payment_schedules",
+            "can_pay_early"
           ]
         },
         {
@@ -928,6 +964,12 @@
                   "payment_terms_id": {
                     "type": "integer"
                   },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
                   "issued_at": {
                     "type": "string",
                     "format": "date-time"
@@ -945,6 +987,24 @@
                   },
                   "currency": {
                     "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -952,13 +1012,24 @@
                   "created_at",
                   "updated_at",
                   "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
                   "issued_at",
                   "due_at",
                   "completed_at",
                   "amount",
-                  "currency"
+                  "currency",
+                  "total_price",
+                  "total_price_currency",
+                  "balance_due",
+                  "balance_due_currency",
+                  "outstanding_balance",
+                  "outstanding_balance_currency"
                 ]
               }
+            },
+            "can_pay_early": {
+              "type": "boolean"
             }
           },
           "required": [
@@ -968,7 +1039,8 @@
             "due_in_days",
             "created_at",
             "updated_at",
-            "payment_schedules"
+            "payment_schedules",
+            "can_pay_early"
           ]
         }
       ]
@@ -1224,15 +1296,15 @@
         "marketing_opt_in_level": {
           "type": "string"
         },
-        "accepts_marketing": {
-          "type": "boolean"
-        },
         "accepts_marketing_updated_at": {
           "type": [
             "string",
             "null"
           ],
           "format": "date-time"
+        },
+        "accepts_marketing": {
+          "type": "boolean"
         },
         "metafields": {
           "type": "array",

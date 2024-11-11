@@ -4,14 +4,16 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when a subscription contract is paused.",
   "name": "subscription_contracts/pause",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/6022434938",
-    "id": 6022434938,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/1412250266",
+    "id": 1412250266,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -28,6 +30,7 @@
     "status": "paused",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "6978606581"
-  }
+    "revision_id": "8872806977"
+  },
+  "shop_feature": false
 }

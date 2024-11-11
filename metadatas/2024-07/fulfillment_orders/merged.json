@@ -6,8 +6,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs when multiple fulfillment orders are merged into a single fulfillment order.",
   "name": "fulfillment_orders/merged",
   "related_resource": "FulfillmentOrder",
@@ -38,5 +40,6 @@
         "status": "open"
       }
     }
-  }
+  },
+  "shop_feature": false
 }

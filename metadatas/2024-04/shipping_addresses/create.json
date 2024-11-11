@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "shipping"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": true,
+  "description": "Occurs whenever a shipping address is created.",
+  "name": "shipping_addresses/create",
+  "related_resource": "ShippingAddress",
+  "response": {},
+  "shop_feature": false
+}

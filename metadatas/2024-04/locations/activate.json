@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a deactivated location is re-activated.",
   "name": "locations/activate",
   "related_resource": "Location",
@@ -27,5 +29,6 @@
     "legacy": false,
     "active": true,
     "admin_graphql_api_id": "gid://shopify/Location/866550311766439020"
-  }
+  },
+  "shop_feature": false
 }

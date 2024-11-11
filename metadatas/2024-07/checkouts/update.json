@@ -4,8 +4,10 @@
   ],
   "available_on": [
     "graphql",
-    "rest"
+    "rest",
+    "toml"
   ],
+  "deprecated": false,
   "description": "Occurs whenever a checkout is updated.",
   "name": "checkouts/update",
   "pii": [
@@ -42,12 +44,12 @@
       {
         "applied_discounts": [],
         "discount_allocations": [],
-        "key": "2be4a3b3f22ffaa1ed078fa6157daf95",
-        "destination_location_id": 938998369,
+        "key": "fdc2f3d43cec601dbe9d1a7b86152329",
+        "destination_location_id": 1015975130,
         "fulfillment_service": "manual",
         "gift_card": false,
         "grams": 567,
-        "origin_location_id": 938998368,
+        "origin_location_id": 1015975129,
         "presentment_title": "IPod Nano - 8GB",
         "presentment_variant_title": "Pink",
         "product_id": 632910392,
@@ -74,6 +76,7 @@
             "reporting_jurisdiction_code": null,
             "tax_api_client_id": null,
             "tax_calculation_price": "11.94",
+            "tax_registration_id": null,
             "compare_at": 0.06,
             "channel_liable": false
           }
@@ -100,12 +103,12 @@
       {
         "applied_discounts": [],
         "discount_allocations": [],
-        "key": "2be4a3b3f22ffaa1ed078fa6157daf95",
-        "destination_location_id": 938998369,
+        "key": "fdc2f3d43cec601dbe9d1a7b86152329",
+        "destination_location_id": 1015975130,
         "fulfillment_service": "manual",
         "gift_card": false,
         "grams": 567,
-        "origin_location_id": 938998368,
+        "origin_location_id": 1015975129,
         "presentment_title": "IPod Nano - 8GB",
         "presentment_variant_title": "Pink",
         "product_id": 632910392,
@@ -132,6 +135,7 @@
             "reporting_jurisdiction_code": null,
             "tax_api_client_id": null,
             "tax_calculation_price": "11.94",
+            "tax_registration_id": null,
             "compare_at": 0.06,
             "channel_liable": false
           }
@@ -260,5 +264,6 @@
         "default": true
       }
     }
-  }
+  },
+  "shop_feature": false
 }
