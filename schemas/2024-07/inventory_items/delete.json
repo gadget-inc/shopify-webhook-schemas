@@ -1,43 +1,43 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
     },
     "country_code_of_origin": {
       "type": [
-        "string",
-        "null"
-      ]
-    },
-    "province_code_of_origin": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "harmonized_system_code": {
-      "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
     "country_harmonized_system_codes": {
-      "type": "array",
-      "items": false
+      "items": false,
+      "type": "array"
     },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+    "harmonized_system_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "province_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
     }
   },
   "required": [
-    "id",
+    "admin_graphql_api_id",
     "country_code_of_origin",
-    "province_code_of_origin",
-    "harmonized_system_code",
     "country_harmonized_system_codes",
-    "admin_graphql_api_id"
-  ]
+    "harmonized_system_code",
+    "id",
+    "province_code_of_origin"
+  ],
+  "type": "object"
 }

@@ -1,78 +1,78 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
     "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "type": "string"
     },
     "dispositions": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
-          "reverse_fulfillment_order_line_item": {
-            "type": "object",
+          "location": {
             "properties": {
+              "admin_graphql_api_id": {
+                "format": "uri",
+                "type": "string"
+              },
               "id": {
                 "type": "integer"
-              },
-              "admin_graphql_api_id": {
-                "type": "string",
-                "format": "uri"
               }
             },
             "required": [
-              "id",
-              "admin_graphql_api_id"
-            ]
+              "admin_graphql_api_id",
+              "id"
+            ],
+            "type": "object"
+          },
+          "quantity": {
+            "type": "integer"
           },
           "reverse_delivery_line_item": {
             "type": "null"
           },
-          "type": {
-            "type": "string"
-          },
-          "location": {
-            "type": "object",
+          "reverse_fulfillment_order_line_item": {
             "properties": {
+              "admin_graphql_api_id": {
+                "format": "uri",
+                "type": "string"
+              },
               "id": {
                 "type": "integer"
-              },
-              "admin_graphql_api_id": {
-                "type": "string",
-                "format": "uri"
               }
             },
             "required": [
-              "id",
-              "admin_graphql_api_id"
-            ]
+              "admin_graphql_api_id",
+              "id"
+            ],
+            "type": "object"
           },
-          "quantity": {
-            "type": "integer"
+          "type": {
+            "type": "string"
           }
         },
         "required": [
-          "reverse_fulfillment_order_line_item",
-          "reverse_delivery_line_item",
-          "type",
           "location",
-          "quantity"
-        ]
-      }
+          "quantity",
+          "reverse_delivery_line_item",
+          "reverse_fulfillment_order_line_item",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "integer"
     },
     "total_dispositions": {
       "type": "integer"
     }
   },
   "required": [
-    "id",
     "admin_graphql_api_id",
     "dispositions",
+    "id",
     "total_dispositions"
-  ]
+  ],
+  "type": "object"
 }

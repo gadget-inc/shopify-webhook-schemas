@@ -1,72 +1,72 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "sku": {
+    "admin_graphql_api_id": {
+      "format": "uri",
       "type": "string"
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "requires_shipping": {
-      "type": "boolean"
     },
     "cost": {
       "type": [
-        "number",
-        "null"
+        "null",
+        "number"
       ]
     },
     "country_code_of_origin": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
     },
-    "province_code_of_origin": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "country_harmonized_system_codes": {
+      "items": false,
+      "type": "array"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
     },
     "harmonized_system_code": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "province_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "requires_shipping": {
+      "type": "boolean"
+    },
+    "sku": {
+      "type": "string"
     },
     "tracked": {
       "type": "boolean"
     },
-    "country_harmonized_system_codes": {
-      "type": "array",
-      "items": false
-    },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
-    "id",
-    "sku",
-    "created_at",
-    "updated_at",
-    "requires_shipping",
+    "admin_graphql_api_id",
     "cost",
     "country_code_of_origin",
-    "province_code_of_origin",
-    "harmonized_system_code",
-    "tracked",
     "country_harmonized_system_codes",
-    "admin_graphql_api_id"
-  ]
+    "created_at",
+    "harmonized_system_code",
+    "id",
+    "province_code_of_origin",
+    "requires_shipping",
+    "sku",
+    "tracked",
+    "updated_at"
+  ],
+  "type": "object"
 }

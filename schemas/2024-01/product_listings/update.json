@@ -1,172 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "product_listing": {
-      "type": "object",
       "properties": {
-        "product_id": {
-          "type": "integer"
-        },
-        "created_at": {
-          "type": "null"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
+        "available": {
+          "type": "boolean"
         },
         "body_html": {
           "type": "string"
         },
+        "created_at": {
+          "type": "null"
+        },
         "handle": {
           "type": "string"
         },
-        "product_type": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "vendor": {
-          "type": "string"
-        },
-        "available": {
-          "type": "boolean"
-        },
-        "tags": {
-          "type": "string"
-        },
-        "published_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "variants": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "title": {
-                "type": "string"
-              },
-              "option_values": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "option_id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "value": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "option_id",
-                    "name",
-                    "value"
-                  ]
-                }
-              },
-              "price": {
-                "type": "string"
-              },
-              "formatted_price": {
-                "type": "string"
-              },
-              "compare_at_price": {
-                "type": "string"
-              },
-              "grams": {
-                "type": "integer"
-              },
-              "requires_shipping": {
-                "type": "boolean"
-              },
-              "sku": {
-                "type": "null"
-              },
-              "barcode": {
-                "type": "null"
-              },
-              "taxable": {
-                "type": "boolean"
-              },
-              "position": {
-                "type": "integer"
-              },
-              "available": {
-                "type": "boolean"
-              },
-              "inventory_policy": {
-                "type": "string"
-              },
-              "inventory_quantity": {
-                "type": "integer"
-              },
-              "inventory_management": {
-                "type": "null"
-              },
-              "fulfillment_service": {
-                "type": "string"
-              },
-              "weight": {
-                "type": "integer"
-              },
-              "weight_unit": {
-                "type": "string"
-              },
-              "image_id": {
-                "type": "null"
-              },
-              "created_at": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "id",
-              "title",
-              "option_values",
-              "price",
-              "formatted_price",
-              "compare_at_price",
-              "grams",
-              "requires_shipping",
-              "sku",
-              "barcode",
-              "taxable",
-              "position",
-              "available",
-              "inventory_policy",
-              "inventory_quantity",
-              "inventory_management",
-              "fulfillment_service",
-              "weight",
-              "weight_unit",
-              "image_id",
-              "created_at",
-              "updated_at"
-            ]
-          }
-        },
         "images": {
-          "type": "array",
-          "items": false
+          "items": false,
+          "type": "array"
         },
         "options": {
-          "type": "array",
           "items": {
-            "type": "object",
             "properties": {
               "id": {
                 "type": "integer"
@@ -174,48 +28,194 @@
               "name": {
                 "type": "string"
               },
-              "product_id": {
-                "type": "integer"
-              },
               "position": {
                 "type": "integer"
               },
+              "product_id": {
+                "type": "integer"
+              },
               "values": {
-                "type": "array",
                 "items": {
                   "type": "string"
-                }
+                },
+                "type": "array"
               }
             },
             "required": [
               "id",
               "name",
-              "product_id",
               "position",
+              "product_id",
               "values"
-            ]
-          }
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "product_id": {
+          "type": "integer"
+        },
+        "product_type": {
+          "type": "string"
+        },
+        "published_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "tags": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "variants": {
+          "items": {
+            "properties": {
+              "available": {
+                "type": "boolean"
+              },
+              "barcode": {
+                "type": "null"
+              },
+              "compare_at_price": {
+                "type": "string"
+              },
+              "created_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "formatted_price": {
+                "type": "string"
+              },
+              "fulfillment_service": {
+                "type": "string"
+              },
+              "grams": {
+                "type": "integer"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "image_id": {
+                "type": "null"
+              },
+              "inventory_management": {
+                "type": "null"
+              },
+              "inventory_policy": {
+                "type": "string"
+              },
+              "inventory_quantity": {
+                "type": "integer"
+              },
+              "option_values": {
+                "items": {
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "option_id": {
+                      "type": "integer"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "option_id",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "position": {
+                "type": "integer"
+              },
+              "price": {
+                "type": "string"
+              },
+              "requires_shipping": {
+                "type": "boolean"
+              },
+              "sku": {
+                "type": "null"
+              },
+              "taxable": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "updated_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer"
+              },
+              "weight_unit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "available",
+              "barcode",
+              "compare_at_price",
+              "created_at",
+              "formatted_price",
+              "fulfillment_service",
+              "grams",
+              "id",
+              "image_id",
+              "inventory_management",
+              "inventory_policy",
+              "inventory_quantity",
+              "option_values",
+              "position",
+              "price",
+              "requires_shipping",
+              "sku",
+              "taxable",
+              "title",
+              "updated_at",
+              "weight",
+              "weight_unit"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "vendor": {
+          "type": "string"
         }
       },
       "required": [
-        "product_id",
-        "created_at",
-        "updated_at",
-        "body_html",
-        "handle",
-        "product_type",
-        "title",
-        "vendor",
         "available",
-        "tags",
-        "published_at",
-        "variants",
+        "body_html",
+        "created_at",
+        "handle",
         "images",
-        "options"
-      ]
+        "options",
+        "product_id",
+        "product_type",
+        "published_at",
+        "tags",
+        "title",
+        "updated_at",
+        "variants",
+        "vendor"
+      ],
+      "type": "object"
     }
   },
   "required": [
     "product_listing"
-  ]
+  ],
+  "type": "object"
 }

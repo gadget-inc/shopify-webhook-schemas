@@ -1,13 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "app_subscription": {
-      "type": "object",
       "properties": {
         "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
+        },
+        "admin_graphql_api_shop_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "capped_amount": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -15,38 +27,26 @@
         "status": {
           "type": "string"
         },
-        "admin_graphql_api_shop_id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
         "updated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "currency": {
-          "type": "string"
-        },
-        "capped_amount": {
+          "format": "date-time",
           "type": "string"
         }
       },
       "required": [
         "admin_graphql_api_id",
+        "admin_graphql_api_shop_id",
+        "capped_amount",
+        "created_at",
+        "currency",
         "name",
         "status",
-        "admin_graphql_api_shop_id",
-        "created_at",
-        "updated_at",
-        "currency",
-        "capped_amount"
-      ]
+        "updated_at"
+      ],
+      "type": "object"
     }
   },
   "required": [
     "app_subscription"
-  ]
+  ],
+  "type": "object"
 }

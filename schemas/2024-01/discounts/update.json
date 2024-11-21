@@ -1,31 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "type": "string"
     },
-    "title": {
+    "created_at": {
+      "format": "date-time",
       "type": "string"
     },
     "status": {
       "type": "string"
     },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
+    "title": {
+      "type": "string"
     },
     "updated_at": {
-      "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
     "admin_graphql_api_id",
-    "title",
-    "status",
     "created_at",
+    "status",
+    "title",
     "updated_at"
-  ]
+  ],
+  "type": "object"
 }

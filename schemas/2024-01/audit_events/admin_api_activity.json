@@ -1,89 +1,28 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "events": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
-          "time": {
-            "type": "integer"
-          },
           "event": {
-            "type": "object",
             "properties": {
-              "context": {
-                "type": "object",
-                "properties": {
-                  "context_type": {
-                    "type": "string"
-                  },
-                  "context_identifier": {
-                    "type": "string",
-                    "format": "uuid"
-                  },
-                  "context_metadata": {
-                    "type": "object",
-                    "properties": {
-                      "client_ip": {
-                        "type": "string",
-                        "format": "ipv4"
-                      },
-                      "content_type": {
-                        "type": "string"
-                      },
-                      "response_time_ms": {
-                        "type": "number"
-                      },
-                      "user_agent": {
-                        "type": "string"
-                      },
-                      "api_request_failed": {
-                        "type": "boolean"
-                      },
-                      "response_code": {
-                        "type": "integer"
-                      }
-                    },
-                    "required": [
-                      "client_ip",
-                      "content_type",
-                      "response_time_ms",
-                      "user_agent",
-                      "api_request_failed",
-                      "response_code"
-                    ]
-                  }
-                },
-                "required": [
-                  "context_type",
-                  "context_identifier",
-                  "context_metadata"
-                ]
-              },
               "action": {
                 "type": "string"
               },
               "actor": {
-                "type": "object",
                 "properties": {
-                  "actor_type": {
-                    "type": "string"
-                  },
                   "actor_identifier": {
                     "type": "integer"
                   },
                   "actor_metadata": {
-                    "type": "object",
                     "properties": {
-                      "app_name": {
-                        "type": "string"
-                      },
                       "api_version_requested": {
                         "type": "string"
                       },
                       "api_version_served": {
+                        "type": "string"
+                      },
+                      "app_name": {
                         "type": "string"
                       },
                       "ecosystem_category": {
@@ -91,71 +30,54 @@
                       }
                     },
                     "required": [
-                      "app_name",
                       "api_version_requested",
                       "api_version_served",
+                      "app_name",
                       "ecosystem_category"
-                    ]
+                    ],
+                    "type": "object"
+                  },
+                  "actor_type": {
+                    "type": "string"
                   },
                   "on_behalf_of": {
-                    "type": "object",
                     "properties": {
                       "user_email": {
-                        "type": "string",
-                        "format": "email"
+                        "format": "email",
+                        "type": "string"
                       }
                     },
                     "required": [
                       "user_email"
-                    ]
-                  }
-                },
-                "required": [
-                  "actor_type",
-                  "actor_identifier",
-                  "actor_metadata",
-                  "on_behalf_of"
-                ]
-              },
-              "subject": {
-                "type": "object",
-                "properties": {
-                  "subject_type": {
-                    "type": "string"
-                  },
-                  "subject_identifier": {
-                    "type": "string",
-                    "format": "hostname"
-                  },
-                  "subject_metadata": {
+                    ],
                     "type": "object"
                   }
                 },
                 "required": [
-                  "subject_type",
-                  "subject_identifier",
-                  "subject_metadata"
-                ]
-              },
-              "timestamp": {
-                "type": "string",
-                "format": "date-time"
+                  "actor_identifier",
+                  "actor_metadata",
+                  "actor_type",
+                  "on_behalf_of"
+                ],
+                "type": "object"
               },
               "additional_metadata": {
-                "type": "object",
                 "properties": {
-                  "request_type": {
-                    "type": "string"
+                  "error_codes": {
+                    "items": false,
+                    "type": "array"
                   },
                   "mutation_names": {
-                    "type": "array",
-                    "items": false
+                    "items": false,
+                    "type": "array"
                   },
                   "query": {
                     "type": "string"
                   },
+                  "request_type": {
+                    "type": "string"
+                  },
                   "variables": {
-                    "type": "object",
                     "properties": {
                       "first": {
                         "type": "integer"
@@ -163,40 +85,118 @@
                     },
                     "required": [
                       "first"
-                    ]
-                  },
-                  "error_codes": {
-                    "type": "array",
-                    "items": false
+                    ],
+                    "type": "object"
                   }
                 },
                 "required": [
-                  "request_type",
+                  "error_codes",
                   "mutation_names",
                   "query",
-                  "variables",
-                  "error_codes"
-                ]
+                  "request_type",
+                  "variables"
+                ],
+                "type": "object"
+              },
+              "context": {
+                "properties": {
+                  "context_identifier": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "context_metadata": {
+                    "properties": {
+                      "api_request_failed": {
+                        "type": "boolean"
+                      },
+                      "client_ip": {
+                        "format": "ipv4",
+                        "type": "string"
+                      },
+                      "content_type": {
+                        "type": "string"
+                      },
+                      "response_code": {
+                        "type": "integer"
+                      },
+                      "response_time_ms": {
+                        "type": "number"
+                      },
+                      "user_agent": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "api_request_failed",
+                      "client_ip",
+                      "content_type",
+                      "response_code",
+                      "response_time_ms",
+                      "user_agent"
+                    ],
+                    "type": "object"
+                  },
+                  "context_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "context_identifier",
+                  "context_metadata",
+                  "context_type"
+                ],
+                "type": "object"
+              },
+              "subject": {
+                "properties": {
+                  "subject_identifier": {
+                    "format": "hostname",
+                    "type": "string"
+                  },
+                  "subject_metadata": {
+                    "type": "object"
+                  },
+                  "subject_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "subject_identifier",
+                  "subject_metadata",
+                  "subject_type"
+                ],
+                "type": "object"
+              },
+              "timestamp": {
+                "format": "date-time",
+                "type": "string"
               }
             },
             "required": [
-              "context",
               "action",
               "actor",
+              "additional_metadata",
+              "context",
               "subject",
-              "timestamp",
-              "additional_metadata"
-            ]
+              "timestamp"
+            ],
+            "type": "object"
+          },
+          "time": {
+            "type": "integer"
           }
         },
         "required": [
-          "time",
-          "event"
-        ]
-      }
+          "event",
+          "time"
+        ],
+        "type": "object"
+      },
+      "type": "array"
     }
   },
   "required": [
     "events"
-  ]
+  ],
+  "type": "object"
 }

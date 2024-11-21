@@ -1,13 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "fulfillment_order": {
-      "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         },
         "status": {
           "type": "string"
@@ -16,7 +14,8 @@
       "required": [
         "id",
         "status"
-      ]
+      ],
+      "type": "object"
     },
     "message": {
       "type": "string"
@@ -25,5 +24,6 @@
   "required": [
     "fulfillment_order",
     "message"
-  ]
+  ],
+  "type": "object"
 }

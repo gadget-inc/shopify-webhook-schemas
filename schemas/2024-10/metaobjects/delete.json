@@ -1,26 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "type": {
+    "created_by_app_id": {
+      "format": "uri",
       "type": "string"
     },
     "handle": {
       "type": "string"
     },
-    "created_by_app_id": {
-      "type": "string",
-      "format": "uri"
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
     }
   },
   "required": [
-    "id",
-    "type",
+    "created_by_app_id",
     "handle",
-    "created_by_app_id"
-  ]
+    "id",
+    "type"
+  ],
+  "type": "object"
 }

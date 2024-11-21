@@ -1,42 +1,38 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "buyer_accepts_sms_marketing": {
+      "type": "boolean"
+    },
+    "cart_token": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "id": {
       "type": "integer"
     },
     "presentment_currency": {
       "type": "string"
     },
-    "buyer_accepts_sms_marketing": {
-      "type": "boolean"
+    "reservation_token": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "sms_marketing_phone": {
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ]
-    },
-    "total_discounts": {
-      "type": "string"
-    },
-    "total_line_items_price": {
-      "type": "string"
-    },
-    "total_price": {
-      "type": "string"
-    },
-    "total_tax": {
-      "type": "string"
     },
     "subtotal_price": {
       "type": "string"
     },
-    "cart_token": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "total_discounts": {
+      "type": "string"
     },
     "total_duties": {
       "anyOf": [
@@ -63,25 +59,29 @@
         }
       ]
     },
-    "reservation_token": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "total_line_items_price": {
+      "type": "string"
+    },
+    "total_price": {
+      "type": "string"
+    },
+    "total_tax": {
+      "type": "string"
     }
   },
   "required": [
+    "buyer_accepts_sms_marketing",
+    "cart_token",
     "id",
     "presentment_currency",
-    "buyer_accepts_sms_marketing",
+    "reservation_token",
     "sms_marketing_phone",
+    "subtotal_price",
     "total_discounts",
+    "total_duties",
     "total_line_items_price",
     "total_price",
-    "total_tax",
-    "subtotal_price",
-    "cart_token",
-    "total_duties",
-    "reservation_token"
-  ]
+    "total_tax"
+  ],
+  "type": "object"
 }

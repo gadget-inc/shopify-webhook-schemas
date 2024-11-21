@@ -1,42 +1,42 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "host": {
+      "format": "hostname",
+      "type": "string"
+    },
     "id": {
       "type": "integer"
     },
-    "host": {
-      "type": "string",
-      "format": "hostname"
-    },
-    "ssl_enabled": {
-      "type": "boolean"
-    },
     "localization": {
-      "type": "object",
       "properties": {
+        "alternate_locales": {
+          "items": false,
+          "type": "array"
+        },
         "country": {
           "type": "null"
         },
         "default_locale": {
           "type": "string"
-        },
-        "alternate_locales": {
-          "type": "array",
-          "items": false
         }
       },
       "required": [
+        "alternate_locales",
         "country",
-        "default_locale",
-        "alternate_locales"
-      ]
+        "default_locale"
+      ],
+      "type": "object"
+    },
+    "ssl_enabled": {
+      "type": "boolean"
     }
   },
   "required": [
-    "id",
     "host",
-    "ssl_enabled",
-    "localization"
-  ]
+    "id",
+    "localization",
+    "ssl_enabled"
+  ],
+  "type": "object"
 }

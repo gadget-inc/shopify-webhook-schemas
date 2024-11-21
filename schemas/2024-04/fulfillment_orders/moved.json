@@ -1,61 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "original_fulfillment_order": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "status": {
-          "type": "string"
-        },
-        "assigned_location_id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "id",
-        "status",
-        "assigned_location_id"
-      ]
-    },
-    "moved_fulfillment_order": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "status": {
-          "type": "string"
-        },
-        "assigned_location_id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "id",
-        "status",
-        "assigned_location_id"
-      ]
-    },
     "destination_location_id": {
-      "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "type": "string"
     },
     "fulfillment_order_line_items_requested": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uri"
+            "format": "uri",
+            "type": "string"
           },
           "quantity": {
             "type": "integer"
@@ -64,27 +19,72 @@
         "required": [
           "id",
           "quantity"
-        ]
-      }
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "moved_fulfillment_order": {
+      "properties": {
+        "assigned_location_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "assigned_location_id",
+        "id",
+        "status"
+      ],
+      "type": "object"
+    },
+    "original_fulfillment_order": {
+      "properties": {
+        "assigned_location_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "assigned_location_id",
+        "id",
+        "status"
+      ],
+      "type": "object"
     },
     "source_location": {
-      "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         }
       },
       "required": [
         "id"
-      ]
+      ],
+      "type": "object"
     }
   },
   "required": [
-    "original_fulfillment_order",
-    "moved_fulfillment_order",
     "destination_location_id",
     "fulfillment_order_line_items_requested",
+    "moved_fulfillment_order",
+    "original_fulfillment_order",
     "source_location"
-  ]
+  ],
+  "type": "object"
 }

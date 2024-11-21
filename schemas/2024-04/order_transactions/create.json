@@ -1,36 +1,42 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "order_id": {
-      "type": "integer"
-    },
-    "kind": {
+    "admin_graphql_api_id": {
+      "format": "uri",
       "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "authorization": {
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "error_code": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "gateway": {
       "type": "string"
     },
-    "status": {
-      "type": "string"
+    "id": {
+      "type": "integer"
     },
-    "message": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "test": {
-      "type": "boolean"
-    },
-    "authorization": {
+    "kind": {
       "type": "string"
     },
     "location_id": {
@@ -39,11 +45,17 @@
         "null"
       ]
     },
-    "user_id": {
+    "manual_payment_gateway": {
+      "type": "boolean"
+    },
+    "message": {
       "type": [
-        "integer",
-        "null"
+        "null",
+        "string"
       ]
+    },
+    "order_id": {
+      "type": "integer"
     },
     "parent_id": {
       "type": [
@@ -51,67 +63,26 @@
         "null"
       ]
     },
-    "processed_at": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date-time"
-    },
-    "device_id": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "error_code": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "source_name": {
-      "type": "string"
-    },
     "payment_details": {
-      "type": "object",
       "properties": {
-        "credit_card_bin": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
         "avs_result_code": {
           "type": [
-            "string",
-            "null"
+            "null",
+            "string"
           ]
-        },
-        "cvv_result_code": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "credit_card_number": {
-          "type": "string"
-        },
-        "credit_card_company": {
-          "type": "string"
         },
         "buyer_action_info": {
           "type": "null"
         },
-        "credit_card_name": {
+        "credit_card_bin": {
+          "format": "date-time",
           "type": [
-            "string",
-            "null"
+            "null",
+            "string"
           ]
         },
-        "credit_card_wallet": {
-          "type": "null"
+        "credit_card_company": {
+          "type": "string"
         },
         "credit_card_expiration_month": {
           "type": [
@@ -125,42 +96,69 @@
             "null"
           ]
         },
+        "credit_card_name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "credit_card_number": {
+          "type": "string"
+        },
+        "credit_card_wallet": {
+          "type": "null"
+        },
+        "cvv_result_code": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
         "payment_method_name": {
           "type": "string"
         }
       },
       "required": [
-        "credit_card_bin",
         "avs_result_code",
-        "cvv_result_code",
-        "credit_card_number",
-        "credit_card_company",
         "buyer_action_info",
-        "credit_card_name",
-        "credit_card_wallet",
+        "credit_card_bin",
+        "credit_card_company",
         "credit_card_expiration_month",
         "credit_card_expiration_year",
+        "credit_card_name",
+        "credit_card_number",
+        "credit_card_wallet",
+        "cvv_result_code",
         "payment_method_name"
-      ]
-    },
-    "receipt": {
-      "type": "object",
-      "additionalProperties": true
-    },
-    "amount": {
-      "type": "string"
-    },
-    "currency": {
-      "type": "string"
+      ],
+      "type": "object"
     },
     "payment_id": {
       "type": "string"
     },
+    "processed_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "receipt": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "test": {
+      "type": "boolean"
+    },
     "total_unsettled_set": {
-      "type": "object",
       "properties": {
         "presentment_money": {
-          "type": "object",
           "properties": {
             "amount": {
               "type": "string"
@@ -172,10 +170,10 @@
           "required": [
             "amount",
             "currency"
-          ]
+          ],
+          "type": "object"
         },
         "shop_money": {
-          "type": "object",
           "properties": {
             "amount": {
               "type": "string"
@@ -187,46 +185,48 @@
           "required": [
             "amount",
             "currency"
-          ]
+          ],
+          "type": "object"
         }
       },
       "required": [
         "presentment_money",
         "shop_money"
+      ],
+      "type": "object"
+    },
+    "user_id": {
+      "type": [
+        "integer",
+        "null"
       ]
-    },
-    "manual_payment_gateway": {
-      "type": "boolean"
-    },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
     }
   },
   "required": [
-    "id",
-    "order_id",
-    "kind",
-    "gateway",
-    "status",
-    "message",
-    "created_at",
-    "test",
+    "admin_graphql_api_id",
+    "amount",
     "authorization",
-    "location_id",
-    "user_id",
-    "parent_id",
-    "processed_at",
+    "created_at",
+    "currency",
     "device_id",
     "error_code",
-    "source_name",
-    "payment_details",
-    "receipt",
-    "amount",
-    "currency",
-    "payment_id",
-    "total_unsettled_set",
+    "gateway",
+    "id",
+    "kind",
+    "location_id",
     "manual_payment_gateway",
-    "admin_graphql_api_id"
-  ]
+    "message",
+    "order_id",
+    "parent_id",
+    "payment_details",
+    "payment_id",
+    "processed_at",
+    "receipt",
+    "source_name",
+    "status",
+    "test",
+    "total_unsettled_set",
+    "user_id"
+  ],
+  "type": "object"
 }

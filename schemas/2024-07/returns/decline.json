@@ -1,37 +1,37 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
     "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "status": {
+      "format": "uri",
       "type": "string"
     },
     "decline": {
-      "type": "object",
       "properties": {
-        "reason": {
+        "note": {
           "type": "string"
         },
-        "note": {
+        "reason": {
           "type": "string"
         }
       },
       "required": [
-        "reason",
-        "note"
-      ]
+        "note",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
     }
   },
   "required": [
-    "id",
     "admin_graphql_api_id",
-    "status",
-    "decline"
-  ]
+    "decline",
+    "id",
+    "status"
+  ],
+  "type": "object"
 }

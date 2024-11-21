@@ -1,21 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "shop_id": {
-      "type": "string",
-      "format": "uri"
+    "delivery_dates_enabled": {
+      "type": "boolean"
     },
     "processing_time": {
       "type": "string"
     },
-    "delivery_dates_enabled": {
-      "type": "boolean"
+    "shop_id": {
+      "format": "uri",
+      "type": "string"
     }
   },
   "required": [
-    "shop_id",
+    "delivery_dates_enabled",
     "processing_time",
-    "delivery_dates_enabled"
-  ]
+    "shop_id"
+  ],
+  "type": "object"
 }

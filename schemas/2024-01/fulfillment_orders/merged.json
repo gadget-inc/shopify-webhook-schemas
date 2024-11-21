@@ -1,19 +1,38 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "fulfillment_order_merges": {
+      "properties": {
+        "fulfillment_order": {
+          "properties": {
+            "id": {
+              "format": "uri",
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "status"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "fulfillment_order"
+      ],
+      "type": "object"
+    },
     "merge_intents": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
           "fulfillment_order_id": {
             "type": "integer"
           },
           "fulfillment_order_line_items": {
-            "type": "array",
             "items": {
-              "type": "object",
               "properties": {
                 "id": {
                   "type": "integer"
@@ -25,43 +44,24 @@
               "required": [
                 "id",
                 "quantity"
-              ]
-            }
+              ],
+              "type": "object"
+            },
+            "type": "array"
           }
         },
         "required": [
           "fulfillment_order_id",
           "fulfillment_order_line_items"
-        ]
-      }
-    },
-    "fulfillment_order_merges": {
-      "type": "object",
-      "properties": {
-        "fulfillment_order": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "uri"
-            },
-            "status": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "status"
-          ]
-        }
+        ],
+        "type": "object"
       },
-      "required": [
-        "fulfillment_order"
-      ]
+      "type": "array"
     }
   },
   "required": [
-    "merge_intents",
-    "fulfillment_order_merges"
-  ]
+    "fulfillment_order_merges",
+    "merge_intents"
+  ],
+  "type": "object"
 }

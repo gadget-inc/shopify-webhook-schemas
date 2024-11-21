@@ -1,44 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "order_id": {
-      "type": "integer"
-    },
     "amount": {
       "type": "string"
     },
     "currency": {
       "type": "string"
     },
-    "user_id": {
-      "type": [
-        "integer",
-        "null"
-      ]
+    "id": {
+      "type": "integer"
     },
-    "test": {
-      "type": "boolean"
-    },
-    "processed_at": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date-time"
-    },
-    "remote_reference": {
-      "type": "string",
-      "format": "time"
+    "order_id": {
+      "type": "integer"
     },
     "payment_details": {
-      "type": [
-        "object",
-        "null"
-      ],
       "properties": {
         "something": {
           "type": "string"
@@ -46,22 +21,47 @@
       },
       "required": [
         "something"
+      ],
+      "type": [
+        "null",
+        "object"
       ]
     },
     "payment_method": {
       "type": "string"
+    },
+    "processed_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "remote_reference": {
+      "format": "time",
+      "type": "string"
+    },
+    "test": {
+      "type": "boolean"
+    },
+    "user_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
     }
   },
   "required": [
-    "id",
-    "order_id",
     "amount",
     "currency",
-    "user_id",
-    "test",
+    "id",
+    "order_id",
+    "payment_details",
+    "payment_method",
     "processed_at",
     "remote_reference",
-    "payment_details",
-    "payment_method"
-  ]
+    "test",
+    "user_id"
+  ],
+  "type": "object"
 }
