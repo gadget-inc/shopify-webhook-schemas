@@ -1,11 +1,12 @@
+import { getVocabulary, schemaWalk } from "@cloudflare/json-schema-walker";
+import { inferSchema } from "@jsonhero/schema-infer";
+import chalk from "chalk";
+import cheerio from "cheerio";
+import safeStringify from "fast-safe-stringify";
 import fs from "fs-extra";
 import { globby } from "globby";
-import chalk from "chalk";
-import { schemaWalk, getVocabulary } from "@cloudflare/json-schema-walker";
-import { inferSchema } from "@jsonhero/schema-infer";
-import cheerio from "cheerio";
 import got from "got";
-import { cloneDeep, isEqual, merge, pick, uniq } from "lodash";
+import { cloneDeep, cloneDeepWith, isEqual, merge, pick, uniq } from "lodash";
 import path from "path";
 import { getPackageRootDir } from "src";
 import { startDecoding } from "./shopify.js";
@@ -69,6 +70,19 @@ const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/doc
 let warnings = 0;
 let errors = 0;
 
+const sortStringArrays = (obj: Object) => {
+  return cloneDeepWith(obj, (value) => {
+    if (Array.isArray(value) && value.every((item) => typeof item === "string")) {
+      return value.sort();
+    }
+  });
+};
+
+const getDeterministicObject = (obj: Object): Object => {
+  const stableString = safeStringify.stableStringify(sortStringArrays(obj));
+  return JSON.parse(stableString);
+};
+
 const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }) => {
   const inference = inferSchema(examplePayload);
 
@@ -95,8 +109,10 @@ const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, meta
     }
   }
 
+  const sortedSchema = getDeterministicObject(schema);
+
   schemaWalk(
-    schema,
+    sortedSchema,
     (subschema, path, _parent, parentPath) => {
       if (isEqual(subschema, { type: "null" })) {
         warnings += 1;
@@ -114,10 +130,10 @@ const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, meta
       }
     },
     () => {},
-    getVocabulary(schema)
+    getVocabulary(sortedSchema)
   );
 
-  return schema;
+  return sortedSchema;
 };
 
 const loadExemplars = async () => {
