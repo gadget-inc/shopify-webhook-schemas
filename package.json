@@ -43,7 +43,6 @@
     "chalk": "^5.3.0",
     "cheerio": "1.0.0-rc.12",
     "eslint": "^8.52.0",
-    "fast-safe-stringify": "^2.1.1",
     "fs-extra": "^11.2.0",
     "gitpkg": "1.0.0-beta.4",
     "globby": "^14.0.1",
@@ -52,6 +51,7 @@
     "lodash": "^4.17.21",
     "prettier": "^2.8.8",
     "publint": "^0.2.7",
+    "safe-stable-stringify": "^2.5.0",
     "traverse": "^0.6.9",
     "tsx": "^4.7.3",
     "typescript": "^5.4.5"

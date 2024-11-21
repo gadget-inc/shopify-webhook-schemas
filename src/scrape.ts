@@ -2,14 +2,16 @@ import { getVocabulary, schemaWalk } from "@cloudflare/json-schema-walker";
 import { inferSchema } from "@jsonhero/schema-infer";
 import chalk from "chalk";
 import cheerio from "cheerio";
-import safeStringify from "fast-safe-stringify";
 import fs from "fs-extra";
 import { globby } from "globby";
 import got from "got";
 import { cloneDeep, cloneDeepWith, isEqual, merge, pick, uniq } from "lodash";
 import path from "path";
+import { configure } from "safe-stable-stringify";
 import { getPackageRootDir } from "src";
 import { startDecoding } from "./shopify.js";
+
+const stringify = configure({ deterministic: true });
 
 const startVersion = "2024-04";
 
@@ -79,8 +81,8 @@ const sortStringArrays = (obj: Object) => {
 };
 
 const getDeterministicObject = (obj: Object): Object => {
-  const stableString = safeStringify.stableStringify(sortStringArrays(obj));
-  return JSON.parse(stableString);
+  const stableString = stringify(sortStringArrays(obj));
+  return JSON.parse(stableString!);
 };
 
 const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }) => {
