@@ -33,10 +33,7 @@
       "type": "string"
     },
     "last_order_id": {
-      "type": [
-        "integer",
-        "null"
-      ]
+      "type": "integer"
     },
     "note": {
       "type": "string"
@@ -57,10 +54,7 @@
       "type": "string"
     },
     "last_order_name": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": "string"
     },
     "currency": {
       "type": "string"
@@ -94,6 +88,81 @@
     "admin_graphql_api_id": {
       "type": "string",
       "format": "uri"
+    },
+    "default_address": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "customer_id": {
+          "type": "integer"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "company": {
+          "type": "null"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "null"
+        },
+        "city": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "province_code": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "country_name": {
+          "type": "string"
+        },
+        "default": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "customer_id",
+        "first_name",
+        "last_name",
+        "company",
+        "address1",
+        "address2",
+        "city",
+        "province",
+        "country",
+        "zip",
+        "phone",
+        "name",
+        "province_code",
+        "country_code",
+        "country_name",
+        "default"
+      ]
     }
   },
   "required": [
@@ -119,6 +188,7 @@
     "tax_exemptions",
     "email_marketing_consent",
     "sms_marketing_consent",
-    "admin_graphql_api_id"
+    "admin_graphql_api_id",
+    "default_address"
   ]
 }

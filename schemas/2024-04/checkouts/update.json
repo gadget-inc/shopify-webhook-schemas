@@ -262,21 +262,6 @@
               "null"
             ]
           },
-          "estimated_delivery_time_range": {
-            "type": "null"
-          },
-          "original_rate_price": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "delivery_option_group_type": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
           "delivery_option_group": {
             "type": "object",
             "properties": {
@@ -290,6 +275,21 @@
             "required": [
               "type",
               "token"
+            ]
+          },
+          "estimated_delivery_time_range": {
+            "type": "null"
+          },
+          "original_rate_price": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "delivery_option_group_type": {
+            "type": [
+              "string",
+              "null"
             ]
           }
         },

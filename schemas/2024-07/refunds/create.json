@@ -453,7 +453,146 @@
     },
     "transactions": {
       "type": "array",
-      "items": false
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "order_id": {
+            "type": "integer"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "gateway": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "test": {
+            "type": "boolean"
+          },
+          "authorization": {
+            "type": "null"
+          },
+          "location_id": {
+            "type": "null"
+          },
+          "user_id": {
+            "type": "null"
+          },
+          "parent_id": {
+            "type": "null"
+          },
+          "processed_at": {
+            "type": "null"
+          },
+          "device_id": {
+            "type": "null"
+          },
+          "error_code": {
+            "type": "null"
+          },
+          "source_name": {
+            "type": "string"
+          },
+          "receipt": {
+            "type": "object"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "null"
+          },
+          "payment_id": {
+            "type": "string"
+          },
+          "total_unsettled_set": {
+            "type": "object",
+            "properties": {
+              "presentment_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency"
+                ]
+              },
+              "shop_money": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "currency"
+                ]
+              }
+            },
+            "required": [
+              "presentment_money",
+              "shop_money"
+            ]
+          },
+          "manual_payment_gateway": {
+            "type": "boolean"
+          },
+          "admin_graphql_api_id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "id",
+          "order_id",
+          "kind",
+          "gateway",
+          "status",
+          "message",
+          "created_at",
+          "test",
+          "authorization",
+          "location_id",
+          "user_id",
+          "parent_id",
+          "processed_at",
+          "device_id",
+          "error_code",
+          "source_name",
+          "receipt",
+          "amount",
+          "currency",
+          "payment_id",
+          "total_unsettled_set",
+          "manual_payment_gateway",
+          "admin_graphql_api_id"
+        ]
+      }
     }
   },
   "required": [

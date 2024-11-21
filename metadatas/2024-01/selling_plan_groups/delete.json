@@ -12,8 +12,8 @@
   "name": "selling_plan_groups/delete",
   "related_resource": "SellingPlanGroup",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518916",
-    "id": 1039518916
+    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518947",
+    "id": 1039518947
   },
   "shop_feature": false
 }

@@ -104,13 +104,13 @@
             "items": {
               "type": "object",
               "properties": {
+                "price": {
+                  "type": "string"
+                },
                 "rate": {
                   "type": "number"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "price": {
                   "type": "string"
                 },
                 "channel_liable": {
@@ -157,9 +157,9 @@
                 }
               },
               "required": [
+                "price",
                 "rate",
-                "title",
-                "price"
+                "title"
               ]
             }
           },
@@ -876,6 +876,12 @@
                   "balance_due_currency": {
                     "type": "string"
                   },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
                   "outstanding_balance": {
                     "type": "string"
                   },
@@ -899,6 +905,8 @@
                   "total_price_currency",
                   "balance_due",
                   "balance_due_currency",
+                  "total_balance",
+                  "total_balance_currency",
                   "outstanding_balance",
                   "outstanding_balance_currency"
                 ]
@@ -1000,6 +1008,12 @@
                   "balance_due_currency": {
                     "type": "string"
                   },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
                   "outstanding_balance": {
                     "type": "string"
                   },
@@ -1023,6 +1037,8 @@
                   "total_price_currency",
                   "balance_due",
                   "balance_due_currency",
+                  "total_balance",
+                  "total_balance_currency",
                   "outstanding_balance",
                   "outstanding_balance_currency"
                 ]
@@ -1296,15 +1312,15 @@
         "marketing_opt_in_level": {
           "type": "string"
         },
+        "accepts_marketing": {
+          "type": "boolean"
+        },
         "accepts_marketing_updated_at": {
           "type": [
             "string",
             "null"
           ],
           "format": "date-time"
-        },
-        "accepts_marketing": {
-          "type": "boolean"
         },
         "metafields": {
           "type": "array",
