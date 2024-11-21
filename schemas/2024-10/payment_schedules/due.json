@@ -2,25 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "payment_terms_id": {
-      "type": "integer"
-    },
     "amount": {
       "type": "string"
     },
-    "currency": {
+    "balance_due": {
       "type": "string"
-    },
-    "issued_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "due_at": {
-      "type": "string",
-      "format": "date-time"
     },
     "completed_at": {
       "type": "string",
@@ -29,6 +15,32 @@
     "created_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "due_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "payment_terms_id": {
+      "type": "integer"
+    },
+    "presentment_currency": {
+      "type": "string"
+    },
+    "total_balance": {
+      "type": "string"
+    },
+    "total_price": {
+      "type": "string"
     },
     "updated_at": {
       "type": "string",
@@ -40,14 +52,18 @@
     }
   },
   "required": [
-    "id",
-    "payment_terms_id",
     "amount",
-    "currency",
-    "issued_at",
-    "due_at",
+    "balance_due",
     "completed_at",
     "created_at",
+    "currency",
+    "due_at",
+    "id",
+    "issued_at",
+    "payment_terms_id",
+    "presentment_currency",
+    "total_balance",
+    "total_price",
     "updated_at",
     "admin_graphql_api_id"
   ]

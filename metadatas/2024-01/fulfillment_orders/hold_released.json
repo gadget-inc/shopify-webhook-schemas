@@ -11,7 +11,7 @@
     "toml"
   ],
   "deprecated": false,
-  "description": "Occurs whenever a fulfillment order hold is released.",
+  "description": "Occurs when a fulfillment order is released and is no longer on hold.\n\nIf a fulfillment order has multiple holds then this webhook will only be triggered once when the last hold is released and the status of the fulfillment order is no longer `ON_HOLD`.\n",
   "name": "fulfillment_orders/hold_released",
   "related_resource": "FulfillmentOrder",
   "response": {

@@ -11,7 +11,7 @@
     "toml"
   ],
   "deprecated": false,
-  "description": "Occurs when a fulfillment order is placed on hold.",
+  "description": "Occurs when a fulfillment order transitions to the `ON_HOLD` status\n\nFor cases where multiple holds are applied to a fulfillment order, this webhook will only trigger once when the first hold is applied and the fulfillment order status changes to `ON_HOLD`.\n",
   "name": "fulfillment_orders/placed_on_hold",
   "related_resource": "FulfillmentOrder",
   "response": {

@@ -7,7 +7,7 @@
   "deprecated": false,
   "description": "Occurs whenever the access scopes of any installation are modified. Allows apps to keep track of the granted access scopes of their installations.",
   "name": "app/scopes_update",
-  "related_resource": "AppScopesUpdateWebhookPayload",
+  "related_resource": "Shop",
   "response": {
     "id": 1,
     "previous": [
