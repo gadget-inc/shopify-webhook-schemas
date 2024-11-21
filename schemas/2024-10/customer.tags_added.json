@@ -1,25 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "customerId": {
-      "type": "string",
-      "format": "uri"
-    },
-    "tags": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "format": "uri",
+      "type": "string"
     },
     "occurredAt": {
-      "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     }
   },
   "required": [
     "customerId",
-    "tags",
-    "occurredAt"
-  ]
+    "occurredAt",
+    "tags"
+  ],
+  "type": "object"
 }

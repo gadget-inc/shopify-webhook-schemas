@@ -1,22 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "collection_listing": {
-      "type": "object",
       "properties": {
-        "collection_id": {
-          "type": "integer"
-        },
-        "updated_at": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
         "body_html": {
           "type": "string"
+        },
+        "collection_id": {
+          "type": "integer"
         },
         "default_product_image": {
           "type": "null"
@@ -27,7 +18,8 @@
         "image": {
           "type": "null"
         },
-        "title": {
+        "published_at": {
+          "format": "date-time",
           "type": "string"
         },
         "sort_order": {
@@ -36,25 +28,33 @@
             "null"
           ]
         },
-        "published_at": {
-          "type": "string",
-          "format": "date-time"
+        "title": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
         }
       },
       "required": [
-        "collection_id",
-        "updated_at",
         "body_html",
+        "collection_id",
         "default_product_image",
         "handle",
         "image",
-        "title",
+        "published_at",
         "sort_order",
-        "published_at"
-      ]
+        "title",
+        "updated_at"
+      ],
+      "type": "object"
     }
   },
   "required": [
     "collection_listing"
-  ]
+  ],
+  "type": "object"
 }

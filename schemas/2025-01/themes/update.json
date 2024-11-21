@@ -1,26 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
     "id": {
       "type": "integer"
     },
     "name": {
       "type": "string"
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "role": {
-      "type": "string"
-    },
-    "theme_store_id": {
-      "type": "integer"
     },
     "previewable": {
       "type": "boolean"
@@ -28,20 +21,27 @@
     "processing": {
       "type": "boolean"
     },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+    "role": {
+      "type": "string"
+    },
+    "theme_store_id": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
+    "admin_graphql_api_id",
+    "created_at",
     "id",
     "name",
-    "created_at",
-    "updated_at",
-    "role",
-    "theme_store_id",
     "previewable",
     "processing",
-    "admin_graphql_api_id"
-  ]
+    "role",
+    "theme_store_id",
+    "updated_at"
+  ],
+  "type": "object"
 }

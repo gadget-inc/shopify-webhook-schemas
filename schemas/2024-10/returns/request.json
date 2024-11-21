@@ -1,65 +1,65 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
     "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "status": {
+      "format": "uri",
       "type": "string"
     },
-    "order": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "id",
-        "admin_graphql_api_id"
-      ]
+    "exchange_line_items": {
+      "items": false,
+      "type": "array"
     },
-    "total_return_line_items": {
+    "id": {
       "type": "integer"
     },
     "name": {
       "type": "null"
     },
+    "order": {
+      "properties": {
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "id"
+      ],
+      "type": "object"
+    },
     "return_line_items": {
-      "type": "array",
-      "items": false
+      "items": false,
+      "type": "array"
     },
     "return_shipping_fees": {
-      "type": "array",
-      "items": false
+      "items": false,
+      "type": "array"
     },
-    "exchange_line_items": {
-      "type": "array",
-      "items": false
+    "status": {
+      "type": "string"
     },
     "total_exchange_line_items": {
+      "type": "integer"
+    },
+    "total_return_line_items": {
       "type": "integer"
     }
   },
   "required": [
-    "id",
     "admin_graphql_api_id",
-    "status",
-    "order",
-    "total_return_line_items",
+    "exchange_line_items",
+    "id",
     "name",
+    "order",
     "return_line_items",
     "return_shipping_fees",
-    "exchange_line_items",
-    "total_exchange_line_items"
-  ]
+    "status",
+    "total_exchange_line_items",
+    "total_return_line_items"
+  ],
+  "type": "object"
 }

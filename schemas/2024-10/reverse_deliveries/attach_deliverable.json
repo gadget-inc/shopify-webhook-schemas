@@ -1,35 +1,47 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
     "id": {
       "type": "integer"
     },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
-    },
     "return": {
-      "type": "object",
       "properties": {
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
         "id": {
           "type": "integer"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
         }
       },
       "required": [
-        "id",
-        "admin_graphql_api_id"
-      ]
+        "admin_graphql_api_id",
+        "id"
+      ],
+      "type": "object"
     },
     "shipping_deliverable": {
-      "type": "object",
       "properties": {
+        "label": {
+          "properties": {
+            "created_at": {
+              "type": "null"
+            },
+            "public_file_url": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "created_at",
+            "public_file_url"
+          ],
+          "type": "object"
+        },
         "tracking": {
-          "type": "object",
           "properties": {
             "carrier_name": {
               "type": "string"
@@ -45,34 +57,22 @@
             "carrier_name",
             "tracking_number",
             "tracking_url"
-          ]
-        },
-        "label": {
-          "type": "object",
-          "properties": {
-            "public_file_url": {
-              "type": "null"
-            },
-            "created_at": {
-              "type": "null"
-            }
-          },
-          "required": [
-            "public_file_url",
-            "created_at"
-          ]
+          ],
+          "type": "object"
         }
       },
       "required": [
-        "tracking",
-        "label"
-      ]
+        "label",
+        "tracking"
+      ],
+      "type": "object"
     }
   },
   "required": [
-    "id",
     "admin_graphql_api_id",
+    "id",
     "return",
     "shipping_deliverable"
-  ]
+  ],
+  "type": "object"
 }

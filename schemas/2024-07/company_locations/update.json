@@ -1,35 +1,89 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "name": {
+    "admin_graphql_api_id": {
+      "format": "uri",
       "type": "string"
     },
-    "external_id": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "locale": {
-      "type": "string"
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "note": {
-      "type": "string"
+    "billing_address": {
+      "properties": {
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "company_admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "first_name": {
+          "type": "null"
+        },
+        "last_name": {
+          "type": "null"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "zone_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "address1",
+        "address2",
+        "admin_graphql_api_id",
+        "city",
+        "company_admin_graphql_api_id",
+        "country",
+        "country_code",
+        "created_at",
+        "first_name",
+        "last_name",
+        "phone",
+        "province",
+        "recipient",
+        "updated_at",
+        "zip",
+        "zone_code"
+      ],
+      "type": "object"
     },
     "buyer_experience_configuration": {
-      "type": [
-        "object",
-        "null"
-      ],
       "properties": {
         "pay_now_only": {
           "type": "boolean"
@@ -37,159 +91,105 @@
       },
       "required": [
         "pay_now_only"
+      ],
+      "type": [
+        "null",
+        "object"
       ]
     },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "tax_exemptions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "company": {
-      "type": "object",
       "properties": {
-        "name": {
+        "admin_graphql_api_id": {
+          "format": "uri",
           "type": "string"
         },
-        "note": {
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customer_since": {
+          "format": "date-time",
           "type": "string"
         },
         "external_id": {
           "type": "string"
         },
         "main_contact_admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
         },
         "updated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "customer_since": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
+          "format": "date-time",
+          "type": "string"
         }
       },
       "required": [
-        "name",
-        "note",
+        "admin_graphql_api_id",
+        "created_at",
+        "customer_since",
         "external_id",
         "main_contact_admin_graphql_api_id",
-        "created_at",
-        "updated_at",
-        "customer_since",
-        "admin_graphql_api_id"
-      ]
+        "name",
+        "note",
+        "updated_at"
+      ],
+      "type": "object"
     },
-    "billing_address": {
-      "type": "object",
-      "properties": {
-        "address1": {
-          "type": "string"
-        },
-        "city": {
-          "type": "string"
-        },
-        "province": {
-          "type": "string"
-        },
-        "country": {
-          "type": "string"
-        },
-        "zip": {
-          "type": "string"
-        },
-        "recipient": {
-          "type": "string"
-        },
-        "first_name": {
-          "type": "null"
-        },
-        "last_name": {
-          "type": "null"
-        },
-        "address2": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "phone": {
-          "type": "string"
-        },
-        "zone_code": {
-          "type": "string"
-        },
-        "country_code": {
-          "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "company_admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "address1",
-        "city",
-        "province",
-        "country",
-        "zip",
-        "recipient",
-        "first_name",
-        "last_name",
-        "address2",
-        "phone",
-        "zone_code",
-        "country_code",
-        "created_at",
-        "updated_at",
-        "admin_graphql_api_id",
-        "company_admin_graphql_api_id"
-      ]
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "external_id": {
+      "type": "string"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     },
     "shipping_address": {
-      "type": "object",
       "properties": {
         "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "admin_graphql_api_id": {
+          "format": "uri",
           "type": "string"
         },
         "city": {
           "type": "string"
         },
-        "province": {
+        "company_admin_graphql_api_id": {
+          "format": "uri",
           "type": "string"
         },
         "country": {
           "type": "string"
         },
-        "zip": {
+        "country_code": {
           "type": "string"
         },
-        "recipient": {
+        "created_at": {
+          "format": "date-time",
           "type": "string"
         },
         "first_name": {
@@ -198,59 +198,53 @@
         "last_name": {
           "type": "null"
         },
-        "address2": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
         "phone": {
+          "type": "string"
+        },
+        "province": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "zip": {
           "type": "string"
         },
         "zone_code": {
           "type": "string"
-        },
-        "country_code": {
-          "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "company_admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
         }
       },
       "required": [
         "address1",
-        "city",
-        "province",
-        "country",
-        "zip",
-        "recipient",
-        "first_name",
-        "last_name",
         "address2",
-        "phone",
-        "zone_code",
+        "admin_graphql_api_id",
+        "city",
+        "company_admin_graphql_api_id",
+        "country",
         "country_code",
         "created_at",
+        "first_name",
+        "last_name",
+        "phone",
+        "province",
+        "recipient",
         "updated_at",
-        "admin_graphql_api_id",
-        "company_admin_graphql_api_id"
-      ]
+        "zip",
+        "zone_code"
+      ],
+      "type": "object"
+    },
+    "tax_exemptions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
     "tax_registration": {
-      "type": "object",
       "properties": {
         "tax_id": {
           "type": "string"
@@ -258,23 +252,29 @@
       },
       "required": [
         "tax_id"
-      ]
+      ],
+      "type": "object"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
-    "name",
-    "external_id",
-    "phone",
-    "locale",
-    "created_at",
-    "updated_at",
-    "note",
-    "buyer_experience_configuration",
     "admin_graphql_api_id",
-    "tax_exemptions",
-    "company",
     "billing_address",
+    "buyer_experience_configuration",
+    "company",
+    "created_at",
+    "external_id",
+    "locale",
+    "name",
+    "note",
+    "phone",
     "shipping_address",
-    "tax_registration"
-  ]
+    "tax_exemptions",
+    "tax_registration",
+    "updated_at"
+  ],
+  "type": "object"
 }

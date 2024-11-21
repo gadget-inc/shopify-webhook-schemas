@@ -1,31 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "current": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
     "id": {
       "type": "integer"
     },
     "previous": {
-      "type": "array",
       "items": {
         "type": "string"
-      }
-    },
-    "current": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      },
+      "type": "array"
     },
     "updated_at": {
-      "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
+    "current",
     "id",
     "previous",
-    "current",
     "updated_at"
-  ]
+  ],
+  "type": "object"
 }

@@ -1,22 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "fulfillment_order": {
-      "type": "object",
       "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "status": {
-          "type": "string"
-        },
-        "preparable": {
-          "type": "boolean"
-        },
         "delivery_method": {
-          "type": "object",
           "properties": {
             "method_type": {
               "type": "string"
@@ -24,18 +11,31 @@
           },
           "required": [
             "method_type"
-          ]
+          ],
+          "type": "object"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "preparable": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
         }
       },
       "required": [
+        "delivery_method",
         "id",
-        "status",
         "preparable",
-        "delivery_method"
-      ]
+        "status"
+      ],
+      "type": "object"
     }
   },
   "required": [
     "fulfillment_order"
-  ]
+  ],
+  "type": "object"
 }

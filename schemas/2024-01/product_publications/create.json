@@ -1,45 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "id": {
       "type": "null"
+    },
+    "product_id": {
+      "type": "integer"
     },
     "publication_id": {
       "type": "null"
     },
-    "published_at": {
-      "type": "string",
-      "format": "date-time"
-    },
     "published": {
       "type": "boolean"
     },
-    "created_at": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date-time"
+    "published_at": {
+      "format": "date-time",
+      "type": "string"
     },
     "updated_at": {
+      "format": "date-time",
       "type": [
-        "string",
-        "null"
-      ],
-      "format": "date-time"
-    },
-    "product_id": {
-      "type": "integer"
+        "null",
+        "string"
+      ]
     }
   },
   "required": [
-    "id",
-    "publication_id",
-    "published_at",
-    "published",
     "created_at",
-    "updated_at",
-    "product_id"
-  ]
+    "id",
+    "product_id",
+    "publication_id",
+    "published",
+    "published_at",
+    "updated_at"
+  ],
+  "type": "object"
 }

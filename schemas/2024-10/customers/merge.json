@@ -1,35 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "admin_graphql_api_customer_kept_id": {
-      "type": "string",
-      "format": "uri"
-    },
     "admin_graphql_api_customer_deleted_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "admin_graphql_api_job_id": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "uri"
-    },
-    "status": {
+      "format": "uri",
       "type": "string"
     },
+    "admin_graphql_api_customer_kept_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "admin_graphql_api_job_id": {
+      "format": "uri",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "errors": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
           "customer_ids": {
-            "type": "array",
             "items": {
               "type": "integer"
-            }
+            },
+            "type": "array"
           },
           "field": {
             "type": "string"
@@ -42,15 +36,21 @@
           "customer_ids",
           "field",
           "message"
-        ]
-      }
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
     }
   },
   "required": [
-    "admin_graphql_api_customer_kept_id",
     "admin_graphql_api_customer_deleted_id",
+    "admin_graphql_api_customer_kept_id",
     "admin_graphql_api_job_id",
-    "status",
-    "errors"
-  ]
+    "errors",
+    "status"
+  ],
+  "type": "object"
 }

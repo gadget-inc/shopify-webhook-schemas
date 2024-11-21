@@ -1,26 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "fulfillment_order": {
-      "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "status": {
+          "format": "uri",
           "type": "string"
         },
         "request_status": {
+          "type": "string"
+        },
+        "status": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "status",
-        "request_status"
-      ]
+        "request_status",
+        "status"
+      ],
+      "type": "object"
     },
     "message": {
       "type": "string"
@@ -29,5 +28,6 @@
   "required": [
     "fulfillment_order",
     "message"
-  ]
+  ],
+  "type": "object"
 }

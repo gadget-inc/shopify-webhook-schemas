@@ -1,208 +1,211 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "metadata": {
-      "type": "object",
       "properties": {
         "action": {
           "type": "string"
         },
-        "type": {
+        "occured_at": {
+          "format": "date-time",
           "type": "string"
         },
         "resource": {
           "type": "string"
         },
         "truncatedFields": {
-          "type": "array",
-          "items": false
+          "items": false,
+          "type": "array"
         },
-        "occured_at": {
-          "type": "string",
-          "format": "date-time"
+        "type": {
+          "type": "string"
         }
       },
       "required": [
         "action",
-        "type",
+        "occured_at",
         "resource",
         "truncatedFields",
-        "occured_at"
-      ]
-    },
-    "productFeed": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "shop_id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "country": {
-          "type": "string"
-        },
-        "language": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "shop_id",
-        "country",
-        "language"
-      ]
+        "type"
+      ],
+      "type": "object"
     },
     "product": {
-      "type": "object",
       "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "title": {
+        "createdAt": {
+          "format": "date-time",
           "type": "string"
         },
         "description": {
           "type": "string"
         },
-        "onlineStoreUrl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "isPublished": {
-          "type": "boolean"
-        },
-        "publishedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "productType": {
-          "type": "string"
-        },
-        "vendor": {
-          "type": "string"
-        },
         "handle": {
           "type": "string"
         },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
         "images": {
-          "type": "object",
           "properties": {
             "edges": {
-              "type": "array",
               "items": {
-                "type": "object",
                 "properties": {
                   "node": {
-                    "type": "object",
                     "properties": {
-                      "id": {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      "url": {
-                        "type": "string",
-                        "format": "uri"
-                      },
                       "height": {
                         "type": "integer"
+                      },
+                      "id": {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
                       },
                       "width": {
                         "type": "integer"
                       }
                     },
                     "required": [
+                      "height",
                       "id",
                       "url",
-                      "height",
                       "width"
-                    ]
+                    ],
+                    "type": "object"
                   }
                 },
                 "required": [
                   "node"
-                ]
-              }
+                ],
+                "type": "object"
+              },
+              "type": "array"
             }
           },
           "required": [
             "edges"
-          ]
+          ],
+          "type": "object"
+        },
+        "isPublished": {
+          "type": "boolean"
+        },
+        "onlineStoreUrl": {
+          "format": "uri",
+          "type": "string"
         },
         "options": {
-          "type": "array",
           "items": {
-            "type": "object",
             "properties": {
               "name": {
                 "type": "string"
               },
               "values": {
-                "type": "array",
                 "items": {
                   "type": "string"
-                }
+                },
+                "type": "array"
               }
             },
             "required": [
               "name",
               "values"
-            ]
-          }
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "productType": {
+          "type": "string"
+        },
+        "publishedAt": {
+          "format": "date-time",
+          "type": "string"
         },
         "seo": {
-          "type": "object",
           "properties": {
-            "title": {
+            "description": {
               "type": "string"
             },
-            "description": {
+            "title": {
               "type": "string"
             }
           },
           "required": [
-            "title",
-            "description"
-          ]
+            "description",
+            "title"
+          ],
+          "type": "object"
         },
         "tags": {
-          "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
         },
         "variants": {
-          "type": "object",
           "properties": {
             "edges": {
-              "type": "array",
               "items": {
-                "type": "object",
                 "properties": {
                   "node": {
-                    "type": "object",
                     "properties": {
-                      "id": {
-                        "type": "string",
-                        "format": "uri"
+                      "availableForSale": {
+                        "type": "boolean"
                       },
-                      "title": {
+                      "barcode": {
+                        "type": "null"
+                      },
+                      "compareAtPrice": {
+                        "type": "null"
+                      },
+                      "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "id": {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "image": {
+                        "properties": {
+                          "height": {
+                            "type": "integer"
+                          },
+                          "id": {
+                            "format": "uri",
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          },
+                          "width": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "height",
+                          "id",
+                          "url",
+                          "width"
+                        ],
+                        "type": "object"
+                      },
+                      "inventoryPolicy": {
                         "type": "string"
                       },
                       "price": {
-                        "type": "object",
                         "properties": {
                           "amount": {
                             "type": "string"
@@ -214,72 +217,17 @@
                         "required": [
                           "amount",
                           "currencyCode"
-                        ]
-                      },
-                      "compareAtPrice": {
-                        "type": "null"
-                      },
-                      "sku": {
-                        "type": "string"
-                      },
-                      "barcode": {
-                        "type": "null"
+                        ],
+                        "type": "object"
                       },
                       "quantityAvailable": {
                         "type": "integer"
                       },
-                      "availableForSale": {
-                        "type": "boolean"
-                      },
-                      "weight": {
-                        "type": "number"
-                      },
-                      "weightUnit": {
-                        "type": "string"
-                      },
                       "requireShipping": {
                         "type": "boolean"
                       },
-                      "inventoryPolicy": {
-                        "type": "string"
-                      },
-                      "createdAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "updatedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "image": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string",
-                            "format": "uri"
-                          },
-                          "url": {
-                            "type": "string",
-                            "format": "uri"
-                          },
-                          "height": {
-                            "type": "integer"
-                          },
-                          "width": {
-                            "type": "integer"
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "url",
-                          "height",
-                          "width"
-                        ]
-                      },
                       "selectedOptions": {
-                        "type": "array",
                         "items": {
-                          "type": "object",
                           "properties": {
                             "name": {
                               "type": "string"
@@ -291,59 +239,110 @@
                           "required": [
                             "name",
                             "value"
-                          ]
-                        }
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "sku": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "weight": {
+                        "type": "number"
+                      },
+                      "weightUnit": {
+                        "type": "string"
                       }
                     },
                     "required": [
-                      "id",
-                      "title",
-                      "price",
-                      "compareAtPrice",
-                      "sku",
-                      "barcode",
-                      "quantityAvailable",
                       "availableForSale",
-                      "weight",
-                      "weightUnit",
-                      "requireShipping",
-                      "inventoryPolicy",
+                      "barcode",
+                      "compareAtPrice",
                       "createdAt",
-                      "updatedAt",
+                      "id",
                       "image",
-                      "selectedOptions"
-                    ]
+                      "inventoryPolicy",
+                      "price",
+                      "quantityAvailable",
+                      "requireShipping",
+                      "selectedOptions",
+                      "sku",
+                      "title",
+                      "updatedAt",
+                      "weight",
+                      "weightUnit"
+                    ],
+                    "type": "object"
                   }
                 },
                 "required": [
                   "node"
-                ]
-              }
+                ],
+                "type": "object"
+              },
+              "type": "array"
             }
           },
           "required": [
             "edges"
-          ]
+          ],
+          "type": "object"
+        },
+        "vendor": {
+          "type": "string"
         }
       },
       "required": [
-        "id",
-        "title",
-        "description",
-        "onlineStoreUrl",
         "createdAt",
-        "updatedAt",
-        "isPublished",
-        "publishedAt",
-        "productType",
-        "vendor",
+        "description",
         "handle",
+        "id",
         "images",
+        "isPublished",
+        "onlineStoreUrl",
         "options",
+        "productType",
+        "publishedAt",
         "seo",
         "tags",
-        "variants"
-      ]
+        "title",
+        "updatedAt",
+        "variants",
+        "vendor"
+      ],
+      "type": "object"
+    },
+    "productFeed": {
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "shop_id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "country",
+        "id",
+        "language",
+        "shop_id"
+      ],
+      "type": "object"
     },
     "products": {
       "type": "null"
@@ -351,8 +350,9 @@
   },
   "required": [
     "metadata",
-    "productFeed",
     "product",
+    "productFeed",
     "products"
-  ]
+  ],
+  "type": "object"
 }

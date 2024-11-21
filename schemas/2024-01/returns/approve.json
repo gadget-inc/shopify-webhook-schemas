@@ -1,51 +1,51 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
     "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "status": {
+      "format": "uri",
       "type": "string"
     },
-    "order": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "admin_graphql_api_id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "id",
-        "admin_graphql_api_id"
-      ]
-    },
-    "total_return_line_items": {
+    "id": {
       "type": "integer"
     },
     "name": {
       "type": "null"
     },
+    "order": {
+      "properties": {
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "id"
+      ],
+      "type": "object"
+    },
     "return_line_items": {
-      "type": "array",
-      "items": false
+      "items": false,
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total_return_line_items": {
+      "type": "integer"
     }
   },
   "required": [
-    "id",
     "admin_graphql_api_id",
-    "status",
-    "order",
-    "total_return_line_items",
+    "id",
     "name",
-    "return_line_items"
-  ]
+    "order",
+    "return_line_items",
+    "status",
+    "total_return_line_items"
+  ],
+  "type": "object"
 }

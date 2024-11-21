@@ -1,33 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
     "fulfillment_order": {
-      "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "status": {
+          "format": "uri",
           "type": "string"
         },
         "request_status": {
+          "type": "string"
+        },
+        "status": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "status",
-        "request_status"
-      ]
+        "request_status",
+        "status"
+      ],
+      "type": "object"
     },
     "fulfillment_order_merchant_request": {
-      "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         },
         "message": {
           "type": "string"
@@ -36,11 +34,13 @@
       "required": [
         "id",
         "message"
-      ]
+      ],
+      "type": "object"
     }
   },
   "required": [
     "fulfillment_order",
     "fulfillment_order_merchant_request"
-  ]
+  ],
+  "type": "object"
 }

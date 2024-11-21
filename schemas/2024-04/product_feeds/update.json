@@ -1,12 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri"
-    },
     "country": {
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
       "type": "string"
     },
     "language": {
@@ -17,9 +16,10 @@
     }
   },
   "required": [
-    "id",
     "country",
+    "id",
     "language",
     "status"
-  ]
+  ],
+  "type": "object"
 }

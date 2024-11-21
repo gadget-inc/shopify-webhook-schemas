@@ -1,56 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "type": {
-      "type": "string"
-    },
-    "handle": {
-      "type": "string"
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "display_name": {
-      "type": "string"
-    },
-    "id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "definition_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "fields": {
-      "type": "object",
-      "properties": {
-        "example-key": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "example-key"
-      ]
-    },
-    "created_by_staff_id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "created_by_app_id": {
-      "type": "string",
-      "format": "uri"
-    },
     "capabilities": {
-      "type": "object",
       "properties": {
         "publishable": {
-          "type": "object",
           "properties": {
             "status": {
               "type": "string"
@@ -58,25 +11,72 @@
           },
           "required": [
             "status"
-          ]
+          ],
+          "type": "object"
         }
       },
       "required": [
         "publishable"
-      ]
+      ],
+      "type": "object"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "created_by_app_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "created_by_staff_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "definition_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "fields": {
+      "properties": {
+        "example-key": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "example-key"
+      ],
+      "type": "object"
+    },
+    "handle": {
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
-    "type",
-    "handle",
+    "capabilities",
     "created_at",
-    "updated_at",
-    "display_name",
-    "id",
-    "definition_id",
-    "fields",
-    "created_by_staff_id",
     "created_by_app_id",
-    "capabilities"
-  ]
+    "created_by_staff_id",
+    "definition_id",
+    "display_name",
+    "fields",
+    "handle",
+    "id",
+    "type",
+    "updated_at"
+  ],
+  "type": "object"
 }

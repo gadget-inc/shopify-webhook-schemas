@@ -1,32 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "payment_terms_name": {
+    "admin_graphql_api_id": {
+      "format": "uri",
       "type": "string"
     },
-    "payment_terms_type": {
+    "created_at": {
+      "format": "date-time",
       "type": "string"
     },
     "due_in_days": {
       "type": "integer"
     },
-    "created_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
+    "id": {
+      "type": "integer"
     },
     "payment_schedules": {
-      "type": "array",
       "items": {
-        "type": "object",
         "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
           "amount": {
             "type": "string"
           },
@@ -34,26 +29,26 @@
             "type": "string"
           },
           "completed_at": {
-            "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "created_at": {
-            "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "currency": {
             "type": "string"
           },
           "due_at": {
-            "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "id": {
             "type": "integer"
           },
           "issued_at": {
-            "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "payment_terms_id": {
             "type": "integer"
@@ -68,15 +63,12 @@
             "type": "string"
           },
           "updated_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "admin_graphql_api_id": {
-            "type": "string",
-            "format": "uri"
+            "format": "date-time",
+            "type": "string"
           }
         },
         "required": [
+          "admin_graphql_api_id",
           "amount",
           "balance_due",
           "completed_at",
@@ -89,24 +81,32 @@
           "presentment_currency",
           "total_balance",
           "total_price",
-          "updated_at",
-          "admin_graphql_api_id"
-        ]
-      }
+          "updated_at"
+        ],
+        "type": "object"
+      },
+      "type": "array"
     },
-    "admin_graphql_api_id": {
-      "type": "string",
-      "format": "uri"
+    "payment_terms_name": {
+      "type": "string"
+    },
+    "payment_terms_type": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
     }
   },
   "required": [
+    "admin_graphql_api_id",
+    "created_at",
+    "due_in_days",
     "id",
+    "payment_schedules",
     "payment_terms_name",
     "payment_terms_type",
-    "due_in_days",
-    "created_at",
-    "updated_at",
-    "payment_schedules",
-    "admin_graphql_api_id"
-  ]
+    "updated_at"
+  ],
+  "type": "object"
 }
