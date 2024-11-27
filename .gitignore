@@ -3,3 +3,4 @@ node_modules
 !shopify.js
 !gitpkg.config.js
 dist/
+.direnv

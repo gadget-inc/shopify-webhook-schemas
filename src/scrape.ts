@@ -72,7 +72,7 @@ const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/doc
 let warnings = 0;
 let errors = 0;
 
-const sortStringArrays = (obj: Object) => {
+const sortStringArrays = (obj: Record<string, any>) => {
   return cloneDeepWith(obj, (value) => {
     if (Array.isArray(value) && value.every((item) => typeof item === "string")) {
       return value.sort();
@@ -80,7 +80,7 @@ const sortStringArrays = (obj: Object) => {
   });
 };
 
-const getDeterministicObject = (obj: Object): Object => {
+const getDeterministicObject = (obj: Record<string, any>): Record<string, any> => {
   const stableString = stringify(sortStringArrays(obj));
   return JSON.parse(stableString!);
 };
