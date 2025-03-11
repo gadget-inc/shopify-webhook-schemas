@@ -85,7 +85,7 @@ const getDeterministicObject = (obj: Record<string, any>): Record<string, any> =
   return JSON.parse(stableString!);
 };
 
-const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }) => {
+const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, metadata: { name: string }, version: string) => {
   const inference = inferSchema(examplePayload);
 
   // build a copy of the payload and apply overrides based on the webhook name
@@ -124,9 +124,9 @@ const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, meta
         } else {
           errors += 1;
           console.error(
-            `${chalk.red("schema error")}: null type found in final schema for ${chalk.blue(metadata.name)} at path ${chalk.green(
-              fullPath
-            )}`
+            `${chalk.red("schema error")}: null type found in final schema for version ${chalk.blue(version)} for ${chalk.blue(
+              metadata.name
+            )} at path ${chalk.green(fullPath)}`
           );
         }
       }
@@ -179,7 +179,7 @@ const main = async () => {
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");
 
-      const schema = inferSchemaFromExamplePayload(webhook.response, webhook);
+      const schema = inferSchemaFromExamplePayload(webhook.response, webhook, version);
 
       const schemaFile = path.join(rootDir, "schemas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(schemaFile), { recursive: true });

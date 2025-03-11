@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test test/*.test.ts",
+    "test": "tsx --test --no-experimental-strip-types test/*.test.ts",
     "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "publint": "publint && attw --pack",
     "lint:prettier": "prettier --check \"{test,src}/**/*.{js,ts}\"",
