@@ -1,0 +1,404 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "body_html": {
+      "type": "string"
+    },
+    "category": {
+      "type": "null"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "handle": {
+      "type": "string"
+    },
+    "has_variants_that_requires_components": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "image": {
+      "anyOf": [
+        {
+          "format": "uri",
+          "type": "string"
+        },
+        {
+          "properties": {
+            "admin_graphql_api_id": {
+              "format": "uri",
+              "type": "string"
+            },
+            "alt": {
+              "type": "null"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "position": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "src": {
+              "format": "uri",
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "variant_ids": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "admin_graphql_api_id",
+            "alt",
+            "created_at",
+            "height",
+            "id",
+            "position",
+            "product_id",
+            "src",
+            "updated_at",
+            "variant_ids",
+            "width"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "images": {
+      "items": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "alt": {
+            "type": "null"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "src": {
+            "format": "uri",
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "variant_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "width": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "admin_graphql_api_id",
+          "alt",
+          "created_at",
+          "height",
+          "id",
+          "position",
+          "product_id",
+          "src",
+          "updated_at",
+          "variant_ids",
+          "width"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "media": {
+      "items": false,
+      "type": "array"
+    },
+    "options": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "values": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "position",
+          "product_id",
+          "values"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "product_type": {
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "published_scope": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "template_suffix": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "variant_gids": {
+      "items": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "admin_graphql_api_id",
+          "updated_at"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "variants": {
+      "items": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "barcode": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "compare_at_price": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "fulfillment_service": {
+            "type": "string"
+          },
+          "grams": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "image_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "inventory_item_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "inventory_management": {
+            "type": "string"
+          },
+          "inventory_policy": {
+            "type": "string"
+          },
+          "inventory_quantity": {
+            "type": "integer"
+          },
+          "old_inventory_quantity": {
+            "type": "integer"
+          },
+          "option1": {
+            "type": "string"
+          },
+          "option2": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "option3": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "position": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "string"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "requires_shipping": {
+            "type": "boolean"
+          },
+          "sku": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "taxable": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "weight": {
+            "type": "number"
+          },
+          "weight_unit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "admin_graphql_api_id",
+          "barcode",
+          "compare_at_price",
+          "created_at",
+          "id",
+          "image_id",
+          "inventory_item_id",
+          "inventory_policy",
+          "inventory_quantity",
+          "old_inventory_quantity",
+          "option1",
+          "option2",
+          "option3",
+          "position",
+          "price",
+          "product_id",
+          "sku",
+          "taxable",
+          "title",
+          "updated_at"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "vendor": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "body_html",
+    "category",
+    "created_at",
+    "handle",
+    "has_variants_that_requires_components",
+    "id",
+    "image",
+    "images",
+    "media",
+    "options",
+    "product_type",
+    "published_at",
+    "published_scope",
+    "status",
+    "tags",
+    "template_suffix",
+    "title",
+    "updated_at",
+    "variant_gids",
+    "variants",
+    "vendor"
+  ],
+  "type": "object"
+}

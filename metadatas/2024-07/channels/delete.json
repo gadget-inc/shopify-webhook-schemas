@@ -14,8 +14,5 @@
   "response": {
     "id": "123456789"
   },
-  "shop_feature": false,
-  "shopify_approval_scope": [
-    "write_publications"
-  ]
+  "shop_feature": false
 }

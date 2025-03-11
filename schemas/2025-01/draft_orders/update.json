@@ -5,6 +5,12 @@
       "format": "uri",
       "type": "string"
     },
+    "allow_discount_codes_in_checkout?": {
+      "type": "boolean"
+    },
+    "api_client_id": {
+      "type": "null"
+    },
     "applied_discount": {
       "properties": {
         "amount": {
@@ -34,6 +40,9 @@
         "null",
         "object"
       ]
+    },
+    "b2b?": {
+      "type": "boolean"
     },
     "billing_address": {
       "properties": {
@@ -133,6 +142,9 @@
     "created_at": {
       "format": "date-time",
       "type": "string"
+    },
+    "created_on_api_version_handle": {
+      "type": "null"
     },
     "currency": {
       "type": "string"
@@ -276,10 +288,7 @@
               ]
             },
             "opt_in_level": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "state": {
               "type": "string"
@@ -302,16 +311,10 @@
           "type": "string"
         },
         "last_order_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
+          "type": "integer"
         },
         "last_order_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "string"
         },
         "marketing_opt_in_level": {
           "type": "string"
@@ -404,22 +407,15 @@
         "currency",
         "default_address",
         "email",
-        "email_marketing_consent",
         "first_name",
         "id",
         "last_name",
-        "last_order_id",
-        "last_order_name",
         "multipass_identifier",
         "note",
-        "orders_count",
         "phone",
-        "sms_marketing_consent",
         "state",
-        "tags",
         "tax_exempt",
         "tax_exemptions",
-        "total_spent",
         "updated_at",
         "verified_email"
       ],
@@ -1355,10 +1351,14 @@
   },
   "required": [
     "admin_graphql_api_id",
+    "allow_discount_codes_in_checkout?",
+    "api_client_id",
     "applied_discount",
+    "b2b?",
     "billing_address",
     "completed_at",
     "created_at",
+    "created_on_api_version_handle",
     "currency",
     "customer",
     "email",

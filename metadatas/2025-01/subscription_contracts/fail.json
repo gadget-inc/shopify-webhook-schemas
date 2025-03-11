@@ -12,8 +12,8 @@
   "name": "subscription_contracts/fail",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/5600015926",
-    "id": 5600015926,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/7236891302",
+    "id": 7236891302,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -30,7 +30,7 @@
     "status": "failed",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "4406140774"
+    "revision_id": "8429768365"
   },
   "shop_feature": false
 }

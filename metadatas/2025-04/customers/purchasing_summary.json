@@ -1,0 +1,27 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a customer sales history change.",
+  "name": "customers/purchasing_summary",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Payload",
+  "response": {
+    "customerId": "gid://shopify/Customer/1",
+    "numberOfOrders": 1,
+    "amountSpent": {
+      "amount": "100.00",
+      "currencyCode": "USD"
+    },
+    "lastOrderId": "gid://shopify/Order/1",
+    "occurredAt": "2005-05-05T07:00:00.000Z"
+  },
+  "shop_feature": false
+}

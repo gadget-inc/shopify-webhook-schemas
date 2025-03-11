@@ -95,12 +95,6 @@
       "format": "email",
       "type": "string"
     },
-    "email_marketing_consent": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
     "first_name": {
       "type": "string"
     },
@@ -108,12 +102,6 @@
       "type": "integer"
     },
     "last_name": {
-      "type": "string"
-    },
-    "last_order_id": {
-      "type": "integer"
-    },
-    "last_order_name": {
       "type": "string"
     },
     "multipass_identifier": {
@@ -125,25 +113,13 @@
     "note": {
       "type": "string"
     },
-    "orders_count": {
-      "type": "integer"
-    },
     "phone": {
       "type": [
         "null",
         "string"
       ]
     },
-    "sms_marketing_consent": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
     "state": {
-      "type": "string"
-    },
-    "tags": {
       "type": "string"
     },
     "tax_exempt": {
@@ -152,9 +128,6 @@
     "tax_exemptions": {
       "items": false,
       "type": "array"
-    },
-    "total_spent": {
-      "type": "string"
     },
     "updated_at": {
       "format": "date-time",
@@ -171,22 +144,15 @@
     "currency",
     "default_address",
     "email",
-    "email_marketing_consent",
     "first_name",
     "id",
     "last_name",
-    "last_order_id",
-    "last_order_name",
     "multipass_identifier",
     "note",
-    "orders_count",
     "phone",
-    "sms_marketing_consent",
     "state",
-    "tags",
     "tax_exempt",
     "tax_exemptions",
-    "total_spent",
     "updated_at",
     "verified_email"
   ],

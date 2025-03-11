@@ -20,8 +20,5 @@
     "updated_at": null,
     "collection_id": 408372092144951400
   },
-  "shop_feature": false,
-  "shopify_approval_scope": [
-    "write_publications"
-  ]
+  "shop_feature": false
 }

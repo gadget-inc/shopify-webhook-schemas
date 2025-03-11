@@ -1,0 +1,28 @@
+{
+  "available_on": [
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Customers can request their data from a store owner. When this happens, Shopify sends a payload on the customers/data_request topic to the apps that are installed on that store.",
+  "name": "customers/data_request",
+  "privacy_compliance_topic": true,
+  "related_resource": "Customer",
+  "response": {
+    "shop_id": 954889,
+    "shop_domain": "{shop}.myshopify.com",
+    "customer": {
+      "id": 191167,
+      "email": "john@example.com",
+      "phone": "555-625-1199"
+    },
+    "orders_requested": [
+      299938,
+      280263,
+      220458
+    ],
+    "data_request": {
+      "id": 9999
+    }
+  },
+  "shop_feature": false
+}

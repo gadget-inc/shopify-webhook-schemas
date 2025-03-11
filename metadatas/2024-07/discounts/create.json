@@ -15,8 +15,8 @@
     "admin_graphql_api_id": "gid://shopify/DiscountAutomaticNode/1",
     "title": "Automatic free shipping",
     "status": "ACTIVE",
-    "created_at": "2016-08-29T14:00:00-04:00",
-    "updated_at": "2016-08-29T14:00:00-04:00"
+    "created_at": "2016-08-29T15:00:00-04:00",
+    "updated_at": "2016-08-29T15:00:00-04:00"
   },
   "shop_feature": false
 }
