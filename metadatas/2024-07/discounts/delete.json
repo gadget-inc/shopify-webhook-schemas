@@ -13,7 +13,7 @@
   "related_resource": "PriceRule",
   "response": {
     "admin_graphql_api_id": "gid://shopify/DiscountAutomaticNode/1",
-    "deleted_at": "2018-08-29T14:00:00-04:00"
+    "deleted_at": "2018-08-29T15:00:00-04:00"
   },
   "shop_feature": false
 }

@@ -97,7 +97,7 @@
     "email": "jon@example.com",
     "estimated_taxes": false,
     "financial_status": "voided",
-    "fulfillment_status": "pending",
+    "fulfillment_status": null,
     "landing_site": null,
     "landing_site_ref": null,
     "location_id": null,

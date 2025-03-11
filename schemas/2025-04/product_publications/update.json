@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "null"
+    },
+    "product_id": {
+      "type": "integer"
+    },
+    "publication_id": {
+      "type": "null"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "published_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "created_at",
+    "id",
+    "product_id",
+    "publication_id",
+    "published",
+    "published_at",
+    "updated_at"
+  ],
+  "type": "object"
+}

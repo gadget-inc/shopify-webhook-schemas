@@ -12,8 +12,8 @@
   "name": "selling_plan_groups/create",
   "related_resource": "SellingPlanGroup",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518938",
-    "id": 1039518938,
+    "admin_graphql_api_id": "gid://shopify/SellingPlanGroup/1039518918",
+    "id": 1039518918,
     "name": "Subscribe & Save",
     "merchant_code": "sub-n-save",
     "admin_graphql_api_app": "gid://shopify/App/2525000003",

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "access": {
+      "type": "string"
+    },
+    "admin_filter_status": {
+      "type": "string"
+    },
+    "api_client_id": {
+      "type": "null"
+    },
+    "app_config_managed": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deleting": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "null"
+    },
+    "id": {
+      "type": "null"
+    },
+    "key": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "options": {
+      "items": false,
+      "type": "array"
+    },
+    "owner_type": {
+      "type": "string"
+    },
+    "pinned_position": {
+      "type": "integer"
+    },
+    "shop_id": {
+      "type": "integer"
+    },
+    "standard_template_id": {
+      "type": "null"
+    },
+    "type_name": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "use_as_collection_condition": {
+      "type": "boolean"
+    },
+    "validation_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "access",
+    "admin_filter_status",
+    "api_client_id",
+    "app_config_managed",
+    "created_at",
+    "deleting",
+    "description",
+    "id",
+    "key",
+    "name",
+    "namespace",
+    "options",
+    "owner_type",
+    "pinned_position",
+    "shop_id",
+    "standard_template_id",
+    "type_name",
+    "updated_at",
+    "use_as_collection_condition",
+    "validation_status"
+  ],
+  "type": "object"
+}

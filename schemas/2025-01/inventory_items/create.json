@@ -52,6 +52,12 @@
     "updated_at": {
       "format": "date-time",
       "type": "string"
+    },
+    "weight_unit": {
+      "type": "string"
+    },
+    "weight_value": {
+      "type": "integer"
     }
   },
   "required": [
@@ -66,7 +72,9 @@
     "requires_shipping",
     "sku",
     "tracked",
-    "updated_at"
+    "updated_at",
+    "weight_unit",
+    "weight_value"
   ],
   "type": "object"
 }

@@ -9,7 +9,7 @@
   "related_resource": "ApplicationCharge",
   "response": {
     "app_purchase_one_time": {
-      "admin_graphql_api_id": "gid://shopify/AppPurchaseOneTime/1017262363",
+      "admin_graphql_api_id": "gid://shopify/AppPurchaseOneTime/1017262347",
       "name": "Webhook Test",
       "status": "PENDING",
       "admin_graphql_api_shop_id": "gid://shopify/Shop/548380009",

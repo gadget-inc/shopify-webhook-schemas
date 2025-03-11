@@ -38,8 +38,5 @@
     "admin_graphql_api_id": "gid://shopify/ProductVariant/642667041472713922",
     "image_id": null
   },
-  "shop_feature": false,
-  "shopify_approval_scope": [
-    "write_publications"
-  ]
+  "shop_feature": false
 }

@@ -23,6 +23,8 @@
     "harmonized_system_code": null,
     "tracked": true,
     "country_harmonized_system_codes": [],
+    "weight_value": 0,
+    "weight_unit": "lb",
     "admin_graphql_api_id": "gid://shopify/InventoryItem/271878346596884015"
   },
   "shop_feature": false

@@ -25,18 +25,20 @@
     "updated_at": "2021-12-31T19:00:00-05:00",
     "tax_exempt": false,
     "completed_at": null,
-    "name": "#D130",
+    "name": "#D117",
+    "allow_discount_codes_in_checkout?": false,
+    "b2b?": false,
     "status": "open",
     "line_items": [
       {
-        "id": 2314521,
+        "id": 3784621,
         "variant_id": 49148385,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Red",
         "sku": "IPOD2008RED",
         "vendor": "Apple",
-        "quantity": 3,
+        "quantity": 10,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -48,17 +50,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2314521"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/3784621"
       },
       {
-        "id": 1024828,
+        "id": 2720787,
         "variant_id": 457924702,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Black",
         "sku": "IPOD2008BLACK",
         "vendor": "Apple",
-        "quantity": 7,
+        "quantity": 9,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -70,17 +72,17 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1024828"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/2720787"
       },
       {
-        "id": 1956887,
+        "id": 1289942,
         "variant_id": 808950810,
         "product_id": 632910392,
         "title": "IPod Nano - 8GB",
         "variant_title": "Pink",
         "sku": "IPOD2008PINK",
         "vendor": "Apple",
-        "quantity": 4,
+        "quantity": 6,
         "requires_shipping": true,
         "taxable": true,
         "gift_card": false,
@@ -92,9 +94,10 @@
         "properties": [],
         "custom": false,
         "price": "199.00",
-        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1956887"
+        "admin_graphql_api_id": "gid://shopify/DraftOrderLineItem/1289942"
       }
     ],
+    "api_client_id": null,
     "shipping_address": {
       "first_name": "Steve",
       "address1": "123 Shipping Street",
@@ -130,11 +133,12 @@
       "province_code": "KY"
     },
     "invoice_url": "https://jsmith.myshopify.com/548380009/invoices/abcd1234abcd1234abcd1234abcd1234",
+    "created_on_api_version_handle": null,
     "applied_discount": {
       "description": "ABC 123",
-      "value": "10.0",
+      "value": "5.0",
       "title": "ABC 123",
-      "amount": "8.00",
+      "amount": "1.00",
       "value_type": "percentage"
     },
     "order_id": null,
@@ -142,30 +146,30 @@
       "title": "ABC 123",
       "custom": true,
       "handle": null,
-      "price": "8.00"
+      "price": "10.00"
     },
     "tax_lines": [
       {
-        "rate": 0.028528230756445477,
+        "rate": 0.018286303269730513,
+        "title": "State tax",
+        "price": "3.00"
+      },
+      {
+        "rate": 0.018286303269730513,
         "title": "State tax",
         "price": "1.00"
       },
       {
-        "rate": 0.028528230756445477,
+        "rate": 0.018286303269730513,
         "title": "State tax",
-        "price": "2.00"
-      },
-      {
-        "rate": 0.028528230756445477,
-        "title": "State tax",
-        "price": "2.00"
+        "price": "1.00"
       }
     ],
     "tags": "",
     "note_attributes": [],
-    "total_price": "436.00",
-    "subtotal_price": "458.00",
-    "total_tax": "467.00",
+    "total_price": "416.00",
+    "subtotal_price": "478.00",
+    "total_tax": "432.00",
     "payment_terms": {
       "id": 706405506930370000,
       "payment_terms_name": "Net 7",
@@ -184,15 +188,15 @@
           "issued_at": "2021-01-01T00:00:00-05:00",
           "due_at": "2021-01-02T00:00:00-05:00",
           "completed_at": "2021-01-02T00:00:00-05:00",
-          "amount": "436.00",
+          "amount": "416.00",
           "currency": "USD",
-          "total_price": "436.00",
+          "total_price": "416.00",
           "total_price_currency": "USD",
-          "balance_due": "436.00",
+          "balance_due": "416.00",
           "balance_due_currency": "USD",
-          "total_balance": "436.00",
+          "total_balance": "416.00",
           "total_balance_currency": "USD",
-          "outstanding_balance": "436.00",
+          "outstanding_balance": "416.00",
           "outstanding_balance_currency": "USD"
         }
       ],

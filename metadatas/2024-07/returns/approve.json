@@ -20,7 +20,7 @@
       "id": 4783296544821,
       "admin_graphql_api_id": "gid://shopify/Order/4783296544821"
     },
-    "total_return_line_items": 2,
+    "total_return_line_items": 0,
     "name": null,
     "return_line_items": [],
     "return_shipping_fees": [

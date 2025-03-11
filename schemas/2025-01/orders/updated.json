@@ -616,10 +616,7 @@
               ]
             },
             "opt_in_level": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "state": {
               "type": "string"
@@ -722,16 +719,13 @@
         "currency",
         "default_address",
         "email",
-        "email_marketing_consent",
         "first_name",
         "id",
         "last_name",
         "multipass_identifier",
         "note",
         "phone",
-        "sms_marketing_consent",
         "state",
-        "tags",
         "tax_exempt",
         "tax_exemptions",
         "updated_at",
@@ -1481,6 +1475,9 @@
           },
           "requires_shipping": {
             "type": "boolean"
+          },
+          "sales_line_item_group_id": {
+            "type": "null"
           },
           "sku": {
             "type": "string"
