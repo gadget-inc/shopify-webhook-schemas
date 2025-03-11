@@ -124,9 +124,9 @@ const inferSchemaFromExamplePayload = (examplePayload: Record<string, any>, meta
         } else {
           errors += 1;
           console.error(
-            `${chalk.red("schema error")}: null type found in final schema for version ${chalk.blue(version)} for ${chalk.blue(metadata.name)} at path ${chalk.green(
-              fullPath
-            )}`
+            `${chalk.red("schema error")}: null type found in final schema for version ${chalk.blue(version)} for ${chalk.blue(
+              metadata.name
+            )} at path ${chalk.green(fullPath)}`
           );
         }
       }
