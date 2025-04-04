@@ -1,6 +1,6 @@
 {
   "name": "shopify-webhook-schemas",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "",
   "main": "dist/src/index.js",
   "type": "commonjs",
