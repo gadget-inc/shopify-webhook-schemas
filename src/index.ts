@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import fastGlob from "fast-glob";
+import { inferSchemaFromExamplePayload } from "./infer-schema";
+
+export { inferSchemaFromExamplePayload };
 
 const loaded: { [kind in "metadatas" | "schemas"]: { [apiVersion: string]: { [topic: string]: any } } } = { metadatas: {}, schemas: {} };
 

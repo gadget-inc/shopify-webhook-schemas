@@ -30,11 +30,9 @@
   "license": "MIT",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",
-    "@cloudflare/json-schema-walker": "^0.1.1",
     "@gadgetinc/eslint-config": "^0.6.1",
     "@gadgetinc/prettier-config": "^0.4.0",
     "@jsonhero/json-infer-types": "^1.2.11",
-    "@jsonhero/schema-infer": "^0.1.5",
     "@opentelemetry/api": "^1.8.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.0",
@@ -48,16 +46,18 @@
     "globby": "^14.0.1",
     "got": "^11.8.6",
     "inflected": "^2.1.0",
-    "lodash": "^4.17.21",
     "prettier": "^2.8.8",
     "publint": "^0.2.7",
-    "safe-stable-stringify": "^2.5.0",
     "traverse": "^0.6.9",
     "tsx": "^4.7.3",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "fast-glob": "^3.3.2"
+    "fast-glob": "^3.3.2",
+    "@cloudflare/json-schema-walker": "^0.1.1",
+    "@jsonhero/schema-infer": "^0.1.5",
+    "lodash": "^4.17.21",
+    "safe-stable-stringify": "^2.5.0"
   },
   "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }
