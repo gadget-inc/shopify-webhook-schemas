@@ -8,16 +8,25 @@ importers:
 
   .:
     dependencies:
+      '@cloudflare/json-schema-walker':
+        specifier: ^0.1.1
+        version: 0.1.1
+      '@jsonhero/schema-infer':
+        specifier: ^0.1.5
+        version: 0.1.5
       fast-glob:
         specifier: ^3.3.2
         version: 3.3.2
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      safe-stable-stringify:
+        specifier: ^2.5.0
+        version: 2.5.0
     devDependencies:
       '@arethetypeswrong/cli':
         specifier: ^0.15.3
         version: 0.15.4
-      '@cloudflare/json-schema-walker':
-        specifier: ^0.1.1
-        version: 0.1.1
       '@gadgetinc/eslint-config':
         specifier: ^0.6.1
         version: 0.6.1(@gadgetinc/prettier-config@0.4.0(prettier@2.8.8)(typescript@5.6.3))(eslint@8.57.1)(lodash@4.17.21)(typescript@5.6.3)
@@ -27,9 +36,6 @@ importers:
       '@jsonhero/json-infer-types':
         specifier: ^1.2.11
         version: 1.2.11
-      '@jsonhero/schema-infer':
-        specifier: ^0.1.5
-        version: 0.1.5
       '@opentelemetry/api':
         specifier: ^1.8.0
         version: 1.9.0
@@ -69,18 +75,12 @@ importers:
       inflected:
         specifier: ^2.1.0
         version: 2.1.0
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
       prettier:
         specifier: ^2.8.8
         version: 2.8.8
       publint:
         specifier: ^0.2.7
         version: 0.2.11
-      safe-stable-stringify:
-        specifier: ^2.5.0
-        version: 2.5.0
       traverse:
         specifier: ^0.6.9
         version: 0.6.10

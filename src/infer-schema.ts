@@ -41,7 +41,7 @@ export const inferSchemaFromExamplePayload = (
   const sortedSchema = getDeterministicObject(schema);
 
   let warnings = 0;
-  let errors: Error[] = [];
+  const errors: Error[] = [];
 
   schemaWalk(
     sortedSchema,
