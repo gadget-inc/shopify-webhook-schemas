@@ -4,7 +4,10 @@
     "order_edit": {
       "properties": {
         "app_id": {
-          "type": "null"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "committed_at": {
           "format": "date-time",
@@ -114,7 +117,10 @@
           "type": "string"
         },
         "user_id": {
-          "type": "null"
+          "type": [
+            "integer",
+            "null"
+          ]
         }
       },
       "required": [

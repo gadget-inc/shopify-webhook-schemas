@@ -1,0 +1,6 @@
+{
+  "host": "example string",
+  "id": 123,
+  "localization": null,
+  "ssl_enabled": false
+}

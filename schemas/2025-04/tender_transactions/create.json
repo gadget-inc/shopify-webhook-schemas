@@ -15,40 +15,33 @@
     },
     "payment_details": {
       "properties": {
+        "credit_card_company": {
+          "type": "string"
+        },
+        "credit_card_number": {
+          "type": "string"
+        },
         "something": {
           "type": "string"
         }
       },
-      "required": [
-        "something"
-      ],
-      "type": [
-        "null",
-        "object"
-      ]
+      "type": ["null", "object"]
     },
     "payment_method": {
       "type": "string"
     },
     "processed_at": {
       "format": "date-time",
-      "type": [
-        "null",
-        "string"
-      ]
+      "type": ["null", "string"]
     },
     "remote_reference": {
-      "format": "time",
       "type": "string"
     },
     "test": {
       "type": "boolean"
     },
     "user_id": {
-      "type": [
-        "integer",
-        "null"
-      ]
+      "type": ["integer", "null"]
     }
   },
   "required": [

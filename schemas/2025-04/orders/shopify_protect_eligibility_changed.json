@@ -13,7 +13,14 @@
       "type": "object"
     },
     "order_id": {
-      "type": "integer"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "status": {
       "type": "string"

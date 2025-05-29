@@ -1,0 +1,20 @@
+{
+  "address1": "example string",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "city": "example string",
+  "country": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "estimated_delivery_at": "2019-01-01 00:00:00.000Z",
+  "fulfillment_id": 123,
+  "happened_at": "2019-01-01 00:00:00.000Z",
+  "id": 123,
+  "latitude": null,
+  "longitude": null,
+  "message": "example string",
+  "order_id": 123,
+  "province": "example string",
+  "shop_id": 123,
+  "status": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "zip": "example string"
+}

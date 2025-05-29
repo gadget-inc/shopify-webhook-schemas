@@ -1,0 +1,31 @@
+{
+  "order_edit": {
+    "app_id": 123,
+    "committed_at": "2019-01-01 00:00:00.000Z",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "discounts": {
+      "line_item": {
+        "additions": [],
+        "removals": []
+      }
+    },
+    "id": 123,
+    "line_items": {
+      "additions": [
+        {
+          "delta": 123,
+          "id": 123
+        }
+      ],
+      "removals": []
+    },
+    "notify_customer": false,
+    "order_id": 123,
+    "shipping_lines": {
+      "additions": [],
+      "removals": []
+    },
+    "staff_note": "example string",
+    "user_id": 123
+  }
+}
