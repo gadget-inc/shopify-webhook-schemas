@@ -1,0 +1,8 @@
+{
+  "admin_graphql_api_order_id": "https://www.example.com/",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "order_id": "example string",
+  "provider_id": 123,
+  "provider_title": "example string",
+  "risk_level": "example string"
+}

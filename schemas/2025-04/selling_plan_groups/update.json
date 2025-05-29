@@ -10,9 +10,13 @@
       "type": "string"
     },
     "app_id": {
-      "type": [
-        "integer",
-        "null"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
       ]
     },
     "description": {
@@ -47,7 +51,26 @@
       "type": "array"
     },
     "products": {
-      "items": false,
+      "items": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "storefront_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "storefront_graphql_api_id",
+          "title"
+        ],
+        "type": "object"
+      },
       "type": "array"
     },
     "selling_plans": {
@@ -62,10 +85,16 @@
                 "type": "integer"
               },
               "max_cycles": {
-                "type": "null"
+                "type": [
+                  "integer",
+                  "null"
+                ]
               },
               "min_cycles": {
-                "type": "null"
+                "type": [
+                  "integer",
+                  "null"
+                ]
               }
             },
             "required": [
@@ -83,7 +112,10 @@
                 "type": "array"
               },
               "cutoff": {
-                "type": "null"
+                "type": [
+                  "integer",
+                  "null"
+                ]
               },
               "interval": {
                 "type": "string"
@@ -105,7 +137,10 @@
             "type": "object"
           },
           "description": {
-            "type": "null"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "name": {
             "type": "string"
@@ -117,10 +152,31 @@
             "type": "array"
           },
           "position": {
-            "type": "null"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "pricing_policies": {
-            "items": false,
+            "items": {
+              "properties": {
+                "adjustment_type": {
+                  "type": "string"
+                },
+                "adjustment_value": {
+                  "type": "string"
+                },
+                "after_cycle": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "adjustment_type",
+                "adjustment_value",
+                "after_cycle"
+              ],
+              "type": "object"
+            },
             "type": "array"
           }
         },

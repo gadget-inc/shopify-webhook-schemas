@@ -1,0 +1,111 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "body_html": "example string",
+  "category": {
+    "admin_graphql_api_id": "https://www.example.com/",
+    "full_name": "example string",
+    "name": "example string"
+  },
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "handle": "example string",
+  "has_variants_that_requires_components": false,
+  "id": 123,
+  "image": {
+    "admin_graphql_api_id": "https://www.example.com/",
+    "alt": "example string",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "height": 123,
+    "id": 123,
+    "position": 123,
+    "product_id": 123,
+    "src": "https://www.example.com/",
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "variant_ids": [],
+    "width": 123
+  },
+  "images": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "alt": "example string",
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "height": 123,
+      "id": 123,
+      "position": 123,
+      "product_id": 123,
+      "src": "https://www.example.com/",
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "variant_ids": [],
+      "width": 123
+    }
+  ],
+  "media": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "alt": "example string",
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "id": 123,
+      "media_content_type": "example string",
+      "position": 123,
+      "preview_image": {
+        "height": 123,
+        "src": "https://www.example.com/",
+        "status": "example string",
+        "width": 123
+      },
+      "product_id": 123,
+      "status": "example string",
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "variant_ids": []
+    }
+  ],
+  "options": [
+    {
+      "id": 123,
+      "name": "example string",
+      "position": 123,
+      "product_id": 123,
+      "values": [
+        "example string"
+      ]
+    }
+  ],
+  "product_type": "example string",
+  "published_at": null,
+  "published_scope": "example string",
+  "status": "example string",
+  "tags": "example string",
+  "template_suffix": "example string",
+  "title": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "variant_gids": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "updated_at": "2019-01-01 00:00:00.000Z"
+    }
+  ],
+  "variants": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "barcode": "example string",
+      "compare_at_price": null,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "id": 123,
+      "image_id": null,
+      "inventory_item_id": 123,
+      "inventory_policy": "example string",
+      "inventory_quantity": 123,
+      "old_inventory_quantity": 123,
+      "option1": "example string",
+      "option2": null,
+      "option3": null,
+      "position": 123,
+      "price": "example string",
+      "product_id": 123,
+      "sku": "example string",
+      "taxable": true,
+      "title": "example string",
+      "updated_at": "2019-01-01 00:00:00.000Z"
+    }
+  ],
+  "vendor": "example string"
+}

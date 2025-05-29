@@ -1,0 +1,21 @@
+{
+  "admin_graphql_api_customer_id": "https://www.example.com/",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "admin_graphql_api_origin_order_id": "https://www.example.com/",
+  "billing_policy": {
+    "interval": "example string",
+    "interval_count": 123,
+    "max_cycles": null,
+    "min_cycles": null
+  },
+  "currency_code": "example string",
+  "customer_id": 123,
+  "delivery_policy": {
+    "interval": "example string",
+    "interval_count": 123
+  },
+  "id": 123,
+  "origin_order_id": 123,
+  "revision_id": "example string",
+  "status": "example string"
+}

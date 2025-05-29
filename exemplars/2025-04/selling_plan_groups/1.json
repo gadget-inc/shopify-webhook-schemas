@@ -1,0 +1,52 @@
+{
+  "admin_graphql_api_app": "https://www.example.com/",
+  "admin_graphql_api_id": "https://www.example.com/",
+  "app_id": "example string",
+  "description": "example string",
+  "id": 123,
+  "merchant_code": "example string",
+  "name": "example string",
+  "options": [
+    "example string"
+  ],
+  "position": 123,
+  "product_variants": [],
+  "products": [
+    {
+      "id": 123,
+      "storefront_graphql_api_id": "https://www.example.com/",
+      "title": "example string"
+    }
+  ],
+  "selling_plans": [
+    {
+      "billing_policy": {
+        "interval": "example string",
+        "interval_count": 123,
+        "max_cycles": 123,
+        "min_cycles": 123
+      },
+      "delivery_policy": {
+        "anchors": [],
+        "cutoff": 123,
+        "interval": "example string",
+        "interval_count": 123,
+        "pre_anchor_behavior": "example string"
+      },
+      "description": "example string",
+      "name": "example string",
+      "options": [
+        "example string"
+      ],
+      "position": 123,
+      "pricing_policies": [
+        {
+          "adjustment_type": "example string",
+          "adjustment_value": "example string",
+          "after_cycle": 123
+        }
+      ]
+    }
+  ],
+  "summary": "example string"
+}

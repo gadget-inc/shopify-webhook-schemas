@@ -1,0 +1,19 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "body_html": "example string",
+  "handle": "example string",
+  "id": 123,
+  "image": {
+    "alt": "example string",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "height": 123,
+    "src": "https://www.example.com/",
+    "width": 123
+  },
+  "published_at": "2019-01-01 00:00:00.000Z",
+  "published_scope": "example string",
+  "sort_order": "example string",
+  "template_suffix": "example string",
+  "title": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z"
+}

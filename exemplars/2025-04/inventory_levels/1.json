@@ -1,0 +1,7 @@
+{
+  "inventory_item_id": 123,
+  "location_id": 123,
+  "available": 123,
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "admin_graphql_api_id": "https://www.example.com/"
+}

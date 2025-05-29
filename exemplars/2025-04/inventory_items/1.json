@@ -1,0 +1,16 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "cost": "example string",
+  "country_code_of_origin": "example string",
+  "country_harmonized_system_codes": [],
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "harmonized_system_code": "example string",
+  "id": 123,
+  "province_code_of_origin": "example string",
+  "requires_shipping": true,
+  "sku": "example string",
+  "tracked": true,
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "weight_unit": "example string",
+  "weight_value": 123
+}

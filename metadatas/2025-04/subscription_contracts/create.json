@@ -12,15 +12,15 @@
   "name": "subscription_contracts/create",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/5691166352",
-    "id": 5691166352,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/3588376895",
+    "id": 3588376895,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
       "min_cycles": 1,
       "max_cycles": 2
     },
-    "currency_code": "USD",
+    "currency_code": "CAD",
     "customer_id": 1,
     "admin_graphql_api_customer_id": "gid://shopify/Customer/1",
     "delivery_policy": {
@@ -30,7 +30,7 @@
     "status": "active",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "4589581500"
+    "revision_id": "4728464132"
   },
   "shop_feature": false
 }

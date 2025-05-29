@@ -1,0 +1,12 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "admin_graphql_api_order_id": "https://www.example.com/",
+  "admin_graphql_api_subscription_contract_id": "https://www.example.com/",
+  "error_code": null,
+  "error_message": null,
+  "id": 123,
+  "idempotency_key": "example string",
+  "order_id": 123,
+  "ready": true,
+  "subscription_contract_id": 123
+}

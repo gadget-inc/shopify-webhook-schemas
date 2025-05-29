@@ -646,4 +646,94 @@ export const overrides: { topics: string[]; schema: any; versions?: string[] }[]
       },
     },
   },
+  {
+    topics: ["collections/create", "collections/update"],
+    schema: {
+      image: {
+        type: "object",
+        properties: {
+          alt: { type: "string" },
+          created_at: { type: "string" },
+          height: { type: "number" },
+          src: { type: "string" },
+          width: { type: "number" },
+        },
+      },
+    },
+  },
+  {
+    topics: ["fulfillments/create", "fulfillments/update"],
+    schema: {
+      origin_address: {
+        address1: { type: "string" },
+        city: { type: "string" },
+        country_code: { type: "string" },
+        province_code: { type: "string" },
+        zip: { type: "string" },
+      },
+    },
+  },
+  {
+    topics: ["products/create", "products/update"],
+    schema: {
+      image: {
+        properties: {
+          admin_graphql_api_id: {
+            format: "uri",
+            type: "string",
+          },
+          alt: {
+            type: ["string", "null"],
+          },
+          created_at: {
+            format: "date-time",
+            type: "string",
+          },
+          height: {
+            type: "integer",
+          },
+          id: {
+            type: "integer",
+          },
+          position: {
+            type: "integer",
+          },
+          product_id: {
+            type: "integer",
+          },
+          src: {
+            format: "uri",
+            type: "string",
+          },
+          updated_at: {
+            format: "date-time",
+            type: "string",
+          },
+          variant_ids: {
+            items: {
+              type: "integer",
+            },
+            type: "array",
+          },
+          width: {
+            type: "integer",
+          },
+        },
+        required: [
+          "admin_graphql_api_id",
+          "alt",
+          "created_at",
+          "height",
+          "id",
+          "position",
+          "product_id",
+          "src",
+          "updated_at",
+          "variant_ids",
+          "width",
+        ],
+        type: "object",
+      },
+    },
+  },
 ];

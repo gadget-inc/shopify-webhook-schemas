@@ -1,0 +1,73 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "billing_address": {
+    "address1": "example string",
+    "address2": "example string",
+    "admin_graphql_api_id": "https://www.example.com/",
+    "city": "example string",
+    "company_admin_graphql_api_id": "https://www.example.com/",
+    "country": "example string",
+    "country_code": "example string",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "first_name": "example string",
+    "last_name": "example string",
+    "phone": "example string",
+    "province": "example string",
+    "recipient": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "zip": "example string",
+    "zone_code": "example string"
+  },
+  "buyer_experience_configuration": {
+    "checkout_to_draft": false,
+    "deposit": null,
+    "editable_shipping_address": false,
+    "pay_now_only": true,
+    "payment_terms_template_admin_graphql_api_id": "https://www.example.com/"
+  },
+  "company": {
+    "admin_graphql_api_id": "https://www.example.com/",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "customer_since": "2019-01-01 00:00:00.000Z",
+    "external_id": "example string",
+    "main_contact_admin_graphql_api_id": "https://www.example.com/",
+    "name": "example string",
+    "note": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z"
+  },
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "external_id": "example string",
+  "locale": "example string",
+  "name": "example string",
+  "note": "example string",
+  "shipping_address": {
+    "address1": "example string",
+    "address2": "example string",
+    "admin_graphql_api_id": "https://www.example.com/",
+    "city": "example string",
+    "company_admin_graphql_api_id": "https://www.example.com/",
+    "country": "example string",
+    "country_code": "example string",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "first_name": "example string",
+    "last_name": "example string",
+    "phone": "example string",
+    "province": "example string",
+    "recipient": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z",
+    "zip": "example string",
+    "zone_code": "example string"
+  },
+  "tax_exemptions": [
+    "example string"
+  ],
+  "tax_registration": null,
+  "tax_settings": {
+    "tax_exempt": false,
+    "tax_exemptions": [
+      "example string"
+    ],
+    "tax_registration_id": "example string"
+  },
+  "updated_at": "2019-01-01 00:00:00.000Z"
+}

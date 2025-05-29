@@ -1,0 +1,9 @@
+{
+  "customer_id": 123,
+  "email_address": "eallam@example.com",
+  "email_marketing_consent": {
+    "state": "example string",
+    "opt_in_level": "example string",
+    "consent_updated_at": "2019-01-01 00:00:00.000Z"
+  }
+}

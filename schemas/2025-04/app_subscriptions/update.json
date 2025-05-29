@@ -21,7 +21,16 @@
         "currency": {
           "type": "string"
         },
+        "interval": {
+          "type": "string"
+        },
         "name": {
+          "type": "string"
+        },
+        "plan_handle": {
+          "type": "string"
+        },
+        "price": {
           "type": "string"
         },
         "status": {
@@ -38,7 +47,10 @@
         "capped_amount",
         "created_at",
         "currency",
+        "interval",
         "name",
+        "plan_handle",
+        "price",
         "status",
         "updated_at"
       ],

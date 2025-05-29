@@ -15,7 +15,10 @@
           "type": "string"
         },
         "address2": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "city": {
           "type": "string"
@@ -158,7 +161,137 @@
             "type": "array"
           },
           "duties": {
-            "items": false,
+            "items": {
+              "properties": {
+                "admin_graphql_api_id": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "country_code_of_origin": {
+                  "type": "string"
+                },
+                "harmonized_system_code": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "price_set": {
+                  "properties": {
+                    "presentment_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    },
+                    "shop_money": {
+                      "properties": {
+                        "amount": {
+                          "type": "string"
+                        },
+                        "currency_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "currency_code"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "presentment_money",
+                    "shop_money"
+                  ],
+                  "type": "object"
+                },
+                "tax_lines": {
+                  "items": {
+                    "properties": {
+                      "channel_liable": {
+                        "type": "boolean"
+                      },
+                      "price": {
+                        "type": "string"
+                      },
+                      "price_set": {
+                        "properties": {
+                          "presentment_money": {
+                            "properties": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "currency_code": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "amount",
+                              "currency_code"
+                            ],
+                            "type": "object"
+                          },
+                          "shop_money": {
+                            "properties": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "currency_code": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "amount",
+                              "currency_code"
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "presentment_money",
+                          "shop_money"
+                        ],
+                        "type": "object"
+                      },
+                      "rate": {
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "channel_liable",
+                      "price",
+                      "price_set",
+                      "rate",
+                      "title"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "admin_graphql_api_id",
+                "country_code_of_origin",
+                "harmonized_system_code",
+                "id",
+                "price_set",
+                "tax_lines"
+              ],
+              "type": "object"
+            },
             "type": "array"
           },
           "fulfillable_quantity": {
@@ -276,7 +409,21 @@
             "type": "integer"
           },
           "properties": {
-            "items": false,
+            "items": {
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value"
+              ],
+              "type": "object"
+            },
             "type": "array"
           },
           "quantity": {
@@ -406,10 +553,16 @@
             "type": "object"
           },
           "variant_id": {
-            "type": "integer"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "variant_inventory_management": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "variant_title": {
             "type": [
@@ -470,70 +623,47 @@
       "type": "integer"
     },
     "origin_address": {
-      "properties": {
-        "address1": {
-          "type": "string"
-        },
-        "address2": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "city": {
-          "type": "string"
-        },
-        "company": {
-          "type": "string"
-        },
-        "country": {
-          "type": "string"
-        },
-        "country_code": {
-          "type": "string"
-        },
-        "first_name": {
-          "type": "string"
-        },
-        "last_name": {
-          "type": "string"
-        },
-        "latitude": {
-          "type": "null"
-        },
-        "longitude": {
-          "type": "null"
-        },
-        "name": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "province": {
-          "type": "string"
-        },
-        "province_code": {
-          "type": "string"
-        },
-        "zip": {
-          "type": "string"
-        }
+      "address1": {
+        "type": "string"
       },
-      "required": [
-        "address1",
-        "address2",
-        "city",
-        "country_code",
-        "province_code",
-        "zip"
-      ],
-      "type": [
-        "null",
-        "object"
-      ]
+      "city": {
+        "type": "string"
+      },
+      "country_code": {
+        "type": "string"
+      },
+      "province_code": {
+        "type": "string"
+      },
+      "zip": {
+        "type": "string"
+      }
     },
     "receipt": {
+      "properties": {
+        "gift_cards": {
+          "items": {
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "line_item_id": {
+                "type": "integer"
+              },
+              "masked_code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "line_item_id",
+              "masked_code"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
       "type": "object"
     },
     "service": {

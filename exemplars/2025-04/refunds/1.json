@@ -1,0 +1,320 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "duties": [],
+  "id": 123,
+  "note": "example string",
+  "order_adjustments": [],
+  "order_id": 123,
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "refund_line_items": [
+    {
+      "id": 123,
+      "line_item": {
+        "admin_graphql_api_id": "https://www.example.com/",
+        "discount_allocations": [],
+        "duties": [],
+        "fulfillable_quantity": 123,
+        "fulfillment_service": "example string",
+        "fulfillment_status": "example string",
+        "gift_card": false,
+        "grams": 123,
+        "id": 123,
+        "name": "example string",
+        "origin_location": {
+          "address1": "example string",
+          "address2": "example string",
+          "city": "example string",
+          "country_code": "example string",
+          "id": 123,
+          "name": "example string",
+          "province_code": "example string",
+          "zip": "example string"
+        },
+        "pre_tax_price": "example string",
+        "price": "example string",
+        "price_set": {
+          "presentment_money": {
+            "amount": "example string",
+            "currency_code": "example string"
+          },
+          "shop_money": {
+            "amount": "example string",
+            "currency_code": "example string"
+          }
+        },
+        "product_exists": true,
+        "product_id": 123,
+        "properties": [],
+        "quantity": 123,
+        "requires_shipping": true,
+        "sku": "example string",
+        "tax_code": "example string",
+        "tax_lines": [
+          {
+            "channel_liable": true,
+            "price": "example string",
+            "price_set": {
+              "presentment_money": {
+                "amount": "example string",
+                "currency_code": "example string"
+              },
+              "shop_money": {
+                "amount": "example string",
+                "currency_code": "example string"
+              }
+            },
+            "rate": 123.456,
+            "title": "example string"
+          }
+        ],
+        "taxable": true,
+        "title": "example string",
+        "total_discount": "example string",
+        "total_discount_set": {
+          "presentment_money": {
+            "amount": "example string",
+            "currency_code": "example string"
+          },
+          "shop_money": {
+            "amount": "example string",
+            "currency_code": "example string"
+          }
+        },
+        "variant_id": 123,
+        "variant_inventory_management": "example string",
+        "variant_title": "example string",
+        "vendor": "example string"
+      },
+      "line_item_id": 123,
+      "location_id": 123,
+      "quantity": 123,
+      "restock_type": "example string",
+      "subtotal": 123,
+      "subtotal_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      },
+      "total_tax": 123.456,
+      "total_tax_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      }
+    }
+  ],
+  "refund_shipping_lines": [],
+  "restock": false,
+  "return": null,
+  "total_duties_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "transactions": [
+    {
+      "admin_graphql_api_id": "https://www.example.com/",
+      "amount": "example string",
+      "amount_rounding": "example string",
+      "authorization": "example string",
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "currency": "example string",
+      "device_id": 123,
+      "error_code": null,
+      "gateway": "example string",
+      "id": 123,
+      "kind": "example string",
+      "location_id": 123,
+      "manual_payment_gateway": false,
+      "message": "example string",
+      "order_id": 123,
+      "parent_id": 123,
+      "payment_details": {
+        "avs_result_code": "example string",
+        "buyer_action_info": null,
+        "credit_card_bin": "2019-01-01 00:00:00.000Z",
+        "credit_card_company": "example string",
+        "credit_card_expiration_month": 123,
+        "credit_card_expiration_year": 123,
+        "credit_card_name": "example string",
+        "credit_card_number": "example string",
+        "credit_card_wallet": "example string",
+        "cvv_result_code": "example string",
+        "payment_method_name": "example string"
+      },
+      "payment_id": "example string",
+      "payments_refund_attributes": {
+        "acquirer_reference_number": "example string",
+        "status": "example string"
+      },
+      "processed_at": "2019-01-01 00:00:00.000Z",
+      "receipt": {
+        "amount": 123,
+        "balance_transaction": {
+          "exchange_rate": null,
+          "id": "example string",
+          "object": "example string"
+        },
+        "charge": {
+          "amount": 123,
+          "application_fee": "example string",
+          "balance_transaction": "example string",
+          "captured": true,
+          "created": 123,
+          "currency": "example string",
+          "failure_code": null,
+          "failure_message": "example string",
+          "fraud_details": {},
+          "id": "example string",
+          "livemode": true,
+          "metadata": {
+            "email": "example string",
+            "manual_entry": "example string",
+            "order_id": "example string",
+            "order_transaction_id": "example string",
+            "payments_charge_id": "example string",
+            "shop_id": "example string",
+            "shop_name": "example string",
+            "shopify_payments_next": "example string"
+          },
+          "mit_params": {
+            "network_transaction_id": "example string"
+          },
+          "object": "example string",
+          "outcome": {
+            "advice_code": null,
+            "network_advice_code": null,
+            "network_decline_code": null,
+            "network_status": "example string",
+            "reason": "example string",
+            "risk_level": "example string",
+            "seller_message": "example string",
+            "type": "example string"
+          },
+          "paid": true,
+          "payment_intent": "example string",
+          "payment_method": "example string",
+          "payment_method_details": {
+            "card": {
+              "amount_authorized": 123,
+              "authorization_code": "2019-01-01 00:00:00.000Z",
+              "brand": "example string",
+              "capture_before": 123,
+              "checks": {
+                "address_line1_check": "example string",
+                "address_postal_code_check": "example string",
+                "cvc_check": "example string"
+              },
+              "country": "example string",
+              "description": "example string",
+              "ds_transaction_id": null,
+              "exp_month": 123,
+              "exp_year": 123,
+              "extended_authorization": {
+                "status": "example string"
+              },
+              "fingerprint": "example string",
+              "funding": "example string",
+              "iin": "2019-01-01 00:00:00.000Z",
+              "incremental_authorization": {
+                "status": "example string"
+              },
+              "installments": null,
+              "issuer": "example string",
+              "last4": "2019-01-01 00:00:00.000Z",
+              "mandate": null,
+              "moto": true,
+              "multicapture": {
+                "status": "example string"
+              },
+              "network": "example string",
+              "network_token": {
+                "used": false
+              },
+              "network_transaction_id": "example string",
+              "overcapture": {
+                "maximum_amount_capturable": 123,
+                "status": "example string"
+              },
+              "overcapture_supported": true,
+              "payment_account_reference": "example string",
+              "regulated_status": "example string",
+              "three_d_secure": {
+                "authenticated": true,
+                "authentication_flow": "example string",
+                "electronic_commerce_indicator": "example string",
+                "exemption_indicator": "example string",
+                "result": "example string",
+                "result_reason": "example string",
+                "succeeded": true,
+                "transaction_id": "example string",
+                "version": "example string"
+              },
+              "wallet": {
+                "apple_pay": {
+                  "type": "example string"
+                },
+                "dynamic_last4": "2019-01-01 00:00:00.000Z",
+                "type": "example string"
+              }
+            },
+            "type": "example string"
+          },
+          "refunded": true,
+          "source": "example string",
+          "status": "example string"
+        },
+        "created": 123,
+        "currency": "example string",
+        "id": "example string",
+        "metadata": {
+          "order_transaction_id": "example string",
+          "payments_refund_id": "example string",
+          "shopify_payments_next": "example string"
+        },
+        "mit_params": {},
+        "object": "example string",
+        "payment_method_details": {
+          "card": {
+            "acquirer_reference_number": "example string",
+            "acquirer_reference_number_status": "example string"
+          },
+          "type": "example string"
+        },
+        "reason": "example string",
+        "status": "example string"
+      },
+      "source_name": "example string",
+      "status": "example string",
+      "test": false,
+      "total_unsettled_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency": "example string"
+        }
+      },
+      "user_id": 123
+    }
+  ],
+  "user_id": 123
+}
