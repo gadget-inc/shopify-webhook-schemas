@@ -1,7 +1,6 @@
 {
   "access_scopes": [
-    "inventory",
-    "products"
+    "inventory"
   ],
   "available_on": [
     "graphql",
