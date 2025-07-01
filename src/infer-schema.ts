@@ -788,18 +788,12 @@ export const overrides: { topics: string[]; schema: any; required?: string[]; ve
         type: "string",
       },
     },
-    required: [
-      "admin_graphql_api_id",
-      "available",
-      "inventory_item_id",
-      "location_id",
-      "updated_at"
-    ],
+    required: ["admin_graphql_api_id", "available", "inventory_item_id", "location_id", "updated_at"],
   },
   {
     topics: ["shipping_addresses/create", "shipping_addresses/update"],
     schema: {
       ...shippingAddress.properties,
     },
-  }
+  },
 ];
