@@ -1,0 +1,27 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "due_in_days": 123,
+  "id": 123,
+  "payment_schedules": [
+    {
+      "amount": "example string",
+      "balance_due": "example string",
+      "completed_at": null,
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "currency": "example string",
+      "due_at": "2019-01-01 00:00:00.000Z",
+      "id": 123,
+      "issued_at": "2019-01-01 00:00:00.000Z",
+      "payment_terms_id": 123,
+      "presentment_currency": "example string",
+      "total_balance": "example string",
+      "total_price": "example string",
+      "updated_at": "2019-01-01 00:00:00.000Z",
+      "admin_graphql_api_id": "https://www.example.com/"
+    }
+  ],
+  "payment_terms_name": "example string",
+  "payment_terms_type": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z"
+}

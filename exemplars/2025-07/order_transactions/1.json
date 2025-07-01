@@ -1,0 +1,175 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "amount": "example string",
+  "amount_rounding": "example string",
+  "authorization": "example string",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "currency": "example string",
+  "device_id": 123,
+  "error_code": null,
+  "gateway": "example string",
+  "id": 123,
+  "kind": "example string",
+  "location_id": 123,
+  "manual_payment_gateway": false,
+  "message": "example string",
+  "order_id": 123,
+  "parent_id": null,
+  "payment_details": {
+    "avs_result_code": "example string",
+    "buyer_action_info": null,
+    "credit_card_bin": "2019-01-01 00:00:00.000Z",
+    "credit_card_company": "example string",
+    "credit_card_expiration_month": 123,
+    "credit_card_expiration_year": 123,
+    "credit_card_name": "example string",
+    "credit_card_number": "example string",
+    "credit_card_wallet": "example string",
+    "cvv_result_code": null,
+    "payment_method_name": "example string"
+  },
+  "payment_id": "example string",
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "receipt": {
+    "amount": 123,
+    "amount_capturable": 123,
+    "amount_received": 123,
+    "canceled_at": null,
+    "cancellation_reason": null,
+    "capture_method": "example string",
+    "charges": {
+      "data": [
+        {
+          "amount": 123,
+          "application_fee": null,
+          "authorization_code": "example string",
+          "balance_transaction": null,
+          "captured": false,
+          "created": 123,
+          "currency": "example string",
+          "failure_code": null,
+          "failure_message": null,
+          "fraud_details": {},
+          "id": "example string",
+          "livemode": true,
+          "metadata": {
+            "card_source": "example string",
+            "checkout_session_identifier": "example string",
+            "location_id": "example string",
+            "payment_device_name": "example string",
+            "payment_device_serial": "example string",
+            "point_of_sale_device_id": "example string",
+            "shop_id": "example string",
+            "unique_token": "example string",
+            "user_id": "example string"
+          },
+          "object": "example string",
+          "outcome": {
+            "advice_code": null,
+            "network_advice_code": null,
+            "network_decline_code": null,
+            "network_status": "example string",
+            "reason": null,
+            "risk_level": "example string",
+            "seller_message": "example string",
+            "type": "example string"
+          },
+          "paid": true,
+          "payment_intent": "example string",
+          "payment_method": "example string",
+          "payment_method_details": {
+            "card_present": {
+              "amount_authorized": 123,
+              "brand": "example string",
+              "brand_product": "example string",
+              "capture_before": 123,
+              "cardholder_name": null,
+              "country": "example string",
+              "description": "example string",
+              "emv_auth_data": "example string",
+              "exp_month": 123,
+              "exp_year": 123,
+              "fingerprint": "example string",
+              "funding": "example string",
+              "generated_card": null,
+              "iin": "2019-01-01 00:00:00.000Z",
+              "incremental_authorization_supported": false,
+              "issuer": "example string",
+              "last4": "2019-01-01 00:00:00.000Z",
+              "network": "example string",
+              "network_transaction_id": "example string",
+              "offline": {
+                "stored_at": null,
+                "type": null
+              },
+              "overcapture_supported": false,
+              "payment_account_reference": "example string",
+              "preferred_locales": [],
+              "read_method": "example string",
+              "receipt": {
+                "account_type": "example string",
+                "application_cryptogram": "example string",
+                "application_preferred_name": "example string",
+                "authorization_code": "example string",
+                "authorization_response_code": "2019-01-01 00:00:00.000Z",
+                "cardholder_verification_method": "example string",
+                "dedicated_file_name": "example string",
+                "terminal_verification_results": "example string",
+                "transaction_status_information": "example string"
+              }
+            },
+            "type": "example string"
+          },
+          "refunded": false,
+          "source": null,
+          "status": "example string"
+        }
+      ],
+      "has_more": false,
+      "object": "example string",
+      "total_count": 123,
+      "url": "example string"
+    },
+    "confirmation_method": "example string",
+    "created": 123,
+    "currency": "example string",
+    "id": "example string",
+    "last_payment_error": null,
+    "livemode": true,
+    "metadata": {
+      "card_source": "example string",
+      "checkout_session_identifier": "example string",
+      "checkout_token": "example string",
+      "location_id": "example string",
+      "order_id": "example string",
+      "payment_device_name": "example string",
+      "payment_device_serial": "example string",
+      "point_of_sale_device_id": "example string",
+      "shop_id": "example string",
+      "unique_token": "example string",
+      "user_id": "example string"
+    },
+    "next_action": null,
+    "object": "example string",
+    "payment_method": "example string",
+    "payment_method_types": [
+      "example string"
+    ],
+    "source": null,
+    "status": "example string"
+  },
+  "source_name": "example string",
+  "status": "example string",
+  "test": false,
+  "total_unsettled_set": {
+    "presentment_money": {
+      "amount": "example string",
+      "currency": "example string"
+    },
+    "shop_money": {
+      "amount": "example string",
+      "currency": "example string"
+    }
+  },
+  "user_id": 123
+}

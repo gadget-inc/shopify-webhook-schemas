@@ -1,0 +1,10 @@
+{
+  "id": 123,
+  "phone": "example string",
+  "sms_marketing_consent": {
+    "state": "example string",
+    "opt_in_level": "example string",
+    "consent_updated_at": "2019-01-01 00:00:00.000Z",
+    "consent_collected_from": "example string"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "amount": "example string",
+  "currency": "example string",
+  "id": 123,
+  "order_id": 123,
+  "payment_details": {
+    "credit_card_company": "example string",
+    "credit_card_number": "example string"
+  },
+  "payment_method": "example string",
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "remote_reference": "example string",
+  "test": false,
+  "user_id": 123
+}

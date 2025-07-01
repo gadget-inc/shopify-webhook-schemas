@@ -1,0 +1,10 @@
+{
+  "app_purchase_one_time": {
+    "admin_graphql_api_id": "https://www.example.com/",
+    "name": "example string",
+    "status": "example string",
+    "admin_graphql_api_shop_id": "https://www.example.com/",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "updated_at": "2019-01-01 00:00:00.000Z"
+  }
+}

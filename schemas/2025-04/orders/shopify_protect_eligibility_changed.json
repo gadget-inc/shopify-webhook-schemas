@@ -22,6 +22,18 @@
         },
         {
           "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
         }
       ]
     },

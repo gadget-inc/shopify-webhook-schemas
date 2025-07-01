@@ -1,0 +1,10 @@
+{
+  "admin_graphql_api_id": "https://www.example.com/",
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "customer_since": "2019-01-01 00:00:00.000Z",
+  "external_id": "example string",
+  "main_contact_admin_graphql_api_id": "https://www.example.com/",
+  "name": "example string",
+  "note": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z"
+}

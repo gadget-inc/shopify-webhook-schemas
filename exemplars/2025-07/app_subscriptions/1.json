@@ -1,0 +1,15 @@
+{
+  "app_subscription": {
+    "admin_graphql_api_id": "https://www.example.com/",
+    "admin_graphql_api_shop_id": "https://www.example.com/",
+    "capped_amount": "example string",
+    "created_at": "2019-01-01 00:00:00.000Z",
+    "currency": "example string",
+    "interval": "example string",
+    "name": "example string",
+    "plan_handle": "example string",
+    "price": "example string",
+    "status": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z"
+  }
+}

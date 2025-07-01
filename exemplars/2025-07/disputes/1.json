@@ -1,0 +1,14 @@
+{
+  "id": 123,
+  "order_id": 123,
+  "type": "example string",
+  "amount": "example string",
+  "currency": "example string",
+  "reason": "example string",
+  "network_reason_code": "example string",
+  "status": "example string",
+  "evidence_due_by": "2019-01-01 00:00:00.000Z",
+  "evidence_sent_on": "2019-01-01 00:00:00.000Z",
+  "finalized_on": "2019-01-01 00:00:00.000Z",
+  "initiated_at": "2019-01-01 00:00:00.000Z"
+}

@@ -270,6 +270,18 @@
             {
               "format": "uri",
               "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
             }
           ]
         },
