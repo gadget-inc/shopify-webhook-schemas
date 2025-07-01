@@ -465,14 +465,14 @@
             "currency_code": "USD"
           }
         },
-        "discounted_price": "10.00",
+        "discounted_price": "0.00",
         "discounted_price_set": {
           "shop_money": {
-            "amount": "10.00",
+            "amount": "0.00",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "10.00",
+            "amount": "0.00",
             "currency_code": "USD"
           }
         },

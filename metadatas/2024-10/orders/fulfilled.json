@@ -43,14 +43,14 @@
         "currency_code": "USD"
       }
     },
-    "current_subtotal_price": "398.00",
+    "current_subtotal_price": "369.97",
     "current_subtotal_price_set": {
       "shop_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       }
     },
@@ -67,14 +67,14 @@
       }
     },
     "current_total_duties_set": null,
-    "current_total_price": "398.00",
+    "current_total_price": "369.97",
     "current_total_price_set": {
       "shop_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       }
     },
@@ -123,14 +123,14 @@
     "source_identifier": null,
     "source_name": "web",
     "source_url": null,
-    "subtotal_price": "388.00",
+    "subtotal_price": "359.97",
     "subtotal_price_set": {
       "shop_money": {
-        "amount": "388.00",
+        "amount": "359.97",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "388.00",
+        "amount": "359.97",
         "currency_code": "USD"
       }
     },
@@ -171,26 +171,26 @@
         "currency_code": "USD"
       }
     },
-    "total_line_items_price": "398.00",
+    "total_line_items_price": "369.97",
     "total_line_items_price_set": {
       "shop_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "398.00",
+        "amount": "369.97",
         "currency_code": "USD"
       }
     },
-    "total_outstanding": "398.00",
-    "total_price": "388.00",
+    "total_outstanding": "369.97",
+    "total_price": "359.97",
     "total_price_set": {
       "shop_money": {
-        "amount": "388.00",
+        "amount": "359.97",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "388.00",
+        "amount": "359.97",
         "currency_code": "USD"
       }
     },
@@ -283,8 +283,8 @@
     "fulfillments": [],
     "line_items": [
       {
-        "id": 866550311766439000,
-        "admin_graphql_api_id": "gid://shopify/LineItem/866550311766439020",
+        "id": 487817672276298560,
+        "admin_graphql_api_id": "gid://shopify/LineItem/487817672276298554",
         "attributed_staffs": [
           {
             "id": "gid://shopify/StaffMember/902541635",
@@ -296,27 +296,27 @@
         "fulfillment_service": "manual",
         "fulfillment_status": null,
         "gift_card": false,
-        "grams": 567,
-        "name": "IPod Nano - 8GB",
-        "price": "199.00",
+        "grams": 100,
+        "name": "Aviator sunglasses",
+        "price": "89.99",
         "price_set": {
           "shop_money": {
-            "amount": "199.00",
+            "amount": "89.99",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "199.00",
+            "amount": "89.99",
             "currency_code": "USD"
           }
         },
         "product_exists": true,
-        "product_id": 632910392,
+        "product_id": 788032119674292900,
         "properties": [],
         "quantity": 1,
         "requires_shipping": true,
-        "sku": "IPOD2008PINK",
+        "sku": "SKU2006-001",
         "taxable": true,
-        "title": "IPod Nano - 8GB",
+        "title": "Aviator sunglasses",
         "total_discount": "0.00",
         "total_discount_set": {
           "shop_money": {
@@ -328,8 +328,8 @@
             "currency_code": "USD"
           }
         },
-        "variant_id": 808950810,
-        "variant_inventory_management": "shopify",
+        "variant_id": null,
+        "variant_inventory_management": null,
         "variant_title": null,
         "vendor": null,
         "tax_lines": [],
@@ -337,35 +337,35 @@
         "discount_allocations": []
       },
       {
-        "id": 141249953214522980,
-        "admin_graphql_api_id": "gid://shopify/LineItem/141249953214522974",
+        "id": 976318377106520300,
+        "admin_graphql_api_id": "gid://shopify/LineItem/976318377106520349",
         "attributed_staffs": [],
         "current_quantity": 1,
         "fulfillable_quantity": 1,
         "fulfillment_service": "manual",
         "fulfillment_status": null,
         "gift_card": false,
-        "grams": 567,
-        "name": "IPod Nano - 8GB",
-        "price": "199.00",
+        "grams": 1000,
+        "name": "Mid-century lounger",
+        "price": "159.99",
         "price_set": {
           "shop_money": {
-            "amount": "199.00",
+            "amount": "159.99",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "199.00",
+            "amount": "159.99",
             "currency_code": "USD"
           }
         },
         "product_exists": true,
-        "product_id": 632910392,
+        "product_id": 788032119674292900,
         "properties": [],
         "quantity": 1,
         "requires_shipping": true,
-        "sku": "IPOD2008PINK",
+        "sku": "SKU2006-020",
         "taxable": true,
-        "title": "IPod Nano - 8GB",
+        "title": "Mid-century lounger",
         "total_discount": "0.00",
         "total_discount_set": {
           "shop_money": {
@@ -377,8 +377,57 @@
             "currency_code": "USD"
           }
         },
-        "variant_id": 808950810,
-        "variant_inventory_management": "shopify",
+        "variant_id": null,
+        "variant_inventory_management": null,
+        "variant_title": null,
+        "vendor": null,
+        "tax_lines": [],
+        "duties": [],
+        "discount_allocations": []
+      },
+      {
+        "id": 315789986012684400,
+        "admin_graphql_api_id": "gid://shopify/LineItem/315789986012684393",
+        "attributed_staffs": [],
+        "current_quantity": 1,
+        "fulfillable_quantity": 1,
+        "fulfillment_service": "manual",
+        "fulfillment_status": null,
+        "gift_card": false,
+        "grams": 500,
+        "name": "Coffee table",
+        "price": "119.99",
+        "price_set": {
+          "shop_money": {
+            "amount": "119.99",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "119.99",
+            "currency_code": "USD"
+          }
+        },
+        "product_exists": true,
+        "product_id": 788032119674292900,
+        "properties": [],
+        "quantity": 1,
+        "requires_shipping": true,
+        "sku": "SKU2006-035",
+        "taxable": true,
+        "title": "Coffee table",
+        "total_discount": "0.00",
+        "total_discount_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "USD"
+          }
+        },
+        "variant_id": null,
+        "variant_inventory_management": null,
         "variant_title": null,
         "vendor": null,
         "tax_lines": [],
@@ -420,14 +469,14 @@
             "currency_code": "USD"
           }
         },
-        "discounted_price": "10.00",
+        "discounted_price": "0.00",
         "discounted_price_set": {
           "shop_money": {
-            "amount": "10.00",
+            "amount": "0.00",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "10.00",
+            "amount": "0.00",
             "currency_code": "USD"
           }
         },

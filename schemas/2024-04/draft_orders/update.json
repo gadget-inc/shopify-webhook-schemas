@@ -9,7 +9,10 @@
       "type": "boolean"
     },
     "api_client_id": {
-      "type": "null"
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "applied_discount": {
       "properties": {
@@ -144,7 +147,11 @@
       "type": "string"
     },
     "created_on_api_version_handle": {
-      "type": "null"
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "currency": {
       "type": "string"
@@ -275,7 +282,6 @@
           "type": "object"
         },
         "email": {
-          "format": "email",
           "type": "string"
         },
         "email_marketing_consent": {
@@ -288,10 +294,7 @@
               ]
             },
             "opt_in_level": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "state": {
               "type": "string"
@@ -314,16 +317,10 @@
           "type": "string"
         },
         "last_order_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
+          "type": "integer"
         },
         "last_order_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "string"
         },
         "marketing_opt_in_level": {
           "type": "string"
@@ -416,29 +413,21 @@
         "currency",
         "default_address",
         "email",
-        "email_marketing_consent",
         "first_name",
         "id",
         "last_name",
-        "last_order_id",
-        "last_order_name",
         "multipass_identifier",
         "note",
-        "orders_count",
         "phone",
-        "sms_marketing_consent",
         "state",
-        "tags",
         "tax_exempt",
         "tax_exemptions",
-        "total_spent",
         "updated_at",
         "verified_email"
       ],
       "type": "object"
     },
     "email": {
-      "format": "email",
       "type": "string"
     },
     "id": {
@@ -702,6 +691,9 @@
           "requires_shipping": {
             "type": "boolean"
           },
+          "sales_line_item_group_id": {
+            "type": "null"
+          },
           "sku": {
             "type": "string"
           },
@@ -888,9 +880,13 @@
       "type": "array"
     },
     "order_id": {
-      "type": [
-        "integer",
-        "null"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
       ]
     },
     "payment_terms": {
@@ -1026,6 +1022,393 @@
         },
         {
           "type": "string"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "can_pay_early": {
+              "type": "boolean"
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "due_in_days": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "payment_schedules": {
+              "items": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "balance_due": {
+                    "type": "string"
+                  },
+                  "balance_due_currency": {
+                    "type": "string"
+                  },
+                  "completed_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "due_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  },
+                  "issued_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "outstanding_balance": {
+                    "type": "string"
+                  },
+                  "outstanding_balance_currency": {
+                    "type": "string"
+                  },
+                  "payment_terms_id": {
+                    "type": "integer"
+                  },
+                  "reference_id": {
+                    "type": "integer"
+                  },
+                  "reference_type": {
+                    "type": "string"
+                  },
+                  "total_balance": {
+                    "type": "string"
+                  },
+                  "total_balance_currency": {
+                    "type": "string"
+                  },
+                  "total_price": {
+                    "type": "string"
+                  },
+                  "total_price_currency": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "balance_due",
+                  "balance_due_currency",
+                  "completed_at",
+                  "created_at",
+                  "currency",
+                  "due_at",
+                  "id",
+                  "issued_at",
+                  "outstanding_balance",
+                  "outstanding_balance_currency",
+                  "payment_terms_id",
+                  "reference_id",
+                  "reference_type",
+                  "total_balance",
+                  "total_balance_currency",
+                  "total_price",
+                  "total_price_currency",
+                  "updated_at"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "payment_terms_name": {
+              "type": "string"
+            },
+            "payment_terms_type": {
+              "type": "string"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "can_pay_early",
+            "created_at",
+            "due_in_days",
+            "id",
+            "payment_schedules",
+            "payment_terms_name",
+            "payment_terms_type",
+            "updated_at"
+          ],
+          "type": "object"
         },
         {
           "properties": {

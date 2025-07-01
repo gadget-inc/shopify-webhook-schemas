@@ -16,13 +16,23 @@
           "type": "string"
         },
         "consent_updated_at": {
-          "type": "null"
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "opt_in_level": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "state": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         }
       },
       "required": [

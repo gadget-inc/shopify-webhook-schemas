@@ -20,8 +20,8 @@
     "idempotency_key": "9a453d81-d41d-403e-806f-714dee215ff9",
     "order_id": 1,
     "admin_graphql_api_order_id": "gid://shopify/Order/1",
-    "subscription_contract_id": 9886764113,
-    "admin_graphql_api_subscription_contract_id": "gid://shopify/SubscriptionContract/9886764113",
+    "subscription_contract_id": 3802526094,
+    "admin_graphql_api_subscription_contract_id": "gid://shopify/SubscriptionContract/3802526094",
     "ready": true,
     "error_message": null,
     "error_code": null

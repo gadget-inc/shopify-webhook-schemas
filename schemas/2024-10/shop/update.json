@@ -52,7 +52,6 @@
       "type": "string"
     },
     "domain": {
-      "format": "hostname",
       "type": [
         "null",
         "string"
@@ -136,7 +135,6 @@
       "type": "boolean"
     },
     "myshopify_domain": {
-      "format": "hostname",
       "type": [
         "null",
         "string"
@@ -173,7 +171,10 @@
       "type": "string"
     },
     "province_code": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "requires_extra_payments_agreement": {
       "type": "boolean"

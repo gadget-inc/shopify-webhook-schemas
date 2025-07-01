@@ -254,16 +254,10 @@
           "properties": {
             "consent_updated_at": {
               "format": "date-time",
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "opt_in_level": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "state": {
               "type": "string"
@@ -384,22 +378,15 @@
         "currency",
         "default_address",
         "email",
-        "email_marketing_consent",
         "first_name",
         "id",
         "last_name",
-        "last_order_id",
-        "last_order_name",
         "multipass_identifier",
         "note",
-        "orders_count",
         "phone",
-        "sms_marketing_consent",
         "state",
-        "tags",
         "tax_exempt",
         "tax_exemptions",
-        "total_spent",
         "updated_at",
         "verified_email"
       ],
@@ -550,24 +537,31 @@
             "type": "integer"
           },
           "properties": {
-            "items": {
-              "properties": {
-                "name": {
-                  "type": "string"
+            "anyOf": [
+              {
+                "items": {
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "value"
+                  ],
+                  "type": "object"
                 },
-                "value": {
-                  "type": "string"
-                }
+                "type": "array"
               },
-              "required": [
-                "name",
-                "value"
-              ],
-              "type": "object"
-            },
-            "type": [
-              "array",
-              "null"
+              {
+                "type": "object"
+              },
+              {
+                "type": "object"
+              }
             ]
           },
           "quantity": {
@@ -821,6 +815,12 @@
       "type": "string"
     },
     "referring_site": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "reservation_token": {
       "type": [
         "null",
         "string"
@@ -1223,6 +1223,9 @@
         },
         {
           "type": "string"
+        },
+        {
+          "type": "string"
         }
       ]
     },
@@ -1274,6 +1277,7 @@
     "phone",
     "presentment_currency",
     "referring_site",
+    "reservation_token",
     "shipping_address",
     "shipping_lines",
     "sms_marketing_phone",

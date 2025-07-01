@@ -47,16 +47,16 @@
       "payment_method_name": "visa"
     },
     "receipt": {},
-    "amount": "403.00",
+    "amount": "374.97",
     "currency": "USD",
     "payment_id": "#9999.1",
     "total_unsettled_set": {
       "presentment_money": {
-        "amount": "403.0",
+        "amount": "374.97",
         "currency": "USD"
       },
       "shop_money": {
-        "amount": "403.0",
+        "amount": "374.97",
         "currency": "USD"
       }
     },

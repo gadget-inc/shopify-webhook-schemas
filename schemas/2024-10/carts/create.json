@@ -202,7 +202,10 @@
             "type": "integer"
           },
           "properties": {
-            "type": "object"
+            "type": [
+              "null",
+              "object"
+            ]
           },
           "quantity": {
             "type": "integer"

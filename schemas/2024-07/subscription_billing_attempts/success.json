@@ -35,7 +35,6 @@
       ]
     },
     "idempotency_key": {
-      "format": "uuid",
       "type": "string"
     },
     "order_id": {

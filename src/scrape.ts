@@ -103,6 +103,13 @@ const main = async () => {
       } else {
         webhook.response = JSON.parse(webhook.response);
       }
+
+      if (webhook.response === undefined || webhook.response === null) {
+        console.warn(`${webhook.name} has an empty response`);
+        warnings += 1;
+        webhook.response = {};
+      }
+
       const metadataFile = path.join(rootDir, "metadatas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");

@@ -25,14 +25,20 @@
           "type": "string"
         }
       },
-      "type": ["null", "object"]
+      "type": [
+        "null",
+        "object"
+      ]
     },
     "payment_method": {
       "type": "string"
     },
     "processed_at": {
       "format": "date-time",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "remote_reference": {
       "type": "string"
@@ -41,7 +47,10 @@
       "type": "boolean"
     },
     "user_id": {
-      "type": ["integer", "null"]
+      "type": [
+        "integer",
+        "null"
+      ]
     }
   },
   "required": [

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "line_items": {
+      "items": {
+        "properties": {
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "quantity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tracking": {
+      "properties": {
+        "arrives_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "tracking_number": {
+          "type": "string"
+        },
+        "tracking_url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "arrives_at",
+        "company",
+        "tracking_number",
+        "tracking_url"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "happened_at",
+    "id",
+    "line_items",
+    "status",
+    "tracking"
+  ],
+  "type": "object"
+}

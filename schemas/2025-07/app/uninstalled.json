@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "auto_configure_tax_inclusivity": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "checkout_api_supported": {
+      "type": "boolean"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "country_name": {
+      "type": "string"
+    },
+    "county_taxes": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "currency": {
+      "type": "string"
+    },
+    "customer_email": {
+      "format": "email",
+      "type": "string"
+    },
+    "domain": {
+      "format": "hostname",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "eligible_for_payments": {
+      "type": "boolean"
+    },
+    "email": {
+      "format": "email",
+      "type": "string"
+    },
+    "enabled_presentment_currencies": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "finances": {
+      "type": "boolean"
+    },
+    "google_apps_domain": {
+      "format": "hostname",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "google_apps_login_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_discounts": {
+      "type": "boolean"
+    },
+    "has_gift_cards": {
+      "type": "boolean"
+    },
+    "has_storefront": {
+      "type": "boolean"
+    },
+    "iana_timezone": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "longitude": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "marketing_sms_consent_enabled_at_checkout": {
+      "type": "boolean"
+    },
+    "money_format": {
+      "type": "string"
+    },
+    "money_in_emails_format": {
+      "type": "string"
+    },
+    "money_with_currency_format": {
+      "type": "string"
+    },
+    "money_with_currency_in_emails_format": {
+      "type": "string"
+    },
+    "multi_location_enabled": {
+      "type": "boolean"
+    },
+    "myshopify_domain": {
+      "format": "hostname",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "password_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "plan_display_name": {
+      "type": "string"
+    },
+    "plan_name": {
+      "type": "string"
+    },
+    "pre_launch_enabled": {
+      "type": "boolean"
+    },
+    "primary_locale": {
+      "type": "string"
+    },
+    "primary_location_id": {
+      "type": "integer"
+    },
+    "province": {
+      "type": "string"
+    },
+    "province_code": {
+      "type": "string"
+    },
+    "requires_extra_payments_agreement": {
+      "type": "boolean"
+    },
+    "setup_required": {
+      "type": "boolean"
+    },
+    "shop_owner": {
+      "type": "string"
+    },
+    "source": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tax_shipping": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "taxes_included": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "transactional_sms_disabled": {
+      "type": "boolean"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "weight_unit": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "address1",
+    "address2",
+    "auto_configure_tax_inclusivity",
+    "checkout_api_supported",
+    "city",
+    "country",
+    "country_code",
+    "country_name",
+    "county_taxes",
+    "created_at",
+    "currency",
+    "customer_email",
+    "domain",
+    "eligible_for_payments",
+    "email",
+    "enabled_presentment_currencies",
+    "finances",
+    "google_apps_domain",
+    "google_apps_login_enabled",
+    "has_discounts",
+    "has_gift_cards",
+    "has_storefront",
+    "iana_timezone",
+    "id",
+    "latitude",
+    "longitude",
+    "marketing_sms_consent_enabled_at_checkout",
+    "money_format",
+    "money_in_emails_format",
+    "money_with_currency_format",
+    "money_with_currency_in_emails_format",
+    "multi_location_enabled",
+    "myshopify_domain",
+    "name",
+    "password_enabled",
+    "phone",
+    "plan_display_name",
+    "plan_name",
+    "pre_launch_enabled",
+    "primary_locale",
+    "primary_location_id",
+    "province",
+    "province_code",
+    "requires_extra_payments_agreement",
+    "setup_required",
+    "shop_owner",
+    "source",
+    "tax_shipping",
+    "taxes_included",
+    "timezone",
+    "transactional_sms_disabled",
+    "updated_at",
+    "weight_unit",
+    "zip"
+  ],
+  "type": "object"
+}

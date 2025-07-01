@@ -550,24 +550,31 @@
             "type": "integer"
           },
           "properties": {
-            "items": {
-              "properties": {
-                "name": {
-                  "type": "string"
+            "anyOf": [
+              {
+                "items": {
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "value"
+                  ],
+                  "type": "object"
                 },
-                "value": {
-                  "type": "string"
-                }
+                "type": "array"
               },
-              "required": [
-                "name",
-                "value"
-              ],
-              "type": "object"
-            },
-            "type": [
-              "array",
-              "null"
+              {
+                "type": "object"
+              },
+              {
+                "type": "object"
+              }
             ]
           },
           "quantity": {
@@ -1211,6 +1218,9 @@
       "anyOf": [
         {
           "type": "number"
+        },
+        {
+          "type": "string"
         },
         {
           "type": "string"

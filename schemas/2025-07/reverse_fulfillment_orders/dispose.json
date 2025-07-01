@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "dispositions": {
+      "items": {
+        "properties": {
+          "location": {
+            "properties": {
+              "admin_graphql_api_id": {
+                "format": "uri",
+                "type": "string"
+              },
+              "id": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "admin_graphql_api_id",
+              "id"
+            ],
+            "type": "object"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "reverse_delivery_line_item": {
+            "type": "null"
+          },
+          "reverse_fulfillment_order_line_item": {
+            "properties": {
+              "admin_graphql_api_id": {
+                "format": "uri",
+                "type": "string"
+              },
+              "id": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "admin_graphql_api_id",
+              "id"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "location",
+          "quantity",
+          "reverse_delivery_line_item",
+          "reverse_fulfillment_order_line_item",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "total_dispositions": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "dispositions",
+    "id",
+    "total_dispositions"
+  ],
+  "type": "object"
+}
