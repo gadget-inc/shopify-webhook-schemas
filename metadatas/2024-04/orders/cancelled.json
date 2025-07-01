@@ -34,24 +34,14 @@
     "contact_email": "jon@example.com",
     "created_at": "2021-12-31T19:00:00-05:00",
     "currency": "USD",
-    "current_shipping_price_set": {
-      "shop_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      },
-      "presentment_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      }
-    },
-    "current_subtotal_price": "369.97",
+    "current_subtotal_price": "398.00",
     "current_subtotal_price_set": {
       "shop_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       }
     },
@@ -68,14 +58,14 @@
       }
     },
     "current_total_duties_set": null,
-    "current_total_price": "369.97",
+    "current_total_price": "398.00",
     "current_total_price_set": {
       "shop_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       }
     },
@@ -93,7 +83,6 @@
     "customer_locale": "en",
     "device_id": null,
     "discount_codes": [],
-    "duties_included": false,
     "email": "jon@example.com",
     "estimated_taxes": false,
     "financial_status": "voided",
@@ -101,7 +90,6 @@
     "landing_site": null,
     "landing_site_ref": null,
     "location_id": null,
-    "merchant_business_entity_id": "MTU0ODM4MDAwOQ",
     "merchant_of_record_app_id": null,
     "name": "#9999",
     "note": null,
@@ -124,14 +112,14 @@
     "source_identifier": null,
     "source_name": "web",
     "source_url": null,
-    "subtotal_price": "359.97",
+    "subtotal_price": "388.00",
     "subtotal_price_set": {
       "shop_money": {
-        "amount": "359.97",
+        "amount": "388.00",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "359.97",
+        "amount": "388.00",
         "currency_code": "USD"
       }
     },
@@ -141,26 +129,6 @@
     "taxes_included": false,
     "test": true,
     "token": "123456abcd",
-    "total_cash_rounding_payment_adjustment_set": {
-      "shop_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      },
-      "presentment_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      }
-    },
-    "total_cash_rounding_refund_adjustment_set": {
-      "shop_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      },
-      "presentment_money": {
-        "amount": "0.00",
-        "currency_code": "USD"
-      }
-    },
     "total_discounts": "20.00",
     "total_discounts_set": {
       "shop_money": {
@@ -172,26 +140,26 @@
         "currency_code": "USD"
       }
     },
-    "total_line_items_price": "369.97",
+    "total_line_items_price": "398.00",
     "total_line_items_price_set": {
       "shop_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "369.97",
+        "amount": "398.00",
         "currency_code": "USD"
       }
     },
-    "total_outstanding": "369.97",
-    "total_price": "359.97",
+    "total_outstanding": "398.00",
+    "total_price": "388.00",
     "total_price_set": {
       "shop_money": {
-        "amount": "359.97",
+        "amount": "388.00",
         "currency_code": "USD"
       },
       "presentment_money": {
-        "amount": "359.97",
+        "amount": "388.00",
         "currency_code": "USD"
       }
     },
@@ -250,6 +218,13 @@
       "multipass_identifier": null,
       "tax_exempt": false,
       "phone": null,
+      "email_marketing_consent": {
+        "state": "not_subscribed",
+        "opt_in_level": null,
+        "consent_updated_at": null
+      },
+      "sms_marketing_consent": null,
+      "tags": "",
       "currency": "USD",
       "tax_exemptions": [],
       "admin_graphql_api_id": "gid://shopify/Customer/115310627314723954",
@@ -277,8 +252,8 @@
     "fulfillments": [],
     "line_items": [
       {
-        "id": 487817672276298560,
-        "admin_graphql_api_id": "gid://shopify/LineItem/487817672276298554",
+        "id": 866550311766439000,
+        "admin_graphql_api_id": "gid://shopify/LineItem/866550311766439020",
         "attributed_staffs": [
           {
             "id": "gid://shopify/StaffMember/902541635",
@@ -290,28 +265,27 @@
         "fulfillment_service": "manual",
         "fulfillment_status": null,
         "gift_card": false,
-        "grams": 100,
-        "name": "Aviator sunglasses",
-        "price": "89.99",
+        "grams": 567,
+        "name": "IPod Nano - 8GB",
+        "price": "199.00",
         "price_set": {
           "shop_money": {
-            "amount": "89.99",
+            "amount": "199.00",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "89.99",
+            "amount": "199.00",
             "currency_code": "USD"
           }
         },
         "product_exists": true,
-        "product_id": 788032119674292900,
+        "product_id": 632910392,
         "properties": [],
         "quantity": 1,
         "requires_shipping": true,
-        "sales_line_item_group_id": null,
-        "sku": "SKU2006-001",
+        "sku": "IPOD2008PINK",
         "taxable": true,
-        "title": "Aviator sunglasses",
+        "title": "IPod Nano - 8GB",
         "total_discount": "0.00",
         "total_discount_set": {
           "shop_money": {
@@ -323,8 +297,8 @@
             "currency_code": "USD"
           }
         },
-        "variant_id": null,
-        "variant_inventory_management": null,
+        "variant_id": 808950810,
+        "variant_inventory_management": "shopify",
         "variant_title": null,
         "vendor": null,
         "tax_lines": [],
@@ -332,36 +306,35 @@
         "discount_allocations": []
       },
       {
-        "id": 976318377106520300,
-        "admin_graphql_api_id": "gid://shopify/LineItem/976318377106520349",
+        "id": 141249953214522980,
+        "admin_graphql_api_id": "gid://shopify/LineItem/141249953214522974",
         "attributed_staffs": [],
         "current_quantity": 1,
         "fulfillable_quantity": 1,
         "fulfillment_service": "manual",
         "fulfillment_status": null,
         "gift_card": false,
-        "grams": 1000,
-        "name": "Mid-century lounger",
-        "price": "159.99",
+        "grams": 567,
+        "name": "IPod Nano - 8GB",
+        "price": "199.00",
         "price_set": {
           "shop_money": {
-            "amount": "159.99",
+            "amount": "199.00",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "159.99",
+            "amount": "199.00",
             "currency_code": "USD"
           }
         },
         "product_exists": true,
-        "product_id": 788032119674292900,
+        "product_id": 632910392,
         "properties": [],
         "quantity": 1,
         "requires_shipping": true,
-        "sales_line_item_group_id": 142831562,
-        "sku": "SKU2006-020",
+        "sku": "IPOD2008PINK",
         "taxable": true,
-        "title": "Mid-century lounger",
+        "title": "IPod Nano - 8GB",
         "total_discount": "0.00",
         "total_discount_set": {
           "shop_money": {
@@ -373,58 +346,8 @@
             "currency_code": "USD"
           }
         },
-        "variant_id": null,
-        "variant_inventory_management": null,
-        "variant_title": null,
-        "vendor": null,
-        "tax_lines": [],
-        "duties": [],
-        "discount_allocations": []
-      },
-      {
-        "id": 315789986012684400,
-        "admin_graphql_api_id": "gid://shopify/LineItem/315789986012684393",
-        "attributed_staffs": [],
-        "current_quantity": 1,
-        "fulfillable_quantity": 1,
-        "fulfillment_service": "manual",
-        "fulfillment_status": null,
-        "gift_card": false,
-        "grams": 500,
-        "name": "Coffee table",
-        "price": "119.99",
-        "price_set": {
-          "shop_money": {
-            "amount": "119.99",
-            "currency_code": "USD"
-          },
-          "presentment_money": {
-            "amount": "119.99",
-            "currency_code": "USD"
-          }
-        },
-        "product_exists": true,
-        "product_id": 788032119674292900,
-        "properties": [],
-        "quantity": 1,
-        "requires_shipping": true,
-        "sales_line_item_group_id": 142831562,
-        "sku": "SKU2006-035",
-        "taxable": true,
-        "title": "Coffee table",
-        "total_discount": "0.00",
-        "total_discount_set": {
-          "shop_money": {
-            "amount": "0.00",
-            "currency_code": "USD"
-          },
-          "presentment_money": {
-            "amount": "0.00",
-            "currency_code": "USD"
-          }
-        },
-        "variant_id": null,
-        "variant_inventory_management": null,
+        "variant_id": 808950810,
+        "variant_inventory_management": "shopify",
         "variant_title": null,
         "vendor": null,
         "tax_lines": [],
@@ -456,24 +379,14 @@
         "id": 271878346596884000,
         "carrier_identifier": null,
         "code": null,
-        "current_discounted_price_set": {
-          "shop_money": {
-            "amount": "0.00",
-            "currency_code": "USD"
-          },
-          "presentment_money": {
-            "amount": "0.00",
-            "currency_code": "USD"
-          }
-        },
-        "discounted_price": "0.00",
+        "discounted_price": "10.00",
         "discounted_price_set": {
           "shop_money": {
-            "amount": "0.00",
+            "amount": "10.00",
             "currency_code": "USD"
           },
           "presentment_money": {
-            "amount": "0.00",
+            "amount": "10.00",
             "currency_code": "USD"
           }
         },
@@ -496,8 +409,7 @@
         "tax_lines": [],
         "discount_allocations": []
       }
-    ],
-    "returns": []
+    ]
   },
   "shop_feature": false
 }

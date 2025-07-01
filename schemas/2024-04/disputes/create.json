@@ -33,6 +33,7 @@
       "type": "string"
     },
     "network_reason_code": {
+      "format": "time",
       "type": "string"
     },
     "order_id": {

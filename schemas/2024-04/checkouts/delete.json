@@ -16,12 +16,6 @@
     "presentment_currency": {
       "type": "string"
     },
-    "reservation_token": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "sms_marketing_phone": {
       "type": [
         "null",
@@ -38,9 +32,6 @@
       "anyOf": [
         {
           "type": "number"
-        },
-        {
-          "type": "string"
         },
         {
           "type": "string"
@@ -77,7 +68,6 @@
     "cart_token",
     "id",
     "presentment_currency",
-    "reservation_token",
     "sms_marketing_phone",
     "subtotal_price",
     "total_discounts",

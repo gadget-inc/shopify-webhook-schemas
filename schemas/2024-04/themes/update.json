@@ -25,10 +25,7 @@
       "type": "string"
     },
     "theme_store_id": {
-      "type": [
-        "integer",
-        "null"
-      ]
+      "type": "integer"
     },
     "updated_at": {
       "format": "date-time",

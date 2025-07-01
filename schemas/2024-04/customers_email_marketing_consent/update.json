@@ -14,23 +14,13 @@
     "email_marketing_consent": {
       "properties": {
         "consent_updated_at": {
-          "format": "date-time",
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "opt_in_level": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "state": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         }
       },
       "required": [

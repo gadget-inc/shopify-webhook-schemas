@@ -8,12 +8,6 @@
     "amount": {
       "type": "string"
     },
-    "amount_rounding": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "authorization": {
       "type": "string"
     },
@@ -25,13 +19,9 @@
       "type": "string"
     },
     "device_id": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "integer"
-        }
+      "type": [
+        "null",
+        "string"
       ]
     },
     "error_code": {
@@ -116,10 +106,7 @@
           "type": "string"
         },
         "credit_card_wallet": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "cvv_result_code": {
           "type": [
@@ -218,7 +205,6 @@
   "required": [
     "admin_graphql_api_id",
     "amount",
-    "amount_rounding",
     "authorization",
     "created_at",
     "currency",

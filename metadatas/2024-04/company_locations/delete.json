@@ -26,14 +26,6 @@
       "CA_BC_CONTRACTOR_EXEMPTION",
       "CA_BC_RESELLER_EXEMPTION"
     ],
-    "tax_settings": {
-      "tax_registration_id": "1214214141",
-      "tax_exempt": null,
-      "tax_exemptions": [
-        "CA_BC_CONTRACTOR_EXEMPTION",
-        "CA_BC_RESELLER_EXEMPTION"
-      ]
-    },
     "company": {
       "name": "Example Company",
       "note": "This is an example company",

@@ -47,21 +47,20 @@
       "payment_method_name": "visa"
     },
     "receipt": {},
-    "amount": "374.97",
+    "amount": "403.00",
     "currency": "USD",
     "payment_id": "#9999.1",
     "total_unsettled_set": {
       "presentment_money": {
-        "amount": "374.97",
+        "amount": "403.0",
         "currency": "USD"
       },
       "shop_money": {
-        "amount": "374.97",
+        "amount": "403.0",
         "currency": "USD"
       }
     },
     "manual_payment_gateway": true,
-    "amount_rounding": null,
     "admin_graphql_api_id": "gid://shopify/OrderTransaction/120560818172775265"
   },
   "shop_feature": false
