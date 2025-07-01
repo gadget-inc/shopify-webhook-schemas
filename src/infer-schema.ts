@@ -35,11 +35,11 @@ export const getStartVersion = (date: Date = new Date()) => {
 export type Error = { message: string; path: string };
 
 export const inferSchemaFromExamplePayload = (
+  version: string,
   examplePayload: Record<string, any>,
   metadata: { name: string }
 ): { schema: any; warnings: number; errors: Error[] } => {
   const inference = inferSchema(examplePayload);
-  const startVersion = getStartVersion();
 
   // build a copy of the payload and apply overrides based on the webhook name
   for (const [matcher, override] of manualExamples) {
@@ -57,9 +57,14 @@ export const inferSchemaFromExamplePayload = (
   };
 
   for (const override of overrides) {
-    if (override.topics.includes(metadata.name) && (!override.versions || override.versions.includes(startVersion))) {
+    if (override.topics.includes(metadata.name) && (!override.versions || override.versions.includes(version))) {
       for (const [key, schemaOverride] of Object.entries(override.schema)) {
+        schema.properties ??= {};
         schema.properties[key] = schemaOverride;
+      }
+
+      if (override.required) {
+        schema.required = override.required;
       }
     }
   }
@@ -656,7 +661,7 @@ const shippingAddress = {
   },
 };
 
-export const overrides: { topics: string[]; schema: any; versions?: string[] }[] = [
+export const overrides: { topics: string[]; schema: any; required?: string[]; versions?: string[] }[] = [
   {
     topics: ["checkouts/create", "checkouts/update"],
     schema: {
@@ -762,4 +767,39 @@ export const overrides: { topics: string[]; schema: any; versions?: string[] }[]
       },
     },
   },
+  {
+    topics: ["inventory_levels/connect", "inventory_levels/update"],
+    schema: {
+      admin_graphql_api_id: {
+        format: "uri",
+        type: "string",
+      },
+      available: {
+        type: ["integer", "null"],
+      },
+      inventory_item_id: {
+        type: "integer",
+      },
+      location_id: {
+        type: "integer",
+      },
+      updated_at: {
+        format: "date-time",
+        type: "string",
+      },
+    },
+    required: [
+      "admin_graphql_api_id",
+      "available",
+      "inventory_item_id",
+      "location_id",
+      "updated_at"
+    ],
+  },
+  {
+    topics: ["shipping_addresses/create", "shipping_addresses/update"],
+    schema: {
+      ...shippingAddress.properties,
+    },
+  }
 ];

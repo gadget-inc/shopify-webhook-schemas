@@ -16,7 +16,7 @@
   "related_resource": "Customer",
   "response": {
     "customer_id": 706405506930370000,
-    "email_address": null,
+    "email_address": "bob@biller.com",
     "email_marketing_consent": {
       "state": null,
       "opt_in_level": null,

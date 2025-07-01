@@ -173,7 +173,10 @@
     },
     "email": {
       "format": "email",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "first_name": {
       "type": "string"

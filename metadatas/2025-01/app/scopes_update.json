@@ -10,6 +10,7 @@
   "related_resource": "Shop",
   "response": {
     "id": 1,
+    "shop_id": "gid://shopify/Shop/548380009",
     "previous": [
       "read_products"
     ],

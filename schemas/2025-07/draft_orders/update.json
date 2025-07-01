@@ -218,10 +218,7 @@
               "type": "boolean"
             },
             "first_name": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "id": {
               "type": [
@@ -230,10 +227,7 @@
               ]
             },
             "last_name": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "name": {
               "type": "string"
@@ -282,7 +276,10 @@
           "type": "object"
         },
         "email": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "email_marketing_consent": {
           "properties": {

@@ -9,7 +9,7 @@
   "related_resource": "RecurringApplicationCharge",
   "response": {
     "app_subscription": {
-      "admin_graphql_api_id": "gid://shopify/AppSubscription/1029266955",
+      "admin_graphql_api_id": "gid://shopify/AppSubscription/1029266952",
       "name": "Webhook Test",
       "balance_used": 0,
       "capped_amount": "20.0",

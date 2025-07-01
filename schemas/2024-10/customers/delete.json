@@ -84,9 +84,48 @@
       "type": "string"
     },
     "email_marketing_consent": {
-      "type": [
-        "boolean",
-        "null"
+      "anyOf": [
+        {
+          "properties": {
+            "consent_updated_at": {
+              "type": "null"
+            },
+            "opt_in_level": {
+              "type": "null"
+            },
+            "state": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "consent_updated_at",
+            "opt_in_level",
+            "state"
+          ],
+          "type": "object"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "properties": {
+            "consent_updated_at": {
+              "type": "null"
+            },
+            "opt_in_level": {
+              "type": "null"
+            },
+            "state": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "consent_updated_at",
+            "opt_in_level",
+            "state"
+          ],
+          "type": "object"
+        }
       ]
     },
     "id": {

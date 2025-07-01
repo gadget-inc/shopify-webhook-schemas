@@ -6,10 +6,7 @@
     },
     "email_address": {
       "format": "email",
-      "type": [
-        "null",
-        "string"
-      ]
+      "type": "string"
     },
     "email_marketing_consent": {
       "properties": {

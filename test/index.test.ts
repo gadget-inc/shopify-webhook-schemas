@@ -56,6 +56,7 @@ const EXPECTED_SCHEMA = {
 
 void test("can infer the schema from an example payload", () => {
   const result = inferSchemaFromExamplePayload(
+    "2024-04",
     { id: 1, variants: [{ id: 2, title: "test" }], options: { name: "color", value: "red" } },
     { name: "test" }
   );
@@ -66,7 +67,7 @@ void test("can infer the schema from an example payload", () => {
 });
 
 void test("can infer the schema from an example payload with a null value", () => {
-  const result = inferSchemaFromExamplePayload({ id: null, variants: [] }, { name: "test" });
+  const result = inferSchemaFromExamplePayload("2024-04", { id: null, variants: [] }, { name: "test" });
 
   assert.deepEqual(result.schema, {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -89,7 +90,7 @@ void test("can infer the schema from an example payload with a null value", () =
 });
 
 void test("infer schema uses payload overrides", () => {
-  const result = inferSchemaFromExamplePayload({ created_at: null, billing_address: null }, { name: "orders/updated" });
+  const result = inferSchemaFromExamplePayload("2024-04", { created_at: null, billing_address: null }, { name: "orders/updated" });
 
   assert.deepEqual(result.schema, {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -122,7 +123,7 @@ void test("infer schema uses payload overrides", () => {
 });
 
 void test("infer schema does not apply payload overrides if the topic doesn't match", () => {
-  const result = inferSchemaFromExamplePayload({ created_at: null, billing_address: null }, { name: "products/updated" });
+  const result = inferSchemaFromExamplePayload("2024-04", { created_at: null, billing_address: null }, { name: "products/updated" });
 
   assert.deepEqual(result.schema, {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -145,7 +146,7 @@ void test("infer schema does not apply payload overrides if the topic doesn't ma
 });
 
 void test("infer schema uses schema overrides", () => {
-  const result = inferSchemaFromExamplePayload({ receipt: { id: 1 } }, { name: "order_transactions/update" });
+  const result = inferSchemaFromExamplePayload("2024-04", { receipt: { id: 1 } }, { name: "order_transactions/update" });
 
   assert.deepEqual(result.schema, {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -163,7 +164,7 @@ void test("infer schema uses schema overrides", () => {
 });
 
 void test("infer schema does not apply schema overrides if the topic doesn't match", () => {
-  const result = inferSchemaFromExamplePayload({ receipt: { id: 1 } }, { name: "products/updated" });
+  const result = inferSchemaFromExamplePayload("2024-04", { receipt: { id: 1 } }, { name: "products/updated" });
 
   assert.deepEqual(result.schema, {
     $schema: "https://json-schema.org/draft/2020-12/schema",
