@@ -22,70 +22,65 @@
       "type": "integer"
     },
     "image": {
-      "anyOf": [
-        {
+      "properties": {
+        "admin_graphql_api_id": {
           "format": "uri",
           "type": "string"
         },
-        {
-          "properties": {
-            "admin_graphql_api_id": {
-              "format": "uri",
-              "type": "string"
-            },
-            "alt": {
-              "type": "null"
-            },
-            "created_at": {
-              "format": "date-time",
-              "type": "string"
-            },
-            "height": {
-              "type": "integer"
-            },
-            "id": {
-              "type": "integer"
-            },
-            "position": {
-              "type": "integer"
-            },
-            "product_id": {
-              "type": "integer"
-            },
-            "src": {
-              "format": "uri",
-              "type": "string"
-            },
-            "updated_at": {
-              "format": "date-time",
-              "type": "string"
-            },
-            "variant_ids": {
-              "items": {
-                "type": "integer"
-              },
-              "type": "array"
-            },
-            "width": {
-              "type": "integer"
-            }
+        "alt": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "position": {
+          "type": "integer"
+        },
+        "product_id": {
+          "type": "integer"
+        },
+        "src": {
+          "format": "uri",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "variant_ids": {
+          "items": {
+            "type": "integer"
           },
-          "required": [
-            "admin_graphql_api_id",
-            "alt",
-            "created_at",
-            "height",
-            "id",
-            "position",
-            "product_id",
-            "src",
-            "updated_at",
-            "variant_ids",
-            "width"
-          ],
-          "type": "object"
+          "type": "array"
+        },
+        "width": {
+          "type": "integer"
         }
-      ]
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "alt",
+        "created_at",
+        "height",
+        "id",
+        "position",
+        "product_id",
+        "src",
+        "updated_at",
+        "variant_ids",
+        "width"
+      ],
+      "type": "object"
     },
     "images": {
       "items": {
@@ -95,7 +90,10 @@
             "type": "string"
           },
           "alt": {
-            "type": "null"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "created_at": {
             "format": "date-time",
@@ -149,7 +147,82 @@
       "type": "array"
     },
     "media": {
-      "items": false,
+      "items": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "media_content_type": {
+            "type": "string"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "preview_image": {
+            "properties": {
+              "height": {
+                "type": "integer"
+              },
+              "src": {
+                "format": "uri",
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "height",
+              "src",
+              "status",
+              "width"
+            ],
+            "type": "object"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "variant_ids": {
+            "items": false,
+            "type": "array"
+          }
+        },
+        "required": [
+          "admin_graphql_api_id",
+          "alt",
+          "created_at",
+          "id",
+          "media_content_type",
+          "position",
+          "preview_image",
+          "product_id",
+          "status",
+          "updated_at",
+          "variant_ids"
+        ],
+        "type": "object"
+      },
       "type": "array"
     },
     "options": {
@@ -190,7 +263,10 @@
     },
     "published_at": {
       "format": "date-time",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "published_scope": {
       "type": "string"

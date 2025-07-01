@@ -15,13 +15,16 @@
     },
     "payment_details": {
       "properties": {
+        "credit_card_company": {
+          "type": "string"
+        },
+        "credit_card_number": {
+          "type": "string"
+        },
         "something": {
           "type": "string"
         }
       },
-      "required": [
-        "something"
-      ],
       "type": [
         "null",
         "object"
@@ -38,7 +41,6 @@
       ]
     },
     "remote_reference": {
-      "format": "time",
       "type": "string"
     },
     "test": {

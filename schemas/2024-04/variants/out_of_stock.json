@@ -15,19 +15,10 @@
       "format": "date-time",
       "type": "string"
     },
-    "fulfillment_service": {
-      "type": "string"
-    },
-    "grams": {
-      "type": "integer"
-    },
     "id": {
       "type": "integer"
     },
     "image_id": {
-      "type": "null"
-    },
-    "inventory_management": {
       "type": "null"
     },
     "inventory_policy": {
@@ -57,9 +48,6 @@
     "product_id": {
       "type": "integer"
     },
-    "requires_shipping": {
-      "type": "boolean"
-    },
     "sku": {
       "type": "null"
     },
@@ -72,12 +60,6 @@
     "updated_at": {
       "format": "date-time",
       "type": "string"
-    },
-    "weight": {
-      "type": "integer"
-    },
-    "weight_unit": {
-      "type": "string"
     }
   },
   "required": [
@@ -85,11 +67,8 @@
     "barcode",
     "compare_at_price",
     "created_at",
-    "fulfillment_service",
-    "grams",
     "id",
     "image_id",
-    "inventory_management",
     "inventory_policy",
     "inventory_quantity",
     "old_inventory_quantity",
@@ -99,13 +78,10 @@
     "position",
     "price",
     "product_id",
-    "requires_shipping",
     "sku",
     "taxable",
     "title",
-    "updated_at",
-    "weight",
-    "weight_unit"
+    "updated_at"
   ],
   "type": "object"
 }

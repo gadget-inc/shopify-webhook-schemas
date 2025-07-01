@@ -1040,7 +1040,69 @@
                   "type": "string"
                 },
                 "tax_lines": {
-                  "items": false,
+                  "items": {
+                    "properties": {
+                      "channel_liable": {
+                        "type": "boolean"
+                      },
+                      "price": {
+                        "type": "string"
+                      },
+                      "price_set": {
+                        "properties": {
+                          "presentment_money": {
+                            "properties": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "currency_code": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "amount",
+                              "currency_code"
+                            ],
+                            "type": "object"
+                          },
+                          "shop_money": {
+                            "properties": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "currency_code": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "amount",
+                              "currency_code"
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "presentment_money",
+                          "shop_money"
+                        ],
+                        "type": "object"
+                      },
+                      "rate": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "channel_liable",
+                      "price",
+                      "price_set",
+                      "rate",
+                      "title"
+                    ],
+                    "type": "object"
+                  },
                   "type": "array"
                 },
                 "taxable": {
@@ -1477,7 +1539,10 @@
             "type": "boolean"
           },
           "sales_line_item_group_id": {
-            "type": "null"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "sku": {
             "type": "string"
@@ -1597,7 +1662,10 @@
             "type": "object"
           },
           "variant_id": {
-            "type": "integer"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "variant_inventory_management": {
             "type": [
@@ -1621,6 +1689,7 @@
         "required": [
           "admin_graphql_api_id",
           "attributed_staffs",
+          "current_quantity",
           "discount_allocations",
           "duties",
           "fulfillable_quantity",
@@ -2025,7 +2094,10 @@
             "type": "boolean"
           },
           "phone": {
-            "type": "null"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "price": {
             "type": "string"

@@ -8,7 +8,7 @@
     "toml"
   ],
   "deprecated": false,
-  "description": "Occurs whenever a variant becomes in stock.",
+  "description": "Occurs whenever a variant becomes in stock. Online channels receive this webhook only when the variant becomes in stock online.",
   "name": "variants/in_stock",
   "related_resource": "ProductVariant",
   "response": {

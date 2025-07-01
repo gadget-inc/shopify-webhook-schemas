@@ -19,9 +19,13 @@
       "type": "string"
     },
     "device_id": {
-      "type": [
-        "null",
-        "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
       ]
     },
     "error_code": {
@@ -106,7 +110,10 @@
           "type": "string"
         },
         "credit_card_wallet": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "cvv_result_code": {
           "type": [

@@ -1,35 +1,24 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
-    "enabled": {
-      "type": "boolean"
-    },
     "id": {
       "type": "integer"
     },
     "name": {
       "type": "string"
     },
-    "regions": {
-      "items": {
-        "properties": {
-          "country_code": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "country_code"
-        ],
-        "type": "object"
-      },
-      "type": "array"
+    "status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
     }
   },
   "required": [
-    "enabled",
     "id",
     "name",
-    "regions"
+    "status",
+    "type"
   ],
   "type": "object"
 }

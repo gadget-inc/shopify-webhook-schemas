@@ -21,7 +21,16 @@
         "currency": {
           "type": "string"
         },
+        "interval": {
+          "type": "string"
+        },
         "name": {
+          "type": "string"
+        },
+        "plan_handle": {
+          "type": "string"
+        },
+        "price": {
           "type": "string"
         },
         "status": {

@@ -22,10 +22,16 @@
           "type": "integer"
         },
         "max_cycles": {
-          "type": "integer"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "min_cycles": {
-          "type": "integer"
+          "type": [
+            "integer",
+            "null"
+          ]
         }
       },
       "required": [

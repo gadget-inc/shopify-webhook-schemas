@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "fulfillment_order": {
+      "properties": {
+        "fulfill_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fulfill_at",
+        "id",
+        "status"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "fulfillment_order"
+  ],
+  "type": "object"
+}

@@ -38,10 +38,16 @@
           "type": "string"
         },
         "first_name": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "last_name": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "phone": {
           "type": "string"
@@ -85,8 +91,21 @@
     },
     "buyer_experience_configuration": {
       "properties": {
+        "checkout_to_draft": {
+          "type": "boolean"
+        },
+        "deposit": {
+          "type": "null"
+        },
+        "editable_shipping_address": {
+          "type": "boolean"
+        },
         "pay_now_only": {
           "type": "boolean"
+        },
+        "payment_terms_template_admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
         }
       },
       "required": [
@@ -193,10 +212,16 @@
           "type": "string"
         },
         "first_name": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "last_name": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "phone": {
           "type": "string"
@@ -253,12 +278,18 @@
       "required": [
         "tax_id"
       ],
-      "type": "object"
+      "type": [
+        "null",
+        "object"
+      ]
     },
     "tax_settings": {
       "properties": {
         "tax_exempt": {
-          "type": "null"
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "tax_exemptions": {
           "items": {

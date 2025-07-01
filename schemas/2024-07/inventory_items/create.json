@@ -6,9 +6,13 @@
       "type": "string"
     },
     "cost": {
-      "type": [
-        "null",
-        "number"
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
       ]
     },
     "country_code_of_origin": {
