@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert";
 import { allTopicsForVersion, metadataForWebhook, schemaForWebhook, inferSchemaFromExamplePayload } from "../src/index";
+import { getStartVersion } from "../src/infer-schema";
 
 void test("can get the schema for an example topic", () => {
   assert.ok(schemaForWebhook("2024-04", "products/create"));
@@ -182,4 +183,84 @@ void test("infer schema does not apply schema overrides if the topic doesn't mat
   });
   assert.equal(result.warnings, 0);
   assert.equal(result.errors.length, 0);
+});
+
+void test("getStartVersion - Q1 (January) goes back to previous year Q2", () => {
+  const result = getStartVersion(new Date("2025-01-15"));
+  assert.equal(result, "2024-04");
+});
+
+void test("getStartVersion - Q1 (February) goes back to previous year Q2", () => {
+  const result = getStartVersion(new Date("2025-02-15"));
+  assert.equal(result, "2024-04");
+});
+
+void test("getStartVersion - Q1 (March) goes back to previous year Q2", () => {
+  const result = getStartVersion(new Date("2025-03-15"));
+  assert.equal(result, "2024-04");
+});
+
+void test("getStartVersion - Q2 (April) goes back to previous year Q3", () => {
+  const result = getStartVersion(new Date("2025-04-15"));
+  assert.equal(result, "2024-07");
+});
+
+void test("getStartVersion - Q2 (May) goes back to previous year Q3", () => {
+  const result = getStartVersion(new Date("2025-05-15"));
+  assert.equal(result, "2024-07");
+});
+
+void test("getStartVersion - Q2 (June) goes back to previous year Q3", () => {
+  const result = getStartVersion(new Date("2025-06-15"));
+  assert.equal(result, "2024-07");
+});
+
+void test("getStartVersion - Q3 (July) goes back to previous year Q4", () => {
+  const result = getStartVersion(new Date("2025-07-02"));
+  assert.equal(result, "2024-10");
+});
+
+void test("getStartVersion - Q3 (August) goes back to previous year Q4", () => {
+  const result = getStartVersion(new Date("2025-08-15"));
+  assert.equal(result, "2024-10");
+});
+
+void test("getStartVersion - Q3 (September) goes back to previous year Q4", () => {
+  const result = getStartVersion(new Date("2025-09-15"));
+  assert.equal(result, "2024-10");
+});
+
+void test("getStartVersion - Q4 (October) goes back to current year Q1", () => {
+  const result = getStartVersion(new Date("2025-10-15"));
+  assert.equal(result, "2025-01");
+});
+
+void test("getStartVersion - Q4 (November) goes back to current year Q1", () => {
+  const result = getStartVersion(new Date("2025-11-15"));
+  assert.equal(result, "2025-01");
+});
+
+void test("getStartVersion - Q4 (December) goes back to current year Q1", () => {
+  const result = getStartVersion(new Date("2025-12-15"));
+  assert.equal(result, "2025-01");
+});
+
+void test("getStartVersion - handles year boundary correctly", () => {
+  const result = getStartVersion(new Date("2024-01-01"));
+  assert.equal(result, "2023-04");
+});
+
+void test("getStartVersion - handles leap year", () => {
+  const result = getStartVersion(new Date("2024-02-29"));
+  assert.equal(result, "2023-04");
+});
+
+void test("getStartVersion - edge case: beginning of year", () => {
+  const result = getStartVersion(new Date("2023-01-01"));
+  assert.equal(result, "2022-04");
+});
+
+void test("getStartVersion - edge case: end of year", () => {
+  const result = getStartVersion(new Date("2023-12-31"));
+  assert.equal(result, "2023-01");
 });
