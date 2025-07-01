@@ -12,8 +12,8 @@
   "name": "subscription_contracts/expire",
   "related_resource": "SubscriptionContract",
   "response": {
-    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/4924470822",
-    "id": 4924470822,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContract/9946951049",
+    "id": 9946951049,
     "billing_policy": {
       "interval": "week",
       "interval_count": 4,
@@ -30,7 +30,7 @@
     "status": "expired",
     "admin_graphql_api_origin_order_id": "gid://shopify/Order/1",
     "origin_order_id": 1,
-    "revision_id": "8154267034"
+    "revision_id": "6187947111"
   },
   "shop_feature": false
 }

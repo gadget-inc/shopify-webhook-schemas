@@ -115,7 +115,7 @@ const main = async () => {
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
       await fs.writeFile(metadataFile, JSON.stringify(webhook, null, 2), "utf-8");
 
-      const { schema, warnings: warningCount, errors: errorMessages } = inferSchemaFromExamplePayload(webhook.response, webhook);
+      const { schema, warnings: warningCount, errors: errorMessages } = inferSchemaFromExamplePayload(version, webhook.response, webhook);
       warnings += warningCount;
       for (const error of errorMessages) {
         console.error(

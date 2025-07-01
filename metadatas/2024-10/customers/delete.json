@@ -16,7 +16,11 @@
     "phone": null,
     "addresses": [],
     "tax_exemptions": [],
-    "email_marketing_consent": null,
+    "email_marketing_consent": {
+      "state": "not_subscribed",
+      "opt_in_level": null,
+      "consent_updated_at": null
+    },
     "sms_marketing_consent": null,
     "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084"
   },

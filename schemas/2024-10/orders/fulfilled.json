@@ -551,19 +551,13 @@
               "type": "boolean"
             },
             "first_name": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "id": {
               "type": "integer"
             },
             "last_name": {
-              "type": [
-                "null",
-                "string"
-              ]
+              "type": "string"
             },
             "name": {
               "type": "string"
