@@ -21,7 +21,7 @@
           "type": "string"
         },
         "last_digits": {
-          "format": "date-time",
+          "format": "time",
           "type": "string"
         },
         "month": {

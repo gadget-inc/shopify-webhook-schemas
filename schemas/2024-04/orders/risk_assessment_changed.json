@@ -2,11 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
     "admin_graphql_api_order_id": {
-      "format": "uri",
-      "type": [
-        "null",
-        "string"
-      ]
+      "type": "null"
     },
     "created_at": {
       "format": "date-time",
@@ -16,10 +12,7 @@
       ]
     },
     "order_id": {
-      "type": [
-        "null",
-        "string"
-      ]
+      "type": "null"
     },
     "provider_id": {
       "type": [

@@ -1,74 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
-    "created_fulfillment_hold": {
-      "properties": {
-        "handle": {
-          "type": "string"
-        },
-        "held_by_app": {
-          "properties": {
-            "id": {
-              "format": "uri",
-              "type": "string"
-            }
-          },
-          "required": [
-            "id"
-          ],
-          "type": "object"
-        },
-        "held_by_requesting_app": {
-          "type": "boolean"
-        },
-        "id": {
-          "format": "uri",
-          "type": "string"
-        },
-        "reason": {
-          "type": "string"
-        },
-        "reason_notes": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "handle",
-        "held_by_app",
-        "held_by_requesting_app",
-        "id",
-        "reason",
-        "reason_notes"
-      ],
-      "type": "object"
-    },
     "fulfillment_order": {
       "properties": {
         "fulfillment_holds": {
           "items": {
             "properties": {
-              "handle": {
-                "type": "string"
-              },
-              "held_by_app": {
-                "properties": {
-                  "id": {
-                    "format": "uri",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "id"
-                ],
-                "type": "object"
-              },
-              "held_by_requesting_app": {
-                "type": "boolean"
-              },
-              "id": {
-                "format": "uri",
-                "type": "string"
-              },
               "reason": {
                 "type": "string"
               },
@@ -77,10 +14,6 @@
               }
             },
             "required": [
-              "handle",
-              "held_by_app",
-              "held_by_requesting_app",
-              "id",
               "reason",
               "reason_notes"
             ],
@@ -292,18 +225,6 @@
             {
               "format": "uri",
               "type": "string"
-            },
-            {
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "format": "uri",
-              "type": "string"
             }
           ]
         },
@@ -387,7 +308,6 @@
     }
   },
   "required": [
-    "created_fulfillment_hold",
     "fulfillment_order",
     "held_fulfillment_order_line_items",
     "remaining_fulfillment_order"

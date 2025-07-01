@@ -38,16 +38,10 @@
           "type": "string"
         },
         "first_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "last_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "phone": {
           "type": "string"
@@ -91,21 +85,8 @@
     },
     "buyer_experience_configuration": {
       "properties": {
-        "checkout_to_draft": {
-          "type": "boolean"
-        },
-        "deposit": {
-          "type": "null"
-        },
-        "editable_shipping_address": {
-          "type": "boolean"
-        },
         "pay_now_only": {
           "type": "boolean"
-        },
-        "payment_terms_template_admin_graphql_api_id": {
-          "format": "uri",
-          "type": "string"
         }
       },
       "required": [
@@ -212,16 +193,10 @@
           "type": "string"
         },
         "first_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "last_name": {
-          "type": [
-            "null",
-            "string"
-          ]
+          "type": "null"
         },
         "phone": {
           "type": "string"
@@ -278,34 +253,6 @@
       "required": [
         "tax_id"
       ],
-      "type": [
-        "null",
-        "object"
-      ]
-    },
-    "tax_settings": {
-      "properties": {
-        "tax_exempt": {
-          "type": [
-            "boolean",
-            "null"
-          ]
-        },
-        "tax_exemptions": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "tax_registration_id": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "tax_exempt",
-        "tax_exemptions",
-        "tax_registration_id"
-      ],
       "type": "object"
     },
     "updated_at": {
@@ -327,7 +274,6 @@
     "shipping_address",
     "tax_exemptions",
     "tax_registration",
-    "tax_settings",
     "updated_at"
   ],
   "type": "object"

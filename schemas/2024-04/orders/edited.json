@@ -4,14 +4,7 @@
     "order_edit": {
       "properties": {
         "app_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "committed_at": {
-          "format": "date-time",
-          "type": "string"
+          "type": "null"
         },
         "created_at": {
           "format": "date-time",
@@ -117,15 +110,11 @@
           "type": "string"
         },
         "user_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
+          "type": "null"
         }
       },
       "required": [
         "app_id",
-        "committed_at",
         "created_at",
         "discounts",
         "id",

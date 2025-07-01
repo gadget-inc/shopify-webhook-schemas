@@ -16,6 +16,8 @@
     "phone": null,
     "addresses": [],
     "tax_exemptions": [],
+    "email_marketing_consent": null,
+    "sms_marketing_consent": null,
     "admin_graphql_api_id": "gid://shopify/Customer/706405506930370084"
   },
   "shop_feature": false

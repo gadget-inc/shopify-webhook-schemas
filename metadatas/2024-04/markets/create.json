@@ -14,8 +14,12 @@
   "response": {
     "id": 188558248,
     "name": "United States",
-    "type": "region",
-    "status": "active"
+    "enabled": true,
+    "regions": [
+      {
+        "country_code": "US"
+      }
+    ]
   },
   "shop_feature": false
 }

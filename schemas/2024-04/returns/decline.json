@@ -23,22 +23,6 @@
     "id": {
       "type": "integer"
     },
-    "order": {
-      "properties": {
-        "admin_graphql_api_id": {
-          "format": "uri",
-          "type": "string"
-        },
-        "id": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "admin_graphql_api_id",
-        "id"
-      ],
-      "type": "object"
-    },
     "status": {
       "type": "string"
     }
@@ -47,7 +31,6 @@
     "admin_graphql_api_id",
     "decline",
     "id",
-    "order",
     "status"
   ],
   "type": "object"

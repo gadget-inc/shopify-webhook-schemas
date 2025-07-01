@@ -7,7 +7,7 @@ import chalk from "chalk";
 import path from "path";
 import { getPackageRootDir } from "src";
 import { startDecoding } from "./shopify.js";
-import { inferSchemaFromExamplePayload, manualExamples, startVersion } from "./infer-schema";
+import { inferSchemaFromExamplePayload, manualExamples, getStartVersion } from "./infer-schema";
 
 function assert<T>(value: T | false | undefined | null, message?: string): T {
   if (!value) {
@@ -81,6 +81,7 @@ const loadExemplars = async () => {
 };
 
 const getAllVersions = async () => {
+  const startVersion = getStartVersion();
   const rootPage = await loadRailsData(docsWebhooksPageForVersion(startVersion));
   return uniq([startVersion, ...rootPage.api.selectable_versions]).filter((version) => version != "unstable");
 };

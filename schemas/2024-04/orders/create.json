@@ -198,45 +198,6 @@
     "currency": {
       "type": "string"
     },
-    "current_shipping_price_set": {
-      "properties": {
-        "presentment_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        },
-        "shop_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        }
-      },
-      "required": [
-        "presentment_money",
-        "shop_money"
-      ],
-      "type": "object"
-    },
     "current_subtotal_price": {
       "type": "string"
     },
@@ -616,7 +577,10 @@
               ]
             },
             "opt_in_level": {
-              "type": "string"
+              "type": [
+                "null",
+                "string"
+              ]
             },
             "state": {
               "type": "string"
@@ -719,13 +683,16 @@
         "currency",
         "default_address",
         "email",
+        "email_marketing_consent",
         "first_name",
         "id",
         "last_name",
         "multipass_identifier",
         "note",
         "phone",
+        "sms_marketing_consent",
         "state",
+        "tags",
         "tax_exempt",
         "tax_exemptions",
         "updated_at",
@@ -809,9 +776,6 @@
         "type": "object"
       },
       "type": "array"
-    },
-    "duties_included": {
-      "type": "boolean"
     },
     "email": {
       "format": "email",
@@ -1040,69 +1004,7 @@
                   "type": "string"
                 },
                 "tax_lines": {
-                  "items": {
-                    "properties": {
-                      "channel_liable": {
-                        "type": "boolean"
-                      },
-                      "price": {
-                        "type": "string"
-                      },
-                      "price_set": {
-                        "properties": {
-                          "presentment_money": {
-                            "properties": {
-                              "amount": {
-                                "type": "string"
-                              },
-                              "currency_code": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "amount",
-                              "currency_code"
-                            ],
-                            "type": "object"
-                          },
-                          "shop_money": {
-                            "properties": {
-                              "amount": {
-                                "type": "string"
-                              },
-                              "currency_code": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "amount",
-                              "currency_code"
-                            ],
-                            "type": "object"
-                          }
-                        },
-                        "required": [
-                          "presentment_money",
-                          "shop_money"
-                        ],
-                        "type": "object"
-                      },
-                      "rate": {
-                        "type": "integer"
-                      },
-                      "title": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "channel_liable",
-                      "price",
-                      "price_set",
-                      "rate",
-                      "title"
-                    ],
-                    "type": "object"
-                  },
+                  "items": false,
                   "type": "array"
                 },
                 "taxable": {
@@ -1538,12 +1440,6 @@
           "requires_shipping": {
             "type": "boolean"
           },
-          "sales_line_item_group_id": {
-            "type": [
-              "integer",
-              "null"
-            ]
-          },
           "sku": {
             "type": "string"
           },
@@ -1662,10 +1558,7 @@
             "type": "object"
           },
           "variant_id": {
-            "type": [
-              "integer",
-              "null"
-            ]
+            "type": "integer"
           },
           "variant_inventory_management": {
             "type": [
@@ -1689,7 +1582,6 @@
         "required": [
           "admin_graphql_api_id",
           "attributed_staffs",
-          "current_quantity",
           "discount_allocations",
           "duties",
           "fulfillable_quantity",
@@ -1726,9 +1618,6 @@
         "integer",
         "null"
       ]
-    },
-    "merchant_business_entity_id": {
-      "type": "string"
     },
     "merchant_of_record_app_id": {
       "type": [
@@ -1904,10 +1793,6 @@
       "items": false,
       "type": "array"
     },
-    "returns": {
-      "items": false,
-      "type": "array"
-    },
     "shipping_address": {
       "properties": {
         "address1": {
@@ -2002,45 +1887,6 @@
               "string"
             ]
           },
-          "current_discounted_price_set": {
-            "properties": {
-              "presentment_money": {
-                "properties": {
-                  "amount": {
-                    "type": "string"
-                  },
-                  "currency_code": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "amount",
-                  "currency_code"
-                ],
-                "type": "object"
-              },
-              "shop_money": {
-                "properties": {
-                  "amount": {
-                    "type": "string"
-                  },
-                  "currency_code": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "amount",
-                  "currency_code"
-                ],
-                "type": "object"
-              }
-            },
-            "required": [
-              "presentment_money",
-              "shop_money"
-            ],
-            "type": "object"
-          },
           "discount_allocations": {
             "items": false,
             "type": "array"
@@ -2094,10 +1940,7 @@
             "type": "boolean"
           },
           "phone": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": "null"
           },
           "price": {
             "type": "string"
@@ -2223,7 +2066,6 @@
         "required": [
           "carrier_identifier",
           "code",
-          "current_discounted_price_set",
           "discount_allocations",
           "discounted_price",
           "discounted_price_set",
@@ -2379,84 +2221,6 @@
     },
     "token": {
       "type": "string"
-    },
-    "total_cash_rounding_payment_adjustment_set": {
-      "properties": {
-        "presentment_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        },
-        "shop_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        }
-      },
-      "required": [
-        "presentment_money",
-        "shop_money"
-      ],
-      "type": "object"
-    },
-    "total_cash_rounding_refund_adjustment_set": {
-      "properties": {
-        "presentment_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        },
-        "shop_money": {
-          "properties": {
-            "amount": {
-              "type": "string"
-            },
-            "currency_code": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "amount",
-            "currency_code"
-          ],
-          "type": "object"
-        }
-      },
-      "required": [
-        "presentment_money",
-        "shop_money"
-      ],
-      "type": "object"
     },
     "total_discounts": {
       "type": "string"
@@ -2703,7 +2467,6 @@
     "contact_email",
     "created_at",
     "currency",
-    "current_shipping_price_set",
     "current_subtotal_price",
     "current_subtotal_price_set",
     "current_total_additional_fees_set",
@@ -2719,7 +2482,6 @@
     "device_id",
     "discount_applications",
     "discount_codes",
-    "duties_included",
     "email",
     "estimated_taxes",
     "financial_status",
@@ -2730,7 +2492,6 @@
     "landing_site_ref",
     "line_items",
     "location_id",
-    "merchant_business_entity_id",
     "merchant_of_record_app_id",
     "name",
     "note",
@@ -2749,7 +2510,6 @@
     "reference",
     "referring_site",
     "refunds",
-    "returns",
     "shipping_address",
     "shipping_lines",
     "source_identifier",
@@ -2763,8 +2523,6 @@
     "taxes_included",
     "test",
     "token",
-    "total_cash_rounding_payment_adjustment_set",
-    "total_cash_rounding_refund_adjustment_set",
     "total_discounts",
     "total_discounts_set",
     "total_line_items_price",

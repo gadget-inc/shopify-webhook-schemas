@@ -331,28 +331,6 @@
           ],
           "type": "object"
         },
-        "tax_settings": {
-          "properties": {
-            "tax_exempt": {
-              "type": "null"
-            },
-            "tax_exemptions": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "tax_registration_id": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "tax_exempt",
-            "tax_exemptions",
-            "tax_registration_id"
-          ],
-          "type": "object"
-        },
         "updated_at": {
           "format": "date-time",
           "type": "string"
@@ -372,7 +350,6 @@
         "shipping_address",
         "tax_exemptions",
         "tax_registration",
-        "tax_settings",
         "updated_at"
       ],
       "type": "object"

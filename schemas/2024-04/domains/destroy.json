@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
     "host": {
+      "format": "hostname",
       "type": "string"
     },
     "id": {
@@ -25,10 +26,7 @@
         "country",
         "default_locale"
       ],
-      "type": [
-        "null",
-        "object"
-      ]
+      "type": "object"
     },
     "ssl_enabled": {
       "type": "boolean"

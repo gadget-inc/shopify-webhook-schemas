@@ -8,7 +8,7 @@
     "toml"
   ],
   "deprecated": false,
-  "description": "Occurs whenever a variant becomes out of stock. Online channels receive this webhook only when the variant becomes out of stock online.",
+  "description": "Occurs whenever a variant becomes out of stock.",
   "name": "variants/out_of_stock",
   "related_resource": "ProductVariant",
   "response": {
@@ -26,7 +26,13 @@
     "updated_at": "2021-12-30T19:00:00-05:00",
     "taxable": true,
     "barcode": null,
+    "fulfillment_service": "manual",
+    "grams": 0,
+    "inventory_management": null,
+    "requires_shipping": true,
     "sku": null,
+    "weight": 0,
+    "weight_unit": "lb",
     "inventory_quantity": 0,
     "old_inventory_quantity": 0,
     "admin_graphql_api_id": "gid://shopify/ProductVariant/642667041472713922",
