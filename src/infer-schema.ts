@@ -8,27 +8,27 @@ const stringify = configure({ deterministic: true });
 export const getStartVersion = (date: Date = new Date()) => {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth() + 1; // 1-12
-  
+
   // Map month to quarter
   let quarter: number;
-  if (month <= 3) quarter = 1;      // Jan-Mar -> Q1 (01)
-  else if (month <= 6) quarter = 2; // Apr-Jun -> Q2 (04) 
+  if (month <= 3) quarter = 1; // Jan-Mar -> Q1 (01)
+  else if (month <= 6) quarter = 2; // Apr-Jun -> Q2 (04)
   else if (month <= 9) quarter = 3; // Jul-Sep -> Q3 (07)
-  else quarter = 4;                 // Oct-Dec -> Q4 (10)
-  
+  else quarter = 4; // Oct-Dec -> Q4 (10)
+
   // Go back 3 quarters (4 quarters including current)
   let targetYear = year;
   let targetQuarter = quarter - 3;
-  
+
   // Handle year wraparound
   while (targetQuarter <= 0) {
     targetQuarter += 4;
     targetYear -= 1;
   }
-  
+
   // Map quarter to month string
   const quarterToMonth = { 1: "01", 2: "04", 3: "07", 4: "10" };
-  
+
   return `${targetYear}-${quarterToMonth[targetQuarter as keyof typeof quarterToMonth]}`;
 };
 

@@ -81,7 +81,7 @@ const loadExemplars = async () => {
 };
 
 const getAllVersions = async () => {
-  const startVersion = getStartVersion(); 
+  const startVersion = getStartVersion();
   const rootPage = await loadRailsData(docsWebhooksPageForVersion(startVersion));
   return uniq([startVersion, ...rootPage.api.selectable_versions]).filter((version) => version != "unstable");
 };
