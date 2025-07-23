@@ -796,4 +796,29 @@ export const overrides: { topics: string[]; schema: any; required?: string[]; ve
       ...shippingAddress.properties,
     },
   },
+  {
+    topics: ["refunds/create"],
+    schema: {
+      return: {
+        anyOf: [
+          {
+            type: "null",
+          },
+          {
+            properties: {
+              admin_graphql_api_id: {
+                format: "uri",
+                type: "string",
+              },
+              id: {
+                type: "integer",
+              },
+            },
+            required: ["admin_graphql_api_id", "id"],
+            type: "object",
+          },
+        ],
+      },
+    },
+  },
 ];
