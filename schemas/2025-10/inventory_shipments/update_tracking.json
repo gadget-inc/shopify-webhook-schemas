@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "shipment_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "updated_tracking": {
+      "properties": {
+        "arrives_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "tracking_number": {
+          "type": "string"
+        },
+        "tracking_url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "arrives_at",
+        "company",
+        "tracking_number",
+        "tracking_url"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "happened_at",
+    "shipment_id",
+    "updated_tracking"
+  ],
+  "type": "object"
+}

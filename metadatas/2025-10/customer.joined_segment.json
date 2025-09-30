@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "customers"
+  ],
+  "available_on": [
+    "graphql"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a customer joins a segment.",
+  "name": "customer.joined_segment",
+  "related_resource": "JoinedSegment",
+  "response": {
+    "shop_id": "gid://shopify/Shop/1",
+    "customer_id": "gid://shopify/Customer/2",
+    "segment_id": "gid://shopify/Segment/3"
+  },
+  "shop_feature": false
+}

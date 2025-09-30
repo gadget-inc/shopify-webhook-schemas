@@ -1,13 +1,9 @@
-import cheerio from "cheerio";
 import fs from "fs-extra";
 import { globby } from "globby";
-import got from "got";
-import { uniq } from "lodash";
 import chalk from "chalk";
 import path from "path";
 import { getPackageRootDir } from "src";
-import { startDecoding } from "./shopify.js";
-import { inferSchemaFromExamplePayload, manualExamples, getStartVersion } from "./infer-schema";
+import { inferSchemaFromExamplePayload, manualExamples } from "./infer-schema";
 
 function assert<T>(value: T | false | undefined | null, message?: string): T {
   if (!value) {
@@ -16,52 +12,8 @@ function assert<T>(value: T | false | undefined | null, message?: string): T {
   return value;
 }
 
-/**
- * This script fetches shopify's docs for all their webhook topics, and dumps json schemas for each topic inferred from the example payloads
- */
-const loadRailsData = async (url: string) => {
-  const shopifyDocsSource = await got(url);
-  const $ = cheerio.load(shopifyDocsSource.body);
-  const jsonScriptTag = $("script")
-    .toArray()
-    .find((script) => $(script).html()?.includes("window.RailsData"));
-  const compressedScriptTag = $("script")
-    .toArray()
-    .find((script) => $(script).html()?.includes("rails_data"));
-
-  if (jsonScriptTag) {
-    const scriptText = $(jsonScriptTag).html()!;
-    const jsonMatch = scriptText.match(/window\.RailsData = (\{[\s\S]*?\}\s*)\/\/\]\]/m);
-
-    if (!jsonMatch) {
-      throw new Error("RailsData object literal is in an unexpected format");
-    }
-
-    return JSON.parse(jsonMatch[1]);
-  } else if (compressedScriptTag) {
-    const scriptText = $(compressedScriptTag).html()!;
-    const jsonMatch = scriptText.match(/window.__reactRouterContext.streamController.enqueue\(([\s\S]*)\)/);
-    if (!jsonMatch) {
-      throw new Error("RailsData object literal not found in script tag or is in an unexpected format");
-    }
-    const data = jsonMatch[1].replace("\\\n", "");
-
-    const encoder = new TextEncoderStream();
-    const readableStream = new ReadableStream({
-      start(c) {
-        c.enqueue(JSON.parse(data));
-        c.close();
-      },
-    }).pipeThrough(encoder);
-
-    const result = await startDecoding(readableStream);
-    return result.value.loaderData["./routes/rest"].rails_data;
-  } else {
-    throw new Error("expected to find rails_data or window.RailsData script in shopify source but couldn't");
-  }
-};
-
-const docsWebhooksPageForVersion = (version: string) => `https://shopify.dev/docs/api/admin-rest/${version}/resources/webhook#event-topics`;
+const dataUrl = "https://shopify.dev/docs/api/webhooks.data";
+const dataUrlForVersion = (version: string) => `https://shopify.dev/docs/api/webhooks/${version}.data`;
 
 let warnings = 0;
 let errors = 0;
@@ -80,10 +32,92 @@ const loadExemplars = async () => {
   console.log(`loaded ${files.length} exemplars`);
 };
 
-const getAllVersions = async () => {
-  const startVersion = getStartVersion();
-  const rootPage = await loadRailsData(docsWebhooksPageForVersion(startVersion));
-  return uniq([startVersion, ...rootPage.api.selectable_versions]).filter((version) => version != "unstable");
+const loadDataFromUrl = async (url: string): Promise<Record<string, any>> => {
+  const res = await fetch(url, { headers: { accept: "application/json" } });
+  if (!res.ok) {
+    console.error(`Failed to fetch ${url}: ${res.status} ${res.statusText}`);
+    process.exit(1);
+  }
+
+  const flat = await res.json();
+  return inflateShopifyData(flat);
+};
+
+const inflateShopifyData = (flat: any) => {
+  const cache = new Map();
+
+  const fromIndex = (i: number) => {
+    if (!Number.isInteger(i)) {
+      return i;
+    }
+    if (cache.has(i)) return cache.get(i);
+    const val = flat[i];
+    const out = deref(val);
+    cache.set(i, out);
+    return out;
+  };
+
+  const deref = (x: any): any => {
+    if (typeof x === "number") {
+      return fromIndex(x);
+    }
+    if (Array.isArray(x)) {
+      return x.map(deref);
+    }
+    if (x && typeof x === "object") {
+      const out: any = {};
+      for (const [k, v] of Object.entries(x)) {
+        if (k.startsWith("_")) {
+          const keyIdx = Number(k.slice(1));
+          const key = fromIndex(keyIdx);
+          out[key] = deref(v);
+        } else {
+          out[k] = deref(v);
+        }
+      }
+      return out;
+    }
+
+    return x;
+  };
+
+  return fromIndex(0);
+};
+
+const findFirstByPredicate = (node: any, predicate: (node: any) => boolean): any => {
+  if (node && typeof node === "object") {
+    if (Array.isArray(node)) {
+      for (const child of node) {
+        const result = findFirstByPredicate(child, predicate);
+        if (result !== null) return result;
+      }
+    } else {
+      if (predicate(node)) {
+        return node;
+      }
+      for (const value of Object.values(node)) {
+        const result = findFirstByPredicate(value, predicate);
+        if (result !== null) return result;
+      }
+    }
+  }
+  return null;
+};
+
+const findFirstByKey = (node: any, keyName: string): any => {
+  return findFirstByPredicate(node, (node) => Object.prototype.hasOwnProperty.call(node, keyName))?.[keyName];
+};
+
+const getAllVersions = async (): Promise<string[]> => {
+  const data = await loadDataFromUrl(dataUrl);
+
+  const selectableVersions: any = findFirstByKey(data, "selectableVersions");
+
+  if (!selectableVersions || !Array.isArray(selectableVersions.default.values)) {
+    throw new Error("selectableVersions not found or is not an array");
+  }
+
+  return selectableVersions.default.values.filter((v: any) => v != "unstable");
 };
 
 const main = async () => {
@@ -92,24 +126,44 @@ const main = async () => {
   const versions = process.env.VERSION ? [process.env.VERSION] : await getAllVersions();
 
   for (const version of versions) {
-    const page = await loadRailsData(docsWebhooksPageForVersion(version));
-    const webhooks = assert(page.api.rest_resource.info["x-description-list"]["items"]);
-    console.log(`Loaded ${webhooks.length} webhooks for version ${version}`);
+    console.log(`Loading webhooks for version ${version}`);
 
-    for (const webhook of webhooks) {
-      if (webhook.response === "") {
-        console.warn(`${webhook.name} has an empty response`);
+    const data = await loadDataFromUrl(dataUrlForVersion(version));
+
+    const webhooksAccordian = findFirstByPredicate(
+      data,
+      (node) => node.type === "WebhooksAccordion" && node.anchorLink === "list-of-topics"
+    );
+    const webhookContent = assert(webhooksAccordian.accordionContent);
+
+    for (const webhookNode of webhookContent) {
+      const examplePayload = webhookNode.codeblock?.tabs?.[0]?.code;
+      let response: Record<string, any> = {};
+
+      if (!examplePayload) {
+        console.warn(`${webhookNode.title} has no payload`);
         warnings += 1;
-        webhook.response = {};
       } else {
-        webhook.response = JSON.parse(webhook.response);
+        const parsedPayload = JSON.parse(examplePayload);
+        if (!parsedPayload) {
+          console.warn(`${webhookNode.title} has a null payload`);
+          warnings += 1;
+        } else {
+          response = parsedPayload;
+        }
       }
 
-      if (webhook.response === undefined || webhook.response === null) {
-        console.warn(`${webhook.name} has an empty response`);
-        warnings += 1;
-        webhook.response = {};
-      }
+      const webhook = {
+        access_scopes: webhookNode.accessScopes,
+        available_on: webhookNode.availableOn,
+        deprecated: !!webhookNode.webhookNotices?.find((notice: any) => notice.type === "deprecated"),
+        description: webhookNode.description,
+        name: webhookNode.title,
+        pii: webhookNode.pii,
+        related_resource: webhookNode.relatedResource,
+        response,
+        shop_feature: !!webhookNode.webhookNotices?.find((notice: any) => notice.type === "shop_feature"),
+      };
 
       const metadataFile = path.join(rootDir, "metadatas", version, webhook.name + ".json");
       await fs.mkdir(path.dirname(metadataFile), { recursive: true });
