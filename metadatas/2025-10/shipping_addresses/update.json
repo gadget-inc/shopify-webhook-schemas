@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "shipping"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a shipping address is updated.",
+  "name": "shipping_addresses/update",
+  "related_resource": "ShippingAddress",
+  "response": {},
+  "shop_feature": false
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "body_html": {
+      "type": "string"
+    },
+    "handle": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "image": {
+      "properties": {
+        "alt": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "height": {
+          "type": "number"
+        },
+        "src": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "published_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "published_scope": {
+      "type": "string"
+    },
+    "sort_order": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "template_suffix": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "body_html",
+    "handle",
+    "id",
+    "published_at",
+    "published_scope",
+    "sort_order",
+    "template_suffix",
+    "title",
+    "updated_at"
+  ],
+  "type": "object"
+}

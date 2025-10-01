@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "inventory_shipments"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when tracking info on a shipment is updated.",
+  "name": "inventory_shipments/update_tracking",
+  "related_resource": "Shipment",
+  "response": {
+    "shipment_id": "gid://shopify/InventoryShipment/3921201",
+    "updated_tracking": {
+      "tracking_number": "8375692728",
+      "tracking_url": "https://exampletracking.shopify.com/track/8375692728",
+      "company": "Purolator",
+      "arrives_at": "2023-10-02T03:24:44-04:00"
+    },
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}
