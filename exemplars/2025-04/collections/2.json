@@ -1,0 +1,20 @@
+{
+  "id": 123,
+  "handle": "example string",
+  "title": "example string",
+  "updated_at": "2019-01-01 00:00:00.000Z",
+  "body_html": "example string",
+  "published_at": "2019-01-01 00:00:00.000Z",
+  "sort_order": "example string",
+  "template_suffix": "example string",
+  "disjunctive": true,
+  "rules": [
+    {
+      "column": "example string",
+      "relation": "example string",
+      "condition": "example string"
+    }
+  ],
+  "published_scope": "example string",
+  "admin_graphql_api_id": "https://www.example.com/"
+}

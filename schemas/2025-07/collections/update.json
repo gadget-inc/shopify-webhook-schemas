@@ -8,6 +8,9 @@
     "body_html": {
       "type": "string"
     },
+    "disjunctive": {
+      "type": "boolean"
+    },
     "handle": {
       "type": "string"
     },
@@ -40,6 +43,23 @@
     },
     "published_scope": {
       "type": "string"
+    },
+    "rules": {
+      "items": {
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
     },
     "sort_order": {
       "type": [
