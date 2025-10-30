@@ -690,6 +690,18 @@ export const overrides: { topics: string[]; schema: any; required?: string[]; ve
           width: { type: "number" },
         },
       },
+      rules: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            column: { type: "string" },
+            relation: { type: "string" },
+            condition: { type: "string" },
+          },
+        },
+      },
+      disjunctive: { type: "boolean" },
     },
   },
   {
