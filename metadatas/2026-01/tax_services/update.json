@@ -1,0 +1,21 @@
+{
+  "access_scopes": [
+    "taxes"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenver a tax service is updated.",
+  "name": "tax_services/update",
+  "related_resource": "TaxService",
+  "response": {
+    "id": null,
+    "name": "Tax Service",
+    "url": "https://taxes.shopify.com",
+    "active": true
+  },
+  "shop_feature": false
+}

@@ -40,6 +40,14 @@ const loadDataFromUrl = async (url: string): Promise<Record<string, any>> => {
   }
 
   const flat = await res.json();
+
+  // Handle redirect responses (e.g., 2026-01 redirects to /latest)
+  if (Array.isArray(flat) && flat[0]?.[0] === "SingleFetchRedirect") {
+    console.log(`URL redirected, trying /latest endpoint...`);
+    const latestUrl = url.replace(/\/[^/]+\.data$/, "/latest.data");
+    return await loadDataFromUrl(latestUrl);
+  }
+
   return inflateShopifyData(flat);
 };
 
