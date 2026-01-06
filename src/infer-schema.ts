@@ -669,6 +669,18 @@ export const overrides: { topics: string[]; schema: any; required?: string[]; ve
     },
   },
   {
+    topics: ["orders/create", "orders/updated", "orders/cancelled", "orders/fulfilled", "orders/paid", "orders/partially_fulfilled"],
+    schema: {
+      company: {
+        type: ["object", "null"],
+        properties: {
+          id: { type: "integer" },
+          location_id: { type: "integer" },
+        },
+      },
+    },
+  },
+  {
     topics: ["order_transactions/create", "order_transactions/update"],
     schema: {
       receipt: {
