@@ -19,9 +19,6 @@
         },
         {
           "type": "string"
-        },
-        {
-          "type": "integer"
         }
       ]
     },

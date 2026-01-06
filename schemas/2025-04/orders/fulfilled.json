@@ -178,6 +178,20 @@
         "string"
       ]
     },
+    "company": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "location_id": {
+          "type": "integer"
+        }
+      },
+      "type": [
+        "null",
+        "object"
+      ]
+    },
     "confirmation_number": {
       "type": [
         "null",
@@ -1506,7 +1520,10 @@
             "type": "boolean"
           },
           "product_id": {
-            "type": "integer"
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "properties": {
             "items": {
