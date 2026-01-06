@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a subscription billing attempt fails.",
+  "name": "subscription_billing_attempts/failure",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "SubscriptionBillingAttempt",
+  "response": {},
+  "shop_feature": false
+}

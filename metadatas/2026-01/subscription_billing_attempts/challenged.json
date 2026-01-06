@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when the financial instutition challenges the subscripttion billing attempt charge as per 3D Secure.",
+  "name": "subscription_billing_attempts/challenged",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "SubscriptionBillingAttempt",
+  "response": {},
+  "shop_feature": false
+}
