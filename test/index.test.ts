@@ -110,6 +110,17 @@ void test("infer schema uses payload overrides", () => {
         required: ["address2", "latitude", "longitude"],
         type: ["null", "object"],
       },
+      company: {
+        properties: {
+          id: {
+            type: "integer",
+          },
+          location_id: {
+            type: "integer",
+          },
+        },
+        type: ["null", "object"],
+      },
       created_at: {
         format: "date-time",
         type: ["null", "string"],
