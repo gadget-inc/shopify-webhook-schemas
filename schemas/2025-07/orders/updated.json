@@ -178,6 +178,20 @@
         "string"
       ]
     },
+    "company": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "location_id": {
+          "type": "integer"
+        }
+      },
+      "type": [
+        "null",
+        "object"
+      ]
+    },
     "confirmation_number": {
       "type": [
         "null",
@@ -2692,6 +2706,7 @@
     "checkout_token",
     "client_details",
     "closed_at",
+    "company",
     "confirmation_number",
     "confirmed",
     "contact_email",
