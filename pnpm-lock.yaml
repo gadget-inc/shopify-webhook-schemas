@@ -19,7 +19,7 @@ importers:
         version: 3.3.2
       lodash:
         specifier: ^4.17.21
-        version: 4.17.21
+        version: 4.17.23
       safe-stable-stringify:
         specifier: ^2.5.0
         version: 2.5.0
@@ -29,7 +29,7 @@ importers:
         version: 0.15.4
       '@gadgetinc/eslint-config':
         specifier: ^0.6.1
-        version: 0.6.1(@gadgetinc/prettier-config@0.4.0(prettier@2.8.8)(typescript@5.6.3))(eslint@8.57.1)(lodash@4.17.21)(typescript@5.6.3)
+        version: 0.6.1(@gadgetinc/prettier-config@0.4.0(prettier@2.8.8)(typescript@5.6.3))(eslint@8.57.1)(lodash@4.17.23)(typescript@5.6.3)
       '@gadgetinc/prettier-config':
         specifier: ^0.4.0
         version: 0.4.0(prettier@2.8.8)(typescript@5.6.3)
@@ -1390,9 +1390,10 @@ packages:
 
   lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
+    deprecated: This package is deprecated. Use destructuring assignment syntax instead.
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -2166,7 +2167,7 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@gadgetinc/eslint-config@0.6.1(@gadgetinc/prettier-config@0.4.0(prettier@2.8.8)(typescript@5.6.3))(eslint@8.57.1)(lodash@4.17.21)(typescript@5.6.3)':
+  '@gadgetinc/eslint-config@0.6.1(@gadgetinc/prettier-config@0.4.0(prettier@2.8.8)(typescript@5.6.3))(eslint@8.57.1)(lodash@4.17.23)(typescript@5.6.3)':
     dependencies:
       '@gadgetinc/prettier-config': 0.4.0(prettier@2.8.8)(typescript@5.6.3)
       '@typescript-eslint/eslint-plugin': 5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)
@@ -2182,7 +2183,7 @@ snapshots:
       eslint-plugin-react: 7.37.2(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
       eslint-plugin-workspaces: 0.7.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       typescript: 5.6.3
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -2971,7 +2972,7 @@ snapshots:
   eslint-plugin-lodash@7.4.0(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
-      lodash: 4.17.21
+      lodash: 4.17.23
 
   eslint-plugin-react-hooks@4.6.2(eslint@8.57.1):
     dependencies:
@@ -3549,7 +3550,7 @@ snapshots:
 
   lodash.omit@4.5.0: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   log-symbols@4.1.0:
     dependencies:
