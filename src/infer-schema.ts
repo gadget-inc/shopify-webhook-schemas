@@ -843,6 +843,59 @@ export const overrides: { topics: string[]; schema: any; required?: string[]; ve
           },
         ],
       },
+      order_adjustments: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            id: { type: "integer" },
+            order_id: { type: "integer" },
+            refund_id: { type: "integer" },
+            amount: { type: "string" },
+            tax_amount: { type: "string" },
+            kind: { type: "string" },
+            reason: { type: "string" },
+            amount_set: {
+              type: "object",
+              properties: {
+                shop_money: {
+                  type: "object",
+                  properties: {
+                    amount: { type: "string" },
+                    currency_code: { type: "string" },
+                  },
+                },
+                presentment_money: {
+                  type: "object",
+                  properties: {
+                    amount: { type: "string" },
+                    currency_code: { type: "string" },
+                  },
+                },
+              },
+            },
+            tax_amount_set: {
+              type: "object",
+              properties: {
+                shop_money: {
+                  type: "object",
+                  properties: {
+                    amount: { type: "string" },
+                    currency_code: { type: "string" },
+                  },
+                },
+                presentment_money: {
+                  type: "object",
+                  properties: {
+                    amount: { type: "string" },
+                    currency_code: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
 ];

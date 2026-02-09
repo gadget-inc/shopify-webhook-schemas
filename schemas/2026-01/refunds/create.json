@@ -20,7 +20,86 @@
       "type": "string"
     },
     "order_adjustments": {
-      "items": false,
+      "items": {
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "amount_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "integer"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "refund_id": {
+            "type": "integer"
+          },
+          "tax_amount": {
+            "type": "string"
+          },
+          "tax_amount_set": {
+            "properties": {
+              "presentment_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "shop_money": {
+                "properties": {
+                  "amount": {
+                    "type": "string"
+                  },
+                  "currency_code": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
       "type": "array"
     },
     "order_id": {
