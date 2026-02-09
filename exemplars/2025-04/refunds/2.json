@@ -1,0 +1,92 @@
+{
+  "id": 123,
+  "order_id": 123,
+  "created_at": "2019-01-01 00:00:00.000Z",
+  "note": "example string",
+  "user_id": 123,
+  "processed_at": "2019-01-01 00:00:00.000Z",
+  "duties": [],
+  "total_duties_set": {
+    "shop_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    },
+    "presentment_money": {
+      "amount": "example string",
+      "currency_code": "example string"
+    }
+  },
+  "return": null,
+  "restock": false,
+  "refund_shipping_lines": [],
+  "admin_graphql_api_id": "https://www.example.com/",
+  "order_adjustments": [
+    {
+      "id": 123,
+      "order_id": 123,
+      "refund_id": 123,
+      "amount": "example string",
+      "tax_amount": "example string",
+      "kind": "example string",
+      "reason": "example string",
+      "amount_set": {
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      },
+      "tax_amount_set": {
+        "shop_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        },
+        "presentment_money": {
+          "amount": "example string",
+          "currency_code": "example string"
+        }
+      }
+    }
+  ],
+  "refund_line_items": [],
+  "transactions": [
+    {
+      "id": 123,
+      "order_id": 123,
+      "kind": "example string",
+      "gateway": "example string",
+      "status": "example string",
+      "message": "example string",
+      "created_at": "2019-01-01 00:00:00.000Z",
+      "test": false,
+      "authorization": null,
+      "location_id": null,
+      "user_id": 123,
+      "parent_id": 123,
+      "processed_at": "2019-01-01 00:00:00.000Z",
+      "device_id": null,
+      "error_code": null,
+      "source_name": "example string",
+      "receipt": {},
+      "amount": "example string",
+      "currency": "example string",
+      "payment_id": "example string",
+      "total_unsettled_set": {
+        "presentment_money": {
+          "amount": "example string",
+          "currency": "example string"
+        },
+        "shop_money": {
+          "amount": "example string",
+          "currency": "example string"
+        }
+      },
+      "manual_payment_gateway": true,
+      "amount_rounding": null,
+      "admin_graphql_api_id": "https://www.example.com/"
+    }
+  ]
+}
