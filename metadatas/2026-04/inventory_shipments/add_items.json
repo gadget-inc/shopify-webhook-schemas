@@ -1,0 +1,28 @@
+{
+  "access_scopes": [
+    "inventory_shipments"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever items are added to a shipment.",
+  "name": "inventory_shipments/add_items",
+  "related_resource": "Shipment",
+  "response": {
+    "id": "gid://shopify/InventoryShipment/3921201",
+    "items_added": [
+      {
+        "id": "gid://shopify/InventoryShipmentLineItem/82243",
+        "quantity": 10
+      },
+      {
+        "id": "gid://shopify/InventoryShipmentLineItem/57116",
+        "quantity": 7
+      }
+    ],
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}

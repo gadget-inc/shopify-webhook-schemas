@@ -1,0 +1,14 @@
+{
+  "available_on": [
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "48 hours after a store owner uninstalls your app, Shopify sends a payload on the shop/redact topic. This webhook provides the store's shop_id and shop_domain so that you can erase data for that store from your database.\n\nWhile testing with this topic in development, note that the corresponding event on your test shop will not result in a webhook triggering immediately. shop/redact webhooks are emitted no earlier than 48 hours after uninstalling the app, and they do not fire if the app has been re-installed again.",
+  "name": "shop/redact",
+  "related_resource": "Shop",
+  "response": {
+    "shop_id": 954889,
+    "shop_domain": "{shop}.myshopify.com"
+  },
+  "shop_feature": false
+}

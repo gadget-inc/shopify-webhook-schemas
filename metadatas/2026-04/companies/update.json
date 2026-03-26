@@ -1,0 +1,29 @@
+{
+  "access_scopes": [
+    "customers",
+    "companies"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a company is updated.",
+  "name": "companies/update",
+  "pii": [
+    "customer"
+  ],
+  "related_resource": "Company",
+  "response": {
+    "name": "Example Company",
+    "note": "This is an example company",
+    "external_id": "123456789",
+    "main_contact_admin_graphql_api_id": "gid://shopify/CompanyContact/408372092144951652",
+    "created_at": "2021-12-31T19:00:00-05:00",
+    "updated_at": "2021-12-31T19:00:00-05:00",
+    "customer_since": "2021-12-31T19:00:00-05:00",
+    "admin_graphql_api_id": "gid://shopify/Company/408372092144951419"
+  },
+  "shop_feature": false
+}

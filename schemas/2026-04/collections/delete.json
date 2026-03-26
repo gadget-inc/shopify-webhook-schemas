@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "published_scope": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "id",
+    "published_scope"
+  ],
+  "type": "object"
+}

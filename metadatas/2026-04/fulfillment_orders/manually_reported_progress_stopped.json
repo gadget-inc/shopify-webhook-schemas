@@ -1,0 +1,28 @@
+{
+  "access_scopes": [
+    "merchant_managed_fulfillment_orders",
+    "assigned_fulfillment_orders",
+    "third_party_fulfillment_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a fulfillment order that has previously been manually marked as in progress is marked back as open.",
+  "name": "fulfillment_orders/manually_reported_progress_stopped",
+  "related_resource": "FulfillmentOrder",
+  "response": {
+    "fulfillment_order": {
+      "id": "gid://shopify/FulfillmentOrder/1",
+      "status": "open"
+    },
+    "progress_stopped_by_app": {
+      "id": "gid://shopify/App/12345"
+    },
+    "progress_stopped_by_user": {
+      "id": "gid://shopify/StaffMember/12345"
+    }
+  },
+  "shop_feature": false
+}

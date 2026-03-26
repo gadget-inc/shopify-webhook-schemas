@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "app_subscription": {
+      "properties": {
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "admin_graphql_api_shop_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "balance_used": {
+          "type": "integer"
+        },
+        "capped_amount": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "currency_code": {
+          "type": "string"
+        },
+        "interval": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "plan_handle": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "admin_graphql_api_shop_id",
+        "balance_used",
+        "capped_amount",
+        "created_at",
+        "currency_code",
+        "name",
+        "updated_at"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "app_subscription"
+  ],
+  "type": "object"
+}

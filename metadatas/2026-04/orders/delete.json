@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever an order is deleted.",
+  "name": "orders/delete",
+  "related_resource": "Order",
+  "response": {
+    "id": 820982911946154500
+  },
+  "shop_feature": false
+}

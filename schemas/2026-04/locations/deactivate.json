@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "active": {
+      "type": "boolean"
+    },
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": "string"
+    },
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "country_name": {
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "legacy": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "province_code": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "active",
+    "address1",
+    "address2",
+    "admin_graphql_api_id",
+    "city",
+    "country",
+    "country_code",
+    "country_name",
+    "created_at",
+    "id",
+    "legacy",
+    "name",
+    "phone",
+    "province",
+    "province_code",
+    "updated_at",
+    "zip"
+  ],
+  "type": "object"
+}

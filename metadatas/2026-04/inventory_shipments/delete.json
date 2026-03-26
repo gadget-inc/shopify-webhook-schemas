@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "inventory_shipments"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a shipment is deleted.",
+  "name": "inventory_shipments/delete",
+  "related_resource": "Shipment",
+  "response": {
+    "id": "gid://shopify/InventoryShipment/3921201",
+    "happened_at": "2023-09-01T08:19:56-04:00"
+  },
+  "shop_feature": false
+}
