@@ -1,0 +1,52 @@
+{
+  "access_scopes": [
+    "returns",
+    "marketplace_returns",
+    "buyer_membership_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a return is approved. This means `Return.status` is `OPEN`.",
+  "name": "returns/approve",
+  "related_resource": "Return",
+  "response": {
+    "id": 123134564567890,
+    "admin_graphql_api_id": "gid://shopify/Return/123134564567890",
+    "status": "open",
+    "order": {
+      "id": 4783296544821,
+      "admin_graphql_api_id": "gid://shopify/Order/4783296544821"
+    },
+    "total_return_line_items": 2,
+    "name": null,
+    "return_line_items": [],
+    "return_shipping_fees": [
+      {
+        "id": 987654321547866,
+        "admin_graphql_api_id": "gid://shopify/ReturnShippingFee/987654321547866",
+        "price": {
+          "shop_money": {
+            "amount": "10.0",
+            "currency_code": "XXX"
+          },
+          "presentment_money": {
+            "amount": "10.0",
+            "currency_code": "XXX"
+          }
+        }
+      }
+    ],
+    "exchange_line_items": [
+      {
+        "id": 987654321283476,
+        "admin_graphql_api_id": "gid://shopify/ExchangeLineItem/987654321283476",
+        "line_item": null
+      }
+    ],
+    "total_exchange_line_items": 1
+  },
+  "shop_feature": false
+}

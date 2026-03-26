@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "publications"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a channel is deleted.",
+  "name": "channels/delete",
+  "related_resource": "Channel",
+  "response": {
+    "id": "123456789"
+  },
+  "shop_feature": false
+}

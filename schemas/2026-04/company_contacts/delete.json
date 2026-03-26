@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "company": {
+      "properties": {
+        "admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customer_since": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "external_id": {
+          "type": "string"
+        },
+        "main_contact_admin_graphql_api_id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "admin_graphql_api_id",
+        "created_at",
+        "customer_since",
+        "external_id",
+        "main_contact_admin_graphql_api_id",
+        "name",
+        "note",
+        "updated_at"
+      ],
+      "type": "object"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "customer_admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "company",
+    "created_at",
+    "customer_admin_graphql_api_id",
+    "locale",
+    "title",
+    "updated_at"
+  ],
+  "type": "object"
+}

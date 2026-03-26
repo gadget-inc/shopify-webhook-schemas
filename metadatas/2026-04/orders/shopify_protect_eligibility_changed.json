@@ -1,0 +1,22 @@
+{
+  "access_scopes": [
+    "orders"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever Shopify Protect's eligibility for an order is changed.",
+  "name": "orders/shopify_protect_eligibility_changed",
+  "related_resource": "Summary",
+  "response": {
+    "order_id": 1,
+    "status": "active",
+    "eligibility": {
+      "status": "eligible"
+    }
+  },
+  "shop_feature": false
+}

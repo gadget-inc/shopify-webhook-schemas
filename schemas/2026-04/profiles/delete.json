@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "default": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "profile_type": {
+      "type": "null"
+    },
+    "version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "default",
+    "id",
+    "name",
+    "profile_type",
+    "version"
+  ],
+  "type": "object"
+}

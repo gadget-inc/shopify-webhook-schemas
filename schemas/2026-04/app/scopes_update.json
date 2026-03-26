@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "current": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "previous": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "shop_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "current",
+    "id",
+    "previous",
+    "shop_id",
+    "updated_at"
+  ],
+  "type": "object"
+}

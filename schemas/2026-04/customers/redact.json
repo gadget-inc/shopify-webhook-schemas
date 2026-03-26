@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "customer": {
+      "properties": {
+        "email": {
+          "format": "email",
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "phone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "id",
+        "phone"
+      ],
+      "type": "object"
+    },
+    "orders_to_redact": {
+      "items": {
+        "type": "integer"
+      },
+      "type": "array"
+    },
+    "shop_domain": {
+      "type": "string"
+    },
+    "shop_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "customer",
+    "orders_to_redact",
+    "shop_domain",
+    "shop_id"
+  ],
+  "type": "object"
+}

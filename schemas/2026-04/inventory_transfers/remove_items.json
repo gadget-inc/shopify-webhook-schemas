@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "items_removed": {
+      "items": {
+        "properties": {
+          "line_item_id": {
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "line_item_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "happened_at",
+    "id",
+    "items_removed"
+  ],
+  "type": "object"
+}

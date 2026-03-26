@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "orders",
+    "marketplace_orders",
+    "returns",
+    "marketplace_returns",
+    "buyer_membership_orders"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs whenever a return is closed.",
+  "name": "returns/close",
+  "related_resource": "Return",
+  "response": {
+    "id": 123134564567890,
+    "admin_graphql_api_id": "gid://shopify/Return/123134564567890",
+    "order_id": 4783296544821,
+    "status": "closed"
+  },
+  "shop_feature": false
+}

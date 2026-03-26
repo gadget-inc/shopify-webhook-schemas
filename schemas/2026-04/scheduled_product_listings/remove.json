@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "scheduled_product_listing": {
+      "properties": {
+        "product_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "scheduled_product_listing"
+  ],
+  "type": "object"
+}
