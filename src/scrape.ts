@@ -138,39 +138,47 @@ const main = async () => {
 
     const data = await loadDataFromUrl(dataUrlForVersion(version));
 
-    const webhooksAccordian = findFirstByPredicate(
-      data,
-      (node) => node.type === "WebhooksAccordion" && node.anchorLink === "list-of-topics"
+    const servedVersion = data?.["templated-landing-webhooks"]?.data?.apiVersion;
+    if (servedVersion && servedVersion !== version) {
+      console.warn(`Skipping ${version}: Shopify served data for ${servedVersion} instead (version not yet published).`);
+      warnings += 1;
+      continue;
+    }
+
+    const webhookTopics = assert(
+      findFirstByPredicate(data, (node) => node.name === "WebhookTopics" && Array.isArray(node.members)),
+      `WebhookTopics not found for version ${version}`
     );
-    const webhookContent = assert(webhooksAccordian.accordionContent);
+    const webhookContent = assert(webhookTopics.members);
 
     for (const webhookNode of webhookContent) {
-      const examplePayload = webhookNode.codeblock?.tabs?.[0]?.code;
+      const examplePayload = webhookNode.examples?.[0]?.tabs?.[0]?.code;
       let response: Record<string, any> = {};
 
       if (!examplePayload) {
-        console.warn(`${webhookNode.title} has no payload`);
+        console.warn(`${webhookNode.name} has no payload`);
         warnings += 1;
       } else {
         const parsedPayload = JSON.parse(examplePayload);
         if (!parsedPayload) {
-          console.warn(`${webhookNode.title} has a null payload`);
+          console.warn(`${webhookNode.name} has a null payload`);
           warnings += 1;
         } else {
           response = parsedPayload;
         }
       }
 
+      const notices: any[] = webhookNode.webhooksNotices ?? webhookNode.webhookNotices ?? [];
       const webhook = {
         access_scopes: webhookNode.accessScopes,
         available_on: webhookNode.availableOn,
-        deprecated: !!webhookNode.webhookNotices?.find((notice: any) => notice.type === "deprecated"),
+        deprecated: !!webhookNode.isDeprecated || !!notices.find((notice: any) => notice.type === "deprecated"),
         description: webhookNode.description,
-        name: webhookNode.title,
+        name: webhookNode.name,
         pii: webhookNode.pii,
         related_resource: webhookNode.relatedResource,
         response,
-        shop_feature: !!webhookNode.webhookNotices?.find((notice: any) => notice.type === "shop_feature"),
+        shop_feature: !!notices.find((notice: any) => notice.type === "shopFeature" || notice.type === "shop_feature"),
       };
 
       const metadataFile = path.join(rootDir, "metadatas", version, webhook.name + ".json");
