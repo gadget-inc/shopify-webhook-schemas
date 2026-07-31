@@ -1,0 +1,9 @@
+{
+  "customer_id": 123,
+  "phone_number": "example string",
+  "whats_app_marketing_consent": {
+    "state": "example string",
+    "opt_in_level": "example string",
+    "updated_at": "2019-01-01 00:00:00.000Z"
+  }
+}

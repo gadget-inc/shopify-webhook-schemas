@@ -5,7 +5,10 @@
       "type": "integer"
     },
     "phone_number": {
-      "type": "null"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "whats_app_marketing_consent": {
       "properties": {
@@ -13,13 +16,23 @@
           "type": "string"
         },
         "opt_in_level": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "state": {
-          "type": "null"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "updated_at": {
-          "type": "null"
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
         }
       },
       "required": [
