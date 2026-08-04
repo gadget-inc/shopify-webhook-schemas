@@ -1,0 +1,24 @@
+{
+  "access_scopes": [
+    "inventory_transfers"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a shipment belonging to the transfer is created, edited, or removed. Re-fetch the transfer to get the latest state.",
+  "name": "inventory_transfers/updated",
+  "related_resource": "Transfer",
+  "response": {
+    "id": "gid://shopify/InventoryTransfer/2921201",
+    "happened_at": "2023-09-01T08:19:56-04:00",
+    "origin": {
+      "id": "gid://shopify/Location/346779"
+    },
+    "destination": {
+      "id": "gid://shopify/Location/482156"
+    }
+  },
+  "shop_feature": false
+}
