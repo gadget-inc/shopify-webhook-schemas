@@ -1,6 +1,6 @@
 {
   "access_scopes": [
-    "inventory_shipments_received_items"
+    "inventory_shipments"
   ],
   "available_on": [
     "graphql",

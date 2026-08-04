@@ -4,6 +4,7 @@ import chalk from "chalk";
 import path from "path";
 import { getPackageRootDir } from "src";
 import { inferSchemaFromExamplePayload, manualExamples } from "./infer-schema";
+import { normalizeWebhookAccessScopes } from "./metadata-overrides";
 
 function assert<T>(value: T | false | undefined | null, message?: string): T {
   if (!value) {
@@ -170,7 +171,7 @@ const main = async () => {
 
       const notices: any[] = webhookNode.webhooksNotices ?? webhookNode.webhookNotices ?? [];
       const webhook = {
-        access_scopes: webhookNode.accessScopes,
+        access_scopes: normalizeWebhookAccessScopes(webhookNode.name, webhookNode.accessScopes),
         available_on: webhookNode.availableOn,
         deprecated: !!webhookNode.isDeprecated || !!notices.find((notice: any) => notice.type === "deprecated"),
         description: webhookNode.description,
