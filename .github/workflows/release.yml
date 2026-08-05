@@ -13,8 +13,10 @@ jobs:
   release:
     needs: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-test-env
       - name: Build package
         run: pnpm run build
@@ -25,7 +27,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
       - name: Publish Release to github
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: ${{ steps.npm-publish.outputs.type != 'none' }}
         with:
           tag_name: ${{ steps.npm-publish.outputs.version }}
