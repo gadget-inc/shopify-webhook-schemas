@@ -1,0 +1,16 @@
+{
+  "access_scopes": [
+    "financial_kyc_information"
+  ],
+  "available_on": [
+    "graphql",
+    "rest",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Triggers when a staff's access to all or some finance app has been revoked.",
+  "name": "finance_app_staff_member/revoke",
+  "related_resource": "User",
+  "response": {},
+  "shop_feature": false
+}

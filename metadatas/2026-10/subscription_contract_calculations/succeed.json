@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "A subscription contract calculation succeeded and can be reviewed and committed.",
+  "name": "subscription_contract_calculations/succeed",
+  "related_resource": "SubscriptionContractCalculation",
+  "response": {
+    "id": 789,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContractCalculation/789",
+    "state": "succeeded"
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,30 @@
+{
+  "access_scopes": [
+    "rollouts"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a rollout is created, including its initial treatments and attached changes.",
+  "name": "rollouts/create",
+  "related_resource": "PayloadEnvelope",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/Rollout/123",
+    "name": "Example rollout",
+    "status": "ACTIVE",
+    "traffic_allocation": 50,
+    "effective_traffic_allocation": 50,
+    "schedule": {
+      "activate_at": "2026-09-15T12:00:00.000Z",
+      "conclude_at": null
+    },
+    "started_at": "2026-09-15T12:00:00.000Z",
+    "concluded_at": null,
+    "archived_at": null,
+    "created_at": "2026-09-15T12:00:00.000Z",
+    "updated_at": "2026-09-15T12:00:00.000Z"
+  },
+  "shop_feature": false
+}

@@ -1,0 +1,19 @@
+{
+  "access_scopes": [
+    "own_subscription_contracts"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "A subscription contract calculation failed or was voided.",
+  "name": "subscription_contract_calculations/fail",
+  "related_resource": "SubscriptionContractCalculation",
+  "response": {
+    "id": 789,
+    "admin_graphql_api_id": "gid://shopify/SubscriptionContractCalculation/789",
+    "state": "failed"
+  },
+  "shop_feature": false
+}

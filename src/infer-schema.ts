@@ -159,6 +159,18 @@ const unknownPaths: [topicPattern: RegExp, paths: string[]][] = [
 
 // example data we feed the schema infer-er for each topic to allow it to discover real types
 export const manualExamples: [RegExp, Record<string, any>][] = [
+  // Rollouts have nullable timestamps until they conclude or are archived.
+  [
+    /rollouts\/(create|update)/,
+    {
+      archived_at: "2026-10-02T00:00:00Z",
+      concluded_at: "2026-10-02T00:00:00Z",
+      schedule: { conclude_at: "2026-10-02T00:00:00Z" },
+    },
+  ],
+  // Added to order line items in 2026-10; absent for non-subscription items.
+  [/orders\/.+/, { line_items: [{ selling_plan_id: 123456789 }] }],
+
   [
     /.+/,
     {

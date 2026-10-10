@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "change_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "resource_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "treatment_id": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "change_id",
+    "occurred_at",
+    "resource_id",
+    "treatment_id"
+  ],
+  "type": "object"
+}
