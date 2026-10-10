@@ -1,0 +1,18 @@
+{
+  "access_scopes": [
+    "rollouts"
+  ],
+  "available_on": [
+    "graphql",
+    "toml"
+  ],
+  "deprecated": false,
+  "description": "Occurs when a rollout is deleted. Archiving a rollout instead produces a rollouts/update notification.",
+  "name": "rollouts/delete",
+  "related_resource": "PayloadEnvelope",
+  "response": {
+    "admin_graphql_api_id": "gid://shopify/Rollout/123",
+    "deleted_at": "2026-09-15T12:00:00.000Z"
+  },
+  "shop_feature": false
+}

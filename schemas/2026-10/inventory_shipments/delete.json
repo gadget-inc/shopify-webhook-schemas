@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "happened_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "inventory_transfer_id": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "happened_at",
+    "id",
+    "inventory_transfer_id"
+  ],
+  "type": "object"
+}

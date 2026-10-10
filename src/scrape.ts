@@ -4,7 +4,7 @@ import chalk from "chalk";
 import path from "path";
 import { getPackageRootDir } from "src";
 import { inferSchemaFromExamplePayload, manualExamples } from "./infer-schema";
-import { normalizeWebhookAccessScopes } from "./metadata-overrides";
+import { normalizeWebhookAccessScopes, supplementalWebhookTopics } from "./metadata-overrides";
 
 function assert<T>(value: T | false | undefined | null, message?: string): T {
   if (!value) {
@@ -150,7 +150,10 @@ const main = async () => {
       findFirstByPredicate(data, (node) => node.name === "WebhookTopics" && Array.isArray(node.members)),
       `WebhookTopics not found for version ${version}`
     );
-    const webhookContent = assert(webhookTopics.members);
+    const webhookContent = [...assert(webhookTopics.members)];
+    for (const topic of supplementalWebhookTopics(version)) {
+      if (!webhookContent.some((entry) => entry.name === topic.name)) webhookContent.push(topic);
+    }
 
     for (const webhookNode of webhookContent) {
       const examplePayload = webhookNode.examples?.[0]?.tabs?.[0]?.code;

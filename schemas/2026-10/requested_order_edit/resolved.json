@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "line_items": {
+      "properties": {
+        "removals": {
+          "items": {
+            "properties": {
+              "admin_graphql_api_id": {
+                "format": "uri",
+                "type": "string"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "line_item_id": {
+                "type": "integer"
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "resolved_quantity": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "admin_graphql_api_id",
+              "id",
+              "line_item_id",
+              "quantity",
+              "resolved_quantity"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "removals"
+      ],
+      "type": "object"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "requested_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "id",
+    "line_items",
+    "order_id",
+    "requested_at",
+    "status"
+  ],
+  "type": "object"
+}

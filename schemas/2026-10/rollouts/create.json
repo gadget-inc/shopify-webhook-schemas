@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "archived_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "concluded_at": {
+      "format": "date-time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "effective_traffic_allocation": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "schedule": {
+      "properties": {
+        "activate_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "conclude_at": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "activate_at",
+        "conclude_at"
+      ],
+      "type": "object"
+    },
+    "started_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "traffic_allocation": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "archived_at",
+    "concluded_at",
+    "created_at",
+    "effective_traffic_allocation",
+    "name",
+    "schedule",
+    "started_at",
+    "status",
+    "traffic_allocation",
+    "updated_at"
+  ],
+  "type": "object"
+}

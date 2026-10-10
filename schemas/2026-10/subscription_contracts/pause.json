@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_customer_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "admin_graphql_api_origin_order_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "billing_policy": {
+      "properties": {
+        "interval": {
+          "type": "string"
+        },
+        "interval_count": {
+          "type": "integer"
+        },
+        "max_cycles": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "min_cycles": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "interval",
+        "interval_count",
+        "max_cycles",
+        "min_cycles"
+      ],
+      "type": "object"
+    },
+    "currency_code": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "integer"
+    },
+    "delivery_policy": {
+      "properties": {
+        "interval": {
+          "type": "string"
+        },
+        "interval_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "interval",
+        "interval_count"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "origin_order_id": {
+      "type": "integer"
+    },
+    "revision_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "admin_graphql_api_customer_id",
+    "admin_graphql_api_id",
+    "admin_graphql_api_origin_order_id",
+    "billing_policy",
+    "currency_code",
+    "customer_id",
+    "delivery_policy",
+    "id",
+    "origin_order_id",
+    "revision_id",
+    "status"
+  ],
+  "type": "object"
+}

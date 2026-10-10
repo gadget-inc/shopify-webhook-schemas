@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "admin_graphql_api_id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "country_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "country_harmonized_system_codes": {
+      "items": false,
+      "type": "array"
+    },
+    "harmonized_system_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "province_code_of_origin": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "admin_graphql_api_id",
+    "country_code_of_origin",
+    "country_harmonized_system_codes",
+    "harmonized_system_code",
+    "id",
+    "province_code_of_origin"
+  ],
+  "type": "object"
+}

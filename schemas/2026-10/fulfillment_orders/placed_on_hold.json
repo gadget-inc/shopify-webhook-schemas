@@ -1,0 +1,396 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "created_fulfillment_hold": {
+      "properties": {
+        "handle": {
+          "type": "string"
+        },
+        "held_by_app": {
+          "properties": {
+            "id": {
+              "format": "uri",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "type": "object"
+        },
+        "held_by_requesting_app": {
+          "type": "boolean"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "reason_notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "handle",
+        "held_by_app",
+        "held_by_requesting_app",
+        "id",
+        "reason",
+        "reason_notes"
+      ],
+      "type": "object"
+    },
+    "fulfillment_order": {
+      "properties": {
+        "fulfillment_holds": {
+          "items": {
+            "properties": {
+              "handle": {
+                "type": "string"
+              },
+              "held_by_app": {
+                "properties": {
+                  "id": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "type": "object"
+              },
+              "held_by_requesting_app": {
+                "type": "boolean"
+              },
+              "id": {
+                "format": "uri",
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "reason_notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "handle",
+              "held_by_app",
+              "held_by_requesting_app",
+              "id",
+              "reason",
+              "reason_notes"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fulfillment_holds",
+        "id",
+        "status"
+      ],
+      "type": "object"
+    },
+    "held_fulfillment_order_line_items": {
+      "items": {
+        "properties": {
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "quantity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "remaining_fulfillment_order": {
+      "properties": {
+        "assigned_location": {
+          "properties": {
+            "address1": {
+              "type": "null"
+            },
+            "address2": {
+              "type": "null"
+            },
+            "city": {
+              "type": "null"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "null"
+            },
+            "province": {
+              "type": "null"
+            },
+            "zip": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "address1",
+            "address2",
+            "city",
+            "country_code",
+            "location_id",
+            "name",
+            "phone",
+            "province",
+            "zip"
+          ],
+          "type": "object"
+        },
+        "assigned_location_id": {
+          "type": "integer"
+        },
+        "delivery_method": {
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "max_delivery_date_time": {
+              "type": "null"
+            },
+            "method_type": {
+              "type": "string"
+            },
+            "min_delivery_date_time": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "max_delivery_date_time",
+            "method_type",
+            "min_delivery_date_time"
+          ],
+          "type": "object"
+        },
+        "destination": {
+          "properties": {
+            "address1": {
+              "type": "string"
+            },
+            "address2": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "company": {
+              "type": "null"
+            },
+            "country": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "first_name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "null"
+            },
+            "province": {
+              "type": "string"
+            },
+            "zip": {
+              "format": "time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "address1",
+            "address2",
+            "city",
+            "company",
+            "country",
+            "email",
+            "first_name",
+            "id",
+            "last_name",
+            "phone",
+            "province",
+            "zip"
+          ],
+          "type": "object"
+        },
+        "fulfill_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fulfill_by": {
+          "type": "null"
+        },
+        "fulfillment_holds": {
+          "items": false,
+          "type": "array"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "format": "uri",
+              "type": "string"
+            }
+          ]
+        },
+        "international_duties": {
+          "properties": {
+            "incoterm": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "incoterm"
+          ],
+          "type": "object"
+        },
+        "line_items": {
+          "items": {
+            "properties": {
+              "fulfillable_quantity": {
+                "type": "integer"
+              },
+              "fulfillment_order_id": {
+                "type": "integer"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "inventory_item_id": {
+                "type": "integer"
+              },
+              "line_item_id": {
+                "type": "integer"
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "shop_id": {
+                "type": "integer"
+              },
+              "variant_id": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "fulfillable_quantity",
+              "fulfillment_order_id",
+              "id",
+              "inventory_item_id",
+              "line_item_id",
+              "quantity",
+              "shop_id",
+              "variant_id"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "order_id": {
+          "type": "integer"
+        },
+        "request_status": {
+          "type": "string"
+        },
+        "shop_id": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "supported_actions": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "status"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "created_fulfillment_hold",
+    "fulfillment_order",
+    "held_fulfillment_order_line_items",
+    "remaining_fulfillment_order"
+  ],
+  "type": "object"
+}
